@@ -11,7 +11,38 @@
 |
 */
 
+/**
+ * Tests Routes
+ */
 Route::get('/', function()
 {
 	return View::make('hello');
 });
+
+
+/**
+ * BAIL Routes 
+ */
+
+include __DIR__ .'/Droit/Routes/site-bail.php';
+
+
+/**
+ * Publications-droit Routes
+ */
+
+include __DIR__ .'/Droit/Routes/site-pubdroit.php';
+
+
+/**
+ * Droit-matrimonial Routes
+ */
+
+include __DIR__ .'/Droit/Routes/site-matrimonail.php';
+
+
+/**
+ * Administration Routes
+ */
+	
+include __DIR__ .'/Droit/Routes/admin.php';

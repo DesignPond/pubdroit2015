@@ -1,0 +1,13 @@
+<?php
+
+/**
+ * Route File
+ * Site www.droitmatrimonial.ch
+ */
+
+Route::group(array('prefix' => 'matrimonial'), function()
+{
+    Route::get('/', array('uses' => 'MatrimonialController@index'));
+    Route::get('jurisprudence', array('uses' => 'MatrimonialController@jurisprudence'));	
+    Route::get('test', array('uses' => 'MatrimonialController@test'));    
+});
