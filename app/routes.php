@@ -24,21 +24,21 @@ Route::get('/', function()
  * BAIL Routes 
  */
 
-include __DIR__ .'/Droit/Routes/site-bail.php';
+include __DIR__ .'/Droit/Routes/bail.php';
 
 
 /**
  * Publications-droit Routes
  */
 
-include __DIR__ .'/Droit/Routes/site-pubdroit.php';
+include __DIR__ .'/Droit/Routes/pubdroit.php';
 
 
 /**
  * Droit-matrimonial Routes
  */
 
-include __DIR__ .'/Droit/Routes/site-matrimonail.php';
+include __DIR__ .'/Droit/Routes/matrimonail.php';
 
 
 /**

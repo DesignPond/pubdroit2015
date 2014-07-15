@@ -1,0 +1,462 @@
+refCivilite;nom;prenom;profession;fonction;entreprise;  telephone;mobile;addresse;complement d'adresse;cp; npa;ville;pays;canton ; email;  refSorteMembre ;refSorteSpecialisation
+1;Huguenin-Dezot;Jean-Pierre;1;;Bise & Huguenin-Dezot;0;;1, passage Max.-Meuron;;;2000;Neuchâtel;208;13;etude.bhs@bluewin.ch;;63
+1;Ott;François;1;;Ott & Pointet;0;;5, J.-J. Lallemand;;;2000;Neuchâtel;208;13;francoisott@mandataires.ch;;63
+1;Bauer;Pierre;1;;Bauer Kramer Zender;0;;88, avenue Léopold-Robert;;;2300;La Chaux-de-Fonds;208;13;avocats.lr88@bluewin.ch;;63
+1;Lorenz;Marc;1;;Stahl, Péquignot, Lorenz, Calame;0;;9, rue du Trésor;;;2000;Neuchâtel;208;13;splc@splc.ch;;63
+1;de Reynier;Gilles;1;;Reynier & Süsstrunk;0;;21b, Haute;;;2013;Colombier;208;13;etude@raysus.ch;;63
+2;Walder de Montmollin;Simone;1;;Walder-de Montmollin & Klauser-Péquignot;0;;36, Grand-Rue;;;2108;Couvet;208;13;simone.walder@avocates-ne.ch;;63
+2;Schweingruber Dupraz;Valérie;1;;Etude Valérie Schweingruber Dupraz;0;;11a, avenue Léopold-Robert;;;2300;La Chaux-de-Fonds;208;13;vschweingruber@globalconseil.ch;;63
+1;Zender;Ivan;1;;Bauer Kramer Zender;0;;88, avenue Léopold-Robert;;;2300;La Chaux-de-Fonds;208;13;avocats.lr88@bluewin.ch;;63
+2;Zellweger;Marie-Ange;1;;Etude Marie-Ange Zellweger;0;;7, rue de l'Hôpital ;;;2000;Neuchâtel;208;13;marieangezellweger@vtx.ch;;63
+1;Béguin;Philippe;1;;Etude Philippe Béguin;0;;3, place Pury;;2128;2001;Neuchâtel;208;13;cbef.sa@net2000.ch;;63
+1;Tatos;Ari;1;;Stonehage SA;0;;12, rue du Puits-Godet;;;2000;Neuchâtel;208;13;;;63
+1;Stahl;Fritz;27;;Stahl, Péquignot, Lorenz, Calame;0;;9, rue du Trésor;;;2000;Neuchâtel;208;13;stahl@splc.ch;;63
+1;Benoit;Alain;1;;UBS;0;;5, place Pury;;;2000;Neuchâtel;208;13;;;63
+1;Aeschimann;Jean-Paul;1;;Lenz & Staehelin;0;;30, route de Chêne;;615;1211;Genève 17;208;8;jean-paul.aeschimann@lenzstaehelin.com;;63
+1;Aeschlimann;Lionel;1;;Schellenberg Wittmer;0;;15 bis, rue des Alpes;;2088;1211;Genève 1;208;8;lionel.aeschlimann@swlegal.ch;;63
+1;Amaudruz;Michel;1;;Poncet Turrettini Amaudruz Neyroud & Associés;0;;8-10, rue de Hesse;;5715;1211;Genève 11;208;8;michel.amaudruz@ptan.ch;;63
+1;Arias;Luis;1;;Des Gouttes & Associés;0;;4, avenue de Champel;;;1206;Genève;208;8;luis.arias@desgouttes.ch;;63
+1;Balser;Edouard;1;;Cabinet Mayor;0;;6, rue Eynard;;;1205;Genève;208;8;edouard.balser@cabmayor.ch;;63
+1;Balzli;William;1;;Python & Peter;0;;9, rue Massot;;;1206;Genève;208;8;wbalzli@pplex.ch;;63
+1;Bersier;Marcel;1;;Etude Bersier;0;;4, quai Gustave-Ador;;3082;1211;Genève 3;208;8;etudeber@etude-bersier.ch;;63
+1;Berthoud;Antoine;1;;Bruderlein & Berthoud;0;;14, rue de la Corraterie;;5209;1211;Genève 11;208;8;antoine.berthoud@worldcom.ch;;63
+2;Besson;Brigitte;1;;Etude Besson;0;;29, boulevard Helvétique;;3022;1211;Genève 3;208;8;brigitte_besson@hotmail.com;;63
+1;de Boccard;Philippe;1;;Perréard, de Boccard, Kohler, Ador & Associés;0;;44, avenue Krieg;;45;1211;Genève 17;208;8;philippe.deboccard@pbka.ch;;63
+2;Borcard;Marlene;1;;BEMIDO;0;;2, ch. Des Mines;;145;1211;Genève 20;208;8;;;63
+1;Bogensberger;Sylvain;1;;de Pfyffer & Associés;0;;6, rue Bellot;;;1206;Genève;208;8;sylvain.bogensberger@depfyffer.ch;;63
+1;Boillat;Claude-Alain;1;;B. Lawfirm;0;;8, rue Jean-Gabriel Eynard;;;1205;Genève;208;8;ca.boillat@blawfirm.ch;;63
+1;Boissier;Louis;1;;Borel & Barbey;0;;2, rue de Jargonnant ;;6045;1211;Genève 6;208;8;louis.boissier@borel-barbey.ch;;63
+1;Bonvallat;Damien;1;;Montavon, Bonvallat & Mouro;0;;11 bis, rue Toepffer;;;1206;Genève;208;8;monbonavocat@tele2.ch;;63
+1;Borgeaud;Jean-Daniel;1;;Borgeaud & Lellouch;0;;16, boulevard des Tranchées;;328;1211;Genève 12;208;8;jean-daniel.borgeaud@b-l.ch;;63
+1;Bourquin;Gérald-Charles;1;;Bourquin Biner Bradley;0;;6, quai Gustave-Ador;;;1207;Genève;208;8;gbourquin@lexlaw.ch;;63
+1;Brechbühl;Claude;1;;Pestalozzi Lachenal Patry;0;;65, rue du Rhône;;3199;1211;Genève 3;208;8;claude.brechbuhl@plplaw.ch;;63
+1;Briner;Robert Philip;1;;Briner & Brunisholz;0;;5, cours des Bastion;;;1205;Genève;208;8;rb@bblaw.ch;;63
+1;Brossard;Jean-Marie;1;;Etude Jean-Marie Brossard;0;;7, avenue Eugène Pittard;;3052;1211;Genève;208;8;info@brossard.ch;;63
+1;Brunisholz;Olivier;1;;Briner & Brunisholz;0;;5, cours des Bastion;;;1205;Genève;208;8;ob@bblaw.ch;;63
+1;Buchel;Nicolas;1;;Oberson & Associés;0;;20, rue de Candolle;;280;1211;Genève 12;208;8;info@oberson.ch;;63
+1;Canonica;Dante;1;;Canonica;0;;2, rue Bellot;;;1206;Genève;208;8;dcanonica@canonica-law.ch;;63
+1;Châtelain;Guy;1;;Etude Guy Châtelain;0;;4, rue de l'Athénée;;330;1211;Genève 12;208;8;guy.chatelain@mentha.ch;;63
+2;Chevalier;Suzette;1;;Etude Suzette Chaevalier;0;;15, rue Pestalozzi;;;1202;Genève;208;8;suzette.chevalier@smartfree.ch;;63
+1;Chevallaz;Joël;1;;MCP avocats;0;;20, rue du Marché;;3465;1211;Genève 3;208;8;j.chevallaz@mcplegal.ch;;63
+1;Christin;Dominique;1;;BCCC - Bianchi Carnice Christin & de Coulon;0;;11, rue De-Beaumont;;554;1211;Genève 17;208;8;christin@bccc.ch;;63
+1 ;Clopath;Gion;1;;Etude Gion Clopath;0;;2, rue Thalberg;;;1201;Genève;208;8;gion.clopath@vtxnet.ch;;63
+1;Cohen;Ivan;1;;Des Gouttes & Associés;0;;4, avenue de Champel;;;1206;Genève;208;8;desgouttes@desgouttes.ch;;63
+1;Cottier;Philippe;1;;Pestalozzi Lachenal Patry;0;;65, rue du Rhône;;3199;1211;Genève 3;208;8;philippe.cottier@plplaw.ch;;63
+1;de Coulon;Yvon;1;;Etude Yvon de Coulon;0;;ICC route de Pré-Bois 20;;1885;1215;Genève 15;208;8;yvon.decoulon@bluewin.ch;;63
+1;Courvoisier;Philippe;1;;Etude Philippe Courvoisier;0;;17, rue Ferdinand-Hodler;;;1207;Genève;208;8;courvoisier@vtx.ch;;63
+1;Crettol;Gilles;1;;Monfrini Crettol & Associés;0;;3, place du Molard;;;1204;Genève;208;8;gcrettol@mcswisslaw.com;;63
+1;Croce;Franco;1;;Etude Franco Croce;0;;7, rue des Alpes;;;1201;Genève;208;8;fr_croce@bluewin.ch;;63
+1;Dagon;Roger;1;;Etude Roger Dagon;0;;12-14, rue du Marché;;;1204;Genève;208;8;roger.dagon@deckpoint.ch;;63
+1 ;De Lucia;Pascal;1;;Pestalozzi Lachenal Patry;0;;65, rue du Rhône;;3199;1211;Genève 3;208;8;pascal.de.lucia@plplaw.ch;;63
+1;Donnet;Jean;1;;Budin & Associés;0;;20, rue Sénébier;;166;1211;Genève 12;208;8;jean.donnet@budin.ch;;63
+1;Dunant;Olivier;1;;Borel & Barbey;0;;2, rue de Jargonnant ;;6045;1211;Genève 6;208;8;olivier.dunant@borel-barbey.ch;;63
+1;Fafalen;Serge G.;1;;Etude Serge F. Fafalen;0;;40, rue de l'Athénée;;169;1211;Genève 12;208;8;info@fafalen.com;;63
+1;Fiechter;Eric W.;1;;Secretan Troyanov;0;;2, rue Charles-Bonnet;;189;1211;Genève 12;208;8;eric.fiechter@stSwiss.com;;63
+1;Fischer;Marc;1;;Borel & Barbey;0;;2, rue de Jargonnant ;;6045;1211;Genève 6;208;8;marc.fischer@borel-barbey.ch;;63
+1;Foglia;Franco;1;;SwissLawyersGroup Foglia;0;;6, rue Verdaine;;3229;1211;Genève 3;208;8;f.foglia@bluewin.ch;;63
+2;Froidevaux;Camille;1;;Budin & Associés;0;;20, rue Sénébier;;166;1211;Genève 12;208;8;camille.froidevaux@budin.ch;;63
+1;Graz;Jean-Pierre;1;;Henry, Graz, Vesely & Sekkiou;0;;11 bis, rue Toepffer;;;1206;Genève;208;8;hgvs@bluewin.ch;;63
+1;Guillaume;Pierre-Alain;1;;GLM Avocats;0;;22, rue Général-Dufour;;5711;1211;Genève 11;208;8;guillaume@glmlaw.ch;;63
+1;Heggli;Carl;1;;Borel & Barbey;0;;2, rue de Jargonnant ;;6045;1211;Genève 6;208;8;carl.heggli@borel-barbey.ch;;63
+1;Henchoz;Dominique;1;;Python & Peter;0;;9, rue Massot;;;1206;Genève;208;8;dhenchoz@pplex.ch;;63
+1;Iglehart;John H.;1;;Mudry & Iglehart;0;;16, rue Bellot;;269;1211;Genève 12;208;8;john.iglehart@geneva-link.ch;;63
+1;Immink;Henric;1;;Python & Peter;0;;6, rue Bellot;;;1206;Genève;208;8;mail@pplex.ch;;63
+1;Joory;Marc;1;;Python & Peter;0;;9, rue Massot;;;1206;Genève;208;8;mjoory@pplex.ch;;63
+1;Killen;Nicolas;1;;Borel & Barbey;0;;2, rue de Jargonnant ;;6045;1211;Genève 6;208;8;nicolas.killen@borel-barbey.ch;;63
+1;Klein;Yves;1;;Monfrini Crettol & Associés;0;;3, place du Molard;;;1204;Genève;208;8;yklein@mcswisslaw.com;;63
+1;Kyd;Laurent;1;;Borel & Barbey;0;;2, rue de Jargonnant ;;6045;1211;Genève 6;208;8;laurent.kyd@borel-barbey.ch;;63
+1;Lachenal;Bernard;1;;Pestalozzi Lachenal Patry;0;;65, rue du Rhône;;3199;1211;Genève 3;208;8;bernard.lachenal@plplaw.ch;;63
+1;Lambelet;Michel;1;;Etude Michel Lambelet;0;;50, chemin de Grange-Canal;;;1224;Chêne-Boug;208;8;michel.lambelet@fiscal.ch;;63
+1;Lembo;Saberio;1;;Bär & Karrer;0;;12, quai de la Poste;;;1211;Genève 11;208;8;s.lembo@baerkarrer.ch;;63
+1;Lenz;Christian;1;;Lenz Thiébaud;0;;36, Boulevard Helvétique ;;;1207;Genève;208;8;c.lenz@ltlaw.ch;;63
+1;Landry;Arnaud;1;;Mudry & Iglehart;0;;16, rue Bellot;;269;1211;Genève 12;208;8;arnaud.landry@infomaniak.ch;;63
+1;Lévy;Alain Bruno;1;;Junod, Guyet, Muhlstein, Lévy;0;;17, rue Toepffer;;;1206;Genève;208;8;levy@jgml.ch;;63
+1;Monfrini;Enrico;1;;Monfrini Crettol & Associés;0;;3, place du Molard;;;1204;Genève;208;8;emonfrini@mcswisslaw.ch;;63
+1;Montavon;Pierre-Yves;1;;Montavon & Mermier;0;;6, rue du Nant;;6509;1211;Genève;208;8;mail@montavon-mermier.com;;63
+1;Mudry;Louis;1;;Mudry & Iglehart;0;;5, place Claparède;;292;1211;Genève 12;208;8;mudry@bluewin.ch;;63
+2;Nicolazzi;Myriam;1;;Gillioz Dorsaz & Associés;0;;11, rue du Général Dufour;;5840;1211;Genève 11;208;8;mnicolazzi@gdlaw.ch;;63
+1;Ochsner;Charles;1;;Python & Peter;0;;9, rue Massot;;;1206;Genève;208;8;cochsner@pplex.ch;;63
+1;Patry;Jean;1;;Pestalozzi Lachenal Patry;0;;65, rue du Rhône;;3199;1211;Genève 3;208;8;jean.patry@plplaw.ch;;63
+1;Peter;Clarence;1;;Python & Peter;0;;6, rue Bellot;;;1206;Genève;208;8;cpeter@pplex.ch;;63
+1;Portier;Cédric;1;;Oberson & Associés;0;;20, rue de Candolle;;280;1211;Genève 12;208;8;cportier@oberson.ch;;63
+1;Python;Jacques;1;;Python & Peter;0;;9, rue Massot;;;1206;Genève;208;8;jpython@pplex.ch;;63
+1;Rayroux;François;1;;Lenz & Staehelin;0;;30, route de Chêne;;615;1211;Genève 17;208;8;francois.rayroux@lenzstaehelin.com;;63
+1;Reiser;Christian;1;;Oltramare, Hochstaetter, Eardley, Reiser & Associés;0;;16, rue de Candolle;;;1205;Genève;208;8;cmr@oher.ch;;63
+1;Rey;Stéphane;1;;Etude Stéphane Rey;0;;3, rue Michel-Chauvet;;;1208;Genève;208;8;rey@rey-avocat-geneve.ch;;63
+1;Rossi;Giovanni;1;;Bonnard Lawson;0;;11, rue du Général Dufour;;;1204;Genève;208;8;rossi@ilf.ch;;63
+1;Rytz;Pascal;1;;Rytz Davoine;0;;12, rue Pierre-Fatio;;;1204;Genève;208;8;rytz@avocats-geneve-vaud.ch;;63
+1;Sansonetti;Pietro;1;;Schellenberg Wittmer;0;;15 bis, rue des Alpes;;2088;1211;Genève 11;208;8;pietro.sansonetti@swlegal.ch;;63
+1;Sayegh;Fouad;1;;Oberson & Associés;0;;20, rue de Candolle;;280;1211;Genève 12;208;8;fsayegh@oberson.ch;;63
+1;Schmidt;Pierre-Alain;1;;Schmidt, Jaton & Associés;0;;8, place des Philosophes;;;1205;Genève;208;8;pas@sja.ch;;63
+1;Schwartz;Martin;1;;Etude Martin Schwartz;0;;20, rue Graman;;;1241;Puplinge;208;8;martin.schwartz@bluewin.ch;;63
+2;de Senarclens;Christiane;1;;Etude Lalive;0;;35, rue de la Mairie;;6569;1211;Genève 6;208;8;cdesenarclens@lalive.ch;;63
+1;Siegrist;Jean-Marc;1;;Bolsterli & Associés;0;;23, quai des Bergues;;;1201;Genève;208;8;j-m.siegrist@bolsterli.ch;;63
+1;Steinmann;Thomas;1;;Python & Peter;0;;6, rue Bellot;;;1206;Genève;208;8;tseinmann@pplex.ch;;63
+1;Tamisier;Christian;1;;Tamisier Mathey & Associés;0;;8, rue Saint-Leger;;;1205;Genève;208;8;c.tamisier@tmalaw.ch;;63
+1;Tavernier;Edmond;1;;Tavernier Tschanz;0;;11 bis, rue Toepffer;;;1206;Genève;208;8;tavernier@taverniertschanz.com;;63
+2;Teysseire;Corinne;1;;Roullet & Teysseire;0;;11, rue Ferdinand-Hodler;;;1207;Genève;208;8;roulteys@swissmail.com;;63
+1;Thionnet;Brice;1;;Baker & Mckenzie;0;;5, rue Pedro-Meylan;;;1208;Genève;208;8;;;63
+1;Vecchio;Sandro;1;;Fedele Dessimoz Vecchio;0;;7, avenue Krieg;;;1208;Genève;208;8;sv@barreau.ch;;63
+2;von Fliedner;Isabel;1;;Python & Peter;0;;8, avenue Jules-Crosnier;;;1206;Genève;208;8;ivonfliedner@pplex.ch;;63
+1;Waltenspühl;Louis;1;;Gros & Waltenspühl;0;;9, rue Beauregard;;;1204;Genève;208;8;gw@g-w.ch;;63
+1;de Weck;Dominique;1;;de Weck Perren & Zoells;0;;14, rue des Cordiers;;;1207;Genève;208;8;info@deweckperren.ch;;63
+1;Winkelmann;Laurent;1;;Notter Mégevand & Associés;0;;3, place Edouard-Claparède;;;1205;Genève;208;8;geneve@nomea.ch;;63
+1;Zoells;Robert;1;;de Weck Perren & Zoells;0;;14, rue des Cordiers;;;1207;Genève;208;8;info@deweckperren.ch;;63
+1;Zolty;André;1;;Etude André Zolty;0;;8 C, avenue Champel;;;1206;Genève;208;8;;;63
+2;Zufferey;Martine;1;;Tournaire & Associés;0;;18, quai Gustave-Ador;;6359;1211;Genève 6;208;8;etude@tourass.ch;;63
+2;Zumoffen Fruttero;Joëlle;1;;Etude Mayor;0;;6, rue Eynard;;;1205;Genève;208;8;joelle.zumoffen@cabmayor.ch;;63
+1;del Boca;Pierre;1;;del Boca, Burnet, Luciani & Cerottini;0;;18, rue du Petit-Chêne;;;1003;Lausanne;208;24;pdelboca@bluewin.ch;;63
+1;Bonnard;Yves;1;;Bonnard Lawson;0;;8, rue du Grand-Chêne;;;1002;Lausanne;208;24;yb@ilf.ch;;63
+1;Boudry;François;1;;Boudry & de Braun;0;;2, rue Bellefontaine;;;1003;Lausanne;208;24;;;63
+1;Bourgeois;Olivier;1;;BMP Associés;0;;2, avenue de Montbenon;;;1002;Lausanne;208;24;olivier.bourgeois@bmp.ch;;63
+1;Bridel;Denis;1;;Bridel, Katz, Haldy & Dubuis;0;;60, avenue C.-F. Ramuz;;;1001;Lausanne-Pully;208;24;dbridel@vtx.ch;;63
+1;Besso;Laurent;1;;;0;;7, avenue du Théatre;;2628;1002;Lausanne;208;24;lbesso@pbslaw.ch;;63
+1 ;Burnand;Yves;1;;Burnand Didisheim Mercier & Associés;0;;7, place St-François;;;1002;Lausanne;208;24;yburnand@dbma.ch;;63
+1;de Chedid;Bernard;1;;Etude Bernard de Chedid;0;;5, place St-François;;;1002;Lausanne;208;24;de-chedid@bluewin.ch;;63
+1;Cron;Bernhard;1;;Python et Peter;0;;80, ave nue C.F. Ramuz;;;1009;Pully-Lausanne;208;24;bcron@psplaw.ch;;63
+2;Danthe;Marie-Gisèle;1;;Rossy, Girardet, Michod, Danthe, Righetti, & Elsner Guignard;0;;8, rue de Bourg;;;1002;Lausanne;208;24;mg.danthe@bluewin.ch;;63
+1;Egloff;Yannis Edouard;1;;Lenz & Staehelin;0;;2, place St-François;;;1003;Lausanne;208;24;yannis.egloff@lenzstaehelin.com;;63
+1;Fischer;Christian;1;;Fischer & Buffat;0;;9, avenue Juste-Olivier;;;1006;Lausanne;208;24;;;63
+1;Geller;Bernard;1;;Piguet, Geller, Dupuis, Moreillon & Monniser;0;;5, place St-François;;;1002;Lausannn;208;24;bernard.geller@avpiguet.ch;;63
+1;Glauser;Pierre-Marie;1;;Oberson & Associés;0;;2, rue du Midi;;;1001;Lausanne;208;24;pmglauser@oberson.ch;;63
+1;Lei Ravello;Robert;1;;Baumgartner, Wellauer, Diserens, Lei Ravelo;0;;1, place Bel-Air/Métropole;;;1002;Lausanne;208;24;lrrav@bluewin.ch;;63
+1;de Mestral;Thierry;1;;de Mestral, Pelot, Sutter, de Rougemont, Hahn & Genillod;0;;7, rue Caroline;;;1002;Lausanne;208;24;;;63
+1;Moser;Jean-Pierre;1;;Bagi, Moser, Pidoux, Bally & Associés;0;;8, rue Jean-Jacques Cart;;;1001;Lausanne;208;24;moser-avocat@bluewin.ch;;63
+1;Noël;Yves;1;;Etude Yves Noël;0;;27, avenue du Tribunal-Fédéral;;;1005;Lausanne;208;24;yves-noel@noel-law.ch;;63
+1;Pelot;Jean-David;1;;Trivelli, Pelot, Sutter, de Rougemont, Hahn & Genillod;0;;7, rue Caroline;;;1002;Lausanne;208;24;pelot@citycable.ch;;63
+1;Perroud;Jean-Claude;1;;Rusconi, Recordon, Perroud, Dumoulin, Cavin, Cereghetti, Chavanne, Crippa;0;;4-8, rue du Grand-Chêne;;;1002;Lausanne;208;24;jcperroud@gmx.ch;;63
+1;Piguet;Christophe;1;;Piguet, Geller, Dupuis, Moreillon & Monniser;0;;5, place St-François;;;1002;Lausanne;208;24;christophe.piguet@avpiguet.ch;;63
+1;Reil;Alexandre;1;;Burnand Didisheim Mercier & Associés;0;;7, place St-François;;;1002;Lausanne;208;24;areil@bdma.ch;;63
+1;Reymond;Philippe;1;;Reymond, Saviaux, Baumann et Buffat Reymond;0;;14, avenue d'Ouchy;;;1001;Lausanne;208;24;philippe.reymond@rsbblegal.ch;;63
+1;Righetti;Olivier;1;;Rossy, Girardet, Michod, Danthe, Righetti, & Elsner Guignard;0;;8, rue de Bourg;;;1002;Lausanne;208;24;olivier-righetti@avoc.ch;;63
+2;Rusconi Pidoux;Caroline;1;;Rusconi, Recordon, Perroud, Dumoulin, Cavin, Cereghetti, Chavanne, Crippa;0;;4-8, rue du Grand-Chêne;;;1002;Lausanne;208;24;;;63
+1;Urech;Nicolas;1;;Lexartis Avocats;0;;Rue du Grand-Chêne 2;;6791;1002;Lausanne;208;24;nicolas.urech@lexartis.ch;;63
+1;Wellauer;Pierre-Olivier;1;;Baumgartner, Wellauer, Diserens, Lei Ravelo;0;;1, place Bel-Air/Métropole;;;1002;Lausanne;208;24;p-o.wellauer@bluewin.ch;;63
+1;Weniger;Olivier;1;;BMP Associés;0;;2, avenue de Montbenon;;;1002;Lausanne;208;24;olivier.weniger@bmplaw.ch;;63
+1;Wilhelm;Christophe;1;;TBT Avocats;0;;43, avenue C.-F. Ramuz;;;1001;Lausanne;208;24;cwilhelm@tbt.ch;;63
+1;Corbi;Paolo;1;;OCRA (Switzerland) Sàrl;0;;25, avenue Alexandre Vinet;;;1004;Lausanne;208;24;ocrach@ocra.ch;;63
+1;Wilhelm;Georges;1;;;0;;14, av. de Valmont;;;1010;Lausanne;208;24;;;63
+1;Aebi ;Dieter;1;;;0;;Hardstrasse 3;;8;8624;Grüt-Gossau;208;26;da@ra-aebi.ch;;63
+2;Affentranger-Brunner;Doris;1;;;0;;Bergstrasse 4;;;8103;Unterengstringen;208;26;;;63
+1;von Albertini;Andreas;1;;;0;;Englischviertelstrasse 7;;;8032;Zürich;208;26;;;63
+1;Arnet;Stephan;1;;BodmerFischer AG;0;;Limmatquai 94;;;8023;Zürich;208;26;arnet@bodmerfischer.ch;;63
+1;Arnold;Peter B.;1;;Arnold Wehinger Kaelin & Ferrari;0;;Riesbachstrasse 52;;;8008;Zürich;208;26;peter.arnold@awkf.com;;63
+1;Arter;Oliver;1;;Froriep Renggli;0;;Bellerivestrasse 201;;;8034;Zürich;208;26;;;63
+2;Bachmann;Dorothea;1;;Gros & Waltenspühl;0;;Stockerstrasse 12;;;8002;Zurich;208;26;gwzh@zh.g-w.ch;;63
+1;Banzer;Albert;1;;;0;;Fraumünsterstrasse 9;;2097;8022;Zürich;208;26;ra.banzer@bluewin.ch;;63
+1;Bär;Thomas;1;;Bär & Karrer;0;;Brandschenkestrasse 90;;1548;8027;Zürich;208;26;zuerich@baerkarrer.ch;;63
+1;Baur;Jürg;1;;Schumacher Baur Hürlimann;0;;Bahnhofplatz 9;;7676;8023;Zürich;208;26;juerg.baur@sbh-law.ch;;63
+1;Behnisch;Urs R.;1;;Meyer Lustenberger;0;;Forchstrasse 452;;1432;8032;Zürich;208;26;urs.behnisch@ml-law.ch;;63
+1;Benz;Rolf;1;;;0;;Untertor 8;;1585;8401;Winterthur;208;26;rolf.benz@benzlaw.ch;;63
+1;Berz;Hans Peter;1;;;0;;Ormisstrasse 20;;;8706;Meilen;208;26;berzavocat@bluewin.ch;;63
+1;Bochud;Louis;1;;Bill Isenegger Ackermann;0;;Witikonerstrasse 61;;;8032;Zürich;208;26;louis.bochud@bialaw.ch;;63
+1;Bösiger;Markus;1;;Eberle Kämpfen Bösiger Theiler & Partner;0;;Gerechtigkeitsgasse 23;;;8001;Zürich;208;26;boesiger@ekbt-law.ch;;63
+1;Grunner;Thomas U.K.;1;;küng Rechtsanwälte;0;;Poststrasse 1, I. Stock;;;8303;Bassersdorf;208;26;brunner@kueng-law.ch;;63
+1;Bügler;Jürg;1;;;0;;Heimstättenweg 8;;;8413;Neftenbach;208;26;bueglerra@greenmail.ch;;63
+1;Bürgi;Urs;1;;Bürgli Nägeli;0;;Grossmünsterplatz 9;;;8001;Zürich;208;26;info@bnlawyers.ch;;63
+1;Burkard;Thomas M.;1;;;0;;Tödistrasse 15;;1558;8027;Zürich;208;26;t.burkard@burkardtax.ch;;63
+1;Burkhart;Hanspeter;1;;Burkhart & Bösch;0;;Alte Landstrasse 106;;;8702;Zollikon-Zürich;208;26;Burkhart@bb-nomos.ch;;63
+2;Chassé;Isabelle;1;;Baker & McKenzie Zürich;0;;Zollikerstrasse 225;;;8034;Zürich;208;26;isabelle.chasse@bakernet.com;;63
+1;Daetwyler;Markc;1;;Guggenheim & Daetwyler;0;;Rotfluhstrasse 91;;;8702;Zollikon-Zürich;208;26;marcdaetwyler@orangemail.ch;;63
+2;Dahinden;Sarah;1;;Walder Wyss & Partner;0;;Seefeldstrasse 123;;1236;8034;Zürich;208;26;sdahinden@wwp.ch;;63
+1;Dekker;Stephen;1;;Zeier & Dekker;0;;Seestrasse 29;;1563;8700;Küsnacht-Zürich;208;26;stephen.dekker@zd-law.ch;;63
+1;Deplazes;Ervin;1;;Isler Partner;0;;Kronenstrasse 9;;426;8712;Stäfa;208;26;desplazes@islerpartner.ch;;63
+1;Derksen;Hans Peter;1;;Derksen Hegetschweiler;0;;Stampfenbachstrasse 151;;7337;8023;Zürich;208;26;info@swisslawfirm.ch;;63
+1;Dietrich;Urs;1;;Dietrich, Baumgartner & Partner;0;;Sihlporte 3 / Talstrasse;;3580;8021;Zürich;208;26;dbp@dbp.ch;;63
+1;Dubs;Jürg E.;1;;Schiller Denzler Dubs Rechtsanwälte;0;;Kasinostrasse 2;;1507;8401;Winterthur;208;26;dubs@sdd.ch;;63
+1;Eberle;Lous-Ch.;1;;Eberle Kämpfen Bösiger Theiler & Partner;0;;Gerechtigkeitsgasse 23;;;8001;Zürich;208;26;;;63
+1;von Erlach;Rudolf;1;;CMS von Erlach Henrici;0;;Dreikönigstrasse 7;;2991;8022;Zürich;208;26;rudolf.vonerlach@cms-veh.com;;63
+1;Faber;Alexander;1;;Neupert & Partner;0;;Dufourstrasse 58;;;8702;Zollikon-Zürich;208;26;faber@nplaw.ch;;63
+1;Frei;Andreas;1;;Frei & Frei;0;;Getrudstrasse;;1794;8401;Winterthur;208;26;info@freiundfrei.ch;;63
+1;Frei;Walter;1;;Bill Isenegger Ackermann;0;;Witikonerstrasse 61;;;8032;Zürich;208;26;walter.frei@bialaw.ch;;63
+1;Frey;Markus;1;;Niederer Kraft & Frey;0;;Bahnhofstrasse 13;;;8001;Zürich;208;26;markus.a.frey@nkf.ch;;63
+1;Froriep;Andreas;1;;Froriep Renggli;0;;Bellerivestrasse 201;;;8034;Zürich;208;26;zurich@froriep.com;;63
+2;Funke;Nadja;1;;Bill Isenegger Ackermann;0;;Witikonerstrasse 61;;;8032;Zürich;208;26;nadja.funke@bialaw.ch;;63
+1;Furger;Mark;1;;Steinbrüchel Hüssy;0;;Grossmünsterplatz 8;;;8001;Zürich;208;26;office@steinlex.ch;;63
+1;Galli;Peter;1;;;0;;Bahnhofplatz 9;;;8001;Zürich;208;26;dr.galli@gallilaw.ch;;63
+2;Gamma Ammann;Olga;1;;Gamma Hug Christe Stehli;0;;Hermannstrasse 11;;;8400;Winterthur;208;26;olga.gamma@ghcs.ch;;63
+1;Gantner;Andreas;1;;;0;;Sessierweg 11;;;8802;Kilchberg;208;26;gantner.jur@bluewin.ch;;63
+2;Gautschi;Melissa;1;;Altenburger;0;;Seestrasse 39;;;8700;Küsnacht-Zürich;208;26;gautschi@altengurger.ch;;63
+1;Goetz;Marc L.;1;;Goetz & Patak Rechtsanwälte;0;;Obewachtstrasse 13;;;8700;Küsnacht-Zürich;208;26;goetz@gplegal.ch;;63
+1;Guggenheim;Thomas;1;;Guggenheim & Daetwyler;0;;Rotfluhstrasse 91;;275;8702;Zollikon-Zürich;208;26;thguggenheim@bluewin.ch;;63
+1;Häberli;Robert;1;;;0;;Steinstrasse 75;;9222;8036;Zürich;208;26;robert.haeberli@haeberli-law.ch;;63
+1;Hafner;Benno P.;1;;Hafner & Hochstrasser;0;;General Guisan-Quai 30;;;8002;Zurich;208;26;zh@h-h.ch;;63
+1;Hanhart;Gerhard E.;1;;Eggmann Hanhart Rohrer;0;;Bellerivestrasse 5;;;8008;Zürich;208;26;gehanhart@ehrr.ch;;63
+1;Hauri;Claude;1;;küng Rechtsanwälte;0;;Bahnhofstrasse 26/Paradeplatz;;2707;8022;Zürich;208;26;hauri@kueng-law.ch;;63
+1;Hegetschweiler;Hans;1;;Derksen Hegetschweiler;0;;Stampfenbachstrasse 151;;7337;8023;Zürich;208;26;info@swsslawfirm.ch;;63
+1;Heuberger;Reto;1;;Homburger AG;0;;Weinberstrasse 56/58;;338;8035;Zürich;208;26;reto.heuberger@homburger.ch;;63
+1;Heuser;Bernhard H.;1;;Bär & Karrer;0;;Brandschenkestrasse 90;;1548;8027;Zürich;208;26;b.heusser@baerkarrer.ch;;63
+1;Hodgskin;Francis;1;;Hodgskin Rechtsanwälte;0;;Tödistrasse 17;;2022;8022;Zürich;208;26;hodgskin@hdh.ch;;63
+1;Howald;Adrian F.;1;;Suter Howald Rechtsanwälte;0;;Stampfenbachstrasse 52;;572;8035;Zürich;208;26;adrian.howald@suterhowald.ch;;63
+1;Inderbitzin;Ernst;1;;Inderbitzin Rechtsanwälte;0;;Alfred Ulrich-Strasse 2;;575;8702;Zollikon-Zürich;208;26;inderbitzin@swisslegal.ch;;63
+1;Jenny;Rico;1;;Grendelmeier Jenny & Partner;0;;Zollikerstrasse 141;;;8008;Zürich;208;26;jenny@gj-partner.ch;;63
+1;Jucker;Peter;1;;;0;;Unversitätstrasse 87;;2207;8033;Zürich;208;26;ulrich-jucker@bluewin.ch;;63
+1;Kaelin;Urs. A.;1;;Arnold Wehinger Kaelin & Ferrari;0;;Riesbachstrasse 52;;;8008;Zürich;208;26;urs.kaelin@awkf.com;;63
+1;Kammermann;Urs;1;;Kammermann & Krummenacher;0;;Bellariastrasse 7;;;8027;Zürich;208;26;kammermmann@smile.ch;;63
+1;Karrer;Robert;1;;Bär & Karrer;0;;Brandschenkestrasse 90;;1548;8027;Zürich;208;26;r.karrer@baerkarrer.ch;;63
+1;Kaufmann;Stefan;1;;Künzli Kaufmann & Partner;0;;Gottfried Keller-Strasse 5;;;8024;Zürich;208;26;s.kaufmann@kkp.ch;;63
+1;Keller;Thomas Martin;1;;Eberle Kämpfen Bösiger Theiler & Partner;0;;Gerechtigkeitsgasse 23;;;8001;Zürich;208;26;keller@ekbt-law.ch;;63
+1;Kienast;Peter J.;1;;Bär & Karrer;0;;Brandschenkestrasse 90;;1548;8027;Zürich;208;26;p.kienast@baerkarrer.ch;;63
+1;Kloter;Michael R.;1;;Kloter Rechtsanwälte;0;;Rietstrasse 50;;;8702;Zollikon-Zürich;208;26;office@kloter-attorneys.ch;;63
+1;Künsler;Oliver;1;;Wenger Plattner;0;;Goldbach-Center /Seestr. 39;;;8700;Küsnacht-Zürich;208;26;oliver.kuenzler@wenger-plattner.ch;;63
+1;Künzli;Martin;1;;Künzli Kaufmann & Partner;0;;Gottfried Keller-Strasse 5;;;8024;Zürich;208;26;m.kuenzli@kkp.ch;;63
+1;Lehner;Georg R.;1;;Streichenberg Rechtsanwälte;0;;Stockerstrasse 38;;;8002;Zürich;208;26;geor.lehner@streichenberg.ch;;63
+1;Lerch;Christoph;1;;Lerch & Lerch;0;;Uraniastrasse 24;;;8001;Zürich;208;26;c.lerch@lerchlaw.com;;63
+1;Limburg;Andreas C.;1;;Limburg Law Office;0;;Limmatquai 26;;362;8024;Zürich;208;26;;;63
+1;Lorez;Marco;1;;Lorez & Sulger Büel;0;;Florastrasse 49;;;8008;Zürich;208;26;marco.lorez@lesdroits.ch;;63
+1;Luther;Markus;1;;Künzli Kaufmann & Partner;0;;Gottfried Keller-Strasse 5;;;8024;Zürich;208;26;info@kkp.ch;;63
+1;Marantelli;Adriano;1;;Meyer Lustenberger;0;;Forchstrasse 452;;1432;8032;Zürich;208;26;adriano.marantelli@ml-law.ch;;63
+2;Marenco Szabo;Tiziana;1;;CMS von Erlach Henrici;0;;Dreikönigstrasse 7;;2991;8022;Zürich;208;26;tiziana.marenco@cms-veh.com;;63
+1;Martin;Jürg;1;;Martin Rechtsanwälte;0;;Merkurstrasse 25;;;8400;Winterthur;208;26;martin@martin-ra.ch;;63
+1;Meier;Emil Robert;1;;Meier & Mayerhoffer;0;;Regensbergstrasse 3;;153;8157;Dielsdorf;208;26;;;63
+1;Meier;Walter H.;1;;;0;;Biennenstrasse 1;;;8004;Zürich;208;26;walter.h.meier@dplanet.ch;;63
+1;von Meiss;Florian;1;;Blum Rechtsanwälte;0;;Usteristrasse 14;;;8021;Zürich;208;26;f.vonmeiss@blumlegal.ch;;63
+1;Meng;Franz;1;;Meng Säuberli;0;;Nordstrasse 19;;;8006;Zürich;208;26;;;63
+1;Meroni;Rudolf;1;;Meroni & Schmid;0;;Rotfluhstrasse 67;;;8702;Zollikon-Zürich;208;26;swisslaw@email.ch;;63
+1;Mettler;Xaver;1;;;0;;Schaffhauserstrasse 9;;2119;8401;Winterthur;208;26;xaver.mettler@freesurf.ch;;63
+1;Meyer;Ferdinand;1;;Meyer Lustenberger;0;;Forchstrasse 452;;1432;8032;Zürich;208;26;ferdinand.meyer@ml-law.ch;;63
+1;Meyer;Philippe;1;;Peter Meyer Hürlimann;0;;Talstrasse 20;;;8001;Zürich;208;26;p.meyer@ch.inter.net;;63
+1;Minder;Stefan;1;;Minder & Niklaus Rechtsanwälte;0;;Zeltweg 25;;;8032;Zürich;208;26;stefan.minder@minder-niklaus.ch;;63
+1;Monge;Stefanie;1;;Blum Rechtsanwälte;0;;Usteristrasse 14;;;8021;Zürich;208;26;s.monge@blumlegal.ch;;63
+1;Moser;Peter;1;;;0;;Dorfstrasse 138;;485;8706;Meilen;208;26;;;63
+1;Müller;Peter;1;;Homburger AG;0;;Weinberstrasse 56/58;;338;8035;Zürich;208;26;peter.mueller@homburger.ch;;63
+1;Müllhaupt;Walter;1;;Müllhaupt & Partner;0;;Bellerivestrasse 67;;;8034;Zürich;208;26;mail@mpx.ch;;63
+1;Oesch;Max P.;1;;;0;;Gotthardstrasse 52;;;8002;Zürich;208;26;avo.oesch@bluewin.ch;;63
+1;Pagnamenta;Daniel;1;;Burki Rechtsanwälte;0;;Rotfluhstrasse 85;;;8702;Zollikon-Zürich;208;26;nhb@burki-law.ch;;63
+1;Papadopoulos;Dimitri;1;;Müllhaupt & Partner;0;;Bellerivestrasse 67;;;8034;Zürich;208;26;mail@mpx.ch;;63
+1;Perroulaz;Kilian;1;;Baker & McKenzie Zürich;0;;Zollikerstrasse 225;;;8034;Zürich;208;26;kilian.perroulaz@bakernet.com;;63
+1;Pinto;Jean-Philippe;1;;Arnold Wehinger Kaelin & Ferrari;0;;Riesbachstrasse 52;;;8008;Zürich;208;26;jean-philippe.pinto@awkf.com;;63
+1;Plüss;Adrian;1;;Lanter Rechtsanwälte;0;;Seefeldstrasse 19;;;8032;Zürich;208;26;plues@lanter.biz;;63
+1;Poledna;Tomas;1;;Badertscher Dörig Poledna;0;;Mühlebachstrasse 32;;769;8024;Zürich;208;26;poledna@bdp.ch;;63
+1;Pulver;J. Martin;1;;Pulver Rechtsanwälte;0;;Uraniastrasse 18;;;8001;Zürich;208;26;;;63
+2;Raewel;Dina;1;;Doggwiler Späni Dünner Raewel;0;;Stockerstrasse 38;;;8002;Zurich;208;26;d.raewel@dsdr.ch;;63
+1;Rauch;Men;1;;Rohner Rechtsanwälte;0;;Seestrasse 131;;;8027;Zürich;208;26;men.rauch@rohnerlaw.ch;;63
+1;Rickenbach;Andreas M.;1;;Rickenbach & Partner;0;;Schlossbergstrasse 22;;;8702;Zollikon-Zürich;208;26;info@rickenbach-law.ch;;63
+1;Rickenbach;Matthias W.;1;;Rickenbach & Partner;0;;Schlossbergstrasse 22;;;8702;Zollikon-Zürich;208;26;info@rickenbach-law.ch;;63
+1;Rihm;Thomas;1;;Thouvenin Rechtsanwälte;0;;Klausstrasse 33;;;8034;Zürich;208;26;t.rihm@thouvenin.ch;;63
+1;Ringger;Rolf;1;;Lorez & Sulger Büel;0;;Florastrasse 49;;;8008;Zürich;208;26;r.ringger@lesdroits.ch;;63
+1;Roh ;Stephan C.;1;;;0;;Lintheschergasse 23;;;8001;Zürich;208;26;mail@rohlaw.ch;;63
+1;Rohner;Rudolf;1;;;0;;Etzelstrasse 30;;;8038;Zürich;208;26;;;63
+1;Säuberli;Johannes;1;;Meng Säuberli;0;;Nordstrasse 19;;;8006;Zürich;208;26;;;63
+1;Schär;Daniel;1;;Meyer Lustenberger;0;;Forchstrasse 452;;452;8032;Zürich;208;26;daniel.schaer@ml-law.ch;;63
+1;Schubiger;August;1;;Reichenbach + Partner;0;;Talacker 50;;;8001;Zürich;208;26;schubiger@rplaw.ch;;63
+1;Schumacher;Walter;1;;Schumacher & Scholl;0;;Usteristrasse 19;;;8001;Zürich;208;26;schumacherscholl@bluewin.ch;;63
+1;Siffert;Rino;1;;Baker & McKenzie Zürich;0;;Zollikerstrasse 225;;;8034;Zürich;208;26;rino.siffert@bakernet.com;;63
+2;Solari Bozzi;Anne-Marie;1;;Rickenbach & Partner;0;;Schlossbergstrasse 22;;;8702;Zollikon-Zürich;208;26;info@rickenbach-law.ch;;63
+1;Sommer;Karl;1;;Künzli Kaufmann & Partner;0;;Gottfried Keller-Strasse 5;;;8024;Zürich;208;26;k.sommer@kkp.ch;;63
+1;Spörri;Beat;1;;Hartmann Müller Partner;0;;Zürichbergstrasse 66;;;8044;Zürich;208;26;spoerri@hmp.ch;;63
+1;von Sprecher;Andreas;1;;Hüppi & von Sprecher;0;;Römerhof / Klosbachstrasse 110;;;8032;Zürich;208;26;avs@interlaw.ch;;63
+1;Stieger;Felix;1;;Steuer- & Anwaltskanzlei Stieger;0;;Archstrasse 2;;2416;8401;Winterthur;208;26;felix.stieger@advostieger.ch;;63
+2;Stucki;Elisabeth;1;;Vischer;0;;Schützengasse 1;;6139;8023;Zürich;208;26;estucki@vischer.com;;63
+1;Sulger Büel;Peter;1;;Lorez & Sulger Büel;0;;Florastrasse 49;;;8008;Zürich;208;26;peter.sulger.buel@lesdroits.ch;;63
+1;Tönz;Leonhard;1;;Altenburger;0;;Seestrasse 39;;;8700;Küsnacht-Zürich;208;26;toenz@altenburger.ch;;63
+2;Voser;Nathalie;1;;Schellenberg & HaisslY;0;;Löwenstrasse 19;;6333;8023;Zürich;208;26;nathalie.voser@shlex.ch;;63
+1;Vogel;Alexander P.C.;1;;Meyer Lustenberger;0;;Forchstrasse 452;;1432;8032;Zürich;208;26;alexander.vogel@ml-law.ch;;63
+1;Walther;Michael;1;;GHR Grüninger Hunziker Roth Rechtsanwälte;0;;Bahnhofstrasse 64;;3268;8021;Zürich;208;26;michaelwalther@ghr.ch;;63
+1;Weidmann;Markus;1;;Homburger AG;0;;Weinberstrasse 56/58;;338;8035;Zürich;208;26;markus.weidmann@homburger.ch;;63
+1;Weiss;Ulrich;1;;;0;;Tösstalstrasse 23;;27;8402;Winterthur;208;26;weiss.ra@bluewin.ch;;63
+1;Weissberg;Hans;1;;Schürmann und Partner;0;;Dreikönigstrasse 7;;;8002;Zürich;208;26;hans.weissberg@splaw.ch;;63
+1;Werner;Martin;1;;Shumacher Baur Hürlimann;0;;Bahnhofplatz 9;;7676;8023;Zürich;208;26;martin.wener@sbh-law.ch;;63
+1;Wettstein;George C.;1;;;0;;Dorstrasse 116;;;8706;Meilen;208;26;georgewettstein@compuserve.com;;63
+1;Wildhaber;Christoph;1;;Streichenberg Rechtsanwälte;0;;Stockerstrasse 38;;;8002;Zürich;208;26;christoph.wildhaber@streichenberg.ch;;63
+1;Wille;Hans;1;;CMS von Erlach Henrici;0;;Dreikönigstrasse 7;;2991;8022;Zürich;208;26;hans.wille@cms-veh.com;;63
+1;Wirth;Peter E.;1;;;0;;Balderngasse 9;;2100;8022;Zürich;208;26;pewirth@wirth-law.ch;;63
+1;Wolf;Marco;1;;Wyler Wolf Luchsinger Nötzli;0;;Stadthausquai 1;;3022;8022;Zürich;208;26;wolf@wwln.ch;;63
+1;Zanetti;Livio;1;;Tappolet & Partner;0;;Asylstrasse 77;;;8032;Zürich;208;26;info@tappolet-partner.ch;;63
+1;Zemp;Thomas P.;1;;Beglinger Holenstein;0;;Utoquai 29/31;;;8008;Zürich;208;26;tzemp@beghol.ch;;63
+1;Zimmermann;Stephan;1;;Wehrli Zimmermann Bleixner & Partner;0;;Forchstrasse 2 / Kreuzplatz;;1022;8032;Zürich;208;26;wzvap@swissonline.ch;;63
+2;Zimmermann-Aesbach;Silvia;1;;Pestalozzi Lachenal Patry;0;;Löwenstrasse 1;;;8001;Zürich;208;26;silvia.zimmermann@plplaw.ch;;63
+1;Züllig;Robert;1;;Bär & Karrer;0;;Brandschenkestrasse 90;;1548;8027;Zürich;208;26;r.zuellig@baerkarrer.ch;;63
+2;Zumstein-Sala;Sonja;1;;;0;;Lägernstrasse 20;;136;8155;Niederhasli;208;26;;;63
+1;Künzle;Hans Reiner;1;;Kendris private AG;0;;Wengistrasse 1;;;8026;Zürich;208;26;n.kuenzle@kendris.com;;63
+1;Arnold;Peter B.;1;;Arnold Wehinger Kaelin & Ferrari;0;;Gotthardstrasse 3;;;6300;Zug;208;25;awkf@awkf.com;;63
+1;Bertschi;Urs;1;;;0;;Industriestrasse 22;;814;6301;Zug;208;25;bertschi.law@bluewin.ch;;63
+1;Bill;Daniel;1;;;0;;Grabenstrasse 25;;;6340;Baar;208;25;daniel.bill@ml-law.ch;;63
+1;Blöchliger;Johannes;1;;;0;;Seestrasse 9;;75;6314;Unterägeri;208;25;bloechliger@bluewin.ch;;63
+1;Brand;Jürg;1;;;0;;Bahnhofstrasse 23;;;6300;Zug;208;25;brand@bplawyers.org;;63
+1;Brandenberg;Manuel;1;;;0;;Poststrasse 9 / Pilatushof;;;6300;Zug;208;25;m.brandenberg@brandenberg-iur.ch;;63
+1;Bussmann;Beat;1;;;0;;Alpenstrasse 11 /Zugerhof;;;6304;Zug;208;25;bnk.sekretariat@bluewin.ch;;63
+1;Camenzind;Alois;1;;;0;;Hofstrasse 1a;;;6300;Zug;208;25;alois.camenzind@reichlin-hess.ch;;63
+1;Hotz;Andreas;1;;Hotz & Goldmann;0;;Dorfstrasse 16;;255;6341;Baar;208;25;a.hotz@hotzgoldmann.ch;;63
+1;Huber;Jean Baptiste;1;;;0;;Bundesplatz 6;;4315;6304;Zug;208;25;jbhuber@rahuber.ch;;63
+1;Huwyler;Andeas C.;1;;Blum & Patner;0;;Chamerstrasse 2;;4164;6304;Zug;208;25;info@blum-partner.com;;63
+1;Hübner;Peter;1;;;0;;Spielholf 6;;;6317;Oberwil b. Zug;208;25;huebnerlaw@huebner.ch;;63
+1;Häberling;George;1;;;0;;Oberwiler Kirchweg 4c;;;6300;Zug;208;25;haeberling.law@bluewin.ch;;63
+1;Meyer;Kurt L.;1;;;0;;Industriestrasse 16 / Résidence Park;;705;6301;Zug;208;25;;;63
+1;Moss;Adrian;1;;Hotz & Goldmann;0;;Dorfstrasse 16;;255;6301;Zug;208;25;a.moos@hotzgoldmann.ch;;63
+1;Moser;Marco;1;;;0;;Hänibüel 8;;457;6301;Zug;208;25;;;63
+1;Nützi;Patrick;1;;;0;;Grabenstrasse 42;;;6301;Zug;208;25;nuetzi@nuetzi-law.ch;;63
+1;Rudolf;Andreas K.;1;;Weidmann & Rudolf;0;;Bundesplatz 16;;4747;6304;Zug;208;25;a.rudolf@weidmann-lawzug.ch;;63
+1;Schweiger;Rolf;1;;Schweiger Advokatur / Notariat;0;;Dammstrasse 19;;;6300;Zug;208;25;;;63
+1;Sidler;Oliver;1;;Fäassler Siddler Dehmer Zgraggen;0;;Artherstrasse 23a;;;6300;Zug;208;25;sidler@fsdz.ch;;63
+1;Straub;Christoph;1;;;0;;Hänibüel 8;;457;6301;Zug;208;25;;;63
+1;Stuber;Hans;1;;Froriep Renggli;0;;Grafenaustrasse 5;;4361;6304;Zug;208;25;hstuber@froriep.ch;;63
+1;Ulrich;Thomas;1;;;0;;Rosenweg 3;;;6340;Baar;208;25;ulrich@ulrich-advokatur.ch;;63
+1;Bazzi;Mario;1;;;0;;Via Baraggie 15;;969;6612;Ascona;208;20;avv.bazzi@ticino.com;;63
+2;Corti-Pagani;Barbara;1;;Studio legale Roberto Macconi;0;;Via Ginevra 5;;6147;6901;Lugano;208;20;roberto-macconi@ticino.com;;63
+1;Will;Stefano;1;;Will-Rossini;0;;Via Lavizzari 3;;3526;6901;Lugano;208;20;will-rossini@ticino.com;;63
+1;Camponovo;Stefano;1;;;0;;Corso S. Gottardo 35 ;;2652;6830;Chiasso;208;20;studio@legale.ch;;63
+1;Crivelli;Aldo;1;;Studio legale Aldo e Annemarie Crivelli;0;;Via Motta 19;;5383;6901;Lugano;208;20;a.crivelli@ticino.com;;63
+1;Ottaviani;Fabrizio;1;;;0;;Via al Forte 3;;6215;6901;Lugano;208;20;studion.legale@ottaviani.ch;;63
+1;Bersani;Andrea;1;;Studio legale Bersani & Schiavi;0;;Viale Stazione 11;;1845;6501;Bellinzona;208;20;;;63
+2;Vassalli Zorzi;Louisa;1;;;0;;Piazza del Ponte 9;;;6826;Riva San Vitale;208;20;ivassallizorzi@swissonline.ch;;63
+1;Ferrari;Andrea;1;;Studio legale Ferrari - Ferrari;0;;Palazzo Kondo;;161;6950;Tesserete;208;20;;;63
+2;Mariotti;Sinikka;1;;Studio legale Vittorio Mariotti;0;;Vias Marcacci/via Bacilieri 6;;642;6601;Locarno;208;20;;;63
+1;Quattropani;Samuele;1;;;0;;Via Luvini 4;;5490;6901;Lugano;208;20;samquattro@bluewin.ch;;63
+1;Henauer;Alexander;1;;;0;;Piazza Indipendenza 1;;2120;6830;Chiasso;208;20;avvalexander@henauernotaio.ch;;63
+2;Ammann Bonfanti;Claudia;1;;Studio legale Bonfanti & Ammann;0;;Via Orelli 19;;413;6601;Locarno;208;20;;;63
+1;Guidicelli;Renato;1;;Guidicelli & Associati;0;;Corso Elvezia 23;;5713;6901;Lugano;208;20;office@guidicelli.ch;;63
+1;Ferrazzini;Andrea;1;;;0;;Via Pelli 13;;;6901;Lugano;208;20;andrea-ferrazzini@bluewin.ch;;63
+1;Marzorini;Oviedo;1;;Studio legale Marzorini & Canevascini;0;;Via Sempione 8;;331;6602;Muralto;208;20;;;63
+1;Scacchi;Diego;1;;;0;;Via della Pace 5;;;6601;Locarno;208;20;legalnotarilescachi@freesurf.ch;;63
+1;Probst;Gastone;1;;Studio legale Probst & Pozzoli;0;;Via Dufour 2;;6259;6901;Lugano;208;20;avv.probst.pozzoli@ticino.com;;63
+1;Mondia;Giorgio;1;;;0;;Corso S. Gottardo 35 ;;1735;6830;Chiasso;208;20;avvocati.bmp@bluewin.ch;;63
+1;Padina;Gabriele;1;;;0;;Via Lavizzari 19 a;;;6850;Mendrisio;208;20;;;63
+1;Cattaneo;Gianni;1;;Studio legale Cattaneo & Postizzi;0;;Via Bossi 1;;5397;6901;Lugano;208;20;avcapost@ticino.com;;63
+2;Casella Capelli;Mara;1;;;0;;In Arla 8A;;230;6528;Camorino;208;20;mara.casella@bluemail.ch;;63
+2;Fumagalli;Anna;1;;Studio legale Jelmini;0;;Via Lambertenghi 1;;5779;6901;Lugano;208;20;studiojelmini@bluewin.ch;;63
+2;Nicora;Francesca;1;;Studio legale Merlini e Nicora;0;;Via San Gottardo 56;;;6648;Minusio;208;20;legal@merlini-nicora.ch;;63
+1;Berta;Alfredo;1;;;0;;Via Leoncavallo 1;;246;6614;Brissago;208;20;alfredo.berta@bluewin.ch;;63
+1;Allidi;Aldo;1;;;0;;Via Monte Verità 1;;993;6612;Ascona;208;20;allidistudio@bluewin.ch;;63
+1;Gelmini;Angelo;1;;Sulser & Jelmini;0;;Piazza Molino Nuovo 8;;5747;6901;Lugano;208;20;sulser.jelmini@ticino.com;;63
+1;Falconi;Giogio;1;;;0;;Piazza Cioccaro 4;;2541;6900;Lugano;208;20;giorgiofalconi@gmail.ch;;63
+2;Camponovo Zoppi;Elena;1;;Studio legale Airaghi;0;;Via Ariosto 1;;6439;6901;Lugano;208;20;info@studioairaghi.ch;;63
+1;Pozzoli;Rodolfo;1;;Studio legale Probst & Pozzoli;0;;Via Dufour 2;;6259;6901;Lugano;208;20;avv.probst.pozzoli@ticino.com;;63
+1;Peucchi;Nicola;1;;Studio legale Perucchi & Baggi;0;;via Rerruccio Pelli 9;;6263;6901;Lugano;208;20;;;63
+1;Crespi;Giancarlo;1;;Studio legale Crespi;0;;viale Officina 6;;1068;6501;Bellinzona;208;20;;;63
+1;Nicora;Massimo;1;;Wuthier Regazzi Märki Speziali;0;;Via Luini 18;;640;6601;Locarno;208;20;;;63
+2;Ferrai-Testa;Michela;1;;Studio legale Ferrari - Ferrari;0;;Palazzo Kondo;;161;6950;Tesserete;208;20;;;63
+2;Biaggi-Fabio;Flaviana;1;;Studio legale Belossi-Blotti-Fabio;0;;Via A. Giovannini 16;;1545;6710;Biasca;208;20;;;63
+1;Sutter;Ulisse;1;;;0;;Via Ariosto 6;;6458;6901;Lugano;208;20;ulisse_sutter@bluewin.ch;;63
+1;Pescia;Alessandro;1;;Gaggini & Partners;0;;Via Somaini 10 / Via P. Luchini;;6412;6901;Lugano;208;20;;;63
+2;Tramèr Scolari;Lucia;1;;;0;;Via Castelrotto 15;;727;6601;Locarno;208;20;studio@trascolegal.ch;;63
+1;Bianchi;Emilio;1;;Studio legale Bianchi;0;;Via Nassa 60;;5178;6901;Lugano;208;20;info@studiobianchi.net;;63
+1;Calvarese;Daniele;1;;Studio legale Simonetti Calvarese Naef;0;;Vias Nass 21;;5376;6901;Lugano;208;20;;;63
+2;Remondi;Cristina;1;;;0;;Via Sottomontagne 17a;;;6512;Giubiasco;208;20;;;63
+1;Jermini;Cesare;1;;Studio legale Bär & Karrer;0;;Via Vegezzi 6;;;6901;Lugano;208;20;;;63
+1;Badaracco;Roberto;1;;;0;;Corso Elvezia 8;;5244;6901;Lugano;208;20;Badaracco@ticino.com;;63
+2;Allidi-Cavalleri;Consuelo;1;;;0;;Via alla Ramogna 14;;424;6601;Locarno;208;20;;;63
+1;Molo;Mauro;1;;Studio legale Molo & Collenberg;0;;Via degli Oliva 2/Via Nassa;;6098;6901;Lugano;208;20;mmolo@bluewin.ch;;63
+1;Colucci;Fabrizio;1;;Studio legale Monti;0;;Via Trevano 2;;4321;6904;Lugano;208;20;;;63
+2;Agustoni;Emanuela;1;;;0;;Via Zurigo 5;;5099;6901;Lugano;208;20;legalAgustoni@ticino.com;;63
+1;Fornara;Lorenzo;1;;;0;;Viale S. Franscini 17;;4227;6904;Lugano;208;20;info@lorenzofornara.ch;;63
+2;Ghilardotti;Debora;1;;Studio legale Masoni-Fontana;0;;Via. C. Frasca 10;;6116;6901;Lugano;208;20;;;63
+1;Filippo Monaci;Fabrizio;1;;Celio-Kraushaar, Falfetti, Manetti, Monaci;0;;Piazza Teatro 1;;1857;6501;Bellinzona;208;20;;;63
+2;Snider;Francesca;1;;;0;;Via Trevani 1;;433;6601;Locarno;208;20;avv.snider@bluewin.ch;;63
+1;Brivio;Nicola;1;;Brivio & Brivio;0;;Via Curti 19;;5158;6901;Lugano;208;20;info@studiobrivio.ch;;63
+1;Marchi;Paolo;1;;;0;;Piazza Collegiata/Salita S. Michele 2;;;6501;Bellinzona;208;20;avvmarchi@yahoo.it;;63
+1;Mariotti;Vittorio;1;;;0;;Via Marcacci/Via Bacilieri 6;;642;6601;Locarno;208;20;;;63
+1;Pestelacci;Silvio;1;;;0;;Corso S. Gottardo 35 ;;1531;6830;Chiasso;208;20;studio@legale.ch;;63
+1;Wuthier;Ivo;1;;Wuthier Regazzi Märki Speziali;0;;Via Luini 18;;640;6601;Locarno;208;20;;;63
+1;Mombelli;Egidio;1;;;0;;Via Motta 10;;1742;6830;Chiasso;208;20;;;63
+1;Ravi;Yasar;1;;Studio legale De Polo & Ravi;0;;Via Soldino 22;;138;6903;Lugano-Besso;208;20;yasarravi@hotmail.com;;63
+2;Martinola Pons;Ginetta;1;;;0;;Via Pelli 13;;6093;6901;Lugano;208;20;;;63
+2;Bindella;Fiamma;1;;;0;;Via Bossi 6;;5226;6901;Lugano;208;20;fiamma.bindella@freesurf.ch;;63
+2;Jorio Colombo;Alessandra;1;;Studio legale Jorio;0;;Viale Officina 6;;1020;6501;Bellinzona;208;20;jorio.colombo@bconsult.ch;;63
+2;Weibel;Rosemarie;1;;;0;;Via Pioda 12;;6262;6901;Lugano;208;20;;;63
+2;Conca Soldati;Claudia;1;;;0;;Via Casserinetta 23;;59;6907;Lugano;208;20;cconcasoldati@buewin.ch;;63
+1;Manetti;Stefano;1;;Celio-Kraushaar, Falfetti, Manetti, Monaci;0;;Piazza Teatro 1;;1857;6501;Lugano;208;20;;;63
+1;Molo;Giovanni;1;;Studio legale Bolla Bonzanigo & Associati;0;;Via G.B. Pioda 5;;5202;6901;Lugano;208;20;info@bollabonzanigo.ch;;63
+2;Solcà;Deborah;1;;Studio legale Grassi - Quadranti;0;;Via Livio 14;;2241;6830;Chiasso;208;20;;;63
+2;Canepa Meuli;Giovanna;1;;;0;;via Piraree;;345;6805;Mezzovico-Vira;208;20;g.canepameuli@bluewin.ch;;63
+1;Giudici;Andrea;1;;Studio legale Giudici-Merlini;0;;Via V. Vela 8;;1044;6601;Locarno;208;20;legal@giudici.merlini.ch;;63
+1;Agustoni;Alberto;1;;;0;;Viale Stazione 2;;1017;6501;Bellinzona;208;20;;;63
+1;Crespi;Pietro;1;;;0;;viale Officina 6;;1068;6501;Bellinzona;208;20;;;63
+2;Sartori-Lombardi;Monica;1;;Studio legale Fontana & Sartori-Lombardi;0;;Piazza S. Franscini;;1032;6760;Faldo;208;20;;;63
+1;Facchi;Aurelio;1;;Studio legale Bernasconi-Facchi;0;;Salita Carlo Bossoli 8;;144;6903;Lugano;208;20;;;63
+2;Speziali;Carla;1;;Wuthier Regazzi Märki Speziali;0;;Via Luini 18;;640;6601;Locarno;208;20;;;63
+2;Masoni Brenni;Giovanna;1;;Studio legale Masoni-Fontana;0;;Via C. Frasca 10;;6116;6901;Lugano;208;20;;;63
+1;Masoni;Franco;1;;Studio legale Masoni-Fontana;0;;Via C. Frasca 10;;6116;6901;Lugano;208;20;;;63
+1;Casagrande;Carlo;1;;;0;;Via Dufour 4;;;6900;Lugano;208;20;;;63
+1;Gilardi;Michele;1;;;0;;Via Stazione9/Palazzo Pax;;336;6602;Muralto;208;20;;;63
+1;De Polo;Eero;1;;Studio legale De Polo & Ravi;0;;Via Soldino 22;;138;6903;Lugano-Besso;208;20;;;63
+2;Garbani Nerini;Samantha;1;;Studio legale Simonetti Calvarese Naef;0;;Via Nassa 21;;5376;6901;Lugano;208;20;;;63
+1;Susin;Alain;1;;;0;;Via Serafino Balestra 7;;6436;6901;Lugano;208;20;alainsusin@freesurf.ch;;63
+1;Molina;Gianluca;1;;Studio legale Guglielmetti e Molina;0;;Via Beroldingen 8;;;6850;Mendrisio;208;20;legalguglielmettimolina@bluewind.ch ;;63
+1;Martignoni;Brenno;1;;;0;;Piazza Indipendenza 7;;1853;6501;Bellinzona;208;20;brema@adhoc.ch;;63
+1;Stalder;Sandro F.;1;;Studio legale Stadle - Cattaneo;0;;Corso S. Gottardo 35 ;;1342;6830;Chiasso;208;20;;;63
+2;Polti;Stefania;1;;;0;;Piazza Indipendenza 2;;1846;6501;Bellinzona;208;20;;;63
+1;Pezzati;Fulvio;1;;;0;;Via Soldino 22;;218;6903;Lugano;208;20;fulvio.pezzati@swissonline.ch;;63
+1;Moghini;Giovanni;1;;;0;;Via S. Balestra 27;;;6900;Lugano;208;20;avv.giavanni.moghini@freesurf.ch;;63
+1;Mariotta;Alfredo;1;;;0;;Via Cattedrale 4;;;6900;Lugano;208;20;alfredomariotta@bluewin.ch;;63
+1;Cotti;Fiorenzo;1;;;0;;Largo Zorzi 12;;1161;6600;Locarno;208;20;;;63
+1;Brenni Masoni;Paolo;1;;Studio legale Masoni-Fontana;0;;Via C. Frasca 10;;6116;6901;Lugano;208;20;;;63
+1;Ferrari;Olivier;1;;;0;;Via S. Balestra 18;;5596;6901;Lugano;208;20;avv.ferrari@bluewin.ch;;63
+1;Castelli;Constatino;1;;Studio legale Simonetti Calvarese Naef;0;;Via Nassa 21;;5376;6901;Lugano;208;20;;;63
+1;Felice Barchi;Pier;1;;Studio legale Barchi et Associati;0;;Via S. Balestra 17;;5269;6901;Lugano;208;20;barchieassociati@ticino.com;;63
+1;Bianchi;Manuele;1;;;0;;Piazza cioccaro 4;;5602;6901;Lugano;208;20;manuele.bianchi@aferrini.com;;63
+1;Barchi;Fausto;1;;;0;;Via Grenia 2;;5234;6901;Lugano;208;20;fausto.barchi@netxp.ch;;63
+1;Brunetti;Elio;1;;;0;;Via Curti 19;;5158;6901;Lugano;208;20;;;63
+1;Pellegrini;Sebastiano;1;;Rossi - Pellegrini;0;;Via Noseda 2;;101;6850;Mendrisio;208;20;;;63
+1;Märki;Marco;1;;Wuthier Regazzi Märki Speziali;0;;Via Luini 18;;640;6601;Locarno;208;20;;;63
+2;Simona Dauchy;Barbara;1;;;0;;Via Ballerini 11;;820;6601;Locarno;208;20;;;63
+1;Bernardoni;Plinio;1;;;0;;Via Cantonale 6;;5267;6901;Lugano;208;20;p.bernardoni@bluewin.ch;;63
+2;Vernasconi;Flavia;1;;;0;;Via Officina 6;;1068;6501;Bellinzona;208;20;;;63
+1;Guglielmoni;Nadir;1;;Studio legale Guglielmoni Sala Nacaroglu;0;;Via Pretorio 9;;6427;6901;Lugano;208;20;info@gsnlegal.com;;63
+1;Pagani;Luca;1;;;0;;Piazza Col. Bernasconi 5;;1546;6830;Chiasso;208;20;;;63
+1;Bernasconi;Fabio;1;;;0;;Corso S. Gottardo 35 ;;2842;6830;Chiasso;208;20;studio@legale.ch;;63
+1;Rossi;Matteo;1;;Rossi - Pellegrini;0;;Via Noseda 2;;101;6850;Mendrisio;208;20;;;63
+1;Allidi;Luca;1;;;0;;Via Monte Verità 1;;993;6612;Ascona;208;20;allidistudio@bluewin.ch;;63
+2;De Palatis Keller;Luisa;1;;;0;;Via Bossi 4;;2542;6830;Chiasso;208;20;depalatiskeller@bluewin.ch;;63
+1;Untersee;Patrick;1;;;0;;Corso Pestalozzi 21 b;;6362;6901;Lugano;208;20;untersee.patrick@bluewin.ch;;63
+2;Bianchi;Eugenia;1;;;0;;Via Nassa 60;;5178;6901;Lugano;208;20;info@studiobianchi.net;;63
+2;Leoncini;Daniela;1;;Gaggini & Partners;0;;Via Somaini 10 / Via P. Luchini;;6412;6901;Lugano;208;20;;;63
+2;Allidi;Rachele;1;;;0;;Via Monte Verità 1;;993;6612;Ascona;208;20;allidistudio@bluewin.ch;;63
+1;Mecca;Athos;1;;Fiori - von Siebenthal & Mecca;0;;Via Trevani 1 A;;1147;6601;Locarno;208;20;;;63
+1;Beltrami;Gianfrancesco;1;;;0;;Viale Papio 8 - Palazzo Otello;;916;6612;Ascona;208;20;Studiolegale@beltrami.ch;;63
+1;Delogu;Costantino;1;;;0;;Via Lambertenghi 1;;5779;6901;Lugano;208;20;studiojelmini@bluewin.ch;;63
+1;Nacaroglu;Rupen;1;;Studio legale Guglielmoni Sala Nacaroglu;0;;Via Pretorio 9;;6427;6901;Lugano;208;20;info@gsnlegal.com;;63
+1;Affolter;Christof;1;;;0;;Via Lucchini 8 A;;;6900;Lugano;208;20;achristof@freesurf.ch ;;63
+1;Cavalli;Corrado;1;;;0;;Via Orelli 19;;332;6601;Locarno;208;20;avv.cavalli@mkko.ch;;63
+1;Bucher;Benno;1;;THOMANNFISCHER;0;;Elisabethenstrasse 30;;;4010;Basel;208;5;;;63
+2;Bur Bürgin;Franziska;1;;Vischer;0;;Aeschenvorstadt 4;;526;4010;Basel;208;5;;;63
+1;Dillier;Daniel;1;;Vischer;0;;Aeschenvorstadt 4;;526;4010;Basel;208;5;;;63
+1;Dueggelin;Martin;1;;Vischer;0;;Aeschenvorstadt 4;;526;4010;Basel;208;5;;;63
+1;Eulau;Peter H.;1;;Eulau Kaufmann Giavarini & Recher;0;;Marktplatz 18;;;4001;Basel;208;5;;;63
+1;Fischer;Alex;1;;THOMANNFISCHER;0;;Elisabethenstrasse 30;;;4010;Basel;208;5;;;63
+1;Gfeller;Rudolf;1;;Christen Rickli Partner;0;;Hirschgaesslein 11;;257;4051;Basel;208;5;;;63
+1;Giavarini;Marco;1;;Eulau Kaufmann Giavarini & Recher;0;;Marktplatz 18;;;4001;Basel;208;5;;;63
+1;Hentz;Thomas;1;;Christen Rickli Partner;0;;Hirschgaesslein 11;;257;4051;Basel;208;5;;;63
+1;Krayer;Emmanuel;1;;Stieger Schlager & Partners;0;;Hirschgaesslein 30;;558;4010;Basel;208;5;;;63
+1;Ludwig;Hubertus;1;;Vischer;0;;Aeschenvorstadt 4;;526;4010;Basel;208;5;;;63
+2;Mounier-Schacher;Astrid;1;;Christen Rickli Partner;0;;Hirschgaesslein 11;;257;4051;Basel;208;5;;;63
+1;Müller;Guido;1;;Vischer;0;;Aeschenvorstadt 4;;526;4010;Basel;208;5;;;63
+1;Pfeifer;Michael;1;;Vischer;0;;Aeschenvorstadt 4;;526;4010;Basel;208;5;;;63
+1;Recher;Peter;1;;Eulau Kaufmann Giavarini & Recher;0;;Marktplatz 18;;;4001;Basel;208;5;;;63
+1;Rickli;Peter;1;;Christen Rickli Partner;0;;Hirschgaesslein 11;;257;4051;Basel;208;5;;;63
+1;Schiess;Niklaus E.;1;;Vischer;0;;Aeschenvorstadt 4;;526;4010;Basel;208;5;;;63
+1;Schmid;Gerhard;1;;Wenger Plattner;0;;Aeschenvorstadt 55;;;4051;Basel;208;5;;;63
+1;Stadlin;Markus W.;1;;THOMANNFISCHER;0;;Elisabethenstrasse 30;;;4010;Basel;208;5;;;63
+1;Staehelin;Thomas;1;;Fromer, Schultheiss and Staehelin;0;;St. Jakobs-Strasse 7;;2879;4052;Basel;208;5;;;63
+2;Tarolli;Nadia;1;;Vischer;0;;Aeschenvorstadt 4;;526;4010;Basel;208;5;;;63
+1;Thoenen;Gert;1;;Lenz Caemmerer;0;;Elisabethenstrasse 15;;;4051;Basel;208;5;;;63
+1;Vischer;Ueli;1;;Vischer;0;;Aeschenvorstadt 4;;526;4010;Basel;208;5;;;63
+1;Wüthrich;Rolf;1;;Vischer;0;;Aeschenvorstadt 4;;526;4010;Basel;208;5;;;63
+1;Ziegler;Thomas;1;;Vischer;0;;Aeschenvorstadt 4;;526;4010;Basel;208;5;;;63
+4;Administration cantonale des impôts;;;;Division juridique et législative;0;;Route de Berne 46;;;1010;Lausanne;208;24;;;63
+4;Administration fiscale cantonale;;;;Division juridique;0;;26, rue du Stand;Hôtel des finances;3937;1211;Genève 3;208;8;;;63
+4;Service des contributions;;;;Division juridique;0;;Rue du Docteur-Coullery 5;;;2300;La Chaux-de-Fonds;208;13;;;63
+4;Service cantonal des contributions;;;;Division juridique;0;;Avenue de la Gare 35;Bâtiment Planta 577;;1951;Sion;208;23;;;63
+4;Kantonales Steueramt;;;;Juristische Abteilung;0;;Telli-Hochhaus;;;5004;Aarau;208;3;;;63
+4;Kantonale Steuerverwaltung;;;;Juristische Abteilung;0;;Regierungsgebäude;;;9102;Herisau;208;1;;;63
+4;Kantonale Steuerverwaltung;;;;Juristische Abteilung;0;;Marktgasse 2,;;;9050;Appenzell;208;2;;;63
+4;Kantonale Steuerverwaltung;;;;Juristische Abteilung;0;;Fischmarkt 10;;;4001;Basel;208;5;;;63
+4;Kantonale Steuerverwaltung;;;;Juristische Abteilung;0;;Rheinstrasse 33;;;4410;Liestal;208;4;;;63
+4;Kantonale Steuerverwaltung;;;;Juristische Abteilung;0;;;;8334;3001;Bern;208;6;;;63
+4;Service cantonal des contributions;;;;Division juridique;0;;Rue Joseph-Piller 13;;3937;1701;Fribourg;208;7;;;63
+4;Service des contributions;;;;Division juridique;0;;Rue de la Justice 2;;;2800;Delémont;208;11;;;63
+4;Kantonale Steuerverwaltung;;;;Juristische Abteilung;0;;Steinbruchstrasse 18;;;7000;Chur;208;10;;;63
+4;Kantonale Steuerverwaltung;;;;Juristische Abteilung;0;;Buobenmatt 1;;3464;6022;Luzern;208;12;;;63
+4;Kantonale Steuerverwaltung;;;;Juristische Abteilung;0;;Bahnhofplatz 3;;;6371;Stans;208;14;;;63
+4;Kantonale Steuerverwaltung;;;;Juristische Abteilung;0;;St. Antonistrasse 4;;;6061;Sarnen;208;15;;;63
+4;Kantonale Steuerverwaltung;;;;Juristische Abteilung;0;;J.J. Wepfer-Strasse 6;;;8200;Schaffhausen;208;16;;;63
+4;Kantonale Steuerverwaltung;;;;Juristische Abteilung;0;;Bahnhofstrasse 15;;1230;6341;Schwyz;208;17;;;63
+4;Kantonale Steuerverwaltung;;;;Juristische Abteilung;0;;Werkhofstrasse 29c;Schanzmühle ;;4509;Solothurn;208;18;;;63
+4;Kantonale Steuerverwaltung;;;;Juristische Abteilung;0;;Davidstrasse 41;;1245;9001;St. Gallen;208;19;;;63
+4;Kantonale Steuerverwaltung;;;;Juristische Abteilung;0;;Schossmühlestrasse 15;;;8510;Frauenfeld;208;21;;;63
+4;Divisione delle contribuzioni;;;;Ufficio giuridico;0;;Viale S. Franscini 6;;;6501;Bellinzona;208;20;;;63
+4;Kantonale Steuerverwaltung;;;;Juristische Abteilung;0;;Haus Winterberg;;;6460;Altdorf;208;22;;;63
+4;Kantonale Steuerverwaltung;;;;Juristische Abteilung;0;;Bahnhofstrasse 26;;;6301;Zug;208;25;;;63
+4;Kantonale Steuerverwaltung;;;;Juristische Abteilung;0;;Bändliweg 21;;;8090;Zürich;208;26;;;63
+4;Kantonale Steuerverwaltung;;;;Juristische Abteilung;0;;Hauptstrasse 11/17;;;8750;Glarus;208;9;;;63
+4;Tribunal fédéral suisse;;;;;0;;Avenue du Tribunal fédéral 29;;;1000;Lausanne 14;208;24;;;63

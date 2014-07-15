@@ -1,11 +1,11 @@
 <?php
 
 use Carbon\Carbon;
-use File as File;
-use Civilites as Civilites;
-use Cantons as Cantons;
-use Professions as Professions;
-use Pays as Pays;
+use Droit\Event\Entities\Event_files as File;
+use Droit\User\Entities\Civilites as Civilites;
+use Droit\User\Entities\Cantons as Cantons;
+use Droit\User\Entities\Professions as Professions;
+use Droit\User\Entities\Pays as Pays;
 
 class Custom {
 

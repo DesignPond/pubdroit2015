@@ -1,0 +1,662 @@
+$primary-red: #cb2629;
+
+/* ===== Primary Styles =====================================================
+   Bail
+   ========================================================================== */
+   
+body{
+	background: #cccccc;
+}
+
+img{
+	max-width: 100%;
+}
+
+h1,h2,h3,h4,h5{
+	margin: 0 0 10px 0;
+}
+
+h3{
+	font-size: 0.9em;
+	font-weight: bold;
+}
+
+h4{
+	font-size: 0.8em;
+	font-weight: bold;
+}
+
+h5{
+	font-size: 0.75em;
+	font-weight: bold;
+}
+
+a, a:hover, a:active, a:visited{
+	color: $primary-red;
+    text-decoration: none;
+}
+
+p{
+	font-size: 12px;
+	line-height: 18px;
+}
+
+button.alert:hover, button.alert:focus, .button.alert:hover, .button.alert:focus {
+    background-color: #c02326; 
+}
+
+/*======================================
+	Main Blocks
+=======================================*/
+
+#main{
+	background: #b2b2b2 url("../../images/bail/head_bg2.png") repeat-y; /* Old browsers */
+}
+
+
+#header{
+	background: #fff;
+	height: 86px;
+}
+
+#breadcrumbs, #breadcrumbs a{
+	color: #fff;
+	font-size: 12px;
+}
+
+	#header h1{
+		font-size: 20px;
+		margin-top: 15px;
+	}
+
+.clear:after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+footer{
+	text-align: center;
+	font-size: 12px;
+	line-height: 16px;
+	margin-top: 20px;
+	color: #fff;
+	position: absolute;
+	bottom: 0;
+	width: 769px;
+}
+	footer a{
+		color: #fff;
+	}
+
+.header{
+	height: 86px;
+}
+
+.colorSection{
+	height: 35px;
+	line-height: 24px;
+}
+
+
+.min-inner{
+	margin: 0;
+	padding: 5px 15px;
+}
+
+.homepageBlock p{
+	text-align: justify;
+}
+
+
+.colorBlock{
+    background: $primary-red;
+}
+
+	.colorBlock h4{
+	    margin-top: 5px;
+	}
+	
+	.colorBlock h4,.colorBlock a,.colorBlock p{
+	    color: #fff;
+	    text-align: left;
+	}
+	
+	.colorBlock p{
+		color:#f5c8c8;
+	}
+	
+/*======================================
+	Search
+=======================================*/
+
+.searchform
+{
+	position: relative;
+	margin-bottom: 0;
+}
+
+.searchform input[type="text"]{
+    border-radius: 5px;
+    height: 25px;
+    margin-bottom: 0;
+    padding: 0;
+    position: relative;
+    text-indent: 5px;
+    z-index: 1;
+    color: #999999;
+}
+
+.searchform input[type="submit"]{
+	position: absolute;
+	border: none;
+	background: url("../../images/bail/search_btn.png") 1px 3px no-repeat;
+	text-indent: -999px;
+	right: 1px;
+	top: 1px;
+	z-index: 10;
+	height: 25px;
+	width: 28px;
+}
+
+.searchform input[type="submit"]:hover{
+	background: url("../../images/bail/search_btn.png") 1px 3px no-repeat;
+}
+
+/*======================================
+	Navigation
+=======================================*/
+
+#menu-principal{
+	line-height: 70px;
+} 
+ 
+#menu-principal > a{
+	display: inline-block;
+	padding: 0 5px;
+	margin-top: 10px;
+	font-size: 14px;
+	color: #000;
+} 
+
+#menu-principal > a:hover,#menu-principal > a.active{
+	color: $primary-red;
+} 
+
+#menu-principal > a:after{
+	content: "|";
+	padding: 0 0 0 15px;
+} 
+
+#menu-principal a.noborder:after{
+	border: none;
+	content: "";
+	padding: 0;
+}
+
+/*======================================
+	Sidebar
+=======================================*/
+
+h3.link{
+	margin-bottom: 0;
+}
+
+.searchBg{
+	background:$primary-red url("../../images/bail/search_bg.png") repeat-y;	
+}
+
+.blockTitle{
+	color: #fff;
+	font-size: 12px;
+	font-weight: bold;
+	font-style: italic;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	background:$primary-red url("../../images/bail/search_bg.png") repeat-y;
+}
+
+a.newsletterLink:hover{
+	color: $primary-red;
+}
+
+.newsletterLink{
+    color: #000;
+    border-bottom: 1px solid $primary-red;
+    font-size: 12px;
+    font-weight: normal;
+    font-style: italic;
+    padding: 5px 0;
+    margin-right: 5px;
+    display: block;
+    background: url("../../images/bail/right_close.png") center right no-repeat;
+}
+
+.toggleActive{
+    background: url("../../images/bail/right_open.png") center right no-repeat;
+    font-weight: bold;
+    color: #000;
+}
+
+.toggleNewsletter{
+	padding: 5px 10px;
+	font-size: 11px;
+	line-height: 13px;
+}
+
+.toggleNewsletter ul{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.toggleNewsletter ul li{
+	line-height: 18px;
+}
+
+.toggleNewsletter ul li a{
+	color: #000;
+	font-size: 12px;
+	line-height: 18px;
+}
+
+
+.toggleNewsletter ul li a:hover{
+	color: $primary-red;
+}
+
+.calculator, .calculator p, .calculator label{
+	font-size: 11px;
+}
+
+.calculator label{
+	margin-top: 15px;
+}
+
+.calculator form, .calculator form .tiny{
+	margin-bottom: 0;
+}
+
+.autorite-canton{
+	text-align: center;
+}
+
+/******************************************************
+* RIGHT
+******************************************************/
+
+.ui-corner-all, .ui-corner-bottom, .ui-corner-right, .ui-corner-br {
+    border-bottom-right-radius: 0;
+}
+.ui-corner-all, .ui-corner-bottom, .ui-corner-left, .ui-corner-bl {
+    border-bottom-left-radius: 0;
+}
+.ui-corner-all, .ui-corner-top, .ui-corner-right, .ui-corner-tr {
+    border-top-right-radius: 0;
+}
+.ui-corner-all, .ui-corner-top, .ui-corner-left, .ui-corner-tl {
+    border-top-left-radius: 0;
+}
+
+#rightmenu {
+	min-height: 190px;
+	padding: 15px 15px;
+}
+#rightmenu a {
+	display: block;
+	color: #000;
+	text-decoration: none;
+}
+
+#rightmenu  .ui-widget-content {
+    background: none;
+    border: none;
+    color: #222222;
+}
+
+#rightmenu h4 a {
+	font-style: italic;
+	font-size: 13px;
+	margin-bottom: 3px;
+}
+
+.ui-accordion .ui-accordion-header .ui-accordion-header-icon {
+    background: none;
+}
+
+#rightmenu a:hover {
+	color: #CB2629;
+	text-decoration: none;
+}
+#rightmenu h4 {
+	background: url(../../images/bail/right_close.png) 100% 7px no-repeat;
+	border: none;
+	border-bottom: 1px solid #CB2629;
+	display: block;
+	margin: 0 0 12px;
+	padding: 0;
+	font-size: 12px;
+	line-height: 15px;
+	font-weight: normal;
+	text-decoration: none;
+	color: #000;
+}
+#rightmenu h4:last-child {
+  margin-bottom: 0;
+}
+#rightmenu h4.accordion {
+	background: url(../../images/bail/right_close.png) 100% 7px no-repeat;
+	color: #fff;
+	display: block;
+	text-decoration: none;
+	padding: 0;
+}
+#rightmenu h4.accordion.active {
+	font-weight: bold;
+	background: url(../../images/bail/right_open.png) 100% 7px no-repeat;
+}
+
+#rightmenu h4 a,
+#rightmenu h4 span.a {
+	padding: 3px 0;
+}
+
+#rightmenu ul.menu {
+	margin: 0;
+	padding: 0 10px 20px;
+	list-style: none;
+}
+#rightmenu ul.menu li {
+	margin: 0 ;
+	font-size: 13px;
+}
+#rightmenu ul.menu li a.act {
+  color: #CB2629;
+}
+
+#rightmenu ul.menu2col1,
+#rightmenu ul.menu2col2 {
+	float: left;
+	width: 80px;
+	margin: 0;
+	padding: 0 10px 20px;
+	list-style: none;
+}
+#rightmenu ul.menu2col1 li,
+#rightmenu ul.menu2col2 li {
+	margin: 0 0 3px;
+}
+#rightmenu ul.menu2col1 li a.act,
+#rightmenu ul.menu2col2 li a.act {
+  color: #CB2629;
+}
+
+
+#right .box {
+	margin: 0px 20px 32px;
+}
+
+#right .box h4 {
+	position: relative;
+	left: -20px;
+	width: 215px;
+	display: block;
+	margin: 0;
+	height: 25px;
+	padding: 11px 20px 2px;
+	background: #CB2629 url('../images/search_bg.png') 0 0 repeat-y;
+	font-size: 13px;
+	font-weight: bold;
+	color: #fff;
+	border: 0;
+}
+
+/*** special soutien ***/
+#right .soutien .logo {
+  padding: 10px 0 0;
+  text-align: right;
+}
+
+/*** special jurisprudence ***/
+.accordionContent.jurisprudence h6 , .accordionContent.seminaire h6 {
+   margin-top: 0;
+}
+.accordionContent.jurisprudence .list, .accordionContent.seminaire .list {
+  margin: 0 0 20px;
+  list-style: none;
+}
+.accordionContent.jurisprudence .list li , .accordionContent.seminaire .list li {
+	position: relative;
+}
+.accordionContent.jurisprudence .list li a, .accordionContent.seminaire .list li a {
+	display: block;
+	height: 15px;
+	padding: 0 0 0 20px;
+	margin-bottom: 6px;
+	font-size: 13px;
+	text-decoration: none;
+	background: url('../../images/bail/check.png') 0 0 no-repeat;
+}
+.accordionContent.jurisprudence .list li a:hover , .accordionContent.seminaire .list li a:hover {
+	text-decoration: underline;
+	color: #B80E1D;
+}
+.accordionContent.jurisprudence .list li a.active , .accordionContent.seminaire .list li a.active {
+	text-decoration: underline;
+	color: #B80E1D;
+	background: url('../../images/bail/check.png') 0 -26px no-repeat;
+}
+
+/*** special seminaire ***/
+
+#seminaires .sujets{
+	color: #000000;
+    font-family: Arial,Verdana,Helvetica,sans-serif;
+    font-size: 14px;
+    line-height: 17px;
+}
+
+#seminaires .sujets .col {
+    float: left;
+    padding: 2px;
+}
+#seminaires .sujets .sujet {
+    border-bottom: 1px solid #B80E1D;
+    padding: 10px 0;
+}
+#seminaires .sujets .category {
+    margin-right: 4px;
+    width: 90px;
+}
+
+#seminaires .sujets .category h4{
+	color: #000000;
+    font-size: 13px;
+    font-style: italic;
+    font-weight: normal;
+    padding: 0;
+}
+
+#seminaires .sujets .hidden {
+    display: none;
+}
+
+#seminaires .sujets .edition {
+    margin-right: 4px;
+    width: 130px;
+}
+#seminaires .sujets .annee {
+    margin-right: 4px;
+    width: 36px;
+}
+#seminaires .sujets .catTitle .annee strong {
+    left: -4px;
+    position: relative;
+}
+#seminaires .sujets .desc {
+    margin-right: 4px;
+    width: 200px;
+}
+#seminaires .sujets .auteur {
+    margin-right: 4px;
+    width: 120px;
+}
+#seminaires .sujets .order {
+    width: 65px;
+}
+
+
+.ui-accordion .ui-accordion-content  {
+    padding: 0;
+   
+}
+
+.ui-accordion-header-active.ui-state-active a{
+	font-weight: bold;
+}
+
+.chzn-container-multi .chzn-choices .search-field .default {
+    color: #999999;
+}
+
+.chzn-container-multi .chzn-choices .search-field input {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0) !important;
+    border: 0 none !important;
+    box-shadow: none;
+    color: #666666;
+    margin: 1px 0;
+    outline: 0 none;
+    padding: 5px;
+}
+
+.filtre h6 {
+    color: #666666;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 0;
+}
+/******************************************************
+* Calculette
+******************************************************/
+
+#calculatorResult {
+	margin: 20px 0 0 0;
+}
+
+#calculatorResult .lines {
+  clear: both;
+  line-height: 18px;
+  font-size: 12px;
+}
+
+#calculatorResult .details .lines .label-input,#calculatorResult .result .lines .label-input {
+  display: block;
+  float: left;
+  width: 180px;
+}
+
+#calculatorResult .details .lines .value, #calculatorResult .result .lines .value{
+  display: block;
+  float: right;
+  width: 30px;
+}
+
+
+#calculatorResult .details .dates{
+    color: #808080;
+    display: block;
+    font-size: 11px;
+    padding-bottom: 5px;
+}
+
+
+#calculatorResult .result {
+  margin-bottom: 20px;
+}
+
+
+#calculatorResult .result .nouveau_loyer {
+	font-weight: bold;
+}
+
+
+/*======================================
+	Arrets
+=======================================*/
+
+#arrets .arrets .arret.hidden {
+    display: none;
+}
+
+#analyses {
+	border-bottom: 1px solid #DCDCDC;
+	display: block;
+	margin-bottom: 30px;
+}
+
+#arrets .arrets .cat.hidden {
+    display: none;
+}
+
+
+.arret .content {
+    font-size: 12px;
+    line-height: 18px;
+}
+
+.arret .content h3{
+	color: #000000;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 0;
+}
+
+#arrets .arrets .cat .details h4 {
+    font-size: 13px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-weight: normal;
+    font-style: italic;
+}
+
+#arrets .arrets .cat .details img {
+    display: block;
+    margin: 0 auto;
+}
+
+.arret{
+	margin-bottom: 25px;
+}
+
+
+.arret p,.arret ul{
+	margin-bottom: 10px;
+}
+
+.arret ul li{
+	font-size: 13px;
+}
+
+/*======================================
+	Misc
+=======================================*/
+.regle{
+	border-bottom: 1px solid #DCDCDC;
+	height: 1px;
+	display: block;
+	width: 90%;
+	margin: 10px auto 40px auto;
+}
+
+.upMarge{
+	margin-top: 15px;
+}
+
+.line{
+	line-height: 30px;
+	margin-bottom: 20px;
+	border-bottom: 1px solid $primary-red;
+}

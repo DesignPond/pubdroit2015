@@ -15,16 +15,7 @@
 			<!-- row -->
 				<div class="row">
 	                <div class="col-md-12">
-	                <?php
-	                	
-	                	foreach($data as $ana)
-	                	{
-		                	echo '<pre>';
-							print_r($ana);
-							echo '</pre>';	
-	                	}
-                
-	                ?>					
+	              				
 	                </div>
 	            </div>
 	        <!-- end row -->

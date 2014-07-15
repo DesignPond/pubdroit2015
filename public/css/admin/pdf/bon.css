@@ -1,0 +1,364 @@
+#header{
+	margin-bottom: 20px;
+}
+	  
+#wrapper{
+	display:block;
+	width: 85%;
+	margin: 20px auto 0 auto;
+}
+
+#content h1, #content h2 ,#content p{
+	text-align: center;
+} 
+
+#userInfos{
+	margin-top: 40px;
+	font-size: 14px;
+}
+
+.titre{
+	font-weight: bold;
+	font-size: 14px;
+}
+
+.titre span{
+	color: #0f4d77;
+	font-style: italic;
+}
+
+.red{
+	color: #950000;
+	font-size: 13px;
+}
+
+.blue{
+	color: #0e4d7c;
+}
+
+h1 span{
+	color: #950000;
+}
+
+.signature{
+	font-weight: bold;
+}
+
+.lieuetdate{
+	text-align: left;
+	font-style: italic;
+	font-size: 14px;
+}
+
+.alignleft{
+	text-align: left;
+}
+
+ul{
+	list-style: none;
+	list-style-type: none;
+	margin-left: 5px;
+}
+
+ul li {
+	font-size: 11px;
+	line-height: 13px;
+	list-style: none;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.infos li{
+	margin-left: -15px;
+	padding-left: -15px;
+	text-align: left;
+}
+
+#remarques,  #remarques p{
+	font-size: 14px;
+	line-height: 16px;
+	margin: 0;
+	padding: 0;
+	text-align: left;
+}
+
+#remarques{
+	font-size: 14px;
+	line-height: 20px;
+}
+
+#remarques h1, #remarques h2, #remarques h3{
+	text-align: left;
+}
+
+#remarques ul li{
+	font-size: 14px;
+	line-height: 15px;
+	padding-left: -15px;
+	list-style: disc;
+	margin-left: 8px;
+}
+
+
+.tva{
+	font-size: 11px;
+}
+
+.compte1
+{
+	position:absolute;
+	width:235px;
+	height:95px;
+	font-size:13px;
+	line-height:18px;
+	color:#000;
+	z-index:10;
+	top:863px;
+	left:105px;
+}
+
+
+.compte2
+{
+	position:absolute;
+	width:235px;
+	height:95px;
+	font-size:13px;
+	line-height:18px;
+	color:#000;
+	z-index:10;
+	top:863px;
+	left:340px;
+}
+
+.addresse1
+{
+	position:absolute;
+	width:235px;
+	height:95px;
+	font-size:13px;
+	line-height:18px;
+	color:#000;
+	z-index:10;
+	top:765px;
+	left:30px;
+}
+	
+.addresse2
+{
+	position:absolute;
+	width:235px;
+	height:95px;
+	font-size:13px;
+	line-height:18px;
+	color:#000;
+	z-index:10;
+	top:765px;
+	left:245px;
+}
+	  
+.nofacture
+{
+	position:absolute;
+	width:165px;
+	height:45px;
+	font-size:11px;
+	line-height:14px;
+	color:#000;
+	z-index:10;
+	top:759px;
+	left:480px;
+}
+	
+
+.prixBvSimple
+{
+	position:absolute;
+	width:135px;
+	height:25px;
+	font-size:15px;
+	letter-spacing:10px;
+	line-height:16px;
+	color:#000;
+	z-index:10;
+	top:902px;
+	text-align:right;
+}
+.prixBvSimple.prixBvDroite{
+	left:261px;
+}
+.prixBvSimple.prixBvGauche{
+	left:31px;
+}
+
+.prixBvInvoice{
+	top:897px;
+}
+	
+.centBvSimple
+{
+	position:absolute;
+	width:135px;
+	height:25px;
+	font-size:15px;
+	letter-spacing:10px;
+	line-height:16px;
+	color:#000;
+	z-index:10;
+	top:902px;
+	text-align:right;
+}
+.centBvSimple.centBvDroite{
+	left:320px;
+}
+.centBvSimple.centBvGauche{
+		left:89px;
+}
+
+.centBvInvoice{
+	top:897px;
+}
+
+/* corrections pour bv :(  */
+
+.prixBvCorrection{
+	top:924px;
+}
+
+.prixBvSimple.prixBvGauche.prixBvCorrectionGauche{
+	left:20px;
+}
+
+.centBvSimple.centBvGauche.centBvCorrectionGauche{
+	left:79px;
+}
+
+
+.compteBvCorrection{
+	top:884px;
+}
+
+/* fin corrections pour bv :(  */
+
+#inscription{
+	margin-top: 35px;
+	page-break-before: auto;
+	page-break-after: always;
+}
+
+.smallTable {
+	font-size: 11px;
+	padding:0 3px;
+	text-align: left;
+}
+
+.smallTable th , .smallTable td{
+	padding: 3px 3px;
+	vertical-align: top;
+}
+
+.smallTable th {
+	font-size: 11px;
+}
+
+.title{
+	font-size: 16px;
+	margin-bottom: 20px;
+	color: #0e4d7c;
+	text-align: left;
+}
+
+#organisationInfo{
+	padding-top: 25px;
+	display: block;
+}
+
+small{
+	font-size: 12px;
+	line-height: 25px;
+}
+
+.date{
+	font-size: 12px;
+	margin-bottom: 20px;
+	padding-bottom: 5px;
+	text-align: right;
+	color: #bbbdbe;
+}
+
+.titleHeader{
+	text-align: left;
+}
+
+
+/* Invoice */
+
+.nbr{
+	text-align: center;
+}
+
+.price{
+	text-align: right;
+}
+
+.currency{
+	border-right:none; 
+}
+
+.order th, .order td{
+	border: 1px solid #818181;
+	font-size: 12px;
+	padding: 3px 2px; 
+}
+
+.order th{
+	font-size: 14px;
+}
+
+.footer td{
+	font-size: 12px;
+	padding: 2px 0;
+}
+
+.rabais{
+	color:#900;
+	margin-bottom: 5px;
+}
+.comment{
+	color:#096;
+	margin-bottom: 5px;
+}
+
+/* badges */
+  
+.heigthCell{
+	height: 110px;
+	border-bottom: 2px solid transparent;
+	margin: 0;
+	padding: 0;
+	
+}
+
+.heigthCell.colored{
+	background: #dadada;
+	
+}
+
+.heigthCell h3{
+	font-size: 14px;
+	font-weight: bold;
+	margin: 0;
+	padding: 0;
+}
+
+.heigthCell p{
+	font-size: 12px;
+	line-height: 13px;
+}
+
+.delimiter{
+	height: 1px;
+	background: #964b4b;
+}
+  

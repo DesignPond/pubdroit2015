@@ -1,11 +1,11 @@
 <?php
 
-use Droit\Repo\Event\EventInterface;
-use Droit\Repo\User\UserInfoInterface;
-use Droit\Service\Form\Event\EventForm;
-use Droit\Repo\Inscription\InscriptionInterface;
+use Droit\Event\Repo\EventInterface;
+use Droit\User\Repo\UserInfoInterface;
+//use Droit\Service\Form\Event\EventForm;
+use Droit\Event\Repo\InscriptionInterface;
 
-use Droit\Service\Generate\GenerateInterface;
+use Droit\Event\Worker\GenerateInterface;
 
 class AdminController extends BaseController {
 
@@ -33,6 +33,7 @@ class AdminController extends BaseController {
 	 */
 	public function index()
 	{		
+/*
 		// all analyses	
 		$analyses = Analyses::all();
 
@@ -112,8 +113,9 @@ class AdminController extends BaseController {
 			
 			$sub->save();
 		}
+*/
 									
-		return View::make('admin.index')->with( array( 'data' => $analyses ) ); 
+		return View::make('admin.index'); 
 	}
 
 	public function pdf(){

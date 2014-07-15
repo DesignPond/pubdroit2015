@@ -5,7 +5,7 @@ class Event_option_userTableSeeder extends Seeder {
 	public function run()
 	{
 		// Uncomment the below to wipe the table clean before populating
-		 DB::table('event_option_user')->truncate();
+		DB::table('event_option_user')->truncate();
 
 		$event_option_user = array(
 			array(

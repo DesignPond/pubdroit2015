@@ -121,8 +121,11 @@ return array(
 		'Illuminate\Validation\ValidationServiceProvider',
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
-		'Droit\PubdroitServiceProvider',
-
+		'Droit\Admin\AdminServiceProvider',
+		'Droit\Event\EventServiceProvider',
+		'Droit\Content\ContentServiceProvider',
+		'Droit\User\UserServiceProvider',
+		'Droit\Calculette\CalculetteServiceProvider'
 	),
 
 	/*
