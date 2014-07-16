@@ -80,15 +80,20 @@ class ArretsController extends BaseController {
 		if( $pid == 195 ){ $link = 'bail'; }
 		if( $pid == 207 ){ $link = 'matrimonial'; }	
 		
+		$_file     = Input::file('file', null);
+		$_analysis = Input::file('analysis', null);
+		
 		// Files upload
-		if( Input::file('file') )
+		if( $_file )
 		{
 			$file = $this->upload->upload( Input::file('file') , 'files/arrets' );
+			$data['file'] = (!empty($file) ? $file['name'] : null);
 		}
 			
-		if( Input::file('analysis') )
+		if( $_analysis)
 		{
 			$analysis = $this->upload->upload( Input::file('analysis') , 'files/analyses' );
+			$data['analysis'] = (!empty($analysis) ? $analysis['name'] : null);
 		}					
 		
 		// Data array							
@@ -102,20 +107,12 @@ class ArretsController extends BaseController {
 			  'pub_text'   => Input::get('pub_text')
 		);
 		
-		if($file)    { $data['file']     = $file['name']; }
-		if($analysis){ $data['analysis'] = $analysis['name']; }
-		
-		// Init arrt validator
-		$arretsValidator = ArretsValidator::make( Input::all() );
-		
-		if ($arretsValidator->passes()) 
+		if( $this->arret->create( $data ) ) 
 		{
-			$this->arret->create( $data );
-			
 			return Redirect::to('admin/'.$link.'/arrets')->with( array('status' => 'success' , 'message' => 'Arrêt crée') ); 
 		}
 		
-		return Redirect::back()->withErrors( $arretsValidator->errors() )->withInput( Input::all() ); 
+		return Redirect::back()->withErrors( $this->arret->errors() )->withInput( Input::all() ); 
 
 	}
 

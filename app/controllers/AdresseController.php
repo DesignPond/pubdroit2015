@@ -29,13 +29,12 @@ class AdresseController extends BaseController {
 		$this->userspecialisation = $userspecialisation;
 				
 		// Custom helper				
-/*
-		$this->custom      = new \Custom;
+		$this->custom = new \Custom;
 
 		$shared = $this->custom->sharedVariables();
 		
 		View::share( $shared );
-*/
+
 	}
 
 	/**
@@ -44,8 +43,7 @@ class AdresseController extends BaseController {
 	 * @return Response
 	 */
 	public function index()
-	{
-	
+	{	
         return View::make('admin.adresses.index');
 	}
 	
@@ -77,11 +75,6 @@ class AdresseController extends BaseController {
 	 * change livraison adresse
 	*/		
 	public function changeLivraison(){
-		
-		echo '<pre>';
-		print_r(Input::all());
-		echo '</pre>';
-		exit();
 		
 		if ($this->adresse->changeLivraison($id,$type))
 		{			
@@ -173,23 +166,16 @@ class AdresseController extends BaseController {
 	public function update($id)
 	{
 
-		$redirectTo       = Input::get('redirectTo');
+		$redirectTo = Input::get('redirectTo');
+		$backTo     = 'adresses/'.$id ;
+		$redirect   = ( $redirectTo ? $redirectTo : $backTo);
 		
-		$adresseValidator = AdresseValidator::make( Input::all() );
-		
-		if ($adresseValidator->passes()) 
+		if ($this->adresse->update( Input::all() )) 
 		{
-			$this->adresse->update( Input::all() );
-			
-			if($redirectTo)
-			{
-				return Redirect::to('admin/'.$redirectTo)->with( array('status' => 'success' , 'message' => 'Adresse mise à jour') ); 
-			}
-			
-			return Redirect::to('admin/adresses/'.$id)->with( array('status' => 'success' , 'message' => 'Adresse mise à jour') ); 
+			return Redirect::to('admin/'.$redirect)->with( array('status' => 'success' , 'message' => 'Adresse mise à jour') ); 
 		}
 		
-		return Redirect::to('admin/adresses/'.$id)->withErrors( $adresseValidator->errors() )
+		return Redirect::to('admin/'.$backTo)->withErrors( $this->adresse->errors() )
 												  ->with( array('status' => 'danger' , 'message' => 'Problème avec la mise à jour') )
 												  ->withInput( Input::all() ); 
 	}	

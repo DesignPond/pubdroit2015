@@ -172,6 +172,8 @@
 						    </div>
 						    <div class="panel-footer mini-footer ">
 						      	{{ Form::hidden('id', $arret->id )}}
+						      	{{ Form::hidden('pid', $arret->pid )}}
+						      	{{ Form::hidden('cruser_id', 1 )}}
 						      	<div class="col-sm-3"></div>
 						      	<div class="col-sm-6">
 									<button class="btn btn-primary" type="submit">Envoyer </button>

@@ -1,15 +1,28 @@
 <?php namespace Droit\Content\Entities;
 
-use Eloquent;
+use Droit\Common\BaseModel as BaseModel;
 
-class Arrets extends Eloquent {
+class Arrets extends BaseModel{
 
 	protected $guarded   = array('id');
-	public static $rules = array();
 	
 	protected $dates = array('pub_date');
 	
 	protected $table = 'ba_arrets';
+	
+	protected static $rules = array(
+        'reference' => 'required',
+        'pub_date'  => 'required',
+        'abstract'  => 'required',
+        'pub_text'  => 'required'    
+    );
+
+    protected static $messages = array(
+        'reference.required' => 'Le champ référence est requis',
+        'pub_date.required'  => 'Le champ date de publication est requis',
+        'abstract.required'  => 'Le résumé est requis',
+        'pub_text.required'  => 'Le texte est requis'
+    );
 	
 	public function arrets_categories()
     {     
