@@ -1,10 +1,8 @@
 <?php
 
-use Droit\Repo\User\UserInfoInterface;
-use Droit\Repo\Adresse\AdresseInterface;
-use Droit\Service\Inscription\InscriptionServiceInterface;
-
-use Droit\Service\Form\User\UserValidator as UserValidator;
+use Droit\User\Repo\UserInfoInterface;
+use Droit\User\Repo\AdresseInterface;
+use Droit\Event\Worker\InscriptionServiceInterface;
 
 class UserController extends BaseController {
 
@@ -25,12 +23,13 @@ class UserController extends BaseController {
 		$this->inscription  = $inscription;
 				
 		// Custom helper	
-		$this->custom       = new \Custom;
+
+		$this->custom = new \Custom;
 		
-		// shared variables and list for selects		
 		$shared = $this->custom->sharedVariables();
 		
 		View::share( $shared );
+
 	}
 
 	/**
@@ -61,13 +60,9 @@ class UserController extends BaseController {
 	 */
 	public function store()
 	{
-
-		$userValidator = UserValidator::make( Input::all() );
 		
-		if ($userValidator->passes()) 
+		if($this->user->create( Input::all() )) 
 		{
-			$this->user->create( Input::all() );
-
 			// Get last inserted
 			$user  = $this->user->getLast(1);
 			$id    = $user->first()->id;
@@ -75,7 +70,7 @@ class UserController extends BaseController {
 			return Redirect::to('admin/users/'.$id)->with( array('status' => 'success' , 'message' => 'Utilisateur crée') ); 
 		}
 		
-		return Redirect::back()->withErrors( $userValidator->errors() )->withInput( Input::all() ); 
+		return Redirect::back()->withErrors( $this->user->errors() )->withInput( Input::all() ); 
 	}
 
 	/**

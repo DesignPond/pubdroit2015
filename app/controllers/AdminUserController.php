@@ -1,6 +1,6 @@
 <?php
 
-use Droit\Repo\User\UserInfoInterface;
+use Droit\User\Repo\UserInfoInterface;
 
 class AdminUserController extends BaseController {
 
@@ -11,7 +11,6 @@ class AdminUserController extends BaseController {
 	 */
 	public function __construct( UserInfoInterface $user )
 	{
-
 		$this->user = $user;
 	}
 
@@ -21,8 +20,7 @@ class AdminUserController extends BaseController {
 	 * @return Response
 	 */
 	public function index()
-	{
-		
+	{		
         return View::make('admin.users.index');
 	}
 

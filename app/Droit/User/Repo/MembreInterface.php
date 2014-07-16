@@ -1,6 +1,6 @@
 <?php namespace Droit\User\Repo;
 
-interface ProfessionInterface {
+interface MembreInterface {
 	
 	public function getAll();
 	public function find($id);

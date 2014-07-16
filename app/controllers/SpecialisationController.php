@@ -1,9 +1,8 @@
 <?php
 
-use Droit\Repo\Specialisation\SpecialisationInterface;
-use Droit\Service\Form\Specialisation\SpecialisationValidator as SpecialisationValidator;
+use Droit\User\Repo\SpecialisationInterface;
 
-use Event_specialisations as ES;
+use Droit\User\Entities\Event_specialisations as ES;
 
 class SpecialisationController extends BaseController {
 

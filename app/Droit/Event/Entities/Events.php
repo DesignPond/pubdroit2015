@@ -1,12 +1,39 @@
 <?php namespace Droit\Event\Entities;
 
-use Eloquent;
+use Droit\Common\BaseModel as BaseModel;
 
-class Events extends Eloquent {
+class Events extends BaseModel{
 
+	/*
+	 * Fields guarded
+	*/	
 	protected $guarded   = array('id');
-	//protected $dates     = array('dateDebut','dateFin','dateDelai');
-	public static $rules = array();
+			
+	/*
+	 * Validation rules
+	*/	
+	protected static $rules = array(
+		'organisateur'   => 'required',
+		'titre'          => 'required',
+		'sujet'          => 'required',
+		'endroit'        => 'required',
+		'dateDebut'      => 'required|date_format:Y-m-d',
+		'dateDelai'      => 'required|date_format:Y-m-d'
+	);
+	
+	/*
+	 * Validation messages
+	*/
+	protected static $messages = array(
+		'organisateur.required'   => 'Le champ organisateur est requis',
+		'titre.required'          => 'Le champ titre est requis',
+		'sujet.required'          => 'Le champ sujet est requis',
+		'endroit.required'        => 'Le champ endroit est requis',
+		'dateDebut.required'      => 'Le champ date de début est requis',
+		'dateDelai.required'      => 'Le champ délai d\'inscription est requis'
+	);
+	
+	
 	
 	public function compte()
     {

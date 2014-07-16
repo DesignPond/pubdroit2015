@@ -1,5 +1,6 @@
 <?php namespace Droit\User\Repo;
 
+use Droit\User\Repo\UserInfoInterface;
 use Droit\User\Entities\User as M;
 use Droit\User\Entities\Civilites as Civilites;
 use Droit\User\Entities\Event_options_user;
@@ -17,7 +18,7 @@ class UserInfoEloquent implements UserInfoInterface{
 	{
 		$this->user   = $user;
 		
-		//$this->custom = new \Custom;
+		$this->custom = new \Custom;
 	}
 	
 	public function getAll(){
@@ -38,10 +39,8 @@ class UserInfoEloquent implements UserInfoInterface{
 		{
 			return false;
 		}
-		
-		$activated = ( $user->activated ? 0 : 1);
 
-		$user->activated = $activated;
+		$user->activated = ( $user->activated ? 0 : 1);
 		
 		$user->save();	
 		
@@ -53,7 +52,7 @@ class UserInfoEloquent implements UserInfoInterface{
 	 *
 	*/
 	public function get_ajax( $columns , $sEcho , $iDisplayStart , $iDisplayLength , $sSearch = NULL ){
-	
+		
 		$iTotal   = $this->user->get()->count();
 		
 		if($sSearch)
@@ -64,9 +63,7 @@ class UserInfoEloquent implements UserInfoInterface{
 							   ->skip($iDisplayStart)
 							   ->get();
 								    
-			$iTotalDisplayRecords = $this->user->whereRaw('( prenom LIKE "%'.$sSearch.'%" OR nom LIKE "%'.$sSearch.'%" )')
-											   ->get()
-											   ->count();	
+			$iTotalDisplayRecords = $this->user->whereRaw('( prenom LIKE "%'.$sSearch.'%" OR nom LIKE "%'.$sSearch.'%" )')->get()->count();	
 		}
 		else
 		{
@@ -93,12 +90,13 @@ class UserInfoEloquent implements UserInfoInterface{
 				$row['email']  = "<a href=".url('admin/users/'.$adresse['id']).">".$adresse['email'].'</a>';
 				$row['prenom'] = $this->custom->format_name($adresse['prenom']);
 				$row['nom']    = $this->custom->format_name($adresse['nom']);
-
-				if( $adresse['activated'] == 1 ) { $row['activated'] = 'Active'; } else{ $row['activated'] = 'Inactive'; } 
+				
+				$row['activated'] = ( $adresse['activated'] == 1 ? 'Active' : 'Inactive' );
 				
 				$options = '';
 				
-				if( isset($adresse['adresses']) ){
+				if( isset($adresse['adresses']) )
+				{
 				
 						$options .= '<div class="list-group">';
 						
@@ -119,8 +117,7 @@ class UserInfoEloquent implements UserInfoInterface{
 						}
 						
 						$options .= '</div>';
-				}
-				
+				}				
 				
 				$row['adresses'] = $options;
 				$row['options']  = '<a class="btn btn-info edit_btn" type="button" href="'.url('admin/users/'.$adresse['id']).'">&Eacute;diter</a> ';
@@ -142,7 +139,7 @@ class UserInfoEloquent implements UserInfoInterface{
 	 */
 	public function find($id){
 				
-		return $this->user->where('id','=',$id)->with( array('adresses' , 'groups') )->first();														
+		return $this->user->where('id','=',$id)->with( array('adresses') )->first();														
 	}
 	
 	/**

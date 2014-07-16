@@ -1,9 +1,7 @@
 <?php
 
-use Droit\Repo\Inscription\InscriptionInterface;
-use Droit\Repo\Event\EventInterface;
-
-use Droit\Service\Form\Inscription\InscriptionValidator as InscriptionValidator;
+use Droit\Event\Repo\InscriptionInterface;
+use Droit\Event\Repo\EventInterface;
 
 class InscriptionController extends BaseController {
 

@@ -1,4 +1,4 @@
-<?php namespace Droit\Repo\UserSpecialisation;
+<?php namespace Droit\User\Repo;
 
 interface UserSpecialisationInterface {
 	

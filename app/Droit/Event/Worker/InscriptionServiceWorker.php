@@ -1,9 +1,9 @@
-<?php namespace Droit\Service\Inscription;
+<?php namespace Droit\Event\Worker;
 
-use Droit\Service\Inscription\InscriptionServiceInterface;
-use Droit\Repo\Inscription\InscriptionInterface;
-use Droit\Repo\Option\OptionInterface;
-use Droit\Repo\File\FileInterface;
+use Droit\Event\Worker\InscriptionServiceInterface;
+use Droit\Event\Repo\InscriptionInterface;
+use Droit\Event\Repo\OptionInterface;
+use Droit\Event\Repo\FileInterface;
 
 class InscriptionServiceWorker implements InscriptionServiceInterface {
 

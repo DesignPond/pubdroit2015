@@ -1,8 +1,8 @@
 <?php
 
-use Droit\Repo\Arret\ArretInterface;
-use Droit\Repo\Analyse\AnalyseInterface;
-use Droit\Repo\Categorie\CategorieInterface;
+use Droit\Content\Repo\ArretInterface;
+use Droit\Content\Repo\AnalyseInterface;
+use Droit\Content\Repo\CategorieInterface;
 
 
 class MatrimonialController extends BaseController {

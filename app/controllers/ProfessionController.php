@@ -1,7 +1,6 @@
 <?php
 
-use Droit\Repo\Profession\ProfessionInterface;
-use Droit\Service\Form\Profession\ProfessionValidator as ProfessionValidator;
+use Droit\User\Repo\ProfessionInterface;
 
 class ProfessionController extends BaseController {
 

@@ -1,8 +1,8 @@
 <?php
 
-use Droit\Repo\Inscription\InscriptionInterface;
-use Droit\Repo\Event\EventInterface;
-use Droit\Repo\Invoice\InvoiceInterface;
+use Droit\Event\Repo\InscriptionInterface;
+use Droit\Event\Repo\EventInterface;
+use Droit\Event\Repo\InvoiceInterface;
 
 class InvoiceController extends BaseController {
 

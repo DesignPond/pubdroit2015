@@ -1,7 +1,7 @@
 <?php
 
-use Droit\Repo\Membre\MembreInterface;
-use Droit\Service\Form\Membre\MembreValidator as MembreValidator;
+use Droit\User\Repo\MembreInterface;
+use Droit\User\Entities\MembreValidator as MembreValidator;
 
 class MembreController extends BaseController {
 

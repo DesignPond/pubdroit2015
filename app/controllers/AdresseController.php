@@ -1,12 +1,9 @@
 <?php
 
-use Droit\Repo\User\UserInfoInterface;
-use Droit\Repo\Adresse\AdresseInterface;
-
-use Droit\Service\Form\Adresse\AdresseValidator as AdresseValidator;
-
-use Droit\Repo\UserSpecialisation\UserSpecialisationInterface;
-use Droit\Repo\UserMembre\UserMembreInterface;
+use Droit\User\Repo\UserInfoInterface;
+use Droit\User\Repo\AdresseInterface;
+use Droit\User\Repo\UserSpecialisationInterface;
+use Droit\User\Repo\UserMembreInterface;
 
 class AdresseController extends BaseController {
 
@@ -32,12 +29,13 @@ class AdresseController extends BaseController {
 		$this->userspecialisation = $userspecialisation;
 				
 		// Custom helper				
+/*
 		$this->custom      = new \Custom;
-		
-		// shared variables and list for selects	
+
 		$shared = $this->custom->sharedVariables();
 		
 		View::share( $shared );
+*/
 	}
 
 	/**

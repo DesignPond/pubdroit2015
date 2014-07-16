@@ -1,4 +1,4 @@
-<?php namespace Droit\Repo\UserMembre;
+<?php namespace Droit\User\Repo;
 
 interface UserMembreInterface {
 	

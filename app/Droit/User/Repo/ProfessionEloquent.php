@@ -1,7 +1,7 @@
-<?php namespace Droit\Repo\Profession;
+<?php namespace Droit\User\Repo;
 
-use Droit\Repo\Profession\ProfessionInterface;
-use Professions as M;
+use Droit\User\Repo\ProfessionInterface;
+use Droit\User\Entities\Professions as M;
 
 class ProfessionEloquent implements ProfessionInterface {
 	

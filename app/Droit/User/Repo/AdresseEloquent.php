@@ -1,11 +1,11 @@
-<?php namespace Droit\Repo\Adresse;
+<?php namespace Droit\User\Repo;
 
-use Droit\Repo\Adresse\AdresseInterface;
-use Droit\Repo\User\UserInfoInterface;
+use Droit\User\Repo\AdresseInterface;
+use Droit\User\Repo\UserInfoInterface;
 
-use Adresses as M;
-use User_membres as UM;
-use User_specialisations as US;
+use Droit\User\Entities\Adresses as M;
+use Droit\User\Entities\User_membres as UM;
+use Droit\User\Entities\User_specialisations as US;
 
 class AdresseEloquent implements AdresseInterface{
 

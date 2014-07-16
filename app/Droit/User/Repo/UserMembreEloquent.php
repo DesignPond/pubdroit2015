@@ -1,7 +1,7 @@
-<?php namespace Droit\Repo\UserMembre;
+<?php namespace Droit\User\Repo;
 
-use Droit\Repo\UserMembre\UserMembreInterface;
-use User_membres as M;
+use Droit\User\Repo\UserMembreInterface;
+use Droit\User\Entities\User_membres as M;
 
 class UserMembreEloquent implements UserMembreInterface {
 	

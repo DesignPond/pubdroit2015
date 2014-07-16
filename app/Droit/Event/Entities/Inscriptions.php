@@ -1,8 +1,8 @@
 <?php namespace Droit\Event\Entities;
 
-use Eloquent;
+use Droit\Common\BaseModel as BaseModel;
 
-class Inscriptions extends Eloquent {
+class Inscriptions extends BaseModel {
 
 	protected $guarded   = array('id');
 	public static $rules = array();
@@ -11,17 +11,17 @@ class Inscriptions extends Eloquent {
 	
 	public function prices(){
     	
-    	return $this->belongsTo('Prices', 'price_id');
+    	return $this->belongsTo('Droit\Event\Entities\Prices', 'price_id');
  	}
  	
     public function event()
     {
-        return $this->belongsTo('Events', 'event_id');
+        return $this->belongsTo('Droit\Event\Entities\Events', 'event_id');
     }
     
     public function users()
     {
-        return $this->belongsTo('User', 'user_id');
+        return $this->belongsTo('Droit\User\Entities\User', 'user_id');
     } 
 
 }

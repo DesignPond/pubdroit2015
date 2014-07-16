@@ -66,8 +66,8 @@ class EventServiceProvider extends ServiceProvider {
     
 	    $this->app->bind('Droit\Event\Worker\InscriptionServiceInterface', function()
         {
-            return new \Droit\Service\Inscription\InscriptionServiceWorker(
-	           		\App::make('Droit\Event\Worker\FileInterface') , 
+            return new \Droit\Event\Worker\InscriptionServiceWorker(
+	           		\App::make('Droit\Event\Repo\FileInterface') , 
 	            	\App::make('Droit\Event\Repo\InscriptionInterface') , 
 	            	\App::make('Droit\Event\Repo\OptionInterface') 
             );

@@ -1,4 +1,4 @@
-<?php namespace Droit\Repo\Adresse;
+<?php namespace Droit\User\Repo;
 
 interface AdresseInterface {
 

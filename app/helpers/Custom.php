@@ -2,10 +2,13 @@
 
 use Carbon\Carbon;
 use Droit\Event\Entities\Event_files as File;
+use Droit\User\Entities\Adresse_types as Adresse_types;
 use Droit\User\Entities\Civilites as Civilites;
 use Droit\User\Entities\Cantons as Cantons;
 use Droit\User\Entities\Professions as Professions;
 use Droit\User\Entities\Pays as Pays;
+use Droit\User\Entities\Membres as Membres;
+use Droit\User\Entities\Specialisations as Specialisations;
 
 class Custom {
 
@@ -359,13 +362,13 @@ class Custom {
 	
 	public function sharedVariables(){
 		
-	    $civilites   = \Civilites::all()->lists('title','id');
-	    $professions = \Professions::all()->lists('titreProfession','id');
-		$cantons     = \Cantons::all()->lists('titreCanton','id');
-		$pays        = \Pays::all()->lists('titrePays','id');
+	    $civilites   = Civilites::all()->lists('title','id');
+	    $professions = Professions::all()->lists('titreProfession','id');
+		$cantons     = Cantons::all()->lists('titreCanton','id');
+		$pays        = Pays::all()->lists('titrePays','id');
 		
-		$allmembres          = \Membres::all()->lists('titreMembre','id');
-		$allSpecialisations  = \Specialisations::all()->lists('titreSpecialisation','id');
+		$allmembres          = Membres::all()->lists('titreMembre','id');
+		$allSpecialisations  = Specialisations::all()->lists('titreSpecialisation','id');
 
 		$professions = $this->insertFirstInArray( 0 , 'Choix' , $professions );
 		$cantons     = $this->insertFirstInArray( 0 , 'Choix' , $cantons );
@@ -382,7 +385,7 @@ class Custom {
 	 */	
 	public function whatCivilite($title){
 		
-		$civilites = \Civilites::all()->lists('title','id');
+		$civilites = Civilites::all()->lists('title','id');
 		
 		return (isset($civilites[$title]) ? $civilites[$title] : "");		
 	}
@@ -394,7 +397,7 @@ class Custom {
 	 */	
 	public function whatProfession($title){
 		
-		$professions = \Professions::all()->lists('titreProfession','id');
+		$professions = Professions::all()->lists('titreProfession','id');
 
 		return (isset($professions[$title]) ? $professions[$title] : "");			
 	}    
@@ -406,7 +409,7 @@ class Custom {
 	 */	
 	public function whatCanton($title){
 		
-		$cantons = \Cantons::all()->lists('titreCanton','id');
+		$cantons = Cantons::all()->lists('titreCanton','id');
 
 		return (isset($cantons[$title]) ? $cantons[$title] : "");	
 	} 
@@ -418,7 +421,7 @@ class Custom {
 	 */	
 	public function whatPays($title){
 		
-		$pays = \Pays::all()->lists('titrePays','id');
+		$pays = Pays::all()->lists('titrePays','id');
 
 		return (isset($pays[$title]) ? $pays[$title] : "");	
 	} 
@@ -431,7 +434,7 @@ class Custom {
 	 */	
 	public function whatType($title){
 		
-		$types = \Adresse_types::all()->lists('type','id');
+		$types = Adresse_types::all()->lists('type','id');
 
 		return (isset($types[$title]) ? $types[$title] : "");	
 	} 

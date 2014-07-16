@@ -1,7 +1,7 @@
-<?php namespace Droit\Repo\Userspecialisation;
+<?php namespace Droit\User\Repo;
 
-use Droit\Repo\UserSpecialisation\UserSpecialisationInterface;
-use User_specialisations as M;
+use Droit\User\Repo\UserSpecialisationInterface;
+use Droit\User\Entities\User_specialisations as M;
 
 class UserSpecialisationEloquent implements UserSpecialisationInterface {
 	

@@ -49,7 +49,7 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	*/
 	public function adresses() 
 	{
-		return $this->hasMany('Adresses' ,'user_id'); 
+		return $this->hasMany('Droit\User\Entities\Adresses' ,'user_id'); 
 	}
 		
 	/**
@@ -57,15 +57,17 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	*/	
 	public function inscription(){
 		
-		return $this->hasMany('Inscriptions' ,'user_id'); 
+		return $this->hasMany('Droit\Event\Entities\Inscriptions' ,'user_id'); 
 	}
 
 	/**
 	* Get group for user
 	*/	    
+/*
 	public function groups() 
 	{
 		return $this->belongsToMany('Groups', 'users_groups', 'user_id', 'group_id');
 	}
+*/
 
 }
