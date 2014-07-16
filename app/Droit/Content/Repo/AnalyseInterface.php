@@ -1,4 +1,4 @@
-<?php namespace Droit\Repo\Analyse;
+<?php namespace Droit\Content\Repo;
 
 interface AnalyseInterface {
 	

@@ -1,4 +1,4 @@
-<?php namespace Droit\Repo\Seminaire;
+<?php namespace Droit\Content\Repo;
 
 interface SeminaireInterface {
 	

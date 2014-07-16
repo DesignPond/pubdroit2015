@@ -1,4 +1,4 @@
-<?php namespace Droit\Event\Entities;
+<?php namespace Droit\User\Entities;
 
 use Eloquent;
 

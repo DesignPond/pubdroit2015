@@ -1,4 +1,6 @@
-<?php
+<?php namespace Droit\Calculette\Entities;
+
+use Eloquent;
 
 class Calculette_taux extends Eloquent {
 

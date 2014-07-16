@@ -10,47 +10,47 @@ class Events extends Eloquent {
 	
 	public function compte()
     {
-        return $this->hasOne('Compte');
+        return $this->hasOne('Droit\Event\Entities\Compte');
     }
     
     public function prices(){
     	
-    	return $this->hasMany('Prices', 'event_id');
+    	return $this->hasMany('Droit\Event\Entities\Prices', 'event_id');
  	}
  	
     public function event_options()
     {
-        return $this->hasMany('Event_options', 'event_id');
+        return $this->hasMany('Droit\Event\Entities\Event_options', 'event_id');
     }
     
     public function event_specialisations()
     {     
-        return $this->belongsToMany('Specialisations', 'event_specialisations', 'event_id', 'specialisation_id')->withPivot(array('id'));
+        return $this->belongsToMany('Droit\User\Entities\Specialisations', 'event_specialisations', 'event_id', 'specialisation_id')->withPivot(array('id'));
     }
  	
     public function files(){
     	
-    	return $this->hasMany('Files', 'event_id');
+    	return $this->hasMany('Droit\Event\Entities\Event_files', 'event_id');
  	}
  	
  	public function event_config(){
  	
-	 	return $this->hasOne('Event_config', 'event_id');
+	 	return $this->hasOne('Droit\Event\Entities\Event_config', 'event_id');
  	}
  	
 	public function emails(){
 	
-		return $this->hasOne('Event_emails', 'event_id');
+		return $this->hasOne('Droit\Event\Entities\Event_emails', 'event_id');
 	}
  	
 	public function emailDefaut(){
 	
-		return $this->hasOne('Event_emails', 'event_id');
+		return $this->hasOne('Droit\Event\Entities\Event_emails', 'event_id');
 	}
 		
 	public function attestation(){
 		
-		return $this->hasOne('Event_attestations', 'event_id');
+		return $this->hasOne('Droit\Event\Entities\Event_attestations', 'event_id');
 	}
 	
 }

@@ -61,9 +61,9 @@ class ContentServiceProvider extends ServiceProvider {
 	 */ 	
     public function registerSeminaireService(){
 		
-		$this->app->bind('Droit\Repo\Seminaire\SeminaireInterface', function()
+		$this->app->bind('Droit\Content\Repo\SeminaireInterface', function()
         {
-            return new \Droit\Repo\Seminaire\SeminaireEloquent( new SM );
+            return new \Droit\Content\Repo\SeminaireEloquent( new SM );
         });        
 	}
 

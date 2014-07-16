@@ -1,7 +1,7 @@
-<?php namespace Droit\Repo\Subject;
+<?php namespace Droit\Content\Repo;
 
-use Droit\Repo\Subject\SubjectInterface;
-use Illuminate\Database\Eloquent\Model as M;
+use Droit\Content\Repo\SubjectInterface;
+use Droit\Content\Entities\Subjects as M;
 
 class SubjectEloquent implements SubjectInterface {
 

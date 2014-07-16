@@ -1,4 +1,4 @@
-<?php namespace Droit\Service\Upload;
+<?php namespace Droit\Service\Repo;
 
 use Intervention\Image\Facades\Image;
 

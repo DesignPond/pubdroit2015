@@ -1,6 +1,8 @@
-<?php
+<?php namespace Droit\Content\Entities;
 
-class Analyses_categories extends \Eloquent {
+use Eloquent;
+
+class Analyses_categories extends Eloquent {
 
 	protected $guarded   = array('id');
 	public static $rules = array();

@@ -1,4 +1,4 @@
-<?php namespace Droit\Repo\Arret;
+<?php namespace Droit\Content\Repo;
 
 interface ArretInterface {
 	

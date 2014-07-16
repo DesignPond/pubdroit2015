@@ -1,7 +1,7 @@
-<?php namespace Droit\Repo\Seminaire;
+<?php namespace Droit\Content\Repo;
 
-use Droit\Repo\Seminaire\SeminaireInterface;
-use Illuminate\Database\Eloquent\Model as M;
+use Droit\Content\Repo\SeminaireInterface;
+use Droit\Content\Entities\Seminaires as M;
 
 class SeminaireEloquent implements SeminaireInterface {
 

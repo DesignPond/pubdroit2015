@@ -14,8 +14,6 @@ use Droit\Event\Entities\Invoices as IN;
 use Droit\Event\Entities\Comptes as C;
 use Droit\Event\Entities\Options as O;
 use Droit\Event\Entities\Prices as PR;
-use Droit\Event\Entities\Specialisations as S;
-use Droit\Event\Entities\Membres as M;
 use Droit\Event\Entities\Event_files as F;
 
 /**
@@ -35,8 +33,6 @@ class EventServiceProvider extends ServiceProvider {
     	$this->registerCompteService();	
     	$this->registerOptionService();	
     	$this->registerPriceService();	
-    	$this->registerSpecialisationService();	
-    	$this->registerMembreService();
 		$this->registerGenerateService();
 		$this->registerFileService();    			
     }
@@ -120,29 +116,6 @@ class EventServiceProvider extends ServiceProvider {
         {
             return new \Droit\Event\Repo\PriceEloquent( new PR );
         });        
-	}
-	      
-	/**
-	 * Specialisations service
-	 */     
-    protected function registerSpecialisationService(){
-    
-	    $this->app->bind('Droit\Repo\Specialisation\SpecialisationInterface', function()
-        {
-            return new \Droit\Repo\Specialisation\SpecialisationEloquent( new S );
-        });        
-    } 
-      
-	/**
-	 * Membres service
-	 */     
-    public function registerMembreService(){
-		
-		$this->app->bind('Droit\Repo\Membre\MembreInterface', function()
-        {
-            return new \Droit\Repo\Membre\MembreEloquent( new M );
-        });
-        
 	}
 
 	/**

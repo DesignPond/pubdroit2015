@@ -1,4 +1,6 @@
-<?php
+<?php namespace Droit\Content\Entities;
+
+use Eloquent;
 
 class Arrets_categories extends \Eloquent {
 

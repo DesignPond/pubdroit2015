@@ -1,6 +1,6 @@
-<?php namespace Droit\Repo\Analyse;
+<?php namespace Droit\Content\Repo;
 
-use Droit\Repo\Analyse\AnalyseInterface;
+use Droit\Content\Repo\AnalyseInterface;
 use Illuminate\Database\Eloquent\Model as M;
 
 class AnalyseEloquent implements AnalyseInterface {

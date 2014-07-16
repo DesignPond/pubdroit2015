@@ -1,4 +1,4 @@
-<?php namespace Droit\Repo\Subject;
+<?php namespace Droit\Content\Repo;
 
 interface SubjectInterface {
 	

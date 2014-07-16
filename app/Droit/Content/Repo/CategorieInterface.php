@@ -1,4 +1,4 @@
-<?php namespace Droit\Repo\Categorie;
+<?php namespace Droit\Content\Repo;
 
 interface CategorieInterface {
 	

@@ -1,7 +1,7 @@
-<?php namespace Droit\Repo\Categorie;
+<?php namespace Droit\Content\Repo;
 
-use Droit\Repo\Categorie\CategorieInterface;
-use Illuminate\Database\Eloquent\Model as M;
+use Droit\Content\Repo\CategorieInterface;
+use Droit\Content\Entities\BaCategories as M;
 
 class CategorieEloquent implements CategorieInterface {
 

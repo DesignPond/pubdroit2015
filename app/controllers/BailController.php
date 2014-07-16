@@ -1,14 +1,13 @@
 <?php
 
-use Droit\Repo\Arret\ArretInterface;
-use Droit\Repo\Analyse\AnalyseInterface;
-use Droit\Repo\Seminaire\SeminaireInterface;
-use Droit\Repo\Subject\SubjectInterface;
-use Droit\Repo\Auteur\AuteurInterface;
-use Droit\Repo\Categorie\CategorieInterface;
-use Droit\Repo\BsCategorie\BsCategorieInterface;
-use Droit\Repo\Calculette\CalculetteInterface;
-
+use Droit\Content\Repo\ArretInterface;
+use Droit\Content\Repo\AnalyseInterface;
+use Droit\Content\Repo\SeminaireInterface;
+use Droit\Content\Repo\SubjectInterface;
+use Droit\Content\Repo\AuteurInterface;
+use Droit\Content\Repo\CategorieInterface;
+use Droit\Content\Repo\BsCategorieInterface;
+use Droit\Calculette\Repo\CalculetteInterface;
 
 class BailController extends BaseController {
 

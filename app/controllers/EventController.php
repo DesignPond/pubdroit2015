@@ -1,16 +1,17 @@
 <?php
 
-use Droit\Repo\Event\EventInterface;
-use Droit\Repo\Compte\CompteInterface;
-use Droit\Repo\Specialisation\SpecialisationInterface;
-use Droit\Repo\File\FileInterface;
+use Droit\Event\Repo\EventInterface;
+use Droit\Event\Repo\CompteInterface;
+use Droit\Event\Repo\FileInterface;
+use Droit\User\Repo\SpecialisationInterface;
+use Droit\Service\Repo\UploadInterface;
 
-use Droit\Service\Upload\UploadInterface;
-
+/*
 use Droit\Service\Form\File\FileValidator as FileValidator;;
 use Droit\Service\Form\Attestation\AttestationValidator as AttestationValidator;
 use Droit\Service\Form\Event\EmailEventValidator as EmailEventValidator;
 use Droit\Service\Form\Event\EventValidator as EventValidator;
+*/
 
 class EventController extends BaseController {
 

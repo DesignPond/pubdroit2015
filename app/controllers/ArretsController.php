@@ -1,13 +1,13 @@
 <?php
 
-use Droit\Repo\Arret\ArretInterface;
-use Droit\Repo\Analyse\AnalyseInterface;
-use Droit\Repo\Seminaire\SeminaireInterface;
-use Droit\Repo\Subject\SubjectInterface;
-use Droit\Repo\Categorie\CategorieInterface;
-use Droit\Service\Upload\UploadInterface;
+use Droit\Content\Repo\ArretInterface;
+use Droit\Content\Repo\AnalyseInterface;
+use Droit\Content\Repo\SeminaireInterface;
+use Droit\Content\Repo\SubjectInterface;
+use Droit\Content\Repo\CategorieInterface;
+use Droit\Service\Repo\UploadInterface;
 
-use Droit\Service\Form\Arrets\ArretsValidator as ArretsValidator;
+//use Droit\Service\Form\Arrets\ArretsValidator as ArretsValidator;
 
 class ArretsController extends BaseController {
 
@@ -23,9 +23,7 @@ class ArretsController extends BaseController {
 
 	protected $upload;
 	
-	public function __construct(
-		ArretInterface $arret,CategorieInterface $categorie,AnalyseInterface $analyse,SeminaireInterface $seminaire,SubjectInterface $subject,UploadInterface $upload
-	)
+	public function __construct(ArretInterface $arret,CategorieInterface $categorie,AnalyseInterface $analyse,SeminaireInterface $seminaire,SubjectInterface $subject,UploadInterface $upload)
 	{
 		
 		$this->arret      = $arret;

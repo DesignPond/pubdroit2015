@@ -1,4 +1,4 @@
-<?php namespace Droit\Repo\Calculette;
+<?php namespace Droit\Calculette\Repo;
 
 interface CalculetteInterface {
 	

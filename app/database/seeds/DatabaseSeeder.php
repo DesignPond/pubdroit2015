@@ -11,18 +11,13 @@ class DatabaseSeeder extends Seeder {
 	{
 		Eloquent::unguard();
 
-		$this->call('Newsletter_listsTableSeeder');
-		$this->call('Newsletter_usersTableSeeder');
 		$this->call('AddressesTableSeeder');
 		$this->call('Adresse_typesTableSeeder');
 		$this->call('EventsTableSeeder');
 		$this->call('OptionsTableSeeder');
 		$this->call('PricesTableSeeder');
-		$this->call('UsersTableSeeder');		
-		$this->call('SentryGroupSeeder');
-		$this->call('SentryUserGroupSeeder');		
+		$this->call('UsersTableSeeder');			
 		$this->call('ComptesTableSeeder');
-		$this->call('FilesTableSeeder');
 		$this->call('SpecialisationsTableSeeder');
 		$this->call('Event_specialisationTableSeeder');
 		$this->call('MembresTableSeeder');
@@ -42,6 +37,8 @@ class DatabaseSeeder extends Seeder {
 		$this->call('PaysTableSeeder');
 		$this->call('InvoicesTableSeeder');
 		$this->call('User_specialisationsTableSeeder');
+		$this->call('Newsletter_listsTableSeeder');
+		$this->call('Newsletter_usersTableSeeder');		
 	}
 
 }

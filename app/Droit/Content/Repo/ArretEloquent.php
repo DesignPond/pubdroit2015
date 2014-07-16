@@ -1,7 +1,7 @@
-<?php namespace Droit\Repo\Arret;
+<?php namespace Droit\Content\Repo;
 
-use Droit\Repo\Arret\ArretInterface;
-use Illuminate\Database\Eloquent\Model as M;
+use Droit\Content\Repo\ArretInterface;
+use Droit\Content\Entities\Arrets as M;
 
 class ArretEloquent implements ArretInterface {
 

@@ -1,6 +1,6 @@
-<?php namespace Droit\Repo\Auteur;
+<?php namespace Droit\Content\Repo;
 
-use Droit\Repo\Auteur\AuteurInterface;
+use Droit\Content\Repo\AuteurInterface;
 use Illuminate\Database\Eloquent\Model as M;
 
 class AuteurEloquent implements AuteurInterface {

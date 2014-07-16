@@ -1,6 +1,6 @@
-<?php namespace Droit\Repo\BSCategorie;
+<?php namespace Droit\Content\Repo;
 
-use Droit\Repo\BSCategorie\BSCategorieInterface;
+use Droit\Content\Repo\BSCategorieInterface;
 use Illuminate\Database\Eloquent\Model as M;
 
 class BSCategorieEloquent implements BSCategorieInterface{

@@ -1,4 +1,4 @@
-<?php namespace Droit\Repo\Auteur;
+<?php namespace Droit\Content\Repo;
 
 interface AuteurInterface {
 	

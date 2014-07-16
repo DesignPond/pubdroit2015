@@ -1,8 +1,8 @@
-<?php namespace Droit\Repo\Calculette;
+<?php namespace Droit\Calculette\Repo;
 
-use Droit\Repo\Calculette\CalculetteInterface;
-use Calculette_ipc as CI;
-use Calculette_taux as CT;
+use Droit\Calculette\Repo\CalculetteInterface;
+use Droit\Calculette\Entities\Calculette_ipc as CI;
+use Droit\Calculette\Entities\Calculette_taux as CT;
 use Carbon\Carbon;
 
 class CalculetteEloquent implements CalculetteInterface {

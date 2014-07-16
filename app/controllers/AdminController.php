@@ -1,12 +1,18 @@
 <?php
+/**
+ * Admin Controller
+ */
 
 use Droit\Event\Repo\EventInterface;
 use Droit\User\Repo\UserInfoInterface;
-//use Droit\Service\Form\Event\EventForm;
 use Droit\Event\Repo\InscriptionInterface;
-
 use Droit\Event\Worker\GenerateInterface;
+//use Droit\Service\Form\Event\EventForm;
 
+/**
+ * Admin Controller
+ * The landing controler when entering the admin
+ */
 class AdminController extends BaseController {
 
 	protected $event;
@@ -17,11 +23,11 @@ class AdminController extends BaseController {
 	
 	public function __construct(EventInterface $event , UserInfoInterface $user ,  InscriptionInterface $inscription , GenerateInterface $generate){
 		
-		$this->event    = $event;
+		$this->event       = $event;
 		
-		$this->user     = $user;
+		$this->user        = $user;
 		
-		$this->generate = $generate;
+		$this->generate    = $generate;
 		
 		$this->inscription = $inscription;
 	}
