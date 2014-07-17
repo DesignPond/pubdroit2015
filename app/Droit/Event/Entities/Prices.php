@@ -1,8 +1,8 @@
 <?php namespace Droit\Event\Entities;
 
-use Eloquent;
+use Droit\Common\BaseModel as BaseModel;
 
-class Prices extends Eloquent {
+class Prices extends BaseModel {
 
 	protected $guarded   = array('id');
 	public $timestamps   = false;

@@ -1,9 +1,9 @@
 <?php
 
-use Droit\Repo\Analyse\AnalyseInterface;
-use Droit\Repo\Arret\ArretInterface;
-use Droit\Repo\Categorie\CategorieInterface;
-use Droit\Service\Upload\UploadInterface;
+use Droit\Content\Repo\AnalyseInterface;
+use Droit\Content\Repo\ArretInterface;
+use Droit\Content\Repo\CategorieInterface;
+use Droit\Service\Worker\UploadInterface;
 
 use Droit\Service\Form\Analyses\AnalysesValidator as AnalysesValidator;
 
@@ -17,6 +17,8 @@ class AnalysesController extends BaseController {
 	
 	protected $upload;
 	
+	private $pids;
+	
 	public function __construct( ArretInterface $arret , CategorieInterface $categorie , AnalyseInterface $analyse , UploadInterface $upload ){
 		
 		$this->categorie  = $categorie;
@@ -25,7 +27,9 @@ class AnalysesController extends BaseController {
 
 		$this->arret      = $arret;
 		
-		$this->upload     = $upload;			
+		$this->upload     = $upload;
+		
+		$this->pids = Config::get('common.pid');			
 							
 	}
 
@@ -60,12 +64,9 @@ class AnalysesController extends BaseController {
 	public function store()
 	{
 		// arrange infos
-		$pid  = Input::get('pid');
-		$file = false;
-
-		// Get pid
-		if( $pid == 195 ){ $link = 'bail'; }
-		if( $pid == 207 ){ $link = 'matrimonial'; }	
+		$file = false;	
+		
+		$link = $this->pids[Input::get('pid')];
 		
 		// Files upload
 		if( Input::file('file') )
@@ -85,19 +86,15 @@ class AnalysesController extends BaseController {
 			  'pub_text'   => Input::get('pub_text')
 		);
 		
-		if($file) { $data['file'] = $file['name']; } else { $data['file'] = ''; }
+		$data['file'] = ($file ? $file['name'] : '' );
 		
-		// Init arrt validator
-		$analysesValidator = AnalysesValidator::make( Input::all() );
-		
-		if ($analysesValidator->passes()) 
+		if( $this->analyse->create( $data ) ) 
 		{
-			$this->analyse->create( $data );
 			
 			return Redirect::to('admin/'.$link.'/analyses')->with( array('status' => 'success' , 'message' => 'Analyse crée') ); 
 		}
 		
-		return Redirect::back()->withErrors( $analysesValidator->errors() )->withInput( Input::all() ); 
+		return Redirect::back()->withErrors( $this->analyse->errors() )->withInput( Input::all() ); 
 	}
 
 	/**
@@ -135,7 +132,36 @@ class AnalysesController extends BaseController {
 	 */
 	public function update($id)
 	{
-		//
+
+		// Get pid		
+		$link = $this->pids[Input::get('pid')];
+		
+		// Data array							
+		$data = array(
+			  'pid'        => $pid,
+			  'cruser_id'  => Input::get('cruser_id'),
+			  'authors'    => Input::get('authors'),
+			  'pub_date'   => Input::get('pub_date'),
+			  'abstract'   => Input::get('abstract'),
+			  'categories' => Input::get('categories'),
+			  'arrets'     => Input::get('arrets'),
+			  'pub_text'   => Input::get('pub_text')
+		);
+				
+		// Files upload
+		if( Input::file('file') )
+		{
+			$file = $this->upload->upload( Input::file('file') , 'files/analyses' );				
+			$data['file'] = ($file ? $file['name'] : '' );
+		}				
+	
+		if( $this->analyse->update( $data ) ) 
+		{
+			
+			return Redirect::to('admin/'.$link.'/analyses')->with( array('status' => 'success' , 'message' => 'Analyse mise à jour') ); 
+		}
+		
+		return Redirect::back()->withErrors( $this->analyse->errors() )->withInput( Input::all() ); 
 	}
 
 	/**

@@ -25,14 +25,14 @@ class AnalyseEloquent implements AnalyseInterface {
 	public function getAllArrets($pid){
 		
 		return $this->analyse->where('ba_analyses.pid','=',$pid)
-				    ->join('ba_analyses_arrets', function($join)
+				    ->join('arrets_ba_analyses', function($join)
 			        {
-			          $join->on('ba_analyses.id', '=', 'ba_analyses_arrets.analyse_id');
+			          $join->on('ba_analyses.id', '=', 'arrets_ba_analyses.ba_analyses_id');
 			          
 			        })
 			        ->join('ba_arrets', function($join)
 			        {
-			          $join->on('ba_arrets.id', '=', 'ba_analyses_arrets.arret_id');
+			          $join->on('ba_arrets.id', '=', 'arrets_ba_analyses.arrets_id');
 			          
 			        })
 			        ->where('ba_analyses.deleted', '=', 0)
@@ -85,7 +85,7 @@ class AnalyseEloquent implements AnalyseInterface {
 		{
 			foreach($categories as $index => $categorie)
 			{
-				$analyse_categorie = new \Analyses_categories;
+				$analyse_categorie = new Droit\Content\Entities\Analyses_categories;
 				
 				$analyse_categorie->analyse_id   = $analyse->id;
 				$analyse_categorie->categorie_id = $categorie;
@@ -100,7 +100,7 @@ class AnalyseEloquent implements AnalyseInterface {
 		{
 			foreach($arrets as $index => $arret)
 			{
-				$analyse_arret = new \Analyses_arrets;
+				$analyse_arret = new Droit\Content\Entities\Analyses_arrets;
 				
 				$analyse_arret->analyse_id = $analyse->id;
 				$analyse_arret->arret_id   = $arret;
@@ -115,6 +115,40 @@ class AnalyseEloquent implements AnalyseInterface {
 	
 	public function update(array $data)
 	{
+		
+		$analyse = $this->analyse->findOrFail($data['id']);	
+		
+		if( ! $analyse )
+		{
+			return false;
+		}
+
+		if(isset($data['file']))
+		{
+			$analyse->file = $data['file'];
+		}
+		
+		// Général		
+		$analyse->organisateur = $data['authors'];
+		$analyse->titre        = $data['abstract'];
+		$analyse->soustitre    = $data['pub_text'];
+		$analyse->sujet        = count($data['categories']);
+		$analyse->description  = count($data['arrets']);
+
+		$this->addPivot($id , $data['categories'] , 'categories');
+		$this->addPivot($id , $data['arrets'] , 'arrets');
+		
+		$analyse->save();	
+		
+		return true;
+				
+	}
+	
+	/**
+	 *  add pivot ids 
+	*/
+	public function addPivot($id,$array,$what){
+	
 		
 	}
 	

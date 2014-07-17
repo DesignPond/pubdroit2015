@@ -4,7 +4,7 @@ use Droit\Event\Repo\EventInterface;
 use Droit\Event\Repo\CompteInterface;
 use Droit\Event\Repo\FileInterface;
 use Droit\User\Repo\SpecialisationInterface;
-use Droit\Service\Repo\UploadInterface;
+use Droit\Service\Worker\UploadInterface;
 
 class EventController extends BaseController {
 

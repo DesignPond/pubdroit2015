@@ -12,11 +12,11 @@ class CreateBsSubjectsAuthorsTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('bs_subjects_authors', function(Blueprint $table) {
+		Schema::create('subjects_bs_authors', function(Blueprint $table) {
 
 			$table->increments('id');
-			$table->integer('subject_id')->unsigned()->index();
-			$table->integer('author_id')->unsigned()->index();
+			$table->integer('subjects_id')->unsigned()->index();
+			$table->integer('bs_authors_id')->unsigned()->index();
 			$table->integer('sorting');		
 			
 		});
@@ -30,7 +30,7 @@ class CreateBsSubjectsAuthorsTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('bs_subjects_authors');
+		Schema::drop('subjects_bs_authors');
 	}
 
 }

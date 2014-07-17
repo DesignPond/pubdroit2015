@@ -42,7 +42,7 @@
 					    							    
 						<!-- form start --> 
 						{{ Form::model($analyse,array(
-							'method'        => 'POST',
+							'method'        => 'PUT',
 							'id'            => 'arret',
 							'data-validate' => 'parsley',
 							'class'         => 'validate-form form-horizontal',

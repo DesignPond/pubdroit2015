@@ -1,8 +1,8 @@
 <?php namespace Droit\Content\Entities;
 
-use Eloquent;
+use Droit\Common\BaseModel as BaseModel;
 
-class Analyses extends Eloquent {
+class Analyses extends BaseModel {
 
 	protected $guarded   = array();
 	public static $rules = array();
@@ -18,12 +18,12 @@ class Analyses extends Eloquent {
     
 	public function arrets_analyses()
     {     
-        return $this->belongsToMany('Droit\Content\Entities\Arrets', 'ba_analyses_arrets', 'analyse_id', 'arret_id');
+        return $this->belongsToMany('Droit\Content\Entities\Arrets', 'arrets_ba_analyses', 'ba_analyses_id', 'arrets_id');
     }
 
 	public function analyses_arrets()
     {     
-        return $this->belongsToMany('Droit\Content\Entities\Arrets', 'ba_analyses_arrets', 'arret_id', 'analyse_id');
+        return $this->belongsToMany('Droit\Content\Entities\Arrets', 'arrets_ba_analyses', 'arrets_id', 'ba_analyses_id');
     }
     
 }

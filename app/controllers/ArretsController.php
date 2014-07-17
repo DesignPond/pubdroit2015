@@ -5,9 +5,7 @@ use Droit\Content\Repo\AnalyseInterface;
 use Droit\Content\Repo\SeminaireInterface;
 use Droit\Content\Repo\SubjectInterface;
 use Droit\Content\Repo\CategorieInterface;
-use Droit\Service\Repo\UploadInterface;
-
-//use Droit\Service\Form\Arrets\ArretsValidator as ArretsValidator;
+use Droit\Service\Worker\UploadInterface;
 
 class ArretsController extends BaseController {
 

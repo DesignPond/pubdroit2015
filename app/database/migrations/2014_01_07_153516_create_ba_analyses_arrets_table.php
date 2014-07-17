@@ -12,11 +12,11 @@ class CreateBaAnalysesArretsTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('ba_analyses_arrets', function(Blueprint $table) {
-		
+		Schema::create('arrets_ba_analyses', function(Blueprint $table) {
+			
 			$table->increments('id');
-			$table->integer('arret_id')->unsigned()->index();
-			$table->integer('analyse_id')->unsigned()->index();
+			$table->integer('arrets_id')->unsigned()->index();
+			$table->integer('ba_analyses_id')->unsigned()->index();
 			$table->integer('sorting');			
 			
 		});
@@ -29,7 +29,7 @@ class CreateBaAnalysesArretsTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('ba_analyses_arrets');
+		Schema::drop('arrets_ba_analyses');
 	}
 
 }

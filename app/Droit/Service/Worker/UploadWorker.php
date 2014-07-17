@@ -1,4 +1,4 @@
-<?php namespace Droit\Service\Repo;
+<?php namespace Droit\Service\Worker;
 
 use Intervention\Image\Facades\Image;
 

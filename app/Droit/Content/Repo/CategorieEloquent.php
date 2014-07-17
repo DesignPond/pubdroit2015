@@ -5,7 +5,7 @@ use Droit\Content\Entities\BaCategories as M;
 
 class CategorieEloquent implements CategorieInterface {
 
-	protected $arret;
+	protected $categorie;
 	
 	// Class expects an Eloquent model
 	public function __construct(M $categorie)

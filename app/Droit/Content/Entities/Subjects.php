@@ -1,8 +1,8 @@
 <?php namespace Droit\Content\Entities;
 
-use Eloquent;
+use Droit\Common\BaseModel as BaseModel;
 
-class Subjects extends Eloquent {
+class Subjects extends BaseModel {
 
 	protected $guarded   = array();
 	public static $rules = array();
@@ -11,17 +11,17 @@ class Subjects extends Eloquent {
     
 	public function subjects_categories()
     {     
-        return $this->belongsToMany('BsCategories', 'bs_subjects_category', 'subject_id', 'category_id');
+        return $this->belongsToMany('BsCategories', 'subjects_bs_category', 'subjects_id', 'category_id');
     } 
 
 	public function subjects_authors()
     {     
-        return $this->belongsToMany('Authors', 'bs_subjects_authors', 'subject_id', 'author_id');
+        return $this->belongsToMany('Authors', 'subjects_abs_uthors', 'subjects_id', 'author_id');
     } 
     
 	public function subjects_seminaires()
     {     
-        return $this->belongsToMany('Seminaires', 'bs_seminaires_subjects', 'seminaire_id', 'subject_id');
+        return $this->belongsToMany('Seminaires', 'seminaires_bs_subjects', 'seminaires_id', 'subject_id');
     } 
     
 }

@@ -1,8 +1,8 @@
 <?php namespace Droit\Event\Entities;
 
-use Eloquent;
+use Droit\Common\BaseModel as BaseModel;
 
-class Options extends Eloquent {
+class Options extends BaseModel {
 
 	protected $guarded   = array('id');
 	public static $rules = array();

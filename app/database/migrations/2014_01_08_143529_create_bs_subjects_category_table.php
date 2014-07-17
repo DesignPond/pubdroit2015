@@ -12,11 +12,11 @@ class CreateBsSubjectsCategoryTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('bs_subjects_category', function(Blueprint $table) {
-
+		Schema::create('subjects_bs_category', function(Blueprint $table) {
+			
 			$table->increments('id');
-			$table->integer('subject_id')->unsigned()->index();
-			$table->integer('category_id')->unsigned()->index();
+			$table->integer('subjects_id')->unsigned()->index();
+			$table->integer('bs_category_id')->unsigned()->index();
 			$table->integer('sorting');		
 			
 		});
@@ -30,7 +30,7 @@ class CreateBsSubjectsCategoryTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('bs_subjects_category');
+		Schema::drop('subjects_bs_category');
 	}
 
 }

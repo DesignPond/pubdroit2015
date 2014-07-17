@@ -1,8 +1,8 @@
 <?php namespace Droit\Event\Entities;
 
-use Eloquent;
+use Droit\Common\BaseModel as BaseModel;
 
-class Event_config extends Eloquent {
+class Event_config extends BaseModel {
 	
 	protected $table     = 'event_config';
 	protected $guarded   = array('id');

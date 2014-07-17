@@ -1,11 +1,11 @@
 <?php namespace Droit\Content\Entities;
 
-use Eloquent;
+use Droit\Common\BaseModel as BaseModel;
 
-class Analyses_arrets extends \Eloquent {
+class Analyses_arrets extends BaseModel {
 
 	protected $guarded   = array('id');
 	public static $rules = array();
 	public $timestamps   = false;
-	protected $table     = 'ba_analyses_arrets';
+	protected $table     = 'arrets_ba_analyses';
 }

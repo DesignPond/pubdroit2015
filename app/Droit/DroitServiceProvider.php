@@ -25,9 +25,9 @@ class DroitServiceProvider extends ServiceProvider {
 	 */     
     protected function registerUploadService(){
     
-	    $this->app->bind('Droit\Service\Repo\UploadInterface', function()
+	    $this->app->bind('Droit\Service\Worker\UploadInterface', function()
         {
-            return new \Droit\Service\Repo\UploadWorker();
+            return new \Droit\Service\Worker\UploadWorker();
         });        
     }
     

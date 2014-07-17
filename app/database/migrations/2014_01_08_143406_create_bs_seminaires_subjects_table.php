@@ -12,11 +12,11 @@ class CreateBsSeminairesSubjectsTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('bs_seminaires_subjects', function(Blueprint $table) {
-
+		Schema::create('seminaires_bs_subjects', function(Blueprint $table) {
+			
 			$table->increments('id');
-			$table->integer('seminaire_id')->unsigned()->index();
-			$table->integer('subject_id')->unsigned()->index();
+			$table->integer('seminaires_id')->unsigned()->index();
+			$table->integer('bs_subjects_id')->unsigned()->index();
 			$table->integer('sorting');		
 			
 		});
@@ -30,7 +30,7 @@ class CreateBsSeminairesSubjectsTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('bs_seminaires_subjects');
+		Schema::drop('seminaires_bs_subjects');
 	}
 
 }

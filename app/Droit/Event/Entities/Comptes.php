@@ -1,8 +1,8 @@
 <?php namespace Droit\Event\Entities;
 
-use Eloquent;
+use Droit\Common\BaseModel as BaseModel;
 
-class Comptes extends Eloquent {
+class Comptes extends BaseModel {
 
 	protected $guarded = array('id');
 }

@@ -1,8 +1,8 @@
 <?php namespace Droit\Content\Entities;
 
-use Eloquent;
+use Droit\Common\BaseModel as BaseModel;
 
-class Authors extends Eloquent {
+class Authors extends BaseModel {
 
 	protected $guarded   = array();
 	public static $rules = array();
