@@ -34,7 +34,8 @@ class EventServiceProvider extends ServiceProvider {
     	$this->registerOptionService();	
     	$this->registerPriceService();	
 		$this->registerGenerateService();
-		$this->registerFileService();    			
+		$this->registerFileService();  
+		$this->registerEventWorkerService();    			
     }
 
 	/**
@@ -142,6 +143,17 @@ class EventServiceProvider extends ServiceProvider {
 	    $this->app->bind('Droit\Event\Repo\FileInterface', function()
         {
             return new \Droit\Event\Repo\FileEloquent( new F );
+        });        
+    }
+    
+    /**
+	 * Event worker
+	 */      
+    protected function registerEventWorkerService(){
+
+	    $this->app->bind('Droit\Event\Worker\EventWorkerInterface', function()
+        {
+            return new \Droit\Event\Worker\EventWorker();
         });        
     }
     
