@@ -27,8 +27,17 @@ $app = new Illuminate\Foundation\Application;
 $env = $app->detectEnvironment(array(
 
 	//'local' => array('homestead'),
-	'local'      => array('*.local', gethostname()),
-    'production' => array('5.101.104.99')
+	//'local'      => array('*.local', gethostname()),
+    //'production' => array('5.101.104.99')
+    
+    if($_SERVER['HTTP_HOST'] == 'pubdroit.local')
+    {
+        return 'local';
+    }
+    else
+    {
+        return 'production';
+    }
 
 ));
 
