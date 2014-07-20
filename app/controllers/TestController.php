@@ -14,7 +14,7 @@ class TestController extends BaseController {
 	protected $event;
 
 	
-	public function __construct(EventWorker $event){
+	public function __construct(EventWorkerw $event){
 		
 		$this->event = $$event;
 
