@@ -6,6 +6,9 @@ use Droit\Event\Repo\FileInterface;
 use Droit\User\Repo\SpecialisationInterface;
 use Droit\Service\Worker\UploadInterface;
 
+use Droit\Event\Forms\Events as EventsForm;
+use Laracasts\Validation\FormValidationException;
+
 class EventController extends BaseController {
 
 	protected $event;
@@ -19,8 +22,10 @@ class EventController extends BaseController {
 	protected $specialisation;
 	
 	private $documents;
+
+    protected $eventForm;
 	
-	public function __construct(EventInterface $event, CompteInterface $compte, UploadInterface $upload, FileInterface $file, SpecialisationInterface $specialisation )
+	public function __construct(EventsForm $eventForm, EventInterface $event, CompteInterface $compte, UploadInterface $upload, FileInterface $file, SpecialisationInterface $specialisation )
 	{
 		
 		$this->event          = $event;
@@ -35,6 +40,7 @@ class EventController extends BaseController {
 
 		$this->documents      = array( 'images' => array('carte','vignette','badge','illustration'), 'docs' => array('programme','pdf','document') );
 
+        $this->eventForm      = $eventForm;
 	}
 
 	/**
@@ -88,18 +94,16 @@ class EventController extends BaseController {
 	 * @return Response
 	 */
 	public function store()
-	{	
+	{
 		
-		if ( $this->event->create( Input::all() ) ) 
-		{
-			// Get last inserted
-			$event  = $this->event->getLast(1);
-			$id     = $event->first()->id;
-			
-			return Redirect::to('admin/pubdroit/event/'.$id.'/edit');
-		}
-		
-		return Redirect::to('admin/pubdroit/event/create')->withErrors($this->event->errors())->withInput( Input::all() ); 
+		$this->eventForm->validate( Input::all() );
+
+        $event  = $this->event->create(
+            Input::all()
+        );
+
+        return Redirect::to('admin/pubdroit/event/'.$event->id.'/edit');
+
 	}
 
 	/**

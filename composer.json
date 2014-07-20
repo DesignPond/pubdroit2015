@@ -5,7 +5,9 @@
 	"license": "MIT",
 	"require": {
 		"laravel/framework": "4.2.*",
-		"doctrine/dbal": "~2.3"
+		"doctrine/dbal": "~2.3",
+        "laracasts/validation": "~1.0",
+        "laracasts/commander": "1.1.*"
 	},
 	"require-dev": {
 		"phpunit/phpunit": "4.1.*"

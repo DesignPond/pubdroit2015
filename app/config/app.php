@@ -13,7 +13,7 @@ return array(
 	|
 	*/
 
-	'debug' => true,
+	'debug' => false,
 
 	/*
 	|--------------------------------------------------------------------------
@@ -126,7 +126,9 @@ return array(
 		'Droit\Event\EventServiceProvider',
 		'Droit\Content\ContentServiceProvider',
 		'Droit\User\UserServiceProvider',
-		'Droit\Calculette\CalculetteServiceProvider'
+		'Droit\Calculette\CalculetteServiceProvider',
+        'Laracasts\Validation\ValidationServiceProvider',
+        'Laracasts\Commander\CommanderServiceProvider'
 	),
 
 	/*
