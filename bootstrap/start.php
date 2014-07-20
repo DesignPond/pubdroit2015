@@ -27,7 +27,8 @@ $app = new Illuminate\Foundation\Application;
 $env = $app->detectEnvironment(array(
 
 	//'local' => array('homestead'),
-	'local'      => array('pubdroit.local')   
+	'dev'      => array('pubdroit.local'),
+	'local'    => array('5.101.104.99')   
 
 ));
 
