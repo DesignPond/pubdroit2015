@@ -28,7 +28,7 @@ $env = $app->detectEnvironment(array(
 
 	//'local' => array('homestead'),
 	'local'      => array('*.local', gethostname()),
-    //'production' => array('*.ch')
+    'production' => array('5.101.104.99')
 
 ));
 
