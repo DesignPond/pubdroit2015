@@ -43,16 +43,11 @@ class SpecialisationController extends BaseController {
 	 */
 	public function store()
 	{
-		$specialisationValidator = SpecialisationValidator::make(Input::all());
-		
-		if ($specialisationValidator->passes()) 
-		{
-			$this->specialisation->create(Input::all());
-			
-			return Redirect::to('admin/pubdroit/specialisation')->with( array('status' => 'success' , 'message' => 'La spécialisation à été crée' ) );
-		}
-		
-		return Redirect::to('admin/pubdroit/specialisation/create')->withErrors( $specialisationValidator->errors() )->withInput( Input::all() ); 
+        $specialisation  = $this->specialisation->create(
+            Input::only('titreSpecialisation')
+        );
+
+        return Redirect::to('admin/pubdroit/specialisation')->with( array('status' => 'success' , 'message' => 'La spécialisation a été crée' ) );
 	}
 
 	/**
@@ -87,16 +82,13 @@ class SpecialisationController extends BaseController {
 	 */
 	public function update($id)
 	{
-		$specialisationValidator = SpecialisationValidator::make(Input::all());
-		
-		if ($specialisationValidator->passes()) 
-		{
-			$this->specialisation->update(Input::all());
-			
-			return Redirect::to('admin/pubdroit/specialisation')->with( array('status' => 'success' , 'message' => 'La spécialisation a été modifiée' ) );
-		}
-		
-		return Redirect::to('admin/pubdroit/specialisation/'.$id.'/edit')->withErrors( $specialisationValidator->errors() )->withInput( Input::all() ); 
+
+        $specialisation  = $this->specialisation->update(
+            Input::only('id','titreSpecialisation')
+        );
+
+        return Redirect::to('admin/pubdroit/specialisation')->with( array('status' => 'success' , 'message' => 'La spécialisation a été modifiée' ) );
+
 	}
 
 	/**
@@ -107,12 +99,11 @@ class SpecialisationController extends BaseController {
 	 */
 	public function destroy($id)
 	{
-		if( $this->specialisation->delete($id) )
-		{
-			return Redirect::to('admin/pubdroit/specialisation')->with( array('status' => 'success' , 'message' => 'La spécialisation a été supprimée') );
-		}
-		
-		return Redirect::to('admin/pubdroit/specialisation')->with( array('status' => 'error' , 'message' => 'Problème avec la suppression') );
+
+        $message = ( $this->specialisation->delete($id) ? array('status' => 'success','message' => 'La spécialisation a été supprimée') : array('status' => 'error','message' => 'Problème avec la suppression') );
+
+        return Redirect::back()->with( $message );
+
 	}
 	
 	/* Link to events */

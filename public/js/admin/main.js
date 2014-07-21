@@ -49,7 +49,6 @@ $(function() {
         }
     });
 
-    /*
     $('.validate-form-email').parsley({
         successClass: 'has-success',
         errorClass: 'has-error',
@@ -60,7 +59,7 @@ $(function() {
             errorsWrapper: '<ul class=\"help-block list-unstyled\"></ul>',
             errorElem: '<li></li>'
         }
-    }); */
+    });
     
     $('.validate-form-attestation').parsley({
         successClass: 'has-success',
@@ -73,8 +72,6 @@ $(function() {
             errorElem: '<li></li>'
         }
     });    
-    
-    
 
 	$( ".uploadBtn" ).change(function() {
 		

@@ -18,19 +18,19 @@ class CreateEventsTable extends Migration {
 			
 			$table->string('organisateur');
 			$table->string('titre');
-			$table->string('soustitre');
+			$table->string('soustitre')->nullable();
 			$table->string('sujet');
-			$table->text('description');
+			$table->text('description')->nullable();
 			$table->string('endroit');
 			$table->date('dateDebut');
-			$table->date('dateFin');
+			$table->date('dateFin')->nullable();
 			$table->date('dateDelai'); // changed
-			$table->text('remarques');
+			$table->text('remarques')->nullable();
 			$table->enum('typeColloque', array('0','1','2'))->default(1);
-			$table->integer('compte_id');	// changed	
+			$table->integer('compte_id')->nullable();	// changed
 			$table->enum('visible', array('0','1'))->default(0);
-			$table->integer('nbrInscription');
-			$table->string('centreLogos');	// changed
+			$table->integer('nbrInscription')->default(0);
+			$table->string('centreLogos')->nullable();	// changed
 			
 			$table->timestamps();
 		});

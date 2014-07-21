@@ -6,9 +6,6 @@ use Droit\Event\Repo\FileInterface;
 use Droit\User\Repo\SpecialisationInterface;
 use Droit\Service\Worker\UploadInterface;
 
-use Droit\Event\Forms\Events as EventsForm;
-use Laracasts\Validation\FormValidationException;
-
 class EventController extends BaseController {
 
 	protected $event;
@@ -127,7 +124,8 @@ class EventController extends BaseController {
 	{
 		$event       = $this->event->find($id);
 		$emailDefaut = $this->event->getEmail('inscription',"0");		
-		$comptes     = $this->compte->getAll()->lists('motifCompte', 'id');		
+		$comptes     = $this->compte->getAll()->lists('motifCompte', 'id');
+        $comptes     = ['' => 'Choix'] + $comptes;
 		$centers     = $this->file->getAllCenters(); 
 		
 		$allfiles    = $this->event->setFiles($event,$this->documents);

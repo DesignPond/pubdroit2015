@@ -42,16 +42,12 @@ class MembreController extends BaseController {
 	 */
 	public function store()
 	{
-		$membreValidator = MembreValidator::make(Input::all());
-		
-		if ($membreValidator->passes()) 
-		{
-			$this->membre->create(Input::all());
-			
-			return Redirect::to('admin/pubdroit/membre')->with( array('status' => 'success' , 'message' => 'Le membre à été crée' ) );
-		}
-		
-		return Redirect::to('admin/pubdroit/membre/create')->withErrors( $membreValidator->errors() )->withInput( Input::all() ); 
+
+        $membre  = $this->membre->create(
+            Input::only('titreMembre')
+        );
+
+        return Redirect::to('admin/pubdroit/membre')->with( array('status' => 'success' , 'message' => 'Le membre à été crée' ) );
 	}
 
 	/**
@@ -86,16 +82,13 @@ class MembreController extends BaseController {
 	 */
 	public function update($id)
 	{
-		$membreValidator = MembreValidator::make(Input::all());
-		
-		if ($membreValidator->passes()) 
-		{
-			$this->membre->update(Input::all());
-			
-			return Redirect::to('admin/pubdroit/membre')->with( array('status' => 'success' , 'message' => 'Le membre a été modifié' ) );
-		}
-		
-		return Redirect::to('admin/pubdroit/membre/'.$id.'/edit')->withErrors( $membreValidator->errors() )->withInput( Input::all() ); 
+
+        $membre  = $this->membre->update(
+            Input::only('id','titreMembre')
+        );
+
+        return Redirect::to('admin/pubdroit/membre')->with( array('status' => 'success' , 'message' => 'Le membre a été modifié' ) );
+
 	}
 
 	/**
@@ -106,12 +99,10 @@ class MembreController extends BaseController {
 	 */
 	public function destroy($id)
 	{
-		if( $this->membre->delete($id) )
-		{
-			return Redirect::to('admin/pubdroit/membre')->with( array('status' => 'success' , 'message' => 'Le membre a été supprimé') );
-		}
-		
-		return Redirect::to('admin/pubdroit/membre')->with( array('status' => 'error' , 'message' => 'Problème avec la suppression') );
+        $message = ( $this->membre->delete($id) ? array('status' => 'success','message' => 'Le membre a été supprimé') : array('status' => 'error','message' => 'Problème avec la suppression') );
+
+        return Redirect::back()->with( $message );
+
 	}
 
 }

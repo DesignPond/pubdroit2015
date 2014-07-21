@@ -8,7 +8,7 @@ class Professions extends BaseModel {
 	public $timestamps   = false;
 
     /**
-     * Validation rules for event creation
+     * Validation rules
      *
      * @var array
      */

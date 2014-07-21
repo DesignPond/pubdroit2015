@@ -22,12 +22,6 @@
 						<div class="col-sm-8 col-md-offset-2">
 
                             @include('layouts.partials.message')
-							
-							@if(Session::has('status'))
-							<div class="alert alert-dismissable alert-{{  Session::get('status') }}">
-								ok <button class="close" aria-hidden="true" data-dismiss="alert" type="button">×</button>
-							</div>
-							@endif
 
 							<!-- form start --> 
 							{{ Form::model($profession,array(
