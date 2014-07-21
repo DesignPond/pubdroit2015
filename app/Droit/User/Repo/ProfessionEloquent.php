@@ -1,14 +1,14 @@
 <?php namespace Droit\User\Repo;
 
 use Droit\User\Repo\ProfessionInterface;
-use Droit\User\Entities\Professions as M;
+use Droit\User\Entities\Professions as Professions;
 
 class ProfessionEloquent implements ProfessionInterface {
 	
 	protected $profession;
 	
 	// Class expects an Eloquent model
-	public function __construct(M $profession)
+	public function __construct(Professions $profession)
 	{
 		$this->profession = $profession;	
 	}
@@ -44,7 +44,7 @@ class ProfessionEloquent implements ProfessionInterface {
 			return false;
 		}
 		
-		return true;		
+		return $profession;
 	}
 	
 	public function update(array $data)
@@ -60,7 +60,8 @@ class ProfessionEloquent implements ProfessionInterface {
 		
 		$profession->save();	
 		
-		return true;		
+		return $profession;
+
 	}
 	
 }

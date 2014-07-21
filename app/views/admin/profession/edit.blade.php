@@ -20,15 +20,8 @@
 
 					<div class="row">
 						<div class="col-sm-8 col-md-offset-2">
-						
-						   @if($errors->has())
-								We encountered the following errors:						
-								<ul>
-								    @foreach($errors->all() as $message)						
-								    <li>{{ $message }}</li>						
-								    @endforeach
-								</ul>						
-							@endif
+
+                            @include('layouts.partials.message')
 							
 							@if(Session::has('status'))
 							<div class="alert alert-dismissable alert-{{  Session::get('status') }}">

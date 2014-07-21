@@ -18,23 +18,8 @@
 		    <div class="row">
 				<div class="col-sm-12">	
 									
-				    @if($errors->has())				
-						<ul>
-						    @foreach($errors->all() as $message)						
-						    <li>{{ $message }}</li>						
-						    @endforeach
-						</ul>						
-					@endif
-					
-					@if(Session::has('status'))
-					<div class="alert alert-dismissable alert-{{  Session::get('status') }}">
-						@if(Session::has('message'))
-							{{  Session::get('message') }}
-						@endif
-						<button class="close" aria-hidden="true" data-dismiss="alert" type="button">×</button>
-					</div>
-					@endif
-					
+                    @include('layouts.partials.message')
+
 					<!-- Images et documents -->
 					<!-- panel start -->
 					<div class="panel panel-primary">
@@ -293,8 +278,8 @@
 					{{ Form::model($event,array(
 						'method'        => 'PATCH',
 						'id'            => 'event_info',
-						'data-validate' => 'parsley',
-						'class'         => 'validate-form form-horizontal',
+						'data-validate' => '',
+						'class'         => ' form-horizontal',
 						'route'         => array('admin.pubdroit.event.update',$event->id))) 
 					}} 
 

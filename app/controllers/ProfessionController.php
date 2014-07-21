@@ -41,16 +41,11 @@ class ProfessionController extends BaseController {
 	 */
 	public function store()
 	{
-		$professionValidator = ProfessionValidator::make(Input::all());
-		
-		if ($professionValidator->passes()) 
-		{
-			$this->profession->create(Input::all());
-			
-			return Redirect::to('admin/pubdroit/profession')->with( array('status' => 'success' , 'message' => 'La profession à été crée' ) );
-		}
-		
-		return Redirect::to('admin/pubdroit/profession/create')->withErrors( $professionValidator->errors() )->withInput( Input::all() ); 
+        $profession  = $this->profession->create(
+            Input::only('titreProfession')
+        );
+
+        return Redirect::to('admin/pubdroit/profession')->with( array('status' => 'success' , 'message' => 'La profession a été crée' ) );
 	}
 
 	/**
@@ -85,16 +80,13 @@ class ProfessionController extends BaseController {
 	 */
 	public function update($id)
 	{
-		$professionValidator = ProfessionValidator::make(Input::all());
-		
-		if ($professionValidator->passes()) 
-		{
-			$this->profession->update(Input::all());
-			
-			return Redirect::to('admin/pubdroit/profession')->with( array('status' => 'success' , 'message' => 'La profession a été modifiée' ) );
-		}
-		
-		return Redirect::to('admin/pubdroit/profession/'.$id.'/edit')->withErrors( $professionValidator->errors() )->withInput( Input::all() ); 
+
+        $profession  = $this->profession->update(
+            Input::only('id','titreProfession')
+        );
+
+        return Redirect::to('admin/pubdroit/profession')->with( array('status' => 'success' , 'message' => 'La profession a été modifiée' ) );
+
 	}
 
 	/**
@@ -105,12 +97,9 @@ class ProfessionController extends BaseController {
 	 */
 	public function destroy($id)
 	{
-		if( $this->profession->delete($id) )
-		{
-			return Redirect::to('admin/pubdroit/profession')->with( array('status' => 'success' , 'message' => 'La profession a été supprimée') );
-		}
-		
-		return Redirect::to('admin/pubdroit/profession')->with( array('status' => 'error' , 'message' => 'Problème avec la suppression') );
+		$message = ( $this->profession->delete($id) ? array('status' => 'success','message' => 'La profession a été supprimée') : array('status' => 'error','message' => 'Problème avec la suppression') );
+
+		return Redirect::back()->with( $message );
 	}
 
 }

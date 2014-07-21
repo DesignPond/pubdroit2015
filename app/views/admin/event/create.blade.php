@@ -16,16 +16,9 @@
 		
 		<div class="container">
 		    <div class="row">
-				<div class="col-sm-12">	
-				
-				   @if($errors->has())
-						We encountered the following errors:						
-						<ul>
-						    @foreach($errors->all() as $message)						
-						    <li>{{ $message }}</li>						
-						    @endforeach
-						</ul>						
-					@endif
+				<div class="col-sm-12">
+
+                    @include('layouts.partials.message')
 
 					<!-- panel start -->
 					<div class="panel panel-primary">

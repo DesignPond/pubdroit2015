@@ -1,9 +1,28 @@
 <?php namespace Droit\User\Entities;
 
-use Eloquent;
+use Droit\Common\BaseModel as BaseModel;
 
-class Professions extends Eloquent {
+class Professions extends BaseModel {
+
 	protected $guarded   = array('id');
-	public static $rules = array();
 	public $timestamps   = false;
+
+    /**
+     * Validation rules for event creation
+     *
+     * @var array
+     */
+    protected static $rules = array(
+        'titreProfession' => 'required'
+    );
+
+    /**
+     * Validation messages
+     *
+     * @var array
+     */
+    protected static $messages = array(
+        'titreProfession.required' => 'Le champs titre est requis'
+    );
+
 }

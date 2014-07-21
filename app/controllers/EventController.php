@@ -95,8 +95,6 @@ class EventController extends BaseController {
 	 */
 	public function store()
 	{
-		
-		$this->eventForm->validate( Input::all() );
 
         $event  = $this->event->create(
             Input::all()
