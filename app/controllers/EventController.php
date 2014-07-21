@@ -1,9 +1,8 @@
 <?php
 
 use Droit\Event\Repo\EventInterface;
-use Droit\Event\Repo\CompteInterface;
+use Droit\Event\Worker\EventWorkerInterface;
 use Droit\Event\Repo\FileInterface;
-use Droit\User\Repo\SpecialisationInterface;
 use Droit\Service\Worker\UploadInterface;
 
 class EventController extends BaseController {
@@ -12,32 +11,21 @@ class EventController extends BaseController {
 	
 	protected $file;
 	
-	protected $compte;
-	
 	protected $upload;
-	
-	protected $specialisation;
-	
-	private $documents;
 
-    protected $eventForm;
-	
-	public function __construct(EventsForm $eventForm, EventInterface $event, CompteInterface $compte, UploadInterface $upload, FileInterface $file, SpecialisationInterface $specialisation )
+    protected $worker;
+
+	public function __construct( EventInterface $event, EventWorkerInterface $worker, UploadInterface $upload, FileInterface $file)
 	{
 		
-		$this->event          = $event;
+		$this->event  = $event;
 		
-		$this->file           = $file;
+		$this->file   = $file;
 		
-		$this->compte         = $compte;
-		
-		$this->upload         = $upload;
-		
-		$this->specialisation = $specialisation;
+		$this->upload = $upload;
 
-		$this->documents      = array( 'images' => array('carte','vignette','badge','illustration'), 'docs' => array('programme','pdf','document') );
+        $this->worker = $worker;
 
-        $this->eventForm      = $eventForm;
 	}
 
 	/**
@@ -122,24 +110,10 @@ class EventController extends BaseController {
 	 */
 	public function edit($id)
 	{
-		$event       = $this->event->find($id);
-		$emailDefaut = $this->event->getEmail('inscription',"0");		
-		$comptes     = $this->compte->getAll()->lists('motifCompte', 'id');
-        $comptes     = ['' => 'Choix'] + $comptes;
-		$centers     = $this->file->getAllCenters(); 
+        // return array with event,centers,comptes,event files,default email infos
+        $infos = $this->worker->getInfoForEvent($id);
 		
-		$allfiles    = $this->event->setFiles($event,$this->documents);
-		
-        return View::make('admin.event.edit')->with( 
-        	array(
-        		'event'       => $event,
-        		'centers'     => $centers,
-        		'comptes'     => $comptes,
-        		'emailDefaut' => $emailDefaut, 
-        		'documents'   => $this->documents,
-        		'allfiles'    => $allfiles 
-        	)
-        );
+        return View::make('admin.event.edit')->with( $infos );
         
 	}
 
@@ -205,13 +179,9 @@ class EventController extends BaseController {
 	public function destroy($id)
 	{
 
-		if( $this->event->delete($id) )
-		{
-					
-			return Redirect::to('admin/pubdroit/event')->with( array('status' => 'success' , 'message' => 'Le colloque a été supprimé') );
-		}
-		
-		return Redirect::to('admin/pubdroit/event/'.$id.'/edit')->with( array('status' => 'danger' , 'message' => 'Problème avec la suppression') );
+        $message = ( $this->event->delete($id) ? array('status' => 'success','message' => 'Le colloque a été supprimé') : array('status' => 'error','message' => 'Problème avec la suppression') );
+
+        return Redirect::back()->with( $message );
 		
 	}
 	
@@ -267,19 +237,11 @@ class EventController extends BaseController {
 	 */
 	public function destroy_file($id)
 	{
-	
-		// Get event_id for return uri
-		$event_id = $this->file->find($id)->event_id;
-		
 
-		if( $this->file->delete($id) )
-		{
-		
-			return Redirect::to('admin/pubdroit/event/'.$event_id.'/edit')->with( array('status' => 'success' , 'message' => 'Le fichier a été supprimé') );
-			
-		}
-		
-		return Redirect::to('admin/pubdroit/event/'.$event_id.'/edit')->with( array('status' => 'error' , 'message' => 'Problème avec la suppression') );
+        $message = ( $this->file->delete($id) ? array('status' => 'success','message' => 'Le fichier a été supprimé') : array('status' => 'error','message' => 'Problème avec la suppression') );
+
+        return Redirect::back()->with( $message );
+
 	}
 
 }

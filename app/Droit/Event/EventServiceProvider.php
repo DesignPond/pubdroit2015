@@ -153,7 +153,11 @@ class EventServiceProvider extends ServiceProvider {
 
 	    $this->app->bind('Droit\Event\Worker\EventWorkerInterface', function()
         {
-            return new \Droit\Event\Worker\EventWorker();
+            return new \Droit\Event\Worker\EventWorker(
+                \App::make('Droit\Event\Repo\EventInterface') ,
+                \App::make('Droit\Event\Repo\CompteInterface') ,
+                \App::make('Droit\Event\Repo\FileInterface')
+            );
         });        
     }
     
