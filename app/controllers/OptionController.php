@@ -1,7 +1,6 @@
 <?php
 
-use Droit\Repo\Option\OptionInterface;
-use Droit\Service\Form\Option\OptionValidator as OptionValidator;
+use Droit\Event\Repo\OptionInterface;
 
 class OptionController extends BaseController {
 
@@ -9,7 +8,7 @@ class OptionController extends BaseController {
 	
 	public function __construct( OptionInterface $option )
 	{		
-		$this->option     = $option;
+		$this->option = $option;
 	}
 
 	/**
@@ -29,18 +28,15 @@ class OptionController extends BaseController {
 	 */
 	public function store()
 	{
-		$optionValidator = OptionValidator::make(Input::all());
-		
+
 		$event_id = Input::get('event_id');
-		
-		if ($optionValidator->passes()) 
-		{
-			$this->option->create(Input::all());
-			
-			return Redirect::to('admin/pubdroit/event/'.$event_id.'/edit')->with( array('status' => 'success' , 'message' => 'L\'option à été crée' ) );
-		}
-		
-		return Redirect::to('admin/pubdroit/option/create/'.$event_id)->withErrors( $optionValidator->errors() )->withInput( Input::all() ); 
+
+        $option = $this->option->create(
+            Input::all()
+        );
+
+        return Redirect::to('admin/pubdroit/event/'.$event_id.'/edit')->with( array('status' => 'success' , 'message' => 'L\'option a été crée' ) );
+
 	}
 
 	/**
@@ -64,18 +60,15 @@ class OptionController extends BaseController {
 	 */
 	public function update($id)
 	{
-		$optionValidator = OptionValidator::make(Input::all());
-		
+
 		$event_id = Input::get('event_id');
-		
-		if ($optionValidator->passes()) 
-		{
-			$this->option->update(Input::all());
-			
-			return Redirect::to('admin/pubdroit/event/'.$event_id.'/edit')->with( array('status' => 'success' , 'message' => 'L\'option à été mise à jour') );
-		}
-		
-		return Redirect::to('admin/pubdroit/option/'.$id.'/edit')->withErrors( $optionValidator->errors() )->withInput( Input::all() ); 
+
+        $option = $this->option->update(
+            Input::all()
+        );
+
+        return Redirect::to('admin/pubdroit/event/'.$event_id.'/edit')->with( array('status' => 'success' , 'message' => 'L\'option a été mise à jour') );
+
 	}
 
 	/**
@@ -86,15 +79,11 @@ class OptionController extends BaseController {
 	 */
 	public function destroy($id)
 	{
-		
-		$event_id = $this->option->find($id)->event_id;
 
-		if( $this->option->delete($id) )
-		{
-			return Redirect::to('admin/pubdroit/event/'.$event_id.'/edit')->with( array('status' => 'success' , 'message' => 'L\'option à été supprimée') );
-		}
-		
-		return Redirect::to('admin/pubdroit/event/'.$event_id.'/edit')->with( array('status' => 'error' , 'message' => 'Problème avec la suppression') );
+        $message = ( $this->option->delete($id) ? array('status' => 'success','message' => 'L\'option a été supprimé') : array('status' => 'error','message' => 'Problème avec la suppression') );
+
+        return Redirect::back()->with( $message );
+
 	}
 
 }

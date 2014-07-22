@@ -156,7 +156,8 @@ class EventServiceProvider extends ServiceProvider {
             return new \Droit\Event\Worker\EventWorker(
                 \App::make('Droit\Event\Repo\EventInterface') ,
                 \App::make('Droit\Event\Repo\CompteInterface') ,
-                \App::make('Droit\Event\Repo\FileInterface')
+                \App::make('Droit\Event\Repo\FileInterface'),
+                \App::make('Droit\User\Repo\SpecialisationInterface')
             );
         });        
     }

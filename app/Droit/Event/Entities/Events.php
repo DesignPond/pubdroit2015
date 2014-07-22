@@ -52,7 +52,7 @@ class Events extends BaseModel{
  	
     public function event_options()
     {
-        return $this->hasMany('Droit\Event\Entities\Event_options', 'event_id');
+        return $this->hasMany('Droit\Event\Entities\Options', 'event_id');
     }
     
     public function event_specialisations()

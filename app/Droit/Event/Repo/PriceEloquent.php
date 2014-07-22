@@ -1,14 +1,13 @@
 <?php namespace Droit\Event\Repo;
 
 use Droit\Event\Repo\PriceInterface;
-use Droit\Event\Entities\Prices as M;
+use Droit\Event\Entities\Prices as Prices;
 
 class PriceEloquent implements PriceInterface {
 	
 	protected $price;
-	
-	// Class expects an Eloquent model
-	public function __construct(M $price)
+
+	public function __construct(Prices $price)
 	{
 		$this->price = $price;	
 	}

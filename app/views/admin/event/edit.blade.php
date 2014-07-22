@@ -121,7 +121,7 @@
 					    <div id="email_event" class="toggle_in panel-body"><!-- start panel content -->
 					    
 					    	<?php  $email = ( isset($event->email) ? $event->email : array() ); ?>
-					    	
+
 							<!-- form start --> 
 							{{ Form::model($email,array(
 								'method'        => 'POST',
@@ -136,9 +136,9 @@
 							  	<div class="col-sm-6">
 							  	
 							  		@if(!empty($email))
-					      				{{ Form::textarea('message', $email->message , array('class' => 'form-control  redactor required', 'cols' => '50' , 'rows' => '4' )) }}
+					      				{{ Form::textarea('message', $email->message , array('class' => 'form-control  redactor', 'cols' => '50' , 'rows' => '4' )) }}
 					      			@else
-					      				{{ Form::textarea('message', null , array('class' => 'form-control redactor required', 'cols' => '50' , 'rows' => '4' )) }}
+					      				{{ Form::textarea('message', null , array('class' => 'form-control redactor', 'cols' => '50' , 'rows' => '4' )) }}
 					      			@endif
 							  	  	
 							  	</div>
@@ -146,20 +146,24 @@
 
 							<div class="col-sm-6 col-sm-offset-3 margeBottom">
 					      		
-					      			@if(!empty($email))
-					      				{{ Form::hidden('id', $email->id )}}
-					      			@endif
-					      			
-					      			{{ Form::hidden('typeEmail', 'inscription' )}}
-					      			{{ Form::hidden('event_id', $event->id )}}
-						      		<button type="submit" class="btn-primary btn">Envoyer</button>
+                                @if(!empty($email))
+                                    {{ Form::hidden('id', $email->id )}}
+                                @endif
+
+                                {{ Form::hidden('typeEmail', 'inscription' )}}
+                                {{ Form::hidden('event_id', $event->id )}}
+
+                                <button type="submit" class="btn-primary btn">Envoyer</button>
+
 					      	</div>
 					      											    					    
-					    	@if( !empty($emailDefaut) )
-						    	<div class="well col-sm-6 col-sm-offset-3">	
-						    		<h3>Texte email par défaut</h3>
-						    		<div>{{ $emailDefaut->message }}</div>
-						    	</div>	
+					    	@if( !empty($default) )
+						    	<div id="defaultEmail" class="col-sm-6 col-sm-offset-3">
+						    		<a class="noUnderline" data-toggle="collapse" data-parent="#defaultEmail" href="#emailText">
+                                        <i class="fa fa-eye"></i> &nbsp;Texte email par défaut
+                                    </a>
+						    		<div id="emailText" class="well collapse">{{ $default->message }}</div>
+						    	</div>
 					    	@endif
 						    						  
 							{{ Form::close() }}
@@ -441,7 +445,7 @@
 											  			<li class="list-group-item">
 											  				<div class="row">
 											  					<div class="col-sm-3">
-														  			<strong>{{ $price->price }} CHF</strong>
+														  			<strong><?php echo ($price->price ? $price->price : '0'); ?> CHF</strong>
 														  		</div>
 												  				<div class="col-sm-7">
 														  			{{ $price->remarquePrice }}
@@ -465,11 +469,13 @@
 
 							  <h3><a name="option">Options</a></h3>
 							  <p><a href="{{ url('admin/pubdroit/option/create/'.$event->id) }}" class="btn btn-sm btn-primary">Ajouter</a></p>
-							   
+
 							  <div class="row">
 					  	 		 <div class="col-sm-6 col-md-offset-3">
 									  <ul class="list-group">
 									  @if ( ! $event->event_options->isEmpty() )
+
+
 									  	@foreach($event->event_options as $option)
 									  		<li class="list-group-item">
 									  			<div class="row">
@@ -494,10 +500,10 @@
 								  </div>
 							  </div>						  		
 							  									  
-							  <h3>Spécialisations</h3> 
+							  <h3>Spécialisations</h3>
 							  <p><a href="{{ url('admin/pubdroit/specialisation/create/'.$event->id) }}" class="btn btn-sm btn-primary">Ajouter</a></p>
-							  
-						  	  <div class="row">						  	  
+
+						  	  <div class="row">
 					  	  		 <div class="col-sm-6 col-md-offset-3">
 									  <ul class="list-group">
 								  		@if ( ! $event->event_specialisations->isEmpty() )

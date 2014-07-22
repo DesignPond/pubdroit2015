@@ -64,9 +64,10 @@ body .redactor_box_fullscreen {
 	border: none;
 	background-color: #222;
 	box-shadow: none;
-	color: #ccc;
-	font-size: 13px;
-	font-family: Menlo, Monaco, monospace, sans-serif;
+    color: #4d4d4d;
+    font-family: 'Source Sans Pro','Segoe UI','Droid Sans',Tahoma,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857;
 	resize: none;
 }
 
@@ -104,8 +105,10 @@ body .redactor_box_fullscreen {
 .redactor_editor dl,
 .redactor_editor blockquote,
 .redactor_editor pre {
-	font-size: 15px;
-	line-height: 1.5rem;
+    color: #4d4d4d;
+    font-family: 'Source Sans Pro','Segoe UI','Droid Sans',Tahoma,Arial,sans-serif;
+    font-size: 14px;
+	line-height: 1.7rem;
 }
 
 .redactor_editor,

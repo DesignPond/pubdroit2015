@@ -18,7 +18,7 @@ class CreatePricesTable extends Migration {
 			
 			$table->integer('event_id'); // changed	
 			$table->string('remarquePrice');
-			$table->float('price'); // changed	
+			$table->float('price')->nullable(); // changed
 			$table->integer('rangPrice'); // changed	
 			$table->enum('typePrice', array('1','2'));
 			

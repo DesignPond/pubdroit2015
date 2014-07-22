@@ -124,50 +124,44 @@ class EventController extends BaseController {
 	 * @return Response
 	 */
 	public function update($id)
-	{	
-		
-		if( $this->event->update(Input::all()) ) 
-		{	
-			return Redirect::to('admin/pubdroit/event/'.$id.'/edit')->with( array('status' => 'success', 'message' => 'Mise à jour ok') );
-		}
-		
-		return Redirect::to('admin/pubdroit/event/'.$id.'/edit')->with( array('status' => 'danger', 'message' => 'Problème avec la mise à jour') )
-																->withErrors($this->event->errors())
-																->withInput( Input::all() ); 
+	{
+
+        $event  = $this->event->update(
+            Input::all()
+        );
+
+        return Redirect::to('admin/pubdroit/event/'.$event->id.'/edit')->with( array('status' => 'success', 'message' => 'Mise a jour ok') );
 		
 	}
 	
 	public function email(){
-			
+
 		$event_id = Input::get('event_id');
-		
-		if ( $this->event->createEmail( Input::all() ) ) 
-		{	
-				
-			return Redirect::to('admin/pubdroit/event/'.$event_id.'/edit')->with( array('status' => 'success' , 'message' => 'Mise à jour ok') ); 
-			
-		}
-		
-		return Redirect::to('admin/pubdroit/event/'.$event_id.'/edit')->withErrors( $this->event->errors() )
-																	  ->with( array('status' => 'danger', 'message' => 'Problème avec la mise à jour') )
-																	  ->withInput( Input::all() ); 
-		
-	}
+        $email_id = Input::get('id');
+
+        $store    = ($email_id ? 'updateEmail' : 'createEmail' );
+
+        $email  = $this->event->$store(
+            Input::all()
+        );
+
+        return Redirect::to('admin/pubdroit/event/'.$event_id.'/edit')->with( array('status' => 'success' , 'message' => 'Mise à jour ok') );
+
+    }
 	
 	public function attestation(){
 	
 		$event_id = Input::get('event_id');
-		
-		if ($this->event->createAttestation( Input::all() )) 
-		{
+        $att_id   = Input::get('id');
 
-			return Redirect::to('admin/pubdroit/event/'.$event_id.'/edit')->with( array('status' => 'success' , 'message' => 'Mise à jour ok') ); 
-		
-		}
-		
-		return Redirect::to('admin/pubdroit/event/'.$event_id.'/edit')->withErrors( $this->event->errors() )
-																	  ->with( array('status' => 'danger', 'message' => 'Problème avec la mise à jour') )
-																	  ->withInput( Input::all() ); 
+        $store    = ($att_id ? 'updateAttestation' : 'createAttestation' );
+
+        $attestation  = $this->event->$store(
+            Input::all()
+        );
+
+        return Redirect::to('admin/pubdroit/event/'.$event_id.'/edit')->with( array('status' => 'success' , 'message' => 'Mise à jour ok') );
+
 	}
 	
 	/**

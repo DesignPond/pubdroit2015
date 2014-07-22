@@ -1,14 +1,14 @@
 <?php namespace Droit\Event\Repo;
 
 use Droit\Event\Repo\OptionInterface;
-use Droit\Event\Entities\Options as M;
+use Droit\Event\Entities\Options as Options;
 
 class OptionEloquent implements OptionInterface {
 	
 	protected $option;
 	
 	// Class expects an Eloquent model
-	public function __construct(M $option)
+	public function __construct(Options $option)
 	{
 		$this->option = $option;	
 	}

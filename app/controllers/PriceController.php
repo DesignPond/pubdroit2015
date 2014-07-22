@@ -1,7 +1,6 @@
 <?php
 
-use Droit\Repo\Price\PriceInterface;
-use Droit\Service\Form\Price\PriceValidator as PriceValidator;
+use Droit\Event\Repo\PriceInterface;
 
 class PriceController extends BaseController {
 	
@@ -38,18 +37,15 @@ class PriceController extends BaseController {
 	 */
 	public function store()
 	{
-		$priceValidator = PriceValidator::make(Input::all());
-		
-		$event_id = Input::get('event_id');
-		
-		if ($priceValidator->passes()) 
-		{
-			$this->price->create(Input::all());
-			
-			return Redirect::to('admin/pubdroit/event/'.$event_id.'/edit')->with( array('status' => 'success' , 'message' => 'Le prix a été crée' ) );
-		}
-		
-		return Redirect::to('admin/pubdroit/price/create/'.$event_id)->withErrors( $priceValidator->errors() )->withInput( Input::all() ); 
+
+        $event_id = Input::get('event_id');
+
+        $price = $this->price->create(
+               Input::all()
+        );
+
+        return Redirect::to('admin/pubdroit/event/'.$event_id.'/edit')->with( array('status' => 'success' , 'message' => 'Le prix a été crée' ) );
+
 	}
 
 	/**
@@ -84,18 +80,15 @@ class PriceController extends BaseController {
 	 */
 	public function update($id)
 	{
-		$priceValidator = PriceValidator::make(Input::all());
-		
-		$event_id = Input::get('event_id');
-		
-		if ($priceValidator->passes()) 
-		{
-			$this->price->update(Input::all());
-			
-			return Redirect::to('admin/pubdroit/event/'.$event_id.'/edit')->with( array('status' => 'success' , 'message' => 'Le prix a été mis à jour') );
-		}
-		
-		return Redirect::to('admin/pubdroit/price/'.$id.'/edit')->withErrors( $priceValidator->errors() )->withInput( Input::all() ); 
+
+        $event_id = Input::get('event_id');
+
+        $price = $this->price->update(
+            Input::all()
+        );
+
+        return Redirect::to('admin/pubdroit/event/'.$event_id.'/edit')->with( array('status' => 'success' , 'message' => 'Le prix a été mis a jour') );
+
 	}
 
 	/**
@@ -106,16 +99,10 @@ class PriceController extends BaseController {
 	 */
 	public function destroy($id)
 	{
-		
-		$event_id = $this->price->find($id)->event_id;
+        $message = ( $this->price->delete($id) ? array('status' => 'success','message' => 'Le prix a été supprimé') : array('status' => 'error','message' => 'Problème avec la suppression') );
 
-		if( $this->price->delete($id) )
-		{
-			return Redirect::to('admin/pubdroit/event/'.$event_id.'/edit')->with( array('status' => 'success' , 'message' => 'Le prix a été supprimé') );
-		}
-		
-		return Redirect::to('admin/pubdroit/event/'.$event_id.'/edit')->with( array('status' => 'error' , 'message' => 'Problème avec la suppression') );
+        return Redirect::back()->with( $message );
+
 	}
-
 
 }

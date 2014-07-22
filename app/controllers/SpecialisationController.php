@@ -107,6 +107,16 @@ class SpecialisationController extends BaseController {
 	}
 	
 	/* Link to events */
+
+    /**
+     * AddA specialisation to an event
+     *
+     * @return response
+     */
+    public function addToEvent()
+    {
+        return View::make('admin.specialisation.add');
+    }
 	
 	public function linkEvent(){
 	

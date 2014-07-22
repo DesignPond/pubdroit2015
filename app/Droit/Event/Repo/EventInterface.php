@@ -10,14 +10,15 @@ interface EventInterface {
 	public function update(array $data);
 	public function delete($id);
 
-    public function setFiles($list,$documents);
     // Emails
 	public function getEmail($type,$event);
 	public function createEmail($data);
+    public function updateEmail($data);
 	
 	// Attestations	
 	public function getAttestation($event);
 	public function createAttestation($data);
+    public function updateAttestation($data);
 	
 }
 

@@ -71,25 +71,6 @@ class EventEloquent implements EventInterface {
 		return $event;
 
 	}
-
-    public function setFiles($list,$documents){
-
-        $arranged = array();
-        $files    = $list->files;
-
-        foreach($documents as $type => $docs)
-        {
-            foreach($files as $file)
-            {
-                if(in_array($file->typeFile,$docs))
-                {
-                    $arranged[$type][$file->typeFile] = $file;
-                }
-            }
-        }
-
-        return $arranged;
-    }
 	
 	public function update(array $data){
 		
@@ -101,7 +82,6 @@ class EventEloquent implements EventInterface {
 		}
 		
 		// Général
-		
 		$event->organisateur = $data['organisateur'];
 		$event->titre        = $data['titre'];
 		$event->soustitre    = $data['soustitre'];
@@ -112,70 +92,56 @@ class EventEloquent implements EventInterface {
 		$event->dateFin      = $data['dateFin'];
 		$event->dateDelai    = $data['dateDelai'];
 		$event->remarques    = $data['remarques'];
-		
-		// Liste les centres	
-		if(isset($data['centres']))
-		{
-			 $centres            = $data['centres'];
-			 $centreLogos        = implode(',' , $centres);
-			 $event->centreLogos = $centreLogos;
-		}
-		else
-		{
-			$event->centreLogos = '';
-		}
-			
-		$event->typeColloque = $data['typeColloque'];
-		$event->compte_id    = $data['compte_id'];
-		$event->visible      = $data['visible'];		
-		
+        $event->typeColloque = $data['typeColloque'];
+        $event->compte_id    = $data['compte_id'];
+        $event->visible      = $data['visible'];
+        $event->centreLogos = ( isset($data['centres']) ? implode(',' , $data['centres']) : '');
+
 		$event->save();	
 		
-		return true;
+		return $event;
 	}
-	
+
 	// Emails
 	
-	public function getEmail($type,$event){
-		
-		return EM::where('typeEmail','=',$type)->where('event_id','=',$event)->first();		
+	public function getEmail($type,$id){
+
+        return EM::where('typeEmail','=',$type)->where('event_id', $id)->first();
+
 	}
 	
 	public function createEmail($data){
-	
-		if(!empty($data['id']))
-		{
-			$email = EM::findOrFail($data['id']);	
-			
-			if( ! $email )
-			{
-				return false;
-			}
-			
-			$email->typeEmail = $data['typeEmail'];
-			$email->message   = $data['message'];
-			$email->event_id  = $data['event_id'];		
-			
-			$email->save();	
-			
-			return true;	
-		}
-		else
-		{			
-			$email = EM::create(array(
-				'typeEmail' => $data['typeEmail'],
-				'message'   => $data['message'],
-				'event_id'  => $data['event_id']
-			));
-	
-			if( ! $email )
-			{
-				return false;
-			}
-			
-			return true;	
-		}	
+
+        $email = EM::create(array(
+            'typeEmail' => $data['typeEmail'],
+            'message'   => $data['message'],
+            'event_id'  => $data['event_id']
+        ));
+
+        if( ! $email )
+        {
+            return false;
+        }
+
+        return $email;
 	}
+
+    public function updateEmail($data){
+
+        $email = EM::findOrFail($data['id']);
+
+        if( ! $email )
+        {
+            return false;
+        }
+
+        $email->message = $data['message'];
+
+        $email->save();
+
+        return $email;
+
+    }
 	
 	public function getAttestation($event){
 	
@@ -183,46 +149,46 @@ class EventEloquent implements EventInterface {
 	}
 	
 	public function createAttestation($data){
-	
-		if(!empty($data['id']))
-		{
-			$attestation = EA::findOrFail($data['id']);	
-			
-			if( ! $attestation )
-			{
-				return false;
-			}
-			
-			$attestation->lieu           = $data['lieu'];
-			$attestation->organisateur   = $data['organisateur'];
-			$attestation->remarque 	     = $data['remarque'];
-			$attestation->signature      = $data['signature'];
-			$attestation->responsabilite = $data['responsabilite'];
-			$attestation->event_id       = $data['event_id'];		
-			
-			$attestation->save();	
-			
-			return true;	
-		}
-		else
-		{			
-			$attestation = EA::create(array(
-				'lieu'           => $data['lieu'],
-				'organisateur'   => $data['organisateur'],
-				'remarque'       => $data['remarque'],
-				'signature'      => $data['signature'],
-				'responsabilite' => $data['responsabilite'],
-				'event_id'       => $data['event_id']
-			));
-	
-			if( ! $attestation )
-			{
-				return false;
-			}
-			
-			return true;	
-		}	
-	}
+
+        $attestation = EA::create(array(
+            'lieu'           => $data['lieu'],
+            'organisateur'   => $data['organisateur'],
+            'remarque'       => $data['remarque'],
+            'signature'      => $data['signature'],
+            'responsabilite' => $data['responsabilite'],
+            'event_id'       => $data['event_id']
+        ));
+
+        if( ! $attestation )
+        {
+            return false;
+        }
+
+        return true;
+
+    }
+
+    public function updateAttestation($data){
+
+        $attestation = EA::findOrFail($data['id']);
+
+        if( ! $attestation )
+        {
+            return false;
+        }
+
+        $attestation->lieu           = $data['lieu'];
+        $attestation->organisateur   = $data['organisateur'];
+        $attestation->remarque 	     = $data['remarque'];
+        $attestation->signature      = $data['signature'];
+        $attestation->responsabilite = $data['responsabilite'];
+        $attestation->event_id       = $data['event_id'];
+
+        $attestation->save();
+
+        return true;
+
+    }
 	
 	public function delete($id){
 	
