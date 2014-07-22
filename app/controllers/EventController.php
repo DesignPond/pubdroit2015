@@ -4,7 +4,8 @@ use Droit\Event\Repo\EventInterface;
 use Droit\Event\Worker\EventWorkerInterface;
 use Droit\Event\Repo\FileInterface;
 use Droit\Service\Worker\UploadInterface;
-use Droit\Event\Forms\EventUpload as EventUpload;
+use Droit\Event\Forms\EventUpload;
+
 
 class EventController extends BaseController {
 
@@ -187,39 +188,25 @@ class EventController extends BaseController {
 	/**
 	 * Upload file for event
 	 *
-	 * @param  int  $id
 	 * @return Response
 	 */
 	 public function upload()
-	 {			 		
+	 {
 
-		 $id   = Input::get('event_id');		 
-		 $data = FALSE;
+		 $this->validator->validate( Input::all() );
 
-		 if( $this->validator->validate(Input::file('file')) )
-		 {
-			 $data = $this->upload->upload( Input::file('file') , Input::get('destination') );	 
-		 	
-		 	 if($data)
-		 	 {
+		 $data = $this->upload->upload( Input::file('file') , Input::get('destination') );
 
-	 	 		$event_file = $this->file->create(
-                    array(
-                        'filename' => $data['name'],
-                        'typeFile' => Input::get('typeFile'),
-                        'event_id' => Input::get('event_id')
-                    )
-                ) ;
+            $event_file = $this->file->create(
+                array(
+                    'filename' => $data['name'],
+                    'typeFile' => Input::get('typeFile'),
+                    'event_id' => Input::get('event_id')
+                )
+            );
 
-				return Redirect::to('admin/pubdroit/event/'.$id.'/edit')->with( array('status' => 'success' , 'message' => 'Fichier ajouté') );
+         return Redirect::back()->with( array('status' => 'success' , 'message' => 'Fichier ajouté') );
 
-			 }
-
-			 return Redirect::to('admin/pubdroit/event/'.$id.'/edit')->with( array('status' => 'danger' , 'message' => 'Problème avec le fichier') ); 
-			 
-		 }
-		 
-		 return Redirect::to('admin/pubdroit/event/'.$id.'/edit')->with( array('status' => 'danger' , 'message' => 'Aucun fichier') ); 
 	 }
 	 
 	/**

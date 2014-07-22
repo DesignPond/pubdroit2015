@@ -13,7 +13,7 @@ class UploadWorker implements UploadInterface {
         {
             $name = $file->getClientOriginalName();
             $ext  = $file->getClientOriginalExtension();
-            // Retrive the name first because after moving the file doesn't exist anymore
+            // Retrive the name first because after moving, the file doesn't exist anymore
             $new  = $file->move($destination,$name);
             $size = $new->getSize();
             $mime = $new->getMimeType();
@@ -23,13 +23,12 @@ class UploadWorker implements UploadInterface {
             //$this->rename( $path, $name , 'files/test/' );
             $newfile = array( 'name' => $name ,'ext' => $ext ,'size' => $size ,'mime' => $mime ,'path' => $path  );
 
+            return $newfile;
         }
         catch(Exception $e)
         {
             throw new \Droit\Exceptions\FileUploadException('Upload failed', $e->getError() );
         }
-
-        return $newfile;
 
 	}
 
