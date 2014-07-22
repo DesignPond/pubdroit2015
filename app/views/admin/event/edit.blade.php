@@ -16,9 +16,13 @@
 		
 		<div class="container">
 		    <div class="row">
-				<div class="col-sm-12">	
-									
+				<div class="col-sm-12">
+
+                    <!-- messages and errors -->
                     @include('layouts.partials.message')
+
+                    <!-- documents -->
+                    @include('layouts.partials.admin.documents')
 
 					<!-- Images et documents -->
 					<!-- panel start -->
@@ -501,7 +505,7 @@
 							  </div>						  		
 							  									  
 							  <h3>Spécialisations</h3>
-							  <p><a href="{{ url('admin/pubdroit/specialisation/create/'.$event->id) }}" class="btn btn-sm btn-primary">Ajouter</a></p>
+							  <p><a href="{{ url('admin/pubdroit/specialisation/addToEvent/'.$event->id) }}" class="btn btn-sm btn-primary">Ajouter</a></p>
 
 						  	  <div class="row">
 					  	  		 <div class="col-sm-6 col-md-offset-3">
@@ -547,15 +551,25 @@
 							  <div class="form-group">
 							  	  <label for="selector1" class="col-sm-3 control-label">Choisir si génération factures et emails</label>
 							  	  <div class="col-sm-6">
-							  	  	 {{
-							  	  	    Form::select('typeColloque', array(
-							  	  	    		'0' => 'Sans Documents', 
-							  	  	    		'1' => 'Avec tous les documents / Que Bon',
-							  	  	    		'2' => 'Que facture et BV'
-							  	  	    	), null , array( 'class' => 'form-control' ) )
-							  	  	 }}												  	 
-								  	 <p><br/><strong>Avec tous les documents / Que Bon + info BV</strong> = Tous les documents<br/>
-								  	  <strong>Avec tous les documents / Que Bon + pas d'info BV</strong> = Que bon</p>								  	  
+
+                                      <div class="radio">
+                                          <label>
+                                              {{ Form::radio('typeColloque', 1 , ($event->typeColloque == 1 ? true : false)) }}Avec tous les documents
+                                          </label>
+                                      </div>
+
+                                      <div class="radio">
+                                          <label>{{ Form::radio('typeColloque', 3,($event->typeColloque == 3 ? true : false) ) }}Que Bon</label>
+                                      </div>
+
+                                      <div class="radio">
+                                          <label>{{ Form::radio('typeColloque', 2,($event->typeColloque == 2 ? true : false) ) }}Que facture et BV</label>
+                                      </div>
+
+                                      <div class="radio">
+                                          <label>{{ Form::radio('typeColloque', 0,($event->typeColloque == 0 ? true : false) ) }}Sans Documents</label>
+                                      </div>
+
 							  	  </div>
 							  	  <div class="col-sm-3"><p class="help-block">Requis</p></div>
 							  </div>						

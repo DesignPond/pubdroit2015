@@ -121,6 +121,7 @@ return array(
 		'Illuminate\Validation\ValidationServiceProvider',
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
+        'Intervention\Image\ImageServiceProvider',
 		'Droit\DroitServiceProvider',
 		'Droit\Admin\AdminServiceProvider',
 		'Droit\Event\EventServiceProvider',

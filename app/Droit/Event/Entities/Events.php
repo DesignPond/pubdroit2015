@@ -22,7 +22,8 @@ class Events extends BaseModel{
         'sujet'          => 'required',
         'endroit'        => 'required',
         'dateDebut'      => 'required|date_format:Y-m-d',
-        'dateDelai'      => 'required|date_format:Y-m-d'
+        'dateDelai'      => 'required|date_format:Y-m-d',
+        'compte_id'      => 'required_if:typeColloque,1|required_if:typeColloque,2'
     );
 
     /**
@@ -36,9 +37,9 @@ class Events extends BaseModel{
         'sujet.required'          => 'Le champ sujet est requis',
         'endroit.required'        => 'Le champ endroit est requis',
         'dateDebut.required'      => 'Le champ date de début est requis',
-        'dateDelai.required'      => 'Le champ délai d\'inscription est requis'
+        'dateDelai.required'      => 'Le champ délai d\'inscription est requis',
+        'compte_id.required_if'   => 'Un numéro de compte doit être indiqué pour la facture'
     );
-
 
     public function compte()
     {

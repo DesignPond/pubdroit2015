@@ -26,7 +26,7 @@ class CreateEventsTable extends Migration {
 			$table->date('dateFin')->nullable();
 			$table->date('dateDelai'); // changed
 			$table->text('remarques')->nullable();
-			$table->enum('typeColloque', array('0','1','2'))->default(1);
+			$table->enum('typeColloque', array('0','1','2','3'))->default(1);
 			$table->integer('compte_id')->nullable();	// changed
 			$table->enum('visible', array('0','1'))->default(0);
 			$table->integer('nbrInscription')->default(0);

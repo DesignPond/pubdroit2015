@@ -17,7 +17,6 @@ class FileEloquent implements FileInterface {
 	/*
 	 * CRUD functions
 	*/
-		
 	public function getAllForEvent($event){
 		
 		return $this->file->where('event_id','=', $event)->get();		

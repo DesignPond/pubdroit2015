@@ -46,14 +46,11 @@ class EventWorker implements EventWorkerInterface{
         $comptes        = $this->compte->getAll()->lists('motifCompte', 'id');
         $comptes        = ['' => 'Choix'] + $comptes;
         $centers        = $this->file->getAllCenters();
-        $specialisation = $this->specialisation->getAll()->lists('titreSpecialisation', 'id');
-        $specialisation = ['' => 'Choix'] + $specialisation;
         $allfiles       = $this->setFiles($event,$this->documents);
 
         return array(
             'event'          => $event,
             'centers'        => $centers,
-            'specialisation' => $specialisation,
             'comptes'        => $comptes,
             'default'        => $default,
             'documents'      => $this->documents,

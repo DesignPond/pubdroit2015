@@ -1,15 +1,15 @@
 <?php namespace Droit\User\Repo;
 
 use Droit\User\Repo\SpecialisationInterface;
-use Droit\User\Entities\Specialisations as M;
-use Droit\User\Entities\Event_specialisations as ES;
+use Droit\User\Entities\Specialisations as Specialisations;
+use Droit\Event\Entities\Event_specialisations as ES;
 
 class SpecialisationEloquent implements SpecialisationInterface {
 	
 	protected $specialisation;
 	
 	// Class expects an Eloquent model
-	public function __construct(M $specialisation)
+	public function __construct(Specialisations $specialisation)
 	{
 		$this->specialisation = $specialisation;	
 	}
@@ -50,7 +50,7 @@ class SpecialisationEloquent implements SpecialisationInterface {
 			return false;
 		}
 		
-		return true;		
+		return $specialisation;
 	}
 	
 	public function update(array $data)
@@ -66,14 +66,14 @@ class SpecialisationEloquent implements SpecialisationInterface {
 		
 		$specialisation->save();	
 		
-		return true;		
+		return $specialisation;
 	}
 	
-	public function linkEvent($specialisation,$event){
+	public function linkEvent($data){
 	
 		$link = ES::create(array(
-			'event_id'          => $event,
-			'specialisation_id' => $specialisation
+			'event_id'          => $data['event_id'],
+			'specialisation_id' => $data['specialisation_id']
 		));
 		
 		if( ! $link )
@@ -81,7 +81,7 @@ class SpecialisationEloquent implements SpecialisationInterface {
 			return false;
 		}
 		
-		return true;	
+		return $link;
 	}
 	
 	public function unlinkEvent($id){

@@ -90,6 +90,7 @@ Route::group(array('prefix' => 'admin'), function()
 	    // Spécialisations users and colloques
 	    Route::get('specialisation/{specialisation}/delete', array('uses' => 'SpecialisationController@destroy'));
 	    Route::get('specialisation/create/{event}', array('uses' => 'SpecialisationController@create'));
+        Route::get('specialisation/addToEvent/{event}', array('uses' => 'SpecialisationController@addToEvent'));
 	    Route::post('specialisation/linkEvent', array('uses' => 'SpecialisationController@linkEvent'));
 	    Route::get('specialisation/{id}/unlinkEvent', array('uses' => 'SpecialisationController@unlinkEvent'));
 	    Route::resource('specialisation', 'SpecialisationController');

@@ -9,7 +9,7 @@ interface SpecialisationInterface {
 	public function create(array $data);
 	public function update(array $data);
 	
-	public function linkEvent($specialisation,$event);
+	public function linkEvent($data);
 	public function unlinkEvent($id);
 	
 }

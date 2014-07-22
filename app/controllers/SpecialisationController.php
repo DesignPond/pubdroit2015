@@ -2,8 +2,6 @@
 
 use Droit\User\Repo\SpecialisationInterface;
 
-use Droit\User\Entities\Event_specialisations as ES;
-
 class SpecialisationController extends BaseController {
 
 	protected $specialisation;
@@ -109,42 +107,36 @@ class SpecialisationController extends BaseController {
 	/* Link to events */
 
     /**
-     * AddA specialisation to an event
+     * Add a specialisation to an event
      *
      * @return response
      */
-    public function addToEvent()
+    public function addToEvent($id)
     {
-        return View::make('admin.specialisation.add');
+        $specialisations = $this->specialisation->droplist();
+        $specialisations = ['' => 'Choix'] + $specialisations;
+
+        return View::make('admin.specialisation.add')->with(array('event_id' => $id , 'specialisations' => $specialisations ));
     }
 	
-	public function linkEvent(){
-	
-		$specialisation = Input::get('specialisation_id');
-		$event          = Input::get('event_id');
+	public function linkEvent()
+    {
+
+		$event_id       = Input::get('event_id');
 		
-		if( $this->specialisation->linkEvent($specialisation,$event) )
-		{
-			return Redirect::to('admin/pubdroit/event/'.$event.'/edit')->with( array('status' => 'success') );
-		}
-		
-		return Redirect::back()->with('status', 'Problème avec l\'ajout');
+		$specialisation = $this->specialisation->linkEvent( Input::all() );
+
+		return Redirect::to('admin/pubdroit/event/'.$event_id.'/edit')->with( array('status' => 'success' , 'message' => 'La spécialisation a été lié' ) );
+
 	}
 	
-	public function unlinkEvent($id){
-	
-		//$event_id = ES::find($id)->event_id;
-		
-		$event = ES::find($id);
-		
-		$event_id  = $event->event_id;
-		
-		if( $this->specialisation->unlinkEvent($id) )
-		{
-			return Redirect::to('admin/pubdroit/event/'.$event_id.'/edit')->with( array('status' => 'success' , 'message' => 'La spécialisation a été supprimée') );
-		}
-		
-		return Redirect::to('admin/pubdroit/event/'.$event_id.'/edit')->with( array('status' => 'error' , 'message' => 'Problème avec la suppression') );
+	public function unlinkEvent($id)
+    {
+
+        $message = ( $this->specialisation->unlinkEvent($id) ? array('status' => 'success','message' => 'La spécialisation a été delié') : array('status' => 'error','message' => 'Problème avec la suppression') );
+
+        return Redirect::back()->with( $message );
+
 	}
 
 }

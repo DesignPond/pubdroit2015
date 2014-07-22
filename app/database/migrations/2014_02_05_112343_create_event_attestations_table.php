@@ -18,9 +18,9 @@ class CreateEventAttestationsTable extends Migration {
 			$table->integer('event_id');
 			$table->string('organisateur');
 			$table->string('lieu');
-			$table->string('signature');
-			$table->string('responsabilite');
-			$table->text('remarque');
+			$table->string('signature')->nullable();
+			$table->string('responsabilite')->nullable();
+			$table->text('remarque')->nullable();
 			
 		});
 	}

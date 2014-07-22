@@ -56,6 +56,12 @@ App::error(function(Droit\Exceptions\FormValidationException $exception, $code)
     return Redirect::back()->withInput()->withErrors($exception->getErrors());
 });
 
+App::error(function(Droit\Exceptions\FileException $exception, $code)
+{
+    return Redirect::back()->withInput()->withErrors( $exception->getErrors() );
+});
+
+
 /*
 |--------------------------------------------------------------------------
 | Maintenance Mode Handler

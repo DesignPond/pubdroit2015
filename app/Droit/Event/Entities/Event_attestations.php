@@ -6,5 +6,27 @@ class Event_attestations extends BaseModel {
 
 	protected $guarded   = array('id');
 	public $timestamps   = false;
-	public static $rules = array();
+
+    /**
+     * Validation rules
+     *
+     * @var array
+     */
+    protected static $rules = array(
+        'lieu'         => 'required',
+        'organisateur' => 'required',
+        'signature'    => 'required'
+    );
+
+    /**
+     * Validation messages
+     *
+     * @var array
+     */
+    protected static $messages = array(
+        'lieu.required'         => 'Le champs lieu est requis',
+        'organisateur.required' => 'Le champs organisateur est requis',
+        'signature.required'    => 'Le champs signature est requis'
+    );
+
 }

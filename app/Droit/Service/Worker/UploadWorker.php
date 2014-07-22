@@ -1,6 +1,5 @@
 <?php namespace Droit\Service\Worker;
 
-use Intervention\Image\Facades\Image;
 
 class UploadWorker implements UploadInterface {
 
@@ -9,27 +8,45 @@ class UploadWorker implements UploadInterface {
 	 * @return array
 	*/	
 	public function upload( $file , $destination ){
-		
-		$name = $file->getClientOriginalName();
-		$ext  = $file->getClientOriginalExtension();
-		$new  = $file->move($destination,$name);
-		$size = $new->getSize();
-		$mime = $new->getMimeType();
-		$path = $new->getRealPath();
-		
-		// test resize		
-		//$this->resize( $path, $path , 200 , null , true );
-		//$this->rename( $path, $name , 'files/test/' );
-		
-		$newfile = array( 'name' => $name ,'ext' => $ext ,'size' => $size ,'mime' => $mime ,'path' => $path  );
-		
-		if( $new )
-		{			
-			return $newfile;
-		}
-		
-		return FALSE;		
-	}	
+
+        try
+        {
+            $name = $file->getClientOriginalName();
+            $ext  = $file->getClientOriginalExtension();
+            // Retrive the name first because after moving the file doesn't exist anymore
+            $new  = $file->move($destination,$name);
+            $size = $new->getSize();
+            $mime = $new->getMimeType();
+            $path = $new->getRealPath();
+            // test resize
+            //$this->resize( $path, $path , 200 , null , true );
+            //$this->rename( $path, $name , 'files/test/' );
+            $newfile = array( 'name' => $name ,'ext' => $ext ,'size' => $size ,'mime' => $mime ,'path' => $path  );
+
+        }
+        catch(Exception $e)
+        {
+            throw new \Droit\Exceptions\FileUploadException('Upload failed', $e->getError() );
+        }
+
+        return $newfile;
+
+	}
+
+    /**
+     *  Validate the attributes from model
+     */
+    public function validate(){
+
+        $validator = \Validator::make($this->getAttributes() , static::$rules , static::$messages);
+
+        if( $validator->fails() )
+        {
+            throw new \Droit\Exceptions\FormValidationException('Validation failed', $validator->messages() );
+        }
+
+        return true;
+    }
 	
 	/*
 	 * rename file 

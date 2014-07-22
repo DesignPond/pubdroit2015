@@ -40,7 +40,7 @@
                                     <div class="form-group">
                                         <label for="titreSpecialisation" class="col-sm-3 control-label">Spécialisation à lier</label>
                                         <div class="col-sm-6">
-                                            {{  Form::select('specialisation', $specialisation , null , array( 'class' => 'form-control' ) ) }}
+                                            {{  Form::select('specialisation_id', $specialisations , null , array( 'class' => 'form-control required' ) ) }}
                                         </div>
                                         <div class="col-sm-3">Requis</div>
                                     </div>
@@ -50,7 +50,7 @@
                                     <div class="row">
                                         <div class="col-sm-6 col-sm-offset-3">
                                             <div class="btn-toolbar">
-                                                {{ Form::hidden('id', null )}}
+                                                {{ Form::hidden('event_id', $event_id )}}
                                                 <button type="submit" class="btn-primary btn">Envoyer</button>
                                             </div>
                                         </div>

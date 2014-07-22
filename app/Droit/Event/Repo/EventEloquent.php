@@ -203,4 +203,3 @@ class EventEloquent implements EventInterface {
 	}
 	
 }
-
