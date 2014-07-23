@@ -1,12 +1,11 @@
 <?php
 
-use Droit\Repo\Search\SearchInterface;
+use Droit\Admin\Repo\SearchInterface;
 
 class SearchController extends BaseController {
 	
 	protected $search;
 
-	
 	public function __construct( SearchInterface $search){
 		
 		$this->search = $search;

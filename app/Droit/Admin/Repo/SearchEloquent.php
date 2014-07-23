@@ -3,13 +3,12 @@
  * Repo Eloquent Class 
  */
 
-namespace Droit\Admin\Search;
+namespace Droit\Admin\Repo;
 
-use Droit\Admin\Search\SearchInterface;
-use Droit\Admin\User\UserInfoInterface;
-use Droit\Admin\Adresse\AdresseInterface;
+use Droit\Admin\Repo\SearchInterface;
+use Droit\User\Repo\UserInfoInterface;
+use Droit\User\Repo\AdresseInterface;
 
-use Illuminate\Database\Eloquent\Model as M;
 
 /**
  * Implements SearchInterface 

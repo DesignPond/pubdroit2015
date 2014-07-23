@@ -3,10 +3,10 @@
  * Repo Interface 
  */
 
-namespace Droit\Admin\Search;
+namespace Droit\Admin\Repo;
 
 /**
- * Search Inteface
+ * Search Interface
  * Custom search by keywords in the database for user or adresse
  */
 interface SearchInterface {
