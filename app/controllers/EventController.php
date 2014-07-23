@@ -64,7 +64,7 @@ class EventController extends BaseController {
 	 */
 	public function archives()
 	{
-		$events = $this->event->getArchives();	
+		$events = $this->event->getArchives();
 
         return View::make('admin.event.event')->with( array('events' => $events , 'title' => 'Archives'));
 	}
@@ -103,8 +103,8 @@ class EventController extends BaseController {
 	 */
 	public function show($id)
 	{
-		$event = $this->event->find($id);	
-		
+		$event = $this->event->find($id);
+
         return View::make('event.show')->with( array('event' => $event ));
 	}
 
@@ -118,9 +118,9 @@ class EventController extends BaseController {
 	{
         // return array with event,centers,comptes,event files,default email infos
         $infos = $this->worker->getInfoForEvent($id);
-		
+
         return View::make('admin.event.edit')->with( $infos );
-        
+
 	}
 
 	/**
@@ -137,9 +137,9 @@ class EventController extends BaseController {
         );
 
         return Redirect::to('admin/pubdroit/event/'.$event->id.'/edit')->with( array('status' => 'success', 'message' => 'Mise a jour ok') );
-		
+
 	}
-	
+
 	public function email(){
 
 		$event_id = Input::get('event_id');
@@ -154,9 +154,9 @@ class EventController extends BaseController {
         return Redirect::to('admin/pubdroit/event/'.$event_id.'/edit')->with( array('status' => 'success' , 'message' => 'Mise à jour ok') );
 
     }
-	
+
 	public function attestation(){
-	
+
 		$event_id = Input::get('event_id');
         $att_id   = Input::get('id');
 
@@ -169,7 +169,7 @@ class EventController extends BaseController {
         return Redirect::to('admin/pubdroit/event/'.$event_id.'/edit')->with( array('status' => 'success' , 'message' => 'Mise à jour ok') );
 
 	}
-	
+
 	/**
 	 * Remove the specified resource from storage.
 	 *
@@ -182,9 +182,9 @@ class EventController extends BaseController {
         $message = ( $this->event->delete($id) ? array('status' => 'success','message' => 'Le colloque a été supprimé') : array('status' => 'error','message' => 'Problème avec la suppression') );
 
         return Redirect::back()->with( $message );
-		
+
 	}
-	
+
 	/**
 	 * Upload file for event
 	 *
@@ -192,7 +192,6 @@ class EventController extends BaseController {
 	 */
 	 public function upload()
 	 {
-
 		 $this->validator->validate( Input::all() );
 
 		 $data = $this->upload->upload( Input::file('file') , Input::get('destination') );
@@ -208,7 +207,7 @@ class EventController extends BaseController {
          return Redirect::back()->with( array('status' => 'success' , 'message' => 'Fichier ajouté') );
 
 	 }
-	 
+
 	/**
 	 * Remove the specified resource from storage.
 	 *

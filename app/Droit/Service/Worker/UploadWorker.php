@@ -13,7 +13,7 @@ class UploadWorker implements UploadInterface {
         {
             $name = $file->getClientOriginalName();
             $ext  = $file->getClientOriginalExtension();
-            // Retrive the name first because after moving, the file doesn't exist anymore
+            // Get the name first because after moving, the file doesn't exist anymore
             $new  = $file->move($destination,$name);
             $size = $new->getSize();
             $mime = $new->getMimeType();

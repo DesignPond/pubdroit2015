@@ -79,7 +79,7 @@
 .admin-panel-images{
 	position: relative;
 	width: 80px;
-	height: 80px;
+	height: 60px;
 	display: block;
 	margin: 0 auto;
 }
@@ -127,8 +127,20 @@
 	cursor: pointer;
 }
 
-.btn-group > .btn.alone_btn{
-	float: none;
+.btn.alone_btn{
+	position: absolute;;
+    top: 5px;
+    right: 5px;
+}
+
+.doc-admin-title{
+    display: block;
+    height: 30px;
+    line-height: 30px;
+    margin-top: -15px;
+    margin-bottom: 10px;
+    text-align: center;
+    width: 100%;
 }
 
 .btn-group-pivot{

@@ -1,11 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/app/Droit/Event/Worker/EventWorker.php" line="35" mnemonic="7" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="051f7ca7-1e9e-48fb-bc58-27f4689ba4be" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Droit/Event/Forms/FileUpload.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/layouts/partials/admin/documents.blade.php" afterPath="$PROJECT_DIR$/app/views/admin/event/partials/documents.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/EventController.php" afterPath="$PROJECT_DIR$/app/controllers/EventController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Droit/Event/Forms/EventUpload.php" afterPath="$PROJECT_DIR$/app/Droit/Event/Forms/EventUpload.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Droit/Event/Worker/EventWorker.php" afterPath="$PROJECT_DIR$/app/Droit/Event/Worker/EventWorker.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Droit/Exceptions/FileUploadException.php" afterPath="$PROJECT_DIR$/app/Droit/Exceptions/FileUploadException.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Droit/Service/Worker/UploadWorker.php" afterPath="$PROJECT_DIR$/app/Droit/Service/Worker/UploadWorker.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/pubdroit2015.iml" afterPath="$PROJECT_DIR$/.idea/pubdroit2015.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/common.php" afterPath="$PROJECT_DIR$/app/config/common.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/admin/event/edit.blade.php" afterPath="$PROJECT_DIR$/app/views/admin/event/edit.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/start/global.php" afterPath="$PROJECT_DIR$/app/start/global.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/admin/main.css" afterPath="$PROJECT_DIR$/public/css/admin/main.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/admin/main.js" afterPath="$PROJECT_DIR$/public/js/admin/main.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="pubdroit2015.iws" />
@@ -33,19 +44,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Events.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Droit/Event/Entities/Events.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="91" selection-start="1332" selection-end="1332" vertical-scroll-proportion="-0.0" vertical-offset="1000" max-vertical-offset="2375">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="app.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/config/app.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="123" column="50" selection-start="4418" selection-end="4418" vertical-scroll-proportion="-17.0" vertical-offset="2633" max-vertical-offset="5200">
+            <state line="123" column="50" selection-start="4418" selection-end="4418" vertical-scroll-proportion="-0.0" vertical-offset="3075" max-vertical-offset="5200">
               <folding />
             </state>
           </provider>
@@ -54,25 +56,45 @@
       <file leaf-file-name="edit.blade.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/admin/event/edit.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="95" column="28" selection-start="3968" selection-end="3968" vertical-scroll-proportion="-8.653846" vertical-offset="2150" max-vertical-offset="15525">
+            <state line="24" column="41" selection-start="592" selection-end="592" vertical-scroll-proportion="22.115385" vertical-offset="1175" max-vertical-offset="13175">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BaseModel.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Droit/Common/BaseModel.php">
+      <file leaf-file-name="documents.blade.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/admin/event/partials/documents.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="0" selection-start="605" selection-end="949" vertical-scroll-proportion="-12.230769" vertical-offset="657" max-vertical-offset="1500">
+            <state line="34" column="142" selection-start="1937" selection-end="1937" vertical-scroll-proportion="0.5338078" vertical-offset="400" max-vertical-offset="3225">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UploadWorker.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="main.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/css/admin/main.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="139" column="0" selection-start="1925" selection-end="1947" vertical-scroll-proportion="-17.038462" vertical-offset="3032" max-vertical-offset="7000">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/js/admin/main.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="79" column="48" selection-start="2434" selection-end="2434" vertical-scroll-proportion="0.0" vertical-offset="1306" max-vertical-offset="6850">
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UploadWorker.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Droit/Service/Worker/UploadWorker.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="0" selection-start="191" selection-end="191" vertical-scroll-proportion="0.17793594" vertical-offset="100" max-vertical-offset="1875">
+            <state line="15" column="18" selection-start="341" selection-end="341" vertical-scroll-proportion="-10.576923" vertical-offset="100" max-vertical-offset="1875">
               <folding />
             </state>
           </provider>
@@ -81,7 +103,7 @@
       <file leaf-file-name="EventController.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/EventController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="195" column="52" selection-start="4113" selection-end="4113" vertical-scroll-proportion="-6.730769" vertical-offset="4700" max-vertical-offset="5825">
+            <state line="193" column="6" selection-start="4042" selection-end="4042" vertical-scroll-proportion="-8.653846" vertical-offset="4600" max-vertical-offset="5800">
               <folding>
                 <element signature="e#7#43#0" expanded="true" />
               </folding>
@@ -89,19 +111,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FormValidator.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/laracasts/validation/src/Laracasts/Validation/FormValidator.php">
+      <file leaf-file-name="EventWorker.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Droit/Event/Worker/EventWorker.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="28" selection-start="656" selection-end="664" vertical-scroll-proportion="-24.76923" vertical-offset="256" max-vertical-offset="2100">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EventUpload.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Droit/Event/Forms/EventUpload.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="13" selection-start="217" selection-end="217" vertical-scroll-proportion="-10.576923" vertical-offset="0" max-vertical-offset="775">
+            <state line="36" column="18" selection-start="864" selection-end="864" vertical-scroll-proportion="-23.076923" vertical-offset="200" max-vertical-offset="2200">
               <folding />
             </state>
           </provider>
@@ -120,9 +133,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/Droit/Common/BaseModel.php" />
-        <option value="$PROJECT_DIR$/app/controllers/ProfessionController.php" />
-        <option value="$PROJECT_DIR$/app/views/admin/profession/edit.blade.php" />
         <option value="$PROJECT_DIR$/app/views/admin/specialisation/edit.blade.php" />
         <option value="$PROJECT_DIR$/app/views/admin/membre/create.blade.php" />
         <option value="$PROJECT_DIR$/app/views/admin/membre/edit.blade.php" />
@@ -134,10 +144,8 @@
         <option value="$PROJECT_DIR$/app/views/layouts/partials/admin/navigation.blade.php" />
         <option value="$PROJECT_DIR$/app/views/layouts/partials/admin/login.blade.php" />
         <option value="$PROJECT_DIR$/app/views/layouts/admin.blade.php" />
-        <option value="$PROJECT_DIR$/public/js/admin/main.js" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/public/js/admin/redactor/redactor.css" />
-        <option value="$PROJECT_DIR$/public/css/admin/main.css" />
         <option value="$PROJECT_DIR$/app/Droit/Event/Repo/EventInterface.php" />
         <option value="$PROJECT_DIR$/app/Droit/Event/Entities/Prices.php" />
         <option value="$PROJECT_DIR$/app/Droit/Event/Repo/PriceEloquent.php" />
@@ -147,7 +155,6 @@
         <option value="$PROJECT_DIR$/app/controllers/OptionController.php" />
         <option value="$PROJECT_DIR$/app/Droit/Event/Entities/Options.php" />
         <option value="$PROJECT_DIR$/app/Droit/Event/EventServiceProvider.php" />
-        <option value="$PROJECT_DIR$/app/Droit/Event/Worker/EventWorker.php" />
         <option value="$PROJECT_DIR$/app/views/admin/specialisation/create.blade.php" />
         <option value="$PROJECT_DIR$/app/Droit/Routes/admin.php" />
         <option value="$PROJECT_DIR$/app/Droit/Event/Repo/EventEloquent.php" />
@@ -160,17 +167,23 @@
         <option value="$PROJECT_DIR$/app/database/migrations/2014_02_05_112343_create_event_attestations_table.php" />
         <option value="$PROJECT_DIR$/app/Droit/Event/Entities/Events.php" />
         <option value="$PROJECT_DIR$/app/database/migrations/2013_12_05_074024_create_events_table.php" />
-        <option value="$PROJECT_DIR$/app/views/admin/event/edit.blade.php" />
         <option value="$PROJECT_DIR$/app/views/layouts/partials/admin/documents.blade.php" />
-        <option value="$PROJECT_DIR$/app/Droit/Exceptions/FileUploadException.php" />
-        <option value="$PROJECT_DIR$/app/start/global.php" />
         <option value="$PROJECT_DIR$/app/config/app.php" />
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/app/Droit/Event/Repo/FileEloquent.php" />
         <option value="$PROJECT_DIR$/app/Droit/Event/Forms/EventUpload.php" />
-        <option value="$PROJECT_DIR$/vendor/laracasts/validation/src/Laracasts/Validation/FormValidator.php" />
-        <option value="$PROJECT_DIR$/app/controllers/EventController.php" />
         <option value="$PROJECT_DIR$/app/Droit/Service/Worker/UploadWorker.php" />
+        <option value="$PROJECT_DIR$/app/Droit/Exceptions/FileUploadException.php" />
+        <option value="$PROJECT_DIR$/vendor/laracasts/validation/src/Laracasts/Validation/FormValidator.php" />
+        <option value="$PROJECT_DIR$/app/start/global.php" />
+        <option value="$PROJECT_DIR$/app/Droit/Event/Forms/FileUpload.php" />
+        <option value="$PROJECT_DIR$/app/controllers/EventController.php" />
+        <option value="$PROJECT_DIR$/app/config/common.php" />
+        <option value="$PROJECT_DIR$/app/views/admin/event/edit.blade.php" />
+        <option value="$PROJECT_DIR$/app/Droit/Event/Worker/EventWorker.php" />
+        <option value="$PROJECT_DIR$/public/js/admin/main.js" />
+        <option value="$PROJECT_DIR$/public/css/admin/main.css" />
+        <option value="$PROJECT_DIR$/app/views/admin/event/partials/documents.blade.php" />
       </list>
     </option>
   </component>
@@ -237,6 +250,52 @@
     <option name="width" value="1916" />
     <option name="height" value="966" />
   </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>CSS</id>
+          </State>
+          <State>
+            <id>Control flow issuesJavaScript</id>
+          </State>
+          <State>
+            <id>JavaScript</id>
+          </State>
+          <State>
+            <id>JavaScript function metricsJavaScript</id>
+          </State>
+          <State>
+            <id>JavaScript validity issuesJavaScript</id>
+          </State>
+          <State>
+            <id>PHP</id>
+          </State>
+          <State>
+            <id>PHPDocPHP</id>
+          </State>
+          <State>
+            <id>Potentially confusing code constructsJavaScript</id>
+          </State>
+          <State>
+            <id>SQL</id>
+          </State>
+          <State>
+            <id>XPath</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>CoffeeScript</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
@@ -263,7 +322,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -292,7 +350,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="vendor" />
+              <option name="myItemId" value="public" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -306,15 +364,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="vendor" />
+              <option name="myItemId" value="public" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="laracasts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="validation" />
+              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -328,27 +382,15 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="vendor" />
+              <option name="myItemId" value="public" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="laracasts" />
+              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="validation" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Laracasts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Validation" />
+              <option name="myItemId" value="admin" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -362,11 +404,33 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="vendor" />
+              <option name="myItemId" value="public" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="laracasts" />
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pubdroit2015" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pubdroit2015" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -381,6 +445,180 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pubdroit2015" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pubdroit2015" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pubdroit2015" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pubdroit2015" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layouts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pubdroit2015" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pubdroit2015" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layouts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="partials" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pubdroit2015" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pubdroit2015" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layouts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="partials" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pubdroit2015" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pubdroit2015" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pubdroit2015" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pubdroit2015" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="event" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pubdroit2015" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pubdroit2015" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="event" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="partials" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -399,6 +637,54 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Droit" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pubdroit2015" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pubdroit2015" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Droit" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Worker" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pubdroit2015" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pubdroit2015" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Droit" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Exceptions" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -421,6 +707,32 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Event" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pubdroit2015" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pubdroit2015" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Droit" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Event" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Worker" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -464,32 +776,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Droit" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Event" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Entities" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pubdroit2015" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pubdroit2015" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="controllers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -514,11 +800,12 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="options.lastSelected" value="reference.settingsdialog.IDE.editor.colors.Font" />
+    <property name="options.lastSelected" value="editor.preferences.appearance" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
@@ -528,9 +815,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/Droit/Event/Forms" />
       <recent name="$PROJECT_DIR$/app/views/admin/specialisation" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/views/admin/event/partials" />
       <recent name="$PROJECT_DIR$/app/views/layouts/partials/admin" />
     </key>
   </component>
@@ -581,7 +870,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2296544" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22630993" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -593,11 +882,11 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -619,46 +908,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/partials/admin/search.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="5" selection-start="327" selection-end="327" vertical-scroll-proportion="0.17814727" vertical-offset="0" max-vertical-offset="842" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/partials/admin/navigation.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="4" selection-start="71" selection-end="112" vertical-scroll-proportion="0.089073636" vertical-offset="0" max-vertical-offset="1675" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/partials/admin/login.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="5" selection-start="1288" selection-end="1288" vertical-scroll-proportion="0.68289787" vertical-offset="0" max-vertical-offset="842" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/admin/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="8" selection-start="1182" selection-end="1195" vertical-scroll-proportion="-2.736175" vertical-offset="3300" max-vertical-offset="6875" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="3" selection-start="103" selection-end="122" vertical-scroll-proportion="0.2669039" vertical-offset="0" max-vertical-offset="843" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/admin/redactor/redactor.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="110" column="20" selection-start="2166" selection-end="2166" vertical-scroll-proportion="2.0818713" vertical-offset="970" max-vertical-offset="20950" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/admin/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="230" column="1" selection-start="3685" selection-end="3685" vertical-scroll-proportion="0.23041475" vertical-offset="5550" max-vertical-offset="6700" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Droit/Event/Repo/EventInterface.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="4" selection-start="534" selection-end="574" vertical-scroll-proportion="0.5938242" vertical-offset="0" max-vertical-offset="842" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/admin.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="76" column="112" selection-start="3872" selection-end="3872" vertical-scroll-proportion="0.25771973" vertical-offset="1683" max-vertical-offset="2525" />
@@ -789,37 +1038,9 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="874" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Droit/Exceptions/FormValidationException.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="504" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="828" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/partials/admin/documents.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="40" selection-start="2711" selection-end="2711" vertical-scroll-proportion="0.46437055" vertical-offset="529" max-vertical-offset="2254" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Droit/Event/Worker/EventWorker.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="41" selection-start="1505" selection-end="1505" vertical-scroll-proportion="1.3111639" vertical-offset="0" max-vertical-offset="1932" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/composer.json">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="37" selection-start="175" selection-end="175" vertical-scroll-proportion="0.16389549" vertical-offset="0" max-vertical-offset="1173" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/storage/logs/laravel.log">
-      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="709.5926" vertical-offset="19159" max-vertical-offset="20194" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Droit/Exceptions/FileUploadException.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="25" selection-start="41" selection-end="60" vertical-scroll-proportion="0.05463183" vertical-offset="0" max-vertical-offset="842" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Droit/Event/Repo/FileEloquent.php">
@@ -832,34 +1053,6 @@
         <state line="0" column="0" selection-start="0" selection-end="1049" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="920" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/start/global.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="60" column="54" selection-start="1926" selection-end="1926" vertical-scroll-proportion="-0.12692764" vertical-offset="1382" max-vertical-offset="2225">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/admin/event/edit.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="95" column="28" selection-start="3968" selection-end="3968" vertical-scroll-proportion="-8.653846" vertical-offset="2150" max-vertical-offset="15525">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Droit/Common/BaseModel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="0" selection-start="605" selection-end="949" vertical-scroll-proportion="-12.230769" vertical-offset="657" max-vertical-offset="1500">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Droit/Event/Forms/EventUpload.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="13" selection-start="217" selection-end="217" vertical-scroll-proportion="-10.576923" vertical-offset="0" max-vertical-offset="775">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Droit/Event/Entities/Events.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="40" column="91" selection-start="1332" selection-end="1332" vertical-scroll-proportion="0.0" vertical-offset="1000" max-vertical-offset="2375">
@@ -867,32 +1060,158 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Droit/Event/Forms/EventUpload.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="41" selection-start="275" selection-end="275" vertical-scroll-proportion="-11.538462" vertical-offset="0" max-vertical-offset="775">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/config/app.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="123" column="50" selection-start="4418" selection-end="4418" vertical-scroll-proportion="-17.0" vertical-offset="2633" max-vertical-offset="5200">
+        <state line="123" column="50" selection-start="4418" selection-end="4418" vertical-scroll-proportion="0.0" vertical-offset="3075" max-vertical-offset="5200">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Droit/Common/BaseModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="0" selection-start="605" selection-end="949" vertical-scroll-proportion="1.1565837" vertical-offset="0" max-vertical-offset="1500">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/storage/logs/laravel.log">
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="641" column="177" selection-start="107132" selection-end="107132" vertical-scroll-proportion="0.18576598" vertical-offset="15871" max-vertical-offset="16700">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laracasts/validation/src/Laracasts/Validation/FormValidationException.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="16" selection-start="16" selection-end="36" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="900">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Droit/Exceptions/FormValidationException.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="6" selection-start="41" selection-end="41" vertical-scroll-proportion="-1.9230769" vertical-offset="0" max-vertical-offset="900">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vendor/laracasts/validation/src/Laracasts/Validation/FormValidator.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="28" selection-start="656" selection-end="664" vertical-scroll-proportion="-24.76923" vertical-offset="256" max-vertical-offset="2100">
+        <state line="45" column="0" selection-start="817" selection-end="817" vertical-scroll-proportion="0.5338078" vertical-offset="650" max-vertical-offset="2100">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Droit/Exceptions/FileUploadException.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="25" selection-start="41" selection-end="60" vertical-scroll-proportion="0.059311982" vertical-offset="0" max-vertical-offset="900">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/start/global.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="57" column="0" selection-start="1799" selection-end="1799" vertical-scroll-proportion="0.61565834" vertical-offset="681" max-vertical-offset="2350">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/ArretsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-2.3493977" vertical-offset="1950" max-vertical-offset="4200">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/AnalysesController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="8" selection-start="689" selection-end="729" vertical-scroll-proportion="-15.384615" vertical-offset="250" max-vertical-offset="4450">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/common.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="14" selection-start="240" selection-end="249" vertical-scroll-proportion="-15.384615" vertical-offset="0" max-vertical-offset="700">
+          <folding>
+            <element signature="e#7#76#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/EventController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="195" column="52" selection-start="4113" selection-end="4113" vertical-scroll-proportion="-6.730769" vertical-offset="4700" max-vertical-offset="5825">
+        <state line="193" column="6" selection-start="4042" selection-end="4042" vertical-scroll-proportion="-8.653846" vertical-offset="4600" max-vertical-offset="5800">
           <folding>
             <element signature="e#7#43#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Droit/Event/Worker/EventWorker.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="18" selection-start="864" selection-end="864" vertical-scroll-proportion="-23.076923" vertical-offset="200" max-vertical-offset="2200">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Droit/Event/Forms/FileUpload.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="29" selection-start="495" selection-end="495" vertical-scroll-proportion="0.6524318" vertical-offset="0" max-vertical-offset="843">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Droit/Service/Worker/UploadWorker.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="191" selection-end="191" vertical-scroll-proportion="0.17793594" vertical-offset="100" max-vertical-offset="1875">
+        <state line="15" column="18" selection-start="341" selection-end="341" vertical-scroll-proportion="-10.576923" vertical-offset="100" max-vertical-offset="1875">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/admin/styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="348525">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/admin/event/edit.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="41" selection-start="592" selection-end="592" vertical-scroll-proportion="22.115385" vertical-offset="1175" max-vertical-offset="13175">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/admin/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="79" column="48" selection-start="2434" selection-end="2434" vertical-scroll-proportion="0.0" vertical-offset="1306" max-vertical-offset="6850">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/admin/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="139" column="0" selection-start="1925" selection-end="1947" vertical-scroll-proportion="-17.038462" vertical-offset="3032" max-vertical-offset="7000">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/admin/event/partials/documents.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="142" selection-start="1937" selection-end="1937" vertical-scroll-proportion="0.5338078" vertical-offset="400" max-vertical-offset="3225">
           <folding />
         </state>
       </provider>

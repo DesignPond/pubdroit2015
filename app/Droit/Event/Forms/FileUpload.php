@@ -2,7 +2,7 @@
 
 use Laracasts\Validation\FormValidator;
 
-class EventUpload extends FormValidator {
+class FilesUpload extends FormValidator {
 
     /**
      * Validation rules for event creation
@@ -10,7 +10,7 @@ class EventUpload extends FormValidator {
      * @var array
      */
     protected $rules = array(
-        'file' => 'mimes:jpeg,bmp,png,pdf|required'
+        'file' => 'mimes:jpeg,bmp,png,pdf,xls.docx|required'
     );
 
     /**
@@ -20,7 +20,7 @@ class EventUpload extends FormValidator {
      */
     protected $messages = array(
         'file.required' => 'Choisissez un document ou image',
-        'file.mimes'    => 'Le type de document n\'est pas supporté'
+        'file.mimes'    => 'Ce type de document n\'est pas supporté'
     );
 
 }

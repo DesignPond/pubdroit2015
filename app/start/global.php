@@ -56,9 +56,14 @@ App::error(function(Droit\Exceptions\FormValidationException $exception, $code)
     return Redirect::back()->withInput()->withErrors($exception->getErrors());
 });
 
-App::error(function(Droit\Exceptions\FileException $exception, $code)
+App::error(function(Droit\Exceptions\FileUploadException $exception, $code)
 {
     return Redirect::back()->withInput()->withErrors( $exception->getErrors() );
+});
+
+App::error(function(Laracasts\Validation\FormValidationException $exception, $code)
+{
+    return Redirect::back()->withInput()->withErrors($exception->getErrors());
 });
 
 

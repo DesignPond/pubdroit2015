@@ -21,8 +21,9 @@ class EventWorker implements EventWorkerInterface{
 	/**
 	 * Instantiate
 	 */
-	public function __construct( EventInterface $event , CompteInterface $compte  ,FileInterface $file , SpecialisationInterface $specialisation)
+	public function __construct( EventInterface $event , CompteInterface $compte  , FileInterface $file , SpecialisationInterface $specialisation)
 	{
+
         $this->event     = $event;
 
         $this->file      = $file;
@@ -31,12 +32,15 @@ class EventWorker implements EventWorkerInterface{
 
         $this->specialisation  = $specialisation;
 
-        $this->documents = array( 'images' => array('carte','vignette','badge','illustration'), 'docs' => array('programme','pdf','document') );
+        $this->documents = array(
+                'images'    => \Config::get('common.images'),
+                'documents' => \Config::get('common.documents')
+            );
+
 	}
 
     /**
      *  Get all infos for event view
-     *
      * @return array
      */
     public function getInfoForEvent($id)
