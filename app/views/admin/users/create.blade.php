@@ -20,14 +20,9 @@
 			
 			<div class="row"><!-- row -->
 				<div class="col-md-offset-2 col-md-8"><!-- col -->
-				
-					@if($errors->has())				
-						<div class="alert alert-dismissable alert-danger">
-						    @foreach($errors->all() as $message)						
-						    <p>{{ $message }}</p>						
-						    @endforeach
-						</div>						
-					@endif
+
+                    <!-- messages and errors -->
+                    @include('layouts.partials.message')
 				
 					<div class="panel panel-midnightblue"><!-- panel -->
 						<div class="panel-body"><!-- panel body -->
@@ -54,7 +49,6 @@
 						            	<label for="email" class="col-sm-3 control-label">Email</label>
 						                <div class="col-sm-6">
 						                	{{ Form::text('email', null, array('class' => 'form-control required', 'id' => 'UsernameEmail' , 'placeholder' => 'E-mail')) }}
-						                	{{ Form::hidden('username', null, array( 'id' => 'inputUsername' )) }}
 						                </div>
 						                <div class="col-sm-3"><p class="help-block">Requis</p></div>
 						            </div>
@@ -68,9 +62,9 @@
 						            </div>
 						
 						            <div class="form-group row">
-						           		<label for="password_confirm" class="col-sm-3 control-label">Confirmation du mot de passe</label>
+						           		<label for="password_confirmation" class="col-sm-3 control-label">Confirmation du mot de passe</label>
 						                <div class="col-sm-6">
-						                	{{ Form::password('password_confirm', array('class' => 'form-control required', 'placeholder' => 'Confirmation du mot de passe')) }}
+						                	{{ Form::password('password_confirmation', array('class' => 'form-control required', 'placeholder' => 'Confirmation du mot de passe')) }}
 						                </div>
 						                <div class="col-sm-3"><p class="help-block">Requis</p></div>
 						            </div>

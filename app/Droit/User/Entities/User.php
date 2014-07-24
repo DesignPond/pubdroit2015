@@ -1,13 +1,13 @@
 <?php namespace Droit\User\Entities;
 
-use Eloquent;
+use Droit\Common\BaseModel as BaseModel;
 
 use Illuminate\Auth\UserTrait;
 use Illuminate\Auth\UserInterface;
 use Illuminate\Auth\Reminders\RemindableTrait;
 use Illuminate\Auth\Reminders\RemindableInterface;
 
-class User extends Eloquent implements UserInterface, RemindableInterface {
+class User extends BaseModel implements UserInterface, RemindableInterface {
 
 	use UserTrait, RemindableTrait;
 
@@ -26,7 +26,7 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	/**
 	 * Columns fillable
 	 */	
-	protected $fillable  = array('prenom', 'nom', 'username' , 'email' ,'password' , 'activated');
+	protected $fillable  = array('prenom', 'nom' , 'email' ,'password', 'activated');
 
 	/**
 	 * The attributes excluded from the model's JSON form.
@@ -41,6 +41,31 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	* @var boolean
 	*/	
 	protected $dates = ['deleted_at'];
+
+    /**
+     * Validation rules for event creation
+     *
+     * @var array
+     */
+    protected static $rules = array(
+        'prenom'                => 'required',
+        'nom'                   => 'required',
+        'email'                 => 'required|email|unique:users,email',
+        'password'              => 'required'
+    );
+
+    /**
+     * Validation messages
+     *
+     * @var array
+     */
+    protected static $messages = array(
+        'email.required'                 => 'Le champ email est requis',
+        'email.unique'                   => 'Cet email est déjà utilisé',
+        'prenom.required'                => 'Le champ prénom est requis',
+        'nom.required'                   => 'Le champ nom est requis',
+        'password.required'              => 'Le champ mot de passe est requis'
+    );
 
 	/**
 	* Get the addresses for user

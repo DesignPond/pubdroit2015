@@ -60,17 +60,14 @@ class UserController extends BaseController {
 	 */
 	public function store()
 	{
-		
-		if($this->user->create( Input::all() )) 
-		{
-			// Get last inserted
-			$user  = $this->user->getLast(1);
-			$id    = $user->first()->id;
+
+        /*print_r(Input::all() );
+        exit;*/
+
+        $user = $this->user->create( Input::all() );
 			
-			return Redirect::to('admin/users/'.$id)->with( array('status' => 'success' , 'message' => 'Utilisateur crée') ); 
-		}
-		
-		return Redirect::back()->withErrors( $this->user->errors() )->withInput( Input::all() ); 
+		return Redirect::to('admin/users/'.$user->id)->with( array('status' => 'success' , 'message' => 'Utilisateur crée') );
+
 	}
 
 	/**

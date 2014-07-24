@@ -236,6 +236,7 @@ class UserInfoEloquent implements UserInfoInterface{
 		
 		$user->prenom      = $this->custom->format_name($data['prenom']);
 		$user->nom         = $this->custom->format_name($data['nom']);
+        $user->name        = $this->custom->format_name($data['prenom']).' '.$this->custom->format_name($data['nom']);
 		$user->email       = $data['email'];
 		$user->username    = $data['email'];
 		$user->password    = \Hash::make($data['password']);
@@ -248,7 +249,7 @@ class UserInfoEloquent implements UserInfoInterface{
 			return false;
 		}
 		
-		return true;
+		return $user;
 		
 	}
 
@@ -274,7 +275,7 @@ class UserInfoEloquent implements UserInfoInterface{
 		
 		$user->save();	
 		
-		return true;		
+		return $user;
 	}
 	
 	

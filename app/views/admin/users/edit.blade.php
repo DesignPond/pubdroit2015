@@ -23,7 +23,10 @@
 	                    </div>
 	                    
 	                    <div class="panel-body collapse in">
-	                    
+
+                            <!-- messages and errors -->
+                            @include('layouts.partials.message')
+
 							<div class="well">
 								{{ Form::open(array(
 							        'action' => array('UserController@update', $user->id), 
