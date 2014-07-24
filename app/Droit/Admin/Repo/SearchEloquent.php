@@ -350,5 +350,21 @@ class SearchEloquent implements SearchInterface {
 		return $query;
 
 	}
+
+    /**
+     * Prepare search string for databes
+     * @return array
+     */
+    public function prepareSearch($string){
+
+        // background processing, special commands (backspace, etc.), quotes newlines, or some other special characters
+        $matchSimple =  trim($string);
+        $pattern     = '/(;|\||`|>|<|&|^|"|'."\n|\r|'".'|{|}|[|]|\)|\()/i';
+
+        $matchSimple = preg_replace($pattern, '', $matchSimple);
+
+        return$matchSimple;
+
+    }
 	
 }

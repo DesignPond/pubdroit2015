@@ -437,6 +437,7 @@ class Custom {
 		$types = Adresse_types::all()->lists('type','id');
 
 		return (isset($types[$title]) ? $types[$title] : "");	
-	} 
-	
+	}
+
 }
+

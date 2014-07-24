@@ -19,6 +19,12 @@ Route::get('/', function()
 	return View::make('hello');
 });
 
+Route::get('test', array('uses' => 'TestController@index'));
+
+/**
+ * Password reminder
+ */
+Route::controller('password', 'RemindersController');
 
 /**
  * BAIL Routes 

@@ -3,7 +3,7 @@
  * Test Controller
  */
 
-use Droit\Worker\EventWorker;
+use Droit\Admin\Repo\SearchInterface;
 
 /**
  * Test Controller
@@ -11,12 +11,12 @@ use Droit\Worker\EventWorker;
  */
 class TestController extends BaseController {
 
-	protected $event;
+	protected $search;
 
-	
-	public function __construct(EventWorkerw $event){
-		
-		$this->event = $$event;
+
+	public function __construct( SearchInterface $search){
+
+        $this->search = $search;
 
 	}
 	
@@ -27,10 +27,11 @@ class TestController extends BaseController {
 	 */
 	public function index()
 	{		
-								
-		return View::make('test.index'); 
-	}
+		$string = 'Cindy lé\|schaud';
 
-		
+        $result = $this->search->prepareSearch($string);
+
+		return View::make('test.index')->with('result',$result);
+	}
 
 }
