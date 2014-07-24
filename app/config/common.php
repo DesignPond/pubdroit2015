@@ -17,6 +17,19 @@ return array(
     'documents' => array(
         'programme',
         'pdf'
+    ),
+    'usersearch' => array(
+        'prenom',
+        'nom',
+        'email',
+        array('prenom', 'nom')
+    ),
+    'addresssearch' => array(
+        'prenom',
+        'nom',
+        'email',
+        'entreprise',
+        array('prenom', 'nom')
     )
 );
 

@@ -27,6 +27,16 @@ class SearchEloquent implements SearchInterface {
 	 */	
 	protected $adresse;
 
+    /**
+     * Protected user columns for search
+     */
+    protected $usersearch;
+
+    /**
+     * Protected address columns for search
+     */
+    protected $addresssearch;
+
 	/**
 	 * Class expects an Eloquent model
 	 */	
@@ -35,6 +45,13 @@ class SearchEloquent implements SearchInterface {
 		$this->user     = $user;
 		
 		$this->adresse  = $adresse;
+
+        $this->cleaning = new \Cleaning();
+
+        $this->usersearch    = \Config::get('common.usersearch');
+
+        $this->addresssearch = \Config::get('common.addresssearch');
+
 	}
 	
 	/**
@@ -315,6 +332,91 @@ class SearchEloquent implements SearchInterface {
 	
 	}
 
+
+    /**
+     * Find user by keywords
+     * Allow for htmlentities and accents
+     * @return Illuminate\Database\Eloquent\Collection
+     */
+    public function findUserNew($data){
+
+        list($terms, $search) = $this->prepareSearch($data);
+
+        // We still have something to search for
+        if( strlen($terms) > 0 )
+        {
+
+            $join   = 'adresses';
+            $from   = 'users';
+
+            // Query construction
+            $fields = array(
+                $join.'.id' ,$join.'.user_id',$join.'.deleted',$join.'.civilite',$join.'.nom',$join.'.prenom',
+                $join.'.profession',$join.'.entreprise',$join.'.telephone',$join.'.adresse', $join.'.npa',$join.'.ville',
+                $join.'.pays',$join.'.canton',$join.'.email', $from.'.nom as user_nom',
+                $from.'.prenom as user_prenom', $from.'.email as user_email', $from.'.activated as activated', $from.'.id as uid'
+            );
+
+            $sql  = ' '.$from.'.name LIKE "%'.$terms.'%" ';
+            $sql .= ' OR '.$from.'.email LIKE "%'.$terms.'%" ';
+
+            $users = \DB::table($from)->whereRaw($sql)
+                ->leftJoin($join, $from.'.id', '=', $join.'.user_id')
+                ->select($fields)
+                ->groupBy($from.'.id')
+                ->orderBy($from.'.nom', 'asc')
+                ->orderBy($from.'.prenom', 'asc')
+                ->get();
+
+            return $users;
+
+        }
+
+        return NULL;
+
+    }
+
+    /**
+     * Find user by keywords
+     * Allow for htmlentities and accents
+     * @return Illuminate\Database\Eloquent\Collection
+     */
+    public function findAdresseNew($data){
+
+        list($terms, $search) = $this->prepareSearch($data);
+
+        // We still have something to search for
+        if( strlen($terms) > 0 )
+        {
+
+            $from   = 'adresses';
+
+            // Query construction
+            $fields = array(
+                $from.'.id' ,$from.'.user_id',$from.'.deleted',$from.'.civilite',$from.'.nom',$from.'.prenom',
+                $from.'.profession',$from.'.entreprise',$from.'.telephone',$from.'.adresse', $from.'.npa',$from.'.ville',
+                $from.'.pays',$from.'.canton',$from.'.email', $from.'.nom as user_nom'
+            );
+
+            $sql  = ' '.$from.'.name LIKE "%'.$terms.'%" ';
+            $sql .= ' OR '.$from.'.email LIKE "%'.$terms.'%" ';
+            $sql .= ' OR '.$from.'.entreprise LIKE "%'.$terms.'%" ';
+
+            $adresses = \DB::table($from)->whereRaw($sql)
+                                      ->select($fields)
+                                      ->groupBy($from.'.id')
+                                      ->orderBy($from.'.nom', 'asc')
+                                      ->orderBy($from.'.prenom', 'asc')
+                                      ->get();
+
+            return $adresses;
+
+        }
+
+        return NULL;
+
+    }
+
 	/**
 	 * Find by multiple filters
 	 * - Cantons
@@ -352,18 +454,31 @@ class SearchEloquent implements SearchInterface {
 	}
 
     /**
-     * Prepare search string for databes
+     * Prepare search string for databass
      * @return array
      */
     public function prepareSearch($string){
 
+        // Trim whitespace
+        $terms   =  trim($string);
+
+        // Sanitize
+        $terms   = $this->cleaning->sanitize($terms);
+
         // background processing, special commands (backspace, etc.), quotes newlines, or some other special characters
-        $matchSimple =  trim($string);
-        $pattern     = '/(;|\||`|>|<|&|^|"|'."\n|\r|'".'|{|}|[|]|\)|\()/i';
+        $pattern = '/(;|\||`|>|<|&|^|"|'."\n|\r|'".'|{|}|[|]|\)|\()/i';
+        $terms   = preg_replace($pattern, '', $terms);
 
-        $matchSimple = preg_replace($pattern, '', $matchSimple);
+        // Remove antislashes
+        $terms = stripslashes($terms);
 
-        return$matchSimple;
+        // Remove blank spaces
+        $terms = preg_replace('/\s+/', ' ', $terms);
+
+        // Explode all words into array
+        $search = explode(" ", $terms);
+
+        return array($terms , $search);
 
     }
 	

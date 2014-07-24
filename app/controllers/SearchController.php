@@ -24,8 +24,8 @@ class SearchController extends BaseController {
 		$users   = array();
 		
 		if($search){
-			$adresses  = $this->search->findAdresse($search);
-			$users     = $this->search->findUser($search);
+			$adresses  = $this->search->findAdresseNew($search);
+			$users     = $this->search->findUserNew($search);
 		}
 		
 		$filters = array();
