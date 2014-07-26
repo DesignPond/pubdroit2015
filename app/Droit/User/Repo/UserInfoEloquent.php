@@ -4,6 +4,7 @@ use Droit\User\Repo\UserInfoInterface;
 use Droit\User\Entities\User as M;
 use Droit\User\Entities\Civilites as Civilites;
 use Droit\User\Entities\Event_options_user;
+use Droit\User\Events\UserWasCreated;
 
 class UserInfoEloquent implements UserInfoInterface{
 
@@ -248,7 +249,9 @@ class UserInfoEloquent implements UserInfoInterface{
 		{
 			return false;
 		}
-		
+
+        $user->raise(new UserWasCreated($user));
+
 		return $user;
 		
 	}

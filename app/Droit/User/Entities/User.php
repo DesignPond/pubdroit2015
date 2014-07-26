@@ -50,7 +50,7 @@ class User extends BaseModel implements UserInterface, RemindableInterface {
     protected static $rules = array(
         'prenom'                => 'required',
         'nom'                   => 'required',
-        'email'                 => 'required|email|unique:users,email',
+        'email'                 => 'required|email',
         'password'              => 'required'
     );
 
@@ -60,11 +60,13 @@ class User extends BaseModel implements UserInterface, RemindableInterface {
      * @var array
      */
     protected static $messages = array(
-        'email.required'                 => 'Le champ email est requis',
-        'email.unique'                   => 'Cet email est déjà utilisé',
-        'prenom.required'                => 'Le champ prénom est requis',
-        'nom.required'                   => 'Le champ nom est requis',
-        'password.required'              => 'Le champ mot de passe est requis'
+        'email.required'     => 'Le champ email est requis',
+        'email.unique'       => 'Cet email est déjà utilisé',
+        'email.email'        => 'Merci d\'indiquer un email valide',
+        'prenom.required'    => 'Le champ prénom est requis',
+        'nom.required'       => 'Le champ nom est requis',
+        'password.required'  => 'Le champ mot de passe est requis',
+        'password.confirmed' => 'Le mot de passe ne correspond pas'
     );
 
 	/**

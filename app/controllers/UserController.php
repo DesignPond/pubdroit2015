@@ -3,6 +3,10 @@
 use Droit\User\Repo\UserInfoInterface;
 use Droit\User\Repo\AdresseInterface;
 use Droit\Event\Worker\InscriptionServiceInterface;
+use Droit\User\Forms\UserCreation;
+
+use Droit\User\Commands\CreateUserCommand;
+
 
 class UserController extends BaseController {
 
@@ -11,9 +15,11 @@ class UserController extends BaseController {
 	protected $user;
 	
 	protected $adresse;
+
+    protected $validator;
 	
 	/* Inject dependencies */
-	public function __construct( UserInfoInterface $user,AdresseInterface $adresse,InscriptionServiceInterface $inscription )
+	public function __construct( UserInfoInterface $user,AdresseInterface $adresse,InscriptionServiceInterface $inscription, UserCreation $validator )
 	{
 			
 		$this->user         = $user;
@@ -21,6 +27,8 @@ class UserController extends BaseController {
 		$this->adresse      = $adresse;
 		
 		$this->inscription  = $inscription;
+
+        $this->validator    = $validator;
 				
 		// Custom helper	
 
@@ -60,12 +68,14 @@ class UserController extends BaseController {
 	 */
 	public function store()
 	{
+        // First validate new information and password confirmations
+        $this->validator->validate( Input::all() );
 
-        /*print_r(Input::all() );
-        exit;*/
+        // Create user and pass only needed fields for in model validation
+        // $user = $this->user->create( Input::only('prenom','nom','email','password') );
 
-        $user = $this->user->create( Input::all() );
-			
+        $user = $this->execute('Droit\User\Commands\CreateUserCommand');
+
 		return Redirect::to('admin/users/'.$user->id)->with( array('status' => 'success' , 'message' => 'Utilisateur crée') );
 
 	}

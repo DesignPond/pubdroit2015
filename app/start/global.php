@@ -95,3 +95,14 @@ App::down(function()
 */
 
 require app_path().'/filters.php';
+
+/*
+|--------------------------------------------------------------------------
+| Require The Events File
+|--------------------------------------------------------------------------
+|
+| Next we will load the events listeners file for the application. T
+|
+*/
+
+require app_path().'/events.php';
