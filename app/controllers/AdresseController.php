@@ -109,28 +109,18 @@ class AdresseController extends BaseController {
 	public function store()
 	{			
 		$redirectTo = Input::get('redirectTo');
-		$user_id    = Input::get('user_id');
 
-		$adresseValidator = AdresseValidator::make( Input::all() );
-		
-		if ($adresseValidator->passes()) 
-		{
-			$this->adresse->create( Input::all() );
-			
-			if(!empty($redirectTo))
-			{
-				return Redirect::to('admin/'.$redirectTo)->with( array('status' => 'success' , 'message' => 'Adresse crée') ); 
-			}
-			
-			// Get last inserted
-			$id  = $this->adresse->getLast(1)->first()->id;
-			
-			return Redirect::to('admin/adresses/'.$id)->with( array('status' => 'success' , 'message' => 'Adresse crée') ); 
-		}
-		
-		$where = ( $user_id > 0 ? '/'.$user_id : '');
-		
-		return Redirect::to('admin/adresses/create'.$where)->withErrors( $adresseValidator->errors() )->withInput( Input::all() ); 
+        $adresse = $this->adresse->create(
+            Input::all()
+        );
+
+        if(!empty($redirectTo))
+        {
+            return Redirect::to('admin/'.$redirectTo)->with( array('status' => 'success' , 'message' => 'Adresse crée') );
+        }
+
+        return Redirect::to('admin/adresses/'.$adresse->id)->with( array('status' => 'success' , 'message' => 'Adresse crée') );
+
 	}
 
 	/**
@@ -170,14 +160,10 @@ class AdresseController extends BaseController {
 		$backTo     = 'adresses/'.$id ;
 		$redirect   = ( $redirectTo ? $redirectTo : $backTo);
 		
-		if ($this->adresse->update( Input::all() )) 
-		{
-			return Redirect::to('admin/'.$redirect)->with( array('status' => 'success' , 'message' => 'Adresse mise à jour') ); 
-		}
-		
-		return Redirect::to('admin/'.$backTo)->withErrors( $this->adresse->errors() )
-												  ->with( array('status' => 'danger' , 'message' => 'Problème avec la mise à jour') )
-												  ->withInput( Input::all() ); 
+		$address = $this->adresse->update( Input::all() );
+
+		return Redirect::to('admin/'.$redirect)->with( array('status' => 'success' , 'message' => 'Adresse mise à jour') );
+
 	}	
 
 	/**

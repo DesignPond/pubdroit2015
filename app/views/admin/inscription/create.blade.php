@@ -20,24 +20,8 @@
 
 					<div class="row">
 						<div class="col-sm-8 col-md-offset-2">
-						
-						   @if($errors->has())
-								We encountered the following errors:						
-								<ul>
-								    @foreach($errors->all() as $message)						
-								    <li>{{ $message }}</li>						
-								    @endforeach
-								</ul>						
-							@endif
-							
-							@if(Session::has('status'))
-							<div class="alert alert-dismissable alert-{{  Session::get('status') }}">
-								@if(Session::has('message'))
-									{{  Session::get('message') }}
-								@endif
-								<button class="close" aria-hidden="true" data-dismiss="alert" type="button">×</button>
-							</div>
-							@endif
+
+                            @include('layouts.partials.message')
 
 							<!-- form start --> 
 							{{ Form::open(array(
@@ -45,22 +29,25 @@
 								'id' => 'validate-form',
 								'data-validate' => 'parsley',
 								'class' => 'form-horizontal',
-								'route' => 'admin.pubdroit.profession.store')) 
+								'route' => 'admin.pubdroit.inscription.store'))
 							}} 
 
 							<!-- panel start -->
 							<div class="panel panel-green">	
-						       <div class="panel-heading"><h4><i class="fa fa-calendar-o"></i> Créer</h4></div>
+						       <div class="panel-heading"><h4><i class="fa fa-calendar-o"></i> Nouvelle inscription</h4></div>
 							   <div class="panel-body"><!-- start panel content -->
 							
 									<div class="form-group">
-										  <label for="titreProfession" class="col-sm-3 control-label">Titre de la profession</label>
+										  <label for="price_id" class="col-sm-3 control-label">Prix</label>
 										  <div class="col-sm-6">
-										  	 {{ Form::text('titreProfession', null , array('class' => 'form-control' )) }}
+										  	 {{ Form::text('price_id', 8 , array('class' => 'form-control' )) }}
 										  </div>
 										  <div class="col-sm-3">Requis</div>
 									</div>
-							
+
+                                   {{ Form::hidden('event_id', 3) }}
+                                   {{ Form::hidden('user_id',1 ) }}
+
 							    </div><!-- end panel content -->
 							    <div class="panel-footer">
 							      	<div class="row">

@@ -1,4 +1,4 @@
-<?php namespace Droit\Event\Entities;
+<?php namespace Droit\Inscriptions\Entities;
 
 use Droit\Common\BaseModel as BaseModel;
 

@@ -9,7 +9,6 @@ namespace Droit\Event;
 use Illuminate\Support\ServiceProvider;
 
 use Droit\Event\Entities\Events as E;
-use Droit\Event\Entities\Inscriptions as I;
 use Droit\Event\Entities\Invoices as IN;
 use Droit\Event\Entities\Comptes as C;
 use Droit\Event\Entities\Options as O;
@@ -27,8 +26,6 @@ class EventServiceProvider extends ServiceProvider {
     public function register()
     {     
     	$this->registerEventService();
-    	$this->registerInscriptionService();
-    	$this->registerInscriptionWorkerService();
     	$this->registerInvoiceService();	
     	$this->registerCompteService();	
     	$this->registerOptionService();	
@@ -48,32 +45,6 @@ class EventServiceProvider extends ServiceProvider {
             return new \Droit\Event\Repo\EventEloquent( new E );
         });        
     }
-
-	/**
-	 * Inscriptions service
-	 */    
-    protected function registerInscriptionService(){
-    
-	    $this->app->bind('Droit\Event\Repo\InscriptionInterface', function()
-        {
-            return new \Droit\Event\Repo\InscriptionEloquent( new I );
-        });        
-    }
-
-	/**
-	 * Inscriptions Worker service
-	 */      
-    protected function registerInscriptionWorkerService(){
-    
-	    $this->app->bind('Droit\Event\Worker\InscriptionServiceInterface', function()
-        {
-            return new \Droit\Event\Worker\InscriptionServiceWorker(
-	           		\App::make('Droit\Event\Repo\FileInterface') , 
-	            	\App::make('Droit\Event\Repo\InscriptionInterface') , 
-	            	\App::make('Droit\Event\Repo\OptionInterface') 
-            );
-        });        
-    }    
 
 	/**
 	 * Invoices service

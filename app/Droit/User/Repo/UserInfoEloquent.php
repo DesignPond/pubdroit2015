@@ -250,6 +250,7 @@ class UserInfoEloquent implements UserInfoInterface{
 			return false;
 		}
 
+        // Raise event when new user is created
         $user->raise(new UserWasCreated($user));
 
 		return $user;

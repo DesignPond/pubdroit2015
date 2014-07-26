@@ -2,7 +2,7 @@
 
 use Droit\User\Repo\UserInfoInterface;
 use Droit\User\Repo\AdresseInterface;
-use Droit\Event\Worker\InscriptionServiceInterface;
+use Droit\Inscriptions\Worker\InscriptionServiceInterface;
 use Droit\User\Forms\UserCreation;
 
 use Droit\User\Commands\CreateUserCommand;
@@ -29,13 +29,13 @@ class UserController extends BaseController {
 		$this->inscription  = $inscription;
 
         $this->validator    = $validator;
-				
-		// Custom helper	
+
+		// Custom helper
 
 		$this->custom = new \Custom;
-		
+
 		$shared = $this->custom->sharedVariables();
-		
+
 		View::share( $shared );
 
 	}
@@ -71,9 +71,7 @@ class UserController extends BaseController {
         // First validate new information and password confirmations
         $this->validator->validate( Input::all() );
 
-        // Create user and pass only needed fields for in model validation
-        // $user = $this->user->create( Input::only('prenom','nom','email','password') );
-
+        // Command new user creation and dispatch event
         $user = $this->execute('Droit\User\Commands\CreateUserCommand');
 
 		return Redirect::to('admin/users/'.$user->id)->with( array('status' => 'success' , 'message' => 'Utilisateur crée') );

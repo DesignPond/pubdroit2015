@@ -164,7 +164,7 @@ class AdresseEloquent implements AdresseInterface{
 	 */		
 	public function infosIfUser($id = null){
 		
-		$nametypes = \Adresse_types::all()->lists('type','id');
+		$nametypes = \Droit\User\Entities\Adresse_types::all()->lists('type','id');
 		$types     = $nametypes;
 		
 		if( $id )
@@ -199,20 +199,6 @@ class AdresseEloquent implements AdresseInterface{
 		}		
 		
 		return $data;
-	}
-	
-	/**
-	 *  Active the user
-	*/	
-	public function activeUser($id){
-		
-	}
-	
-	/**
-	 *  Deactive the user
-	*/	
-	public function deactiveUser($id){
-		
 	}
 		
 	/**
@@ -273,7 +259,7 @@ class AdresseEloquent implements AdresseInterface{
 			return false;
 		}
 		
-		return true;
+		return $adresse;
 		
 	}
 	
@@ -310,10 +296,9 @@ class AdresseEloquent implements AdresseInterface{
 		
 		$adresse->save();	
 		
-		return true;		
+		return $adresse;
 	}
-	
-	
+
 	public function delete($id){
 	
 		$adresse = $this->adresse->find($id);
@@ -321,28 +306,6 @@ class AdresseEloquent implements AdresseInterface{
 		return $adresse->delete();
 		
 	}
-	
-	/**
-	 * Tests
-	*/	
-	public function test($sSearch){
-	
-		$iTotal = $this->adresse->where('user_id','=',0)->take(10)->skip(0)->get();
-	
-		/*
-		$data  = $this->adresse->where('user_id','=',0)
-								->whereRaw('( prenom LIKE "%'.$sSearch.'%" OR nom LIKE "%'.$sSearch.'%" OR entreprise LIKE "%'.$sSearch.'%" OR adresse LIKE "%'.$sSearch.'%" )')
-								->take(10)
-								->get();
-								    
-		$iTotalDisplayRecords  = $this->adresse->where('user_id','=',0)
-								->whereRaw('( prenom LIKE "%'.$sSearch.'%" OR nom LIKE "%'.$sSearch.'%" OR entreprise LIKE "%'.$sSearch.'%" OR adresse LIKE "%'.$sSearch.'%" )')
-								->get()
-								->count();	
-		*/						             
-		
-		return $iTotal;
 
-	}
 					
 }

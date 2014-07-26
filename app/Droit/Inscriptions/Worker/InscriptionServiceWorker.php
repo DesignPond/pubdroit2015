@@ -1,7 +1,7 @@
-<?php namespace Droit\Event\Worker;
+<?php namespace Droit\Inscriptions\Worker;
 
-use Droit\Event\Worker\InscriptionServiceInterface;
-use Droit\Event\Repo\InscriptionInterface;
+use Droit\Inscriptions\Worker\InscriptionServiceInterface;
+use Droit\Inscriptions\Repo\InscriptionInterface;
 use Droit\Event\Repo\OptionInterface;
 use Droit\Event\Repo\FileInterface;
 

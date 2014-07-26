@@ -1,4 +1,4 @@
-<?php namespace Droit\Event\Worker;
+<?php namespace Droit\Inscriptions\Worker;
 
 interface InscriptionServiceInterface {
 	

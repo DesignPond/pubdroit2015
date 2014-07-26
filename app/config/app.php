@@ -125,6 +125,7 @@ return array(
 		'Droit\DroitServiceProvider',
 		'Droit\Admin\AdminServiceProvider',
 		'Droit\Event\EventServiceProvider',
+        'Droit\Inscriptions\InscriptionServiceProvider',
 		'Droit\Content\ContentServiceProvider',
 		'Droit\User\UserServiceProvider',
 		'Droit\Calculette\CalculetteServiceProvider',

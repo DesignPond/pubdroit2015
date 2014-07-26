@@ -1,4 +1,4 @@
-<?php namespace Droit\Event\Repo;
+<?php namespace Droit\Inscriptions\Repo;
 
 interface InscriptionInterface {
 	

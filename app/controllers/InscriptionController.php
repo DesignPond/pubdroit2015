@@ -1,6 +1,6 @@
 <?php
 
-use Droit\Event\Repo\InscriptionInterface;
+use Droit\Inscriptions\Repo\InscriptionInterface;
 use Droit\Event\Repo\EventInterface;
 
 class InscriptionController extends BaseController {
@@ -35,7 +35,10 @@ class InscriptionController extends BaseController {
 	 */
 	public function store()
 	{
-		//
+        // Command new inscription creation and dispatch events
+        $inscription = $this->execute('Droit\Inscriptions\Commands\CreateInscriptionCommand');
+
+        return Redirect::to('admin/pubdroit/inscription/'.$inscription->id)->with( array('status' => 'success' , 'message' => 'Inscription crée') );
 	}
 	
 	public function event($id){

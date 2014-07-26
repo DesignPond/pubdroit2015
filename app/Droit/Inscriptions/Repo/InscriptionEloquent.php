@@ -1,14 +1,14 @@
-<?php namespace Droit\Event\Repo;
+<?php namespace Droit\Inscriptions\Repo;
 
-use Droit\Event\Repo\InscriptionInterface;
-use Droit\Event\Entities\Inscriptions as M;
+use Droit\Inscriptions\Repo\InscriptionInterface;
+use Droit\Inscriptions\Entities\Inscriptions as Inscriptions;
 
 class InscriptionEloquent implements InscriptionInterface {
 
 	protected $inscription;
 	
 	// Class expects an Eloquent model
-	public function __construct(M $inscription)
+	public function __construct(Inscriptions $inscription)
 	{
 		$this->inscription = $inscription;	
 	}
