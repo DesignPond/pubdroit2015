@@ -43,7 +43,7 @@
     },
 
     /**
-     * Event listener that largens font size
+     * Colloque listener that largens font size
      */
     keyHandler = function(e) {
         if( e.keyCode == 13 && e.data.closeOnEnter ) {
@@ -253,7 +253,7 @@
     },
 
     /**
-     * Event listener
+     * Colloque listener
      */
     editEvent = function(event) {
         if( $currentlyEdited !== false ) {

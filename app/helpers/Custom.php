@@ -1,7 +1,7 @@
 <?php
 
 use Carbon\Carbon;
-use Droit\Event\Entities\Event_files as File;
+use Droit\Colloque\Entities\Colloque_files as File;
 use Droit\User\Entities\Adresse_types as Adresse_types;
 use Droit\User\Entities\Civilites as Civilites;
 use Droit\User\Entities\Cantons as Cantons;

@@ -29,7 +29,7 @@
                             'id' => 'validate-form',
                             'data-validate' => 'parsley',
                             'class' => 'form-horizontal',
-                            'url' => 'admin/pubdroit/specialisation/linkEvent'))
+                            'url' => 'admin/pubdroit/specialisation/linkColloque'))
                             }}
 
                             <!-- panel start -->
@@ -50,7 +50,7 @@
                                     <div class="row">
                                         <div class="col-sm-6 col-sm-offset-3">
                                             <div class="btn-toolbar">
-                                                {{ Form::hidden('event_id', $event_id )}}
+                                                {{ Form::hidden('colloque_id', $colloque_id )}}
                                                 <button type="submit" class="btn-primary btn">Envoyer</button>
                                             </div>
                                         </div>

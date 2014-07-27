@@ -475,7 +475,7 @@ function Calendar(element, options, eventSources) {
 	
 	
 	
-	/* Event Fetching/Rendering
+	/* Colloque Fetching/Rendering
 	-----------------------------------------------------------------------------*/
 	// TODO: going forward, most of this stuff should be directly handled by the view
 
@@ -1229,7 +1229,7 @@ function EventManager(options, _sources) {
 	
 	
 	
-	/* Event Normalization
+	/* Colloque Normalization
 	-----------------------------------------------------------------------------*/
 	
 	
@@ -1679,7 +1679,7 @@ function iso8601Week(date) {
 fc.applyAll = applyAll;
 
 
-/* Event Date Math
+/* Colloque Date Math
 -----------------------------------------------------------------------------*/
 
 
@@ -1700,7 +1700,7 @@ function _exclEndDay(end, allDay) {
 
 
 
-/* Event Element Binding
+/* Colloque Element Binding
 -----------------------------------------------------------------------------*/
 
 
@@ -4329,7 +4329,7 @@ function AgendaEventRenderer() {
 
 
 
-/* Agenda Event Segment Utilities
+/* Agenda Colloque Segment Utilities
 -----------------------------------------------------------------------------*/
 
 
@@ -4596,7 +4596,7 @@ function View(element, calendar, viewName) {
 	
 
 
-	/* Event Editable Boolean Calculations
+	/* Colloque Editable Boolean Calculations
 	------------------------------------------------------------------------------*/
 
 	
@@ -4629,7 +4629,7 @@ function View(element, calendar, viewName) {
 	
 	
 	
-	/* Event Data
+	/* Colloque Data
 	------------------------------------------------------------------------------*/
 	
 	
@@ -4661,7 +4661,7 @@ function View(element, calendar, viewName) {
 	
 	
 	
-	/* Event Elements
+	/* Colloque Elements
 	------------------------------------------------------------------------------*/
 	
 	
@@ -4729,7 +4729,7 @@ function View(element, calendar, viewName) {
 	
 	
 	
-	/* Event Modification Reporting
+	/* Colloque Modification Reporting
 	---------------------------------------------------------------------------------*/
 	
 	
@@ -4778,7 +4778,7 @@ function View(element, calendar, viewName) {
 	
 	
 	
-	/* Event Modification Math
+	/* Colloque Modification Math
 	---------------------------------------------------------------------------------*/
 	
 	

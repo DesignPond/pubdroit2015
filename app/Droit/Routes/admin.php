@@ -58,41 +58,41 @@ Route::group(array('prefix' => 'admin'), function()
     Route::group(array('prefix' => 'pubdroit'), function()
 	{
 		// Colloques
-	    Route::get('/', array('uses' => 'EventController@index'));	    
-	    Route::get('lists', array('uses' => 'EventController@lists'));
-	    Route::get('archives', array('uses' => 'EventController@archives'));	    
-	    Route::get('event', array('uses' => 'EventController@index'));
-	    Route::post('event/upload', array('uses' => 'EventController@upload'));
-	    Route::get('event/{id}/destroy_file', array('uses' => 'EventController@destroy_file')); 
-	    Route::post('event/pivot', array('uses' => 'EventController@pivot'));	
-	    Route::post('event/email', array('uses' => 'EventController@email'));
-	    Route::post('event/attestation', array('uses' => 'EventController@attestation'));	    
-	    Route::resource('event', 'EventController');
+	    Route::get('/', array('uses' => 'ColloqueController@index'));	    
+	    Route::get('lists', array('uses' => 'ColloqueController@lists'));
+	    Route::get('archives', array('uses' => 'ColloqueController@archives'));	    
+	    Route::get('colloque', array('uses' => 'ColloqueController@index'));
+	    Route::post('colloque/upload', array('uses' => 'ColloqueController@upload'));
+	    Route::get('colloque/{id}/destroy_file', array('uses' => 'ColloqueController@destroy_file')); 
+	    Route::post('colloque/pivot', array('uses' => 'ColloqueController@pivot'));	
+	    Route::post('colloque/email', array('uses' => 'ColloqueController@email'));
+	    Route::post('colloque/attestation', array('uses' => 'ColloqueController@attestation'));	    
+	    Route::resource('colloque', 'ColloqueController');
 
 		// Inscriptions
-	    Route::get('inscription/event/{event}', array('uses' => 'InscriptionController@event'));	      
+	    Route::get('inscription/colloque/{colloque}', array('uses' => 'InscriptionController@colloque'));	      
 	    Route::resource('inscription', 'InscriptionController');
 
 		// Invoices
-	    Route::get('invoice/event/{event}', array('uses' => 'InvoiceController@event'));	      
+	    Route::get('invoice/colloque/{colloque}', array('uses' => 'InvoiceController@colloque'));	      
 	    Route::resource('invoice', 'InvoiceController');
 	    	    
 	    // Options colloques
 	    Route::get('option/{option}/delete', array('uses' => 'OptionController@destroy'));
-	    Route::get('option/create/{event}', array('uses' => 'OptionController@create'));
+	    Route::get('option/create/{colloque}', array('uses' => 'OptionController@create'));
 	    Route::resource('option', 'OptionController');
 
 	    // Prix colloques
 	    Route::get('price/{price}/delete', array('uses' => 'PriceController@destroy'));
-	    Route::get('price/create/{event}', array('uses' => 'PriceController@create'));
+	    Route::get('price/create/{colloque}', array('uses' => 'PriceController@create'));
 	    Route::resource('price', 'PriceController');
 	    
 	    // Spécialisations users and colloques
 	    Route::get('specialisation/{specialisation}/delete', array('uses' => 'SpecialisationController@destroy'));
-	    Route::get('specialisation/create/{event}', array('uses' => 'SpecialisationController@create'));
-        Route::get('specialisation/addToEvent/{event}', array('uses' => 'SpecialisationController@addToEvent'));
-	    Route::post('specialisation/linkEvent', array('uses' => 'SpecialisationController@linkEvent'));
-	    Route::get('specialisation/{id}/unlinkEvent', array('uses' => 'SpecialisationController@unlinkEvent'));
+	    Route::get('specialisation/create/{colloque}', array('uses' => 'SpecialisationController@create'));
+        Route::get('specialisation/addToColloque/{colloque}', array('uses' => 'SpecialisationController@addToColloque'));
+	    Route::post('specialisation/linkColloque', array('uses' => 'SpecialisationController@linkColloque'));
+	    Route::get('specialisation/{id}/unlinkColloque', array('uses' => 'SpecialisationController@unlinkColloque'));
 	    Route::resource('specialisation', 'SpecialisationController');
 	    
 	    // Membres users

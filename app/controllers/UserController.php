@@ -2,7 +2,7 @@
 
 use Droit\User\Repo\UserInfoInterface;
 use Droit\User\Repo\AdresseInterface;
-use Droit\Inscriptions\Worker\InscriptionServiceInterface;
+use Droit\Colloque\Worker\InscriptionServiceInterface;
 use Droit\User\Forms\UserCreation;
 
 use Droit\User\Commands\CreateUserCommand;
@@ -71,7 +71,7 @@ class UserController extends BaseController {
         // First validate new information and password confirmations
         $this->validator->validate( Input::all() );
 
-        // Command new user creation and dispatch event
+        // Command new user creation and dispatch colloque
         $user = $this->execute('Droit\User\Commands\CreateUserCommand');
 
 		return Redirect::to('admin/users/'.$user->id)->with( array('status' => 'success' , 'message' => 'Utilisateur crée') );

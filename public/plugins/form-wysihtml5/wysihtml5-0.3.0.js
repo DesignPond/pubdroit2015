@@ -4308,7 +4308,7 @@ wysihtml5.dom.copyAttributes = function(attributesToCopy) {
     };
   };
 })(wysihtml5.dom);/**
- * Event Delegation
+ * Colloque Delegation
  *
  * @example
  *    wysihtml5.dom.delegate(document.body, "a", "click", function() {

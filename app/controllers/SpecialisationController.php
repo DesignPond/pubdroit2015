@@ -104,36 +104,36 @@ class SpecialisationController extends BaseController {
 
 	}
 	
-	/* Link to events */
+	/* Link to colloques */
 
     /**
-     * Add a specialisation to an event
+     * Add a specialisation to an colloque
      *
      * @return response
      */
-    public function addToEvent($id)
+    public function addToColloque($id)
     {
         $specialisations = $this->specialisation->droplist();
         $specialisations = ['' => 'Choix'] + $specialisations;
 
-        return View::make('admin.specialisation.add')->with(array('event_id' => $id , 'specialisations' => $specialisations ));
+        return View::make('admin.specialisation.add')->with(array('colloque_id' => $id , 'specialisations' => $specialisations ));
     }
 	
-	public function linkEvent()
+	public function linkColloque()
     {
 
-		$event_id       = Input::get('event_id');
+		$colloque_id       = Input::get('colloque_id');
 		
-		$specialisation = $this->specialisation->linkEvent( Input::all() );
+		$specialisation = $this->specialisation->linkColloque( Input::all() );
 
-		return Redirect::to('admin/pubdroit/event/'.$event_id.'/edit')->with( array('status' => 'success' , 'message' => 'La spécialisation a été lié' ) );
+		return Redirect::to('admin/pubdroit/colloque/'.$colloque_id.'/edit')->with( array('status' => 'success' , 'message' => 'La spécialisation a été lié' ) );
 
 	}
 	
-	public function unlinkEvent($id)
+	public function unlinkColloque($id)
     {
 
-        $message = ( $this->specialisation->unlinkEvent($id) ? array('status' => 'success','message' => 'La spécialisation a été delié') : array('status' => 'error','message' => 'Problème avec la suppression') );
+        $message = ( $this->specialisation->unlinkColloque($id) ? array('status' => 'success','message' => 'La spécialisation a été delié') : array('status' => 'error','message' => 'Problème avec la suppression') );
 
         return Redirect::back()->with( $message );
 

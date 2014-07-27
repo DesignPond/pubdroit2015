@@ -7,7 +7,7 @@ use Droit\Event\Repo\EventInterface;
 use Droit\User\Repo\UserInfoInterface;
 use Droit\Event\Repo\InscriptionInterface;
 use Droit\Event\Worker\GenerateInterface;
-//use Droit\Service\Form\Event\EventForm;
+//use Droit\Service\Form\Colloque\EventForm;
 
 /**
  * Admin Controller

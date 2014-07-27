@@ -36,7 +36,7 @@ class EventControllerTest extends TestCase {
     }
     
 	/**
-	 * Event actifs index
+	 * Colloque actifs index
 	*/	 
 	public function testActifEventList()
 	{			
@@ -48,7 +48,7 @@ class EventControllerTest extends TestCase {
 	}
    
 	/**
-	 * Event archive index
+	 * Colloque archive index
 	*/	 
 	public function testArchivesEventList()
 	{			
@@ -60,7 +60,7 @@ class EventControllerTest extends TestCase {
 	}
 	
 	/**
-	 * Event create
+	 * Colloque create
 	*/	 
 	public function testCreateNewEvent()
 	{		

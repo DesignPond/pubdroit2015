@@ -1722,13 +1722,13 @@ jQuery.event = {
 
 	// bubbling is internal
 	trigger: function( event, data, elem /*, bubbling */ ) {
-		// Event object or event type
+		// Colloque object or event type
 		var type = event.type || event,
 			bubbling = arguments[3];
 
 		if ( !bubbling ) {
 			event = typeof event === "object" ?
-				// jQuery.Event object
+				// jQuery.Colloque object
 				event[expando] ? event :
 				// Object literal
 				jQuery.extend( jQuery.Event(type), event ) :
@@ -1982,11 +1982,11 @@ jQuery.Event = function( src ) {
 		return new jQuery.Event( src );
 	}
 
-	// Event object
+	// Colloque object
 	if ( src && src.type ) {
 		this.originalEvent = src;
 		this.type = src.type;
-	// Event type
+	// Colloque type
 	} else {
 		this.type = src;
 	}
@@ -2006,7 +2006,7 @@ function returnTrue() {
 	return true;
 }
 
-// jQuery.Event is based on DOM3 Events as specified by the ECMAScript Language Binding
+// jQuery.Colloque is based on DOM3 Events as specified by the ECMAScript Language Binding
 // http://www.w3.org/TR/2003/WD-DOM-Level-3-Events-20030331/ecma-script-binding.html
 jQuery.Event.prototype = {
 	preventDefault: function() {

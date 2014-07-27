@@ -1,6 +1,6 @@
 <?php
 
-use Droit\Event\Repo\OptionInterface;
+use Droit\Colloque\Repo\OptionInterface;
 
 class OptionController extends BaseController {
 
@@ -16,9 +16,9 @@ class OptionController extends BaseController {
 	 *
 	 * @return Response
 	 */
-	public function create($event)
+	public function create($colloque)
 	{
-        return View::make('admin.event.form.option_create')->with( array( 'event' => $event ) );
+        return View::make('admin.colloque.form.option_create')->with( array( 'colloque' => $colloque ) );
 	}
 
 	/**
@@ -29,13 +29,13 @@ class OptionController extends BaseController {
 	public function store()
 	{
 
-		$event_id = Input::get('event_id');
+		$colloque_id = Input::get('colloque_id');
 
         $option = $this->option->create(
             Input::all()
         );
 
-        return Redirect::to('admin/pubdroit/event/'.$event_id.'/edit')->with( array('status' => 'success' , 'message' => 'L\'option a été crée' ) );
+        return Redirect::to('admin/pubdroit/colloque/'.$colloque_id.'/edit')->with( array('status' => 'success' , 'message' => 'L\'option a été crée' ) );
 
 	}
 
@@ -49,7 +49,7 @@ class OptionController extends BaseController {
 	{
 		 $option = $this->option->find($id);
 		 
-		 return View::make('admin.event.form.option_edit')->with( array('option' => $option) );
+		 return View::make('admin.colloque.form.option_edit')->with( array('option' => $option) );
 	}
 
 	/**
@@ -61,13 +61,13 @@ class OptionController extends BaseController {
 	public function update($id)
 	{
 
-		$event_id = Input::get('event_id');
+		$colloque_id = Input::get('colloque_id');
 
         $option = $this->option->update(
             Input::all()
         );
 
-        return Redirect::to('admin/pubdroit/event/'.$event_id.'/edit')->with( array('status' => 'success' , 'message' => 'L\'option a été mise à jour') );
+        return Redirect::to('admin/pubdroit/colloque/'.$colloque_id.'/edit')->with( array('status' => 'success' , 'message' => 'L\'option a été mise à jour') );
 
 	}
 

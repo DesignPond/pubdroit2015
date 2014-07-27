@@ -1,8 +1,8 @@
 <?php namespace Droit\User\Entities;
 
-use Eloquent;
+use Droit\Common\BaseModel as BaseModel;
 
-class Groups extends Eloquent {
+class Groups extends BaseModel {
 
 	protected $guarded   = array('id');
 	public static $rules = array();

@@ -2,7 +2,7 @@
 
 use Droit\User\Repo\SpecialisationInterface;
 use Droit\User\Entities\Specialisations as Specialisations;
-use Droit\Event\Entities\Event_specialisations as ES;
+use Droit\Colloque\Entities\Colloque_specialisations as ES;
 
 class SpecialisationEloquent implements SpecialisationInterface {
 	
@@ -22,7 +22,7 @@ class SpecialisationEloquent implements SpecialisationInterface {
 	
 	public function droplist(){
 	
-		return $this->specialisation->lists('titreSpecialisation', 'id');
+		return $this->specialisation->lists('titre', 'id');
 	}
 	
 	public function find($id){
@@ -42,7 +42,7 @@ class SpecialisationEloquent implements SpecialisationInterface {
 	public function create(array $data)
 	{
 		$specialisation = $this->specialisation->create(array(
-			'titreSpecialisation' => $data['titreSpecialisation']
+			'titre' => $data['titre']
 		));
 		
 		if( ! $specialisation )
@@ -62,17 +62,17 @@ class SpecialisationEloquent implements SpecialisationInterface {
 			return false;
 		}
 		
-		$specialisation->titreSpecialisation  = $data['titreSpecialisation'];
+		$specialisation->titreSpecialisation  = $data['titre'];
 		
 		$specialisation->save();	
 		
 		return $specialisation;
 	}
 	
-	public function linkEvent($data){
+	public function linkColloque($data){
 	
 		$link = ES::create(array(
-			'event_id'          => $data['event_id'],
+			'colloque_id'       => $data['colloque_id'],
 			'specialisation_id' => $data['specialisation_id']
 		));
 		
@@ -84,7 +84,7 @@ class SpecialisationEloquent implements SpecialisationInterface {
 		return $link;
 	}
 	
-	public function unlinkEvent($id){
+	public function unlinkColloque($id){
 		
 		$link = ES::find($id);
 

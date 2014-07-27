@@ -219,23 +219,9 @@
 			
 			<div class="row"><!-- row -->
 				<div class="col-md-12"><!-- col -->
-					
-				    @if($errors->has())				
-						<ul>
-						    @foreach($errors->all() as $message)						
-						    <li>{{ $message }}</li>						
-						    @endforeach
-						</ul>						
-					@endif
-					
-					@if(Session::has('status'))
-					<div class="alert alert-dismissable alert-{{  Session::get('status') }}">
-						@if(Session::has('message'))
-							{{  Session::get('message') }}
-						@endif
-						<button class="close" aria-hidden="true" data-dismiss="alert" type="button">×</button>
-					</div>
-					@endif
+
+                    <!-- messages and errors -->
+                    @include('layouts.partials.message')
 					
 					@if($nbr_adresse != 0)
 					
@@ -251,71 +237,70 @@
 						<div class="tab-content">
 							<div id="inscriptions" class="tab-pane active">
 												
-								<p class="text-right"><a href="#" class="btn btn-sm btn-primary"><i class="fa fa-plus"></i>&nbsp; Ajouter</a></p>															
+								<p class="text-right"><a href="#" class="btn btn-sm btn-primary"><i class="fa fa-plus"></i>&nbsp; Ajouter</a></p>
+
 								@if(!$inscriptions->isEmpty())
 									@foreach($inscriptions as $inscription)
-									
+
 									    <div class="panel panel-primary">
 									    	<div class="panel-body">
-									    										    	
+
 										    	<div class="row"><!-- row -->
-										    		<div class="col-md-1">													
+										    		<div class="col-md-1">
 														<?php
-															
-															if(isset($vignettes[$inscription->event->id]))
+
+															if(isset($vignettes[$inscription->colloques->id]))
 															{
-																$img      = $vignettes[$inscription->event->id];
+																$img      = $vignettes[$inscription->colloques->id];
 																$url      = '/files/vignette/'.$img;
 																$width    = 70;
 																$vignette = $custom->fileExistFormatImage($url,$width);
-																
+
 																echo $vignette;
 															}
 
 														?>
 										    		</div>
 										    		<div class="col-md-4"><!-- col -->
-										    			<h4><strong>{{ $inscription->event->titre }}</strong></h4>
+										    			<h4><strong>{{ $inscription->colloques->titre }}</strong></h4>
 														<dl>
 															<dt>Date d'inscription</dt>
-															<dd>{{ $inscription->inscription_at->format('d-m-Y') }}</dd>
+															<dd>{{ $inscription->created_at->format('d-m-Y') }}</dd>
 														</dl>
 										    		</div>
 										    		<div class="col-md-2"><!-- col -->
-										    			<h4><span class="label label-info">{{ $inscription->inscriptionNumber }}</span></h4>	
+										    			<h4><span class="label label-info">{{ $inscription->numero }}</span></h4>
 										    			<dl>
 															<dt>Prix</dt>
-															<dd>{{ $inscription->prices->remarquePrice }} : {{ $inscription->prices->price }}</dd>
+															<dd>{{ $inscription->colloque_prices->remarque }} : {{ $inscription->colloque_prices->price }}</dd>
 
 																@if( !$options->isEmpty() )
 																<dt>Options</dt>
 																	@foreach($options as $option)
-																		@if( $option->event_id == $inscription->event->id )
-																			<dd>{{ $option->titreOption }}</dd>
+																		@if( $option->colloque_id == $inscription->colloques->id )
+																			<dd>{{ $option->titre }}</dd>
 																		@endif
 																	@endforeach
-																@endif														
+																@endif
 														</dl>
 										    		</div>
 										    		<div class="col-md-5"><!-- col -->
 										    			<h4><strong>Documents</strong></h4>
 														@if( $docs )
 															<div class="text-right btn-group">
-															@foreach($docs as $name => $view)															
-															<?php 																	
-																$link = $custom->fileExistFormatLink( '/files/users/', $user->id, $inscription->event->id ,$view, $name ,'btn btn-default');
+															@foreach($docs as $name => $view)
+															<?php
+																$link = $custom->fileExistFormatLink( '/files/users/', $user->id, $inscription->colloques->id ,$view, $name ,'btn btn-default');
 																if($link){ echo $link; }
-															?>														
+															?>
 															@endforeach
 															</div>
 														@endif
-																	
-										    		</div>	
+										    		</div>
 										    	</div><!-- end row -->
-										    	
-										    	<div class="row"><!-- row -->							    	
+
+										    	<div class="row"><!-- row -->
 										    		<div class="col-md-12 text-right">
-										    		
 														 <div class="btn-group">
 								                              <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
 								                                Actions &nbsp;<span class="caret"></span>
@@ -328,15 +313,14 @@
 								                                <li><a href="#"><small>Désinscrire</small></a></li>
 								                              </ul>
 							                            </div>
-							                            
 										    		</div>
 										    	</div><!-- end row -->
-										    	
+
 									    	</div>
 									    </div>
-									    
+
 								    @endforeach
-								    
+
 								@else
 								<p>Pas d'inscriptions</p>
 							    @endif

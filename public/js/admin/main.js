@@ -112,14 +112,12 @@ $(function() {
 			 return {column: column , id : id, table : table, event_id : event_id};
 	   	 }
     });  
-    
-        
+
     $('#multi-select2').multiSelect({
 	      selectableHeader: "<strong>Disponibles</strong>",
 		  selectionHeader : "<strong>Sélectionnées</strong>"
     });
-   
-        
+
     $('#multi-select3').multiSelect({
 	      selectableHeader: "<strong>Disponibles</strong>",
 		  selectionHeader : "<strong>Sélectionnées</strong>"
@@ -189,8 +187,6 @@ $(function() {
 		
 		$container.val(email);
 		
-		console.log(email);
-		
 	});
 
 });
@@ -259,7 +255,7 @@ jQuery(document).ready(function() {
     $(".toggle_in").hide();
     
     // Toggle section of admin event
-	$(".event_section").click(function(){
+	$(".colloque_section").click(function(){
 		var myelement = $(this).attr("rel")
 		$(myelement).slideToggle("slow");
 		$(".toggle:visible").not(myelement).hide();	

@@ -82,9 +82,9 @@ class User extends BaseModel implements UserInterface, RemindableInterface {
 	/**
 	* Get all inscriptions for user
 	*/	
-	public function inscription(){
+	public function colloque_inscriptions(){
 		
-		return $this->hasMany('Droit\Event\Entities\Inscriptions' ,'user_id'); 
+		return $this->hasMany('Droit\Inscriptions\Entities\Colloque_inscriptions' ,'user_id');
 	}
 
 	/**

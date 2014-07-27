@@ -1,6 +1,6 @@
 <?php
 
-use Droit\Event\Repo\PriceInterface;
+use Droit\Colloque\Repo\PriceInterface;
 
 class PriceController extends BaseController {
 	
@@ -25,9 +25,9 @@ class PriceController extends BaseController {
 	 *
 	 * @return Response
 	 */
-	public function create($event)
+	public function create($colloque)
 	{
-        return View::make('admin.event.form.price_create')->with( array( 'event' => $event ) );
+        return View::make('admin.colloque.form.price_create')->with( array( 'colloque' => $colloque ) );
 	}
 
 	/**
@@ -38,13 +38,13 @@ class PriceController extends BaseController {
 	public function store()
 	{
 
-        $event_id = Input::get('event_id');
+        $colloque_id = Input::get('colloque_id');
 
         $price = $this->price->create(
                Input::all()
         );
 
-        return Redirect::to('admin/pubdroit/event/'.$event_id.'/edit')->with( array('status' => 'success' , 'message' => 'Le prix a été crée' ) );
+        return Redirect::to('admin/pubdroit/colloque/'.$colloque_id.'/edit')->with( array('status' => 'success' , 'message' => 'Le prix a été crée' ) );
 
 	}
 
@@ -69,7 +69,7 @@ class PriceController extends BaseController {
 	{
 		 $price = $this->price->find($id);
 		 
-		 return View::make('admin.event.form.price_edit')->with( array('price' => $price) );
+		 return View::make('admin.colloque.form.price_edit')->with( array('price' => $price) );
 	}
 
 	/**
@@ -81,13 +81,13 @@ class PriceController extends BaseController {
 	public function update($id)
 	{
 
-        $event_id = Input::get('event_id');
+        $colloque_id = Input::get('colloque_id');
 
         $price = $this->price->update(
             Input::all()
         );
 
-        return Redirect::to('admin/pubdroit/event/'.$event_id.'/edit')->with( array('status' => 'success' , 'message' => 'Le prix a été mis a jour') );
+        return Redirect::to('admin/pubdroit/colloque/'.$colloque_id.'/edit')->with( array('status' => 'success' , 'message' => 'Le prix a été mis a jour') );
 
 	}
 

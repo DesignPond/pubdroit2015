@@ -32,7 +32,7 @@ class InvoiceControllerTest extends TestCase {
     }
     
 	/**
-	 * Event actifs index
+	 * Colloque actifs index
 	*/	 
 	public function testInvoicesList()
 	{			
