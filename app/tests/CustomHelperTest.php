@@ -13,9 +13,9 @@ class CustomHelperTest extends TestCase {
 
 	public function testFindFileAndMakeLinkIfExist()
 	{		
-		$actual = $this->custom->fileExistFormatLink( 'test/users/' , '1' , '4' , 'pdfbon' , 'Bon');
+		$actual = $this->custom->fileExistFormatLink( 'public/test/users/' , '1' , '4' , 'pdfbon' , 'Bon');
 		
-		$asset  = asset('test/users/1/pdfbon_4-1.pdf');
+		$asset  = asset('public/test/users/1/pdfbon_4-1.pdf');
 		
 		$expect = '<a target="_blank" href="'.$asset.'">Bon</a>';
 		

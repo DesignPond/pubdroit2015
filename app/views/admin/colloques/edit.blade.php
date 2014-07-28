@@ -17,12 +17,17 @@
 		<div class="container">
 		    <div class="row">
 				<div class="col-sm-12">
+                <?php
+                    echo '<pre>';
+                    print_r($colloque);
+                    echo '</pre>';
+                ?>
 
                     <!-- messages and errors -->
                     @include('layouts.partials.message')
 
                     <!-- Images et documents -->
-                    @include('admin.colloque.partials.documents')
+                    @include('admin.colloques.partials.documents')
 
 					<!-- Textes email -->
 					<!-- panel start -->

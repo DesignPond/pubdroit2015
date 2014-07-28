@@ -70,7 +70,9 @@ class InscriptionController extends BaseController {
 	 */
 	public function show($id)
 	{
-        return View::make('admin.inscriptions.show');
+        $inscription = $this->inscription->find($id);
+
+        return View::make('admin.inscriptions.edit')->with( array('inscription' => $inscription));
 	}
 
 	/**
@@ -81,7 +83,9 @@ class InscriptionController extends BaseController {
 	 */
 	public function edit($id)
 	{
-        return View::make('admin.inscriptions.edit');
+        $inscription = $this->inscription->find($id);
+
+        return View::make('admin.inscriptions.edit')->with( array('inscription' => $inscription));
 	}
 
 	/**
@@ -92,7 +96,10 @@ class InscriptionController extends BaseController {
 	 */
 	public function update($id)
 	{
-		//
+        // Command new inscription creation and dispatch events
+        $inscription = $this->execute('Droit\Colloque\Commands\UpdateInscriptionCommand');
+
+        return Redirect::to('admin/pubdroit/inscription/'.$inscription->id)->with( array('status' => 'success' , 'message' => 'Inscription mise à jour') );
 	}
 
 	/**

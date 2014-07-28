@@ -5,7 +5,7 @@ use Laracasts\Commander\Events\DispatchableTrait;
 use Droit\Colloque\Repo\InscriptionInterface;
 use Droit\Colloque\Repo\ColloqueInterface;
 
-class CreateInscriptionCommandHandler implements CommandHandler {
+class UpdateInscriptionCommandHandler implements CommandHandler {
 
     use DispatchableTrait;
 
@@ -23,19 +23,16 @@ class CreateInscriptionCommandHandler implements CommandHandler {
 
     public function handle($command)
     {
-        /* Get nbr of inscription from colloque  */
-        $inscrits = $this->colloque->find($command->colloque_id)->inscriptions;
 
         /* Create new inscription number  */
         $numero   = $this->inscription->newNumber($inscrits,$command->colloque_id);
 
         /* Create inscription with infos */
-        $inscription = $this->inscription->create(
+        $inscription = $this->inscription->update(
             array(
                 'colloque_id'       => $command->colloque_id,
                 'colloque_price_id' => $command->colloque_price_id,
-                'user_id'           => $command->user_id,
-                'numero'            => $numero
+                'user_id'           => $command->user_id
             )
         );
 

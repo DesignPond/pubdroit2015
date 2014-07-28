@@ -2,6 +2,7 @@
 
 use Laracasts\Commander\Events\EventListener;
 use Droit\User\Events\UserWasCreated;
+use Droit\Colloque\Events\InscriptionWasCreated;
 
 class EmailNotifier extends EventListener {
 
@@ -24,5 +25,16 @@ class EmailNotifier extends EventListener {
             $message->to('cindy.leschaud@gmail.com', 'Cindy Leschaud')->subject('Inscription was created!!');
         });
     }
+
+    public function whenInscriptionWasUpdated(InscriptionWasUpdated $event)
+    {
+        $data = ['inscription' => $event->inscription];
+
+        \Mail::send('emails.inscription.update', $data , function($message)
+        {
+            $message->to('cindy.leschaud@gmail.com', 'Cindy Leschaud')->subject('Inscription was updated!!');
+        });
+    }
+
 
 }

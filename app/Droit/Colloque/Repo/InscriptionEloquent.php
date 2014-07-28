@@ -30,7 +30,7 @@ class InscriptionEloquent implements InscriptionInterface {
 		
 	public function find($id){
 		
-		return $this->inscription->where('id', '=' ,$id)->with( array('colloque_prices','users') )->get();
+		return $this->inscription->where('id', '=' ,$id)->with( array('colloque_prices','users') )->get()->first();
 	}
 	
 	public function getEvent($event){
@@ -49,8 +49,12 @@ class InscriptionEloquent implements InscriptionInterface {
 		return $this->inscription->where('user_id', '=' ,$user)->with( array('colloque_prices','users','colloques') )->get();
 	}
 
-    public function newNumber(){
+    public function newNumber($inscrits,$colloque_id){
 
+        $inscrits = $inscrits + 1;
+        $year     = date('Y');
+
+        return $colloque_id.'-'.$year.'/'.$inscrits;
     }
 
 	public function create(array $data){
@@ -88,10 +92,12 @@ class InscriptionEloquent implements InscriptionInterface {
 		$inscription->user_id            = $data['user_id'];
 		$inscription->colloque_id        = $data['colloque_id'];
 		$inscription->colloque_price_id  = $data['colloque_price_id'];
-		$inscription->numero             = $data['numero'];
 		$inscription->updated_at         = date('Y-m-d G:i:s');
 
-		$inscription->save();	
+		$inscription->save();
+
+        // Raise event when new user is created
+        $inscription->raise(new InscriptionWasUpdated($inscription));
 		
 		return $inscription;
 

@@ -1,7 +1,7 @@
 <?php
 
 use Carbon\Carbon;
-use Droit\Colloque\Entities\Colloque_files as File;
+
 use Droit\User\Entities\Adresse_types as Adresse_types;
 use Droit\User\Entities\Civilites as Civilites;
 use Droit\User\Entities\Cantons as Cantons;
@@ -39,12 +39,18 @@ class Custom {
     
 	public function fileExistFormatLink( $path , $user , $event , $view , $name , $class = NULL){
 		
-		$link  = $path.$user.'/'.$view.'_'.$event.'-'.$user.'.pdf';
-        $asset = asset($link);
+		$link = $path.$user.'/'.$view.'_'.$event.'-'.$user.'.pdf';
+		$url  = getcwd().'/'.$link;
+
+		$add  = '';
 		
-		if ( File::exists($asset) )
+		if ( \File::exists($url) )
 		{
-            $add   = ($class ? ' class="'.$class.'" ' : '');
+			$asset = asset($link);
+
+			if($class){
+				$add = ' class="'.$class.'" ';
+			}
 			
 			return '<a target="_blank" href="'.$asset.'"'.$add.'>'.$name.'</a>';	
 		}
@@ -85,9 +91,9 @@ class Custom {
 		
 		$ext = array('jpg','JPG','jpeg','JPEG','png','PNG','gif','GIF');
 		
-		if ( File::exists($url) ){
+		if ( \File::exists($url) ){
 			
-			$extension = File::extension($url);
+			$extension = \File::extension($url);
 			
 			if ( in_array( $extension , $ext )  )
 			{

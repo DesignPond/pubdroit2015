@@ -26,6 +26,11 @@
 
                     <?php
                     echo $file;
+
+                    if( File::exists('/Applications/MAMP/htdocs/pubdroit2015/public/test/users/1/pdfbon_4-1.pdf') ){
+                        //echo 'exist';
+                    }
+
                     ?>
 				
 				</div>
