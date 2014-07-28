@@ -12,7 +12,7 @@ Route::group(array('prefix' => 'pubdroit'), function()
     
     Route::get('profil', array('before' => 'auth' , 'uses' => 'PublicationController@profil'));
 
-	Route::get('event', array('uses' => 'PublicationController@event'));
+	Route::get('colloque', array('uses' => 'PublicationController@colloque'));
 		
 	// Search and info API	
 	Route::post('api', array('uses' => 'SearchController@index'));

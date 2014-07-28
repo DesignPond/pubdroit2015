@@ -12,17 +12,17 @@ class Colloque_inscriptions extends BaseModel {
      * @var array
      */
     protected static $rules = array(
-        'event_id'  => 'required',
-        'user_id'   => 'required',
-        'prix_id'   => 'required',
-        'numero '   => 'required'
+        'colloque_id'      => 'required',
+        'user_id'           => 'required',
+        'colloque_price_id' => 'required',
+        'numero'           => 'required'
     );
 
     protected static $messages = array(
-        'event_id.required'  => 'L\'id du colloque est requis',
-        'user_id.required'   => 'L\'id de l\'utilisateur est requis',
-        'prix_id.required'   => 'L\'id du prix est requis',
-        'numero.required'    => 'Le numéro d\'inscription est requis'
+        'colloque_id.required'       => 'L\'id du colloque est requis',
+        'user_id.required'           => 'L\'id de l\'utilisateur est requis',
+        'colloque_price_id.required' => 'L\'id du prix est requis',
+        'numero.required'            => 'Le numéro d\'inscription est requis'
     );
 
     public function colloques()

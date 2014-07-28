@@ -53,7 +53,7 @@ class ColloqueController extends BaseController {
 	{
 		$colloques = $this->colloque->getActifs();
 
-        return View::make('admin.colloque.colloque')->with( array('colloques' => $colloques , 'title' => 'En cours'));
+        return View::make('admin.colloques.colloque')->with( array('colloques' => $colloques , 'title' => 'En cours'));
 	}
 	
 	
@@ -66,7 +66,7 @@ class ColloqueController extends BaseController {
 	{
 		$colloques = $this->colloque->getArchives();
 
-        return View::make('admin.colloque.colloque')->with( array('colloques' => $colloques , 'title' => 'Archives'));
+        return View::make('admin.colloques.colloque')->with( array('colloques' => $colloques , 'title' => 'Archives'));
 	}
 
 	/**
@@ -76,7 +76,7 @@ class ColloqueController extends BaseController {
 	 */
 	public function create()
 	{
-        return View::make('admin.colloque.create');
+        return View::make('admin.colloques.create');
 	}
 
 	/**
@@ -105,7 +105,7 @@ class ColloqueController extends BaseController {
 	{
 		$colloque = $this->colloque->find($id);
 
-        return View::make('colloque.show')->with( array('colloque' => $colloque ));
+        return View::make('colloques.show')->with( array('colloque' => $colloque ));
 	}
 
 	/**
@@ -119,7 +119,7 @@ class ColloqueController extends BaseController {
         // return array with colloque,centers,comptes,colloque files,default email infos
         $infos = $this->worker->getInfoForColloque($id);
 
-        return View::make('admin.colloque.edit')->with( $infos );
+        return View::make('admin.colloques.edit')->with( $infos );
 
 	}
 

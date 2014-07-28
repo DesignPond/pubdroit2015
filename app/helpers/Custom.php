@@ -39,18 +39,12 @@ class Custom {
     
 	public function fileExistFormatLink( $path , $user , $event , $view , $name , $class = NULL){
 		
-		$link = $path.$user.'/'.$view.'_'.$event.'-'.$user.'.pdf';		
-		$url  = getcwd().'/'.$link;
-				
-		$add  = '';
+		$link  = $path.$user.'/'.$view.'_'.$event.'-'.$user.'.pdf';
+        $asset = asset($link);
 		
-		if ( File::exists($url) )
-		{		
-			$asset = asset($link);
-			
-			if($class){
-				$add = ' class="'.$class.'" ';
-			}
+		if ( File::exists($asset) )
+		{
+            $add   = ($class ? ' class="'.$class.'" ' : '');
 			
 			return '<a target="_blank" href="'.$asset.'"'.$add.'>'.$name.'</a>';	
 		}

@@ -15,4 +15,14 @@ class EmailNotifier extends EventListener {
         });
     }
 
+    public function whenInscriptionWasCreated(InscriptionWasCreated $event)
+    {
+        $data = ['inscription' => $event->inscription];
+
+        \Mail::send('emails.inscription.create', $data , function($message)
+        {
+            $message->to('cindy.leschaud@gmail.com', 'Cindy Leschaud')->subject('Inscription was created!!');
+        });
+    }
+
 }

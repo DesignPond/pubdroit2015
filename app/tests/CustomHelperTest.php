@@ -13,9 +13,9 @@ class CustomHelperTest extends TestCase {
 
 	public function testFindFileAndMakeLinkIfExist()
 	{		
-		$actual = $this->custom->fileExistFormatLink( 'public/files/users/' , '1' , '4' , 'pdfbon' , 'Bon');
+		$actual = $this->custom->fileExistFormatLink( 'test/users/' , '1' , '4' , 'pdfbon' , 'Bon');
 		
-		$asset  = asset('public/files/users/1/pdfbon_4-1.pdf');
+		$asset  = asset('test/users/1/pdfbon_4-1.pdf');
 		
 		$expect = '<a target="_blank" href="'.$asset.'">Bon</a>';
 		
@@ -24,7 +24,7 @@ class CustomHelperTest extends TestCase {
 	
 	public function testGetMimeTypeOfFile()
 	{		
-		$url    = getcwd().'/public/files/carte/0c54ef754f2d71c00c26c90e430d7f79.jpg';
+		$url    = getcwd().'/public/test/carte/0c54ef754f2d71c00c26c90e430d7f79.jpg';
 		
 		$actual = $this->custom->getMimeType($url);
 
@@ -35,7 +35,7 @@ class CustomHelperTest extends TestCase {
 	
 	public function testIfExistFormatImage()
 	{		
-		$url    = '/public/files/carte/0c54ef754f2d71c00c26c90e430d7f79.jpg';
+		$url    = '/public/test/carte/0c54ef754f2d71c00c26c90e430d7f79.jpg';
 		$width  = 100;
 		
 		$actual = $this->custom->fileExistFormatImage($url,$width);

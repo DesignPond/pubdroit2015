@@ -1,9 +1,9 @@
 <?php namespace Droit\Colloque\Repo;
 
-use Droit\Colloque\Repo\InvoiceInterface;
+use Droit\Colloque\Repo\FactureInterface;
 use Droit\Colloque\Entities\Colloque_factures as Colloque_factures;
 
-class InvoiceEloquent implements InvoiceInterface {
+class FactureEloquent implements FactureInterface {
 
 	protected $invoice;
 	

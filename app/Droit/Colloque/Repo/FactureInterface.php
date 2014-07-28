@@ -1,9 +1,9 @@
 <?php namespace Droit\Colloque\Repo;
 
-interface InvoiceInterface {
+interface FactureInterface {
 	
 	public function find($id);
-	public function getEvent($event);	
+	public function getColloque($event);
 	
 	public function create(array $data);
 	public function update(array $data);

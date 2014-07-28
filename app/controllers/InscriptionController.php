@@ -1,23 +1,35 @@
 <?php
 
-use Droit\Inscriptions\Repo\InscriptionInterface;
-use Droit\Event\Repo\EventInterface;
+use Droit\Colloque\Repo\InscriptionInterface;
+use Droit\Colloque\Repo\ColloqueInterface;
 
 class InscriptionController extends BaseController {
 
 	protected $inscription;	
 	
-	protected $event;
+	protected $colloque;
 	
-	public function __construct( InscriptionInterface $inscription , EventInterface $event )
+	public function __construct( InscriptionInterface $inscription , ColloqueInterface $colloque )
 	{
 		
 		$this->inscription = $inscription;
 		
-		$this->event       = $event;
+		$this->colloque    = $colloque;
 
-	}
+        $this->custom = new \Custom;
+    }
 
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return Response
+     */
+    public function index()
+    {
+        $file = $this->custom->fileExistFormatLink( 'test/users/' , '1' , '4' , 'pdfbon' , 'Bon');
+
+        return View::make('admin.inscriptions.ind')->with(array('file' => $file));
+    }
 	/**
 	 * Show the form for creating a new resource.
 	 *
@@ -25,7 +37,7 @@ class InscriptionController extends BaseController {
 	 */
 	public function create()
 	{
-        return View::make('admin.inscription.create');
+        return View::make('admin.inscriptions.create');
 	}
 
 	/**
@@ -36,17 +48,17 @@ class InscriptionController extends BaseController {
 	public function store()
 	{
         // Command new inscription creation and dispatch events
-        $inscription = $this->execute('Droit\Inscriptions\Commands\CreateInscriptionCommand');
+        $inscription = $this->execute('Droit\Colloque\Commands\CreateInscriptionCommand');
 
         return Redirect::to('admin/pubdroit/inscription/'.$inscription->id)->with( array('status' => 'success' , 'message' => 'Inscription crée') );
 	}
-	
-	public function event($id){
-		
-		$event        = $this->event->find($id);
+
+	public function colloque($id){
+
+		$colloque     = $this->colloque->find($id);
 		$inscriptions = $this->inscription->getEvent($id);
-		
-		return View::make('admin.inscription.index')->with( array('inscriptions' => $inscriptions , 'event' => $event ));
+
+		return View::make('admin.inscriptions.index')->with( array('inscriptions' => $inscriptions , 'colloque' => $colloque ));
 
 	}
 
@@ -58,7 +70,7 @@ class InscriptionController extends BaseController {
 	 */
 	public function show($id)
 	{
-        return View::make('admin.inscription.show');
+        return View::make('admin.inscriptions.show');
 	}
 
 	/**
@@ -69,7 +81,7 @@ class InscriptionController extends BaseController {
 	 */
 	public function edit($id)
 	{
-        return View::make('admin.inscription.edit');
+        return View::make('admin.inscriptions.edit');
 	}
 
 	/**

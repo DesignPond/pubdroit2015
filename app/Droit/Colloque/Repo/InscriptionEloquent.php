@@ -2,6 +2,7 @@
 
 use Droit\Colloque\Repo\InscriptionInterface;
 use Droit\Colloque\Entities\Colloque_inscriptions as Colloque_inscriptions;
+use Droit\Colloque\Events\InscriptionWasCreated;
 
 class InscriptionEloquent implements InscriptionInterface {
 
@@ -48,6 +49,10 @@ class InscriptionEloquent implements InscriptionInterface {
 		return $this->inscription->where('user_id', '=' ,$user)->with( array('colloque_prices','users','colloques') )->get();
 	}
 
+    public function newNumber(){
+
+    }
+
 	public function create(array $data){
 		
 		// Create the article
@@ -56,16 +61,19 @@ class InscriptionEloquent implements InscriptionInterface {
 			'user_id'           => $data['user_id'],
 			'colloque_price_id' => $data['colloque_price_id'],
 			'numero'            => $data['numero'],
-            'created_at'         => date('Y-m-d G:i:s'),
-            'updated_at'         => date('Y-m-d G:i:s')
+            'created_at'        => date('Y-m-d G:i:s'),
+            'updated_at'        => date('Y-m-d G:i:s')
 		));
 		
 		if( ! $inscription )
 		{
 			return false;
 		}
+
+        // Raise event when new user is created
+        $inscription->raise(new InscriptionWasCreated($inscription));
 		
-		return true;
+		return $inscription;
 	}
 	
 	public function update(array $data){
@@ -85,7 +93,7 @@ class InscriptionEloquent implements InscriptionInterface {
 
 		$inscription->save();	
 		
-		return true;
+		return $inscription;
 
 	}
 	
