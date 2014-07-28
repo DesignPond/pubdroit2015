@@ -3,6 +3,8 @@
 use Laracasts\Commander\Events\EventListener;
 use Droit\User\Events\UserWasCreated;
 use Droit\Colloque\Events\InscriptionWasCreated;
+use Droit\Colloque\Events\InscriptionWasUpdated;
+
 
 class EmailNotifier extends EventListener {
 

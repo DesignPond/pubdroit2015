@@ -96,6 +96,8 @@ class InscriptionController extends BaseController {
 	 */
 	public function update($id)
 	{
+       // print_r($_POST);
+       // exit;
         // Command new inscription creation and dispatch events
         $inscription = $this->execute('Droit\Colloque\Commands\UpdateInscriptionCommand');
 

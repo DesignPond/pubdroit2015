@@ -24,12 +24,10 @@ class UpdateInscriptionCommandHandler implements CommandHandler {
     public function handle($command)
     {
 
-        /* Create new inscription number  */
-        $numero   = $this->inscription->newNumber($inscrits,$command->colloque_id);
-
-        /* Create inscription with infos */
+        /* Update inscription with infos */
         $inscription = $this->inscription->update(
             array(
+                'id'                => $command->id,
                 'colloque_id'       => $command->colloque_id,
                 'colloque_price_id' => $command->colloque_price_id,
                 'user_id'           => $command->user_id

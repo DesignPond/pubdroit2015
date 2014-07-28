@@ -3,6 +3,8 @@
 use Droit\Colloque\Repo\InscriptionInterface;
 use Droit\Colloque\Entities\Colloque_inscriptions as Colloque_inscriptions;
 use Droit\Colloque\Events\InscriptionWasCreated;
+use Droit\Colloque\Events\InscriptionWasUpdated;
+
 
 class InscriptionEloquent implements InscriptionInterface {
 
