@@ -2,7 +2,7 @@
 
 use Droit\Common\BaseModel as BaseModel;
 
-class Colloque_options extends BaseModel {
+class Colloque_option_users extends BaseModel {
 
 	protected $guarded   = array('id');
 	public $timestamps   = false;
@@ -13,7 +13,8 @@ class Colloque_options extends BaseModel {
      * @var array
      */
     protected static $rules = array(
-        'titre' => 'required'
+        'colloque_option_id' => 'required',
+        'user_id' => 'required'
     );
 
     /**
@@ -22,12 +23,8 @@ class Colloque_options extends BaseModel {
      * @var array
      */
     protected static $messages = array(
-        'titre.required' => 'Le champs titre est requis'
+        'colloque_option_id.required' => 'Le champs titre est requis',
+        'user_id.required'            => 'Le champs user est requis'
     );
 
-	public function colloque_option_users()
-    {
-        return $this->belongsTo('Colloques', 'colloque_id');
-    }
-      
 }

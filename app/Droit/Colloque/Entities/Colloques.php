@@ -50,11 +50,6 @@ class Colloques extends BaseModel{
     	
     	return $this->hasMany('Droit\Colloque\Entities\Colloque_prices', 'colloque_id');
  	}
- 	
-    public function colloque_options()
-    {
-        return $this->hasMany('Droit\Colloque\Entities\Colloque_options', 'colloque_id');
-    }
     
     public function colloque_specialisations()
     {     
@@ -84,6 +79,11 @@ class Colloques extends BaseModel{
     public function colloque_compte()
     {
         return $this->belongsTo('Droit\Colloque\Entities\Comptes', 'compte_id', 'id');
+    }
+
+    public function colloque_options()
+    {
+        return $this->hasMany('Droit\Colloque\Entities\Colloque_options', 'colloque_id', 'id');
     }
 	
 }

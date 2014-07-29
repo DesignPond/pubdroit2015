@@ -1,32 +1,30 @@
 <?php namespace Droit\Colloque\Worker;
 
-use Droit\User\Repo\UserInfoInterface;
+use Droit\Colloque\Repo\InscriptionInfoInterface;
+use Droit\Colloque\Repo\ColloqueInterface;
+use Droit\Colloque\Repo\OptionInterface;
 
 class DocumentWorker implements DocumentInterface {
 	
 	protected $pdf;
 	
-	protected $price;
-	
-	protected $compte;
-	
-	protected $files;
-	
 	protected $colloque;
 
-	public function __construct(PriceInterface $price , CompteInterface $compte ,FileInterface $files , UserInfoInterface $user)
+    protected $inscription;
+
+    protected $option;
+
+	public function __construct(ColloqueInterface $colloque, InscriptionInfoInterface $inscription, OptionInterface $option)
 	{
 		$this->pdf    = \App::make('dompdf');
 		
 		$this->custom = new \Custom;
 		
-		$this->price  = $price;
+		$this->colloque    = $colloque;
 		
-		$this->compte = $compte;
-		
-		$this->files  = $files;
-		
-		$this->user   = $user;
+		$this->inscription = $inscription;
+
+        $this->option      = $option;
 		
 	}
 		
@@ -34,10 +32,16 @@ class DocumentWorker implements DocumentInterface {
 	 * Arrange infos for pdf for view 
 	 * @return instance
 	*/		
-	public function arrange($colloque, $user, $infos, $options , $attestation = NULL){
+	public function arrange($inscription){
 
-		// Get infos from colloque
-		$colloque_id = $colloque->id;
+		// Get infos from inscription
+		$colloque_id = $inscription->colloque_id;
+        $user_id     = $inscription->user_id;
+
+        $colloque    = $this->colloque->find($colloque_id);
+        $user        = $this->user->find($user_id);
+        $options     = $this->option->findForUser($colloque_id,$user_id);
+
 		$config      = $colloque->colloque_config;
 		$files       = $colloque->files;
 		
@@ -73,90 +77,6 @@ class DocumentWorker implements DocumentInterface {
 		return array();	
 			
 	}
-	
-	private function getMap($colloque_id){
-			
-		$image = '';
-			
-		// Map for bon
-		$map = $this->files->getFilesColloque($colloque_id,'carte')->first();
-		
-		if( $map )
-		{
-			$carte  = $map->toArray();
-			$image  = getcwd().'/files/carte/'.$carte['filename'];			
-		}
-		
-		return $image;
-		
-	}
-	
-	private function getLogo($colloque , $infos , $config){
-		
-		$image = '';	
-		
-		$colloque_id = $colloque->id;
-				
-		if( !$infos->isEmpty() )
-		{
-			$infos = $infos->first()->toArray();		
-		}
-		
-		// Logo for organisator
-		$vignette  = $this->files->getFilesColloque($colloque_id,'badge');		
-		
-		// Logos for the pdfs
-		if( ! $vignette->isEmpty() )
-		{
-			$logo  = $vignette->first()->toArray();
-			$image = getcwd().'/files/badge/'.$logo['filename'];  
-		}
-		else if(!empty($config))
-		{
-			$logo = $config->toArray();
-			$image = getcwd().'/images/'.$logo['logo'];  
-		}
-		else if(isset($infos['logo']))
-		{
-			$image = getcwd().'/images/'.$infos['logo']; 
-		}
-		else
-		{
-			$image = getcwd().'/images/logos/facdroit.jpg'; 
-		}
-		
-		return $image;
-		
-	}
-	
-	private function getPrice($inscription){
-		
-		// inscription price
-		$idprice     = $inscription['Colloque_price_id'];
-		$price       = $this->price->find($idprice)->toArray();
-		
-		if($price)
-		{
-			return $this->price->find($idprice)->toArray();
-		}
-		
-		return array();
-		
-	}
-	
-	private function getCompte($colloque){
-	
-		// Factures info if exist
-		$compte_id   = $colloque->compte_id;
-		
-		if($compte_id)
-		{
-			return $this->compte->find($compte_id)->toArray();
-		}
-		
-		return array();
-	}
-		
 	/*
 	 * generate pdf 
 	 * @return instance

@@ -70,6 +70,7 @@ class InscriptionController extends BaseController {
 	public function show($id)
 	{
         $inscription = $this->inscription->find($id);
+        $options = findForUser($colloque_id,$user_id);
 
         return View::make('admin.inscriptions.show')->with( array('inscription' => $inscription));
 	}
@@ -82,8 +83,6 @@ class InscriptionController extends BaseController {
 	 */
 	public function edit($id)
 	{
-        $inscription = $this->inscription->find($id);
-
         return View::make('admin.inscriptions.edit')->with( array('inscription' => $inscription));
 	}
 
@@ -95,8 +94,6 @@ class InscriptionController extends BaseController {
 	 */
 	public function update($id)
 	{
-       // print_r($_POST);
-       // exit;
         // Command new inscription creation and dispatch events
         $inscription = $this->execute('Droit\Colloque\Commands\UpdateInscriptionCommand');
 

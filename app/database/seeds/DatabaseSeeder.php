@@ -41,7 +41,7 @@ class DatabaseSeeder extends Seeder {
 		$this->call('Colloque_specialisationTableSeeder');
 		$this->call('Colloque_configTableSeeder');
 		$this->call('Colloque_optionsTableSeeder');
-		$this->call('Colloque_option_userTableSeeder');
+		$this->call('Colloque_option_usersTableSeeder');
 
 	}
 

@@ -8,6 +8,6 @@ interface DocumentInterface{
 	*/	
 	public function generate($view , $data , $name, $path , $write = NULL);	
 	
-	public function arrange($event, $user, $options , $infos);
+	public function arrange($inscription);
 	
 }

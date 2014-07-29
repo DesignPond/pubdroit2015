@@ -11,6 +11,18 @@ class OptionController extends BaseController {
 		$this->option = $option;
 	}
 
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return Response
+     */
+    public function show($colloque)
+    {
+        $options = $this->option->findForUser($colloque,1);
+
+        return View::make('admin.colloques.form.option_show')->with( array( 'options' => $options ) );
+    }
+
 	/**
 	 * Show the form for creating a new resource.
 	 *
@@ -18,7 +30,7 @@ class OptionController extends BaseController {
 	 */
 	public function create($colloque)
 	{
-        return View::make('admin.colloque.form.option_create')->with( array( 'colloque' => $colloque ) );
+        return View::make('admin.colloques.form.option_create')->with( array( 'colloque' => $colloque ) );
 	}
 
 	/**
@@ -49,7 +61,7 @@ class OptionController extends BaseController {
 	{
 		 $option = $this->option->find($id);
 		 
-		 return View::make('admin.colloque.form.option_edit')->with( array('option' => $option) );
+		 return View::make('admin.colloques.form.option_edit')->with( array('option' => $option) );
 	}
 
 	/**

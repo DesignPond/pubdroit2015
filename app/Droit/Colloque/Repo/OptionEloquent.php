@@ -18,10 +18,11 @@ class OptionEloquent implements OptionInterface {
 		return $this->option->all();		
 	}
 	
-	public function findForUser($user){
+	public function findForUser($colloque_id,$user_id){
 	
-		return $this->option->join('colloque_option_user','colloque_options.id','=','colloque_option_user.colloque_option_id')
-							->where('colloque_option_user.user_id', '=' ,$user)
+		return $this->option->join('colloque_option_users','colloque_options.id','=','colloque_option_users.colloque_option_id')
+							->where('colloque_option_users.user_id', '=' ,$user_id)
+                            ->where('colloque_options.colloque_id', '=' ,$colloque_id)
 							->get();
 	}
 	

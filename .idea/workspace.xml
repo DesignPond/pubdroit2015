@@ -5,19 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="051f7ca7-1e9e-48fb-bc58-27f4689ba4be" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Droit/Colloque/Worker/DocumentInterface.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Droit/Colloque/Worker/DocumentWorker.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Droit/User/Entities/Adresses.php" afterPath="$PROJECT_DIR$/app/Droit/User/Entities/Adresses.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Droit/Colloque/Repo/ColloqueEloquent.php" afterPath="$PROJECT_DIR$/app/Droit/Colloque/Repo/ColloqueEloquent.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Droit/Colloque/Entities/Colloque_option_users.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/admin/colloques/form/option_show.blade.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/database/migrations/2014_07_27_085305_pivot_colloque_option_user_table.php" afterPath="$PROJECT_DIR$/app/database/migrations/2014_07_27_085305_pivot_colloque_option_user_tables.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Droit/Colloque/Entities/Colloque_inscriptions.php" afterPath="$PROJECT_DIR$/app/Droit/Colloque/Entities/Colloque_inscriptions.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/database/seeds/Colloque_option_userTableSeeder.php" afterPath="$PROJECT_DIR$/app/database/seeds/Colloque_option_userTableSeeder.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Droit/Colloque/Entities/Colloque_options.php" afterPath="$PROJECT_DIR$/app/Droit/Colloque/Entities/Colloque_options.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Droit/Colloque/Entities/Colloques.php" afterPath="$PROJECT_DIR$/app/Droit/Colloque/Entities/Colloques.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Droit/Colloque/Entities/Comptes.php" afterPath="$PROJECT_DIR$/app/Droit/Colloque/Entities/Comptes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Droit/Colloque/Worker/GenerateWorker.php" afterPath="$PROJECT_DIR$/app/Droit/Colloque/Worker/GenerateWorker.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/database/seeds/DatabaseSeeder.php" afterPath="$PROJECT_DIR$/app/database/seeds/DatabaseSeeder.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Droit/Colloque/Worker/DocumentInterface.php" afterPath="$PROJECT_DIR$/app/Droit/Colloque/Worker/DocumentInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Droit/Colloque/Worker/DocumentWorker.php" afterPath="$PROJECT_DIR$/app/Droit/Colloque/Worker/DocumentWorker.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/InscriptionController.php" afterPath="$PROJECT_DIR$/app/controllers/InscriptionController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Droit/Colloque/Repo/InscriptionEloquent.php" afterPath="$PROJECT_DIR$/app/Droit/Colloque/Repo/InscriptionEloquent.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Droit/Colloque/Repo/InscriptionInterface.php" afterPath="$PROJECT_DIR$/app/Droit/Colloque/Repo/InscriptionInterface.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/start/global.php" afterPath="$PROJECT_DIR$/app/start/global.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/admin/inscriptions/show.blade.php" afterPath="$PROJECT_DIR$/app/views/admin/inscriptions/show.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/OptionController.php" afterPath="$PROJECT_DIR$/app/controllers/OptionController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Droit/Colloque/Repo/OptionEloquent.php" afterPath="$PROJECT_DIR$/app/Droit/Colloque/Repo/OptionEloquent.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Droit/Colloque/Repo/OptionInterface.php" afterPath="$PROJECT_DIR$/app/Droit/Colloque/Repo/OptionInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/admin/colloques/form/option_create.blade.php" afterPath="$PROJECT_DIR$/app/views/admin/colloques/form/option_create.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="pubdroit2015.iws" />
@@ -48,7 +51,7 @@
       <file leaf-file-name="InscriptionController.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/InscriptionController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="71" column="51" selection-start="1639" selection-end="1639" vertical-scroll-proportion="-12.5" vertical-offset="1450" max-vertical-offset="3075">
+            <state line="84" column="5" selection-start="1940" selection-end="1940" vertical-scroll-proportion="-11.538462" vertical-offset="1800" max-vertical-offset="3000">
               <folding>
                 <element signature="e#7#52#0" expanded="true" />
               </folding>
@@ -56,79 +59,62 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="InscriptionInterface.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Droit/Colloque/Repo/InscriptionInterface.php">
+      <file leaf-file-name="OptionController.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/OptionController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="31" selection-start="223" selection-end="223" vertical-scroll-proportion="-7.6923075" vertical-offset="0" max-vertical-offset="525">
+            <state line="22" column="59" selection-start="471" selection-end="471" vertical-scroll-proportion="-13.461538" vertical-offset="200" max-vertical-offset="2650">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="show.blade.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/admin/inscriptions/show.blade.php">
+      <file leaf-file-name="DocumentWorker.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Droit/Colloque/Worker/DocumentWorker.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="44" selection-start="830" selection-end="830" vertical-scroll-proportion="-28.846153" vertical-offset="0" max-vertical-offset="1250">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="laravel.log" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/storage/logs/laravel.log">
-          <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1983" column="34" selection-start="313301" selection-end="313575" vertical-scroll-proportion="-19.25926" vertical-offset="49055" max-vertical-offset="49750">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ColloqueEloquent.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Droit/Colloque/Repo/ColloqueEloquent.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="14" selection-start="1006" selection-end="1111" vertical-scroll-proportion="-13.461538" vertical-offset="725" max-vertical-offset="5475">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="InscriptionEloquent.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/Droit/Colloque/Repo/InscriptionEloquent.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="99" selection-start="1098" selection-end="1098" vertical-scroll-proportion="0.49365303" vertical-offset="600" max-vertical-offset="3000">
+            <state line="45" column="40" selection-start="1145" selection-end="1145" vertical-scroll-proportion="0.034153007" vertical-offset="1100" max-vertical-offset="2600">
               <folding>
-                <element signature="e#38#83#0" expanded="true" />
+                <element signature="e#40#89#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Colloque_inscriptions.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Droit/Colloque/Entities/Colloque_inscriptions.php">
+      <file leaf-file-name="OptionEloquent.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Droit/Colloque/Repo/OptionEloquent.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="5" selection-start="1209" selection-end="1209" vertical-scroll-proportion="-18.615385" vertical-offset="516" max-vertical-offset="1225">
+            <state line="20" column="20" selection-start="432" selection-end="466" vertical-scroll-proportion="-9.615385" vertical-offset="250" max-vertical-offset="2150">
+              <folding>
+                <element signature="e#38#78#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DocumentInterface.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Droit/Colloque/Worker/DocumentInterface.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="40" selection-start="249" selection-end="261" vertical-scroll-proportion="-9.615385" vertical-offset="0" max-vertical-offset="450">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Adresses.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Droit/User/Entities/Adresses.php">
+      <file leaf-file-name="ColloqueWorker.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Droit/Colloque/Worker/ColloqueWorker.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="61" column="35" selection-start="1809" selection-end="1809" vertical-scroll-proportion="-22.461538" vertical-offset="891" max-vertical-offset="1750">
+            <state line="3" column="0" selection-start="91" selection-end="133" vertical-scroll-proportion="-2.8846154" vertical-offset="0" max-vertical-offset="2300">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Colloques.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Droit/Colloque/Entities/Colloques.php">
+      <file leaf-file-name="InscriptionEloquent.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Droit/Colloque/Repo/InscriptionEloquent.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="85" column="75" selection-start="2609" selection-end="2609" vertical-scroll-proportion="-50.0" vertical-offset="825" max-vertical-offset="2375">
-              <folding />
+            <state line="34" column="138" selection-start="926" selection-end="926" vertical-scroll-proportion="-17.307692" vertical-offset="400" max-vertical-offset="2825">
+              <folding>
+                <element signature="e#38#83#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -146,17 +132,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/controllers/ColloqueController.php" />
-        <option value="$PROJECT_DIR$/app/views/admin/inscriptions/partials/create.blade.php" />
-        <option value="$PROJECT_DIR$/app/views/admin/inscriptions/index.blade.php" />
-        <option value="$PROJECT_DIR$/app/Droit/Colloque/Commands/CreateInscriptionCommand.php" />
-        <option value="$PROJECT_DIR$/app/views/emails/inscription/create.blade.php" />
-        <option value="$PROJECT_DIR$/app/views/admin/inscriptions/create.blade.php" />
-        <option value="$PROJECT_DIR$/app/config/app.php" />
-        <option value="$PROJECT_DIR$/app/tests/controllers/UserSpecialisationTest.php" />
-        <option value="$PROJECT_DIR$/phpunit.xml" />
-        <option value="$PROJECT_DIR$/composer.json" />
-        <option value="$PROJECT_DIR$/app/tests/TestCase.php" />
         <option value="$PROJECT_DIR$/app/tests/controllers/EventControllerTest.php" />
         <option value="$PROJECT_DIR$/app/config/testing/database.php" />
         <option value="$PROJECT_DIR$/app/views/admin/inscriptions/ind.blade.php" />
@@ -184,19 +159,30 @@
         <option value="$PROJECT_DIR$/app/Droit/Colloque/Repo/ColloqueInterface.php" />
         <option value="$PROJECT_DIR$/app/Droit/Listeners/InscriptionCreation.php" />
         <option value="$PROJECT_DIR$/app/Droit/Colloque/Worker/GenerateWorker.php" />
-        <option value="$PROJECT_DIR$/app/Droit/Colloque/Worker/DocumentInterface.php" />
-        <option value="$PROJECT_DIR$/app/Droit/Colloque/Worker/DocumentWorker.php" />
-        <option value="$PROJECT_DIR$/app/Droit/Colloque/Repo/ColloqueEloquent.php" />
         <option value="$PROJECT_DIR$/app/start/global.php" />
-        <option value="$PROJECT_DIR$/app/Droit/Colloque/Entities/Colloques.php" />
         <option value="$PROJECT_DIR$/app/Droit/Colloque/Entities/Comptes.php" />
         <option value="$PROJECT_DIR$/app/views/admin/inscriptions/show.blade.php" />
         <option value="$PROJECT_DIR$/app/Droit/User/Entities/Adresses.php" />
-        <option value="$PROJECT_DIR$/app/Droit/Colloque/Repo/InscriptionInterface.php" />
-        <option value="$PROJECT_DIR$/app/controllers/InscriptionController.php" />
-        <option value="$PROJECT_DIR$/app/Droit/Colloque/Entities/Colloque_inscriptions.php" />
         <option value="$PROJECT_DIR$/app/storage/logs/laravel.log" />
+        <option value="$PROJECT_DIR$/app/Droit/Colloque/Entities/Colloque_option_user.php" />
+        <option value="$PROJECT_DIR$/app/database/seeds/Colloque_option_userTableSeeder.php" />
+        <option value="$PROJECT_DIR$/app/database/migrations/2014_07_27_085305_pivot_colloque_option_user_table.php" />
+        <option value="$PROJECT_DIR$/app/database/seeds/DatabaseSeeder.php" />
+        <option value="$PROJECT_DIR$/app/views/admin/colloques/form/option_create.blade.php" />
+        <option value="$PROJECT_DIR$/app/Droit/Colloque/Entities/Colloques.php" />
+        <option value="$PROJECT_DIR$/app/Droit/Colloque/Entities/Colloque_options.php" />
+        <option value="$PROJECT_DIR$/app/Droit/Colloque/Entities/Colloque_option_users.php" />
+        <option value="$PROJECT_DIR$/app/Droit/Colloque/Repo/ColloqueEloquent.php" />
+        <option value="$PROJECT_DIR$/app/Droit/Colloque/Entities/Colloque_inscriptions.php" />
+        <option value="$PROJECT_DIR$/app/Droit/Colloque/Repo/InscriptionInterface.php" />
         <option value="$PROJECT_DIR$/app/Droit/Colloque/Repo/InscriptionEloquent.php" />
+        <option value="$PROJECT_DIR$/app/Droit/Colloque/Worker/DocumentInterface.php" />
+        <option value="$PROJECT_DIR$/app/Droit/Colloque/Repo/OptionInterface.php" />
+        <option value="$PROJECT_DIR$/app/controllers/InscriptionController.php" />
+        <option value="$PROJECT_DIR$/app/views/admin/colloques/form/option_show.blade.php" />
+        <option value="$PROJECT_DIR$/app/controllers/OptionController.php" />
+        <option value="$PROJECT_DIR$/app/Droit/Colloque/Repo/OptionEloquent.php" />
+        <option value="$PROJECT_DIR$/app/Droit/Colloque/Worker/DocumentWorker.php" />
       </list>
     </option>
   </component>
@@ -545,6 +531,36 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="colloques" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="form" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pubdroit2015" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pubdroit2015" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="Droit" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -771,6 +787,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pubdroit2015" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pubdroit2015" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -788,11 +822,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/views/admin/colloques/form" />
+      <recent name="$PROJECT_DIR$/app/Droit/Colloque/Entities" />
       <recent name="$PROJECT_DIR$/app/Droit/Colloque/Worker" />
       <recent name="$PROJECT_DIR$/app/views/emails/inscription" />
       <recent name="$PROJECT_DIR$/app/Droit/Listeners" />
-      <recent name="$PROJECT_DIR$/app/Droit/Colloque/Events" />
-      <recent name="$PROJECT_DIR$/app/Droit/Colloque/Commands" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/Droit/Colloque/Repo" />
@@ -853,7 +887,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21904762" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19642857" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.12432432" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -887,85 +921,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Droit/Colloque/Worker/ColloqueWorker.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.30864197" vertical-offset="225" max-vertical-offset="2200" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Droit/Colloque/Worker/InscriptionServiceWorker.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="4" selection-start="44" selection-end="44" vertical-scroll-proportion="-1.4375857" vertical-offset="1098" max-vertical-offset="1850" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/ColloqueController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="68" column="42" selection-start="1376" selection-end="1376" vertical-scroll-proportion="16.076923" vertical-offset="2018" max-vertical-offset="5700" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/tests/InscriptionEloquentTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="31" selection-start="716" selection-end="717" vertical-scroll-proportion="0.0" vertical-offset="825" max-vertical-offset="1225" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/filters.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2175" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Droit/Colloque/Commands/UpdateInscriptionCommand.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="30" selection-start="72" selection-end="72" vertical-scroll-proportion="0.0685871" vertical-offset="0" max-vertical-offset="729" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/admin/inscriptions/create.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="0" selection-start="1015" selection-end="2552" vertical-scroll-proportion="0.079872206" vertical-offset="900" max-vertical-offset="2375">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/admin/colloques/edit.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="507" column="40" selection-start="21027" selection-end="21057" vertical-scroll-proportion="0.61174554" vertical-offset="12300" max-vertical-offset="13275">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/admin/inscriptions/edit.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="85" selection-start="848" selection-end="848" vertical-scroll-proportion="0.5392912" vertical-offset="450" max-vertical-offset="2425">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Droit/Colloque/Commands/UpdateInscriptionCommandHandler.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="56" selection-start="992" selection-end="992" vertical-scroll-proportion="0.38366717" vertical-offset="551" max-vertical-offset="1200">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Droit/Colloque/Events/InscriptionWasUpdated.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="27" selection-start="119" selection-end="119" vertical-scroll-proportion="0.1540832" vertical-offset="0" max-vertical-offset="649">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laracasts/commander/src/Laracasts/Commander/CommandHandler.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="10" selection-start="48" selection-end="48" vertical-scroll-proportion="0.068306014" vertical-offset="0" max-vertical-offset="732">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laracasts/commander/src/Laracasts/Commander/Events/DispatchableTrait.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="7" selection-start="64" selection-end="64" vertical-scroll-proportion="0.13661203" vertical-offset="0" max-vertical-offset="775">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Droit/Listeners/EmailNotifier.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="3" column="37" selection-start="117" selection-end="117" vertical-scroll-proportion="0.10245901" vertical-offset="0" max-vertical-offset="732">
@@ -1028,7 +983,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="0" selection-start="317" selection-end="593" vertical-scroll-proportion="0.38787025" vertical-offset="0" max-vertical-offset="1325">
           <folding>
-            <element signature="e#42#81#0" expanded="true" />
+            <element signature="e#42#81#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1100,7 +1055,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="33" column="50" selection-start="965" selection-end="965" vertical-scroll-proportion="-16.346153" vertical-offset="400" max-vertical-offset="1275">
           <folding>
-            <element signature="e#42#81#0" expanded="true" />
+            <element signature="e#42#81#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1123,7 +1078,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="25" column="82" selection-start="740" selection-end="740" vertical-scroll-proportion="-20.192308" vertical-offset="100" max-vertical-offset="875">
           <folding>
-            <element signature="e#34#79#0" expanded="true" />
+            <element signature="e#34#79#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1132,7 +1087,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="23" column="25" selection-start="663" selection-end="663" vertical-scroll-proportion="-9.0" vertical-offset="341" max-vertical-offset="1425">
           <folding>
-            <element signature="e#34#79#0" expanded="true" />
+            <element signature="e#34#79#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1140,13 +1095,6 @@
     <entry file="file://$PROJECT_DIR$/app/Droit/Colloque/Worker/GenerateWorker.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="21" column="8" selection-start="491" selection-end="491" vertical-scroll-proportion="13.461538" vertical-offset="800" max-vertical-offset="4600">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Droit/Colloque/Worker/DocumentWorker.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="39" selection-end="39" vertical-scroll-proportion="-0.96153843" vertical-offset="0" max-vertical-offset="4600">
           <folding />
         </state>
       </provider>
@@ -1165,23 +1113,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Droit/Colloque/Worker/DocumentInterface.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="1" selection-start="287" selection-end="287" vertical-scroll-proportion="-11.538462" vertical-offset="0" max-vertical-offset="450">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/admin/inscriptions/show.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="30" column="44" selection-start="830" selection-end="830" vertical-scroll-proportion="-28.846153" vertical-offset="0" max-vertical-offset="1250">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Droit/User/Entities/Adresses.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="35" selection-start="1809" selection-end="1809" vertical-scroll-proportion="-22.461538" vertical-offset="891" max-vertical-offset="1750">
           <folding />
         </state>
       </provider>
@@ -1193,33 +1127,80 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/database/seeds/DatabaseSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="51" selection-start="1132" selection-end="1132" vertical-scroll-proportion="0.5994358" vertical-offset="500" max-vertical-offset="1350">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_07_27_085305_pivot_colloque_option_user_tables.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="43" selection-start="581" selection-end="581" vertical-scroll-proportion="0.95204514" vertical-offset="0" max-vertical-offset="925">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/database/seeds/Colloque_option_userTableSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="38" selection-start="13" selection-end="45" vertical-scroll-proportion="0.07052186" vertical-offset="0" max-vertical-offset="709">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Droit/User/Entities/Adresses.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="61" column="35" selection-start="1809" selection-end="1809" vertical-scroll-proportion="-22.461538" vertical-offset="891" max-vertical-offset="1750">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/admin/colloques/form/specialisation_create.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="28" selection-start="480" selection-end="573" vertical-scroll-proportion="0.6699577" vertical-offset="100" max-vertical-offset="2050">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/admin/colloques/form/specialisation_edit.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.21551724" vertical-offset="150" max-vertical-offset="2250">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Droit/Colloque/Entities/Colloque_options.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="41" selection-start="527" selection-end="548" vertical-scroll-proportion="-17.615385" vertical-offset="217" max-vertical-offset="975">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Droit/Colloque/Repo/ColloqueEloquent.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="14" selection-start="1006" selection-end="1111" vertical-scroll-proportion="-13.461538" vertical-offset="725" max-vertical-offset="5475">
+        <state line="43" column="67" selection-start="970" selection-end="970" vertical-scroll-proportion="0.71791255" vertical-offset="491" max-vertical-offset="5475">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/admin/colloques/form/option_create.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="64" selection-start="557" selection-end="557" vertical-scroll-proportion="-0.13908206" vertical-offset="700" max-vertical-offset="2250">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Droit/Colloque/Entities/Colloques.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="85" column="75" selection-start="2609" selection-end="2609" vertical-scroll-proportion="-50.0" vertical-offset="825" max-vertical-offset="2375">
+        <state line="83" column="36" selection-start="2504" selection-end="2520" vertical-scroll-proportion="0.58275384" vertical-offset="1656" max-vertical-offset="2375">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Droit/Colloque/Entities/Colloque_inscriptions.php">
+    <entry file="file://$PROJECT_DIR$/app/Droit/Colloque/Entities/Colloque_option_users.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="5" selection-start="1209" selection-end="1209" vertical-scroll-proportion="-18.615385" vertical-offset="516" max-vertical-offset="1225">
+        <state line="28" column="0" selection-start="643" selection-end="643" vertical-scroll-proportion="0.72677594" vertical-offset="168" max-vertical-offset="900">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/InscriptionController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="51" selection-start="1639" selection-end="1639" vertical-scroll-proportion="-12.5" vertical-offset="1450" max-vertical-offset="3075">
-          <folding>
-            <element signature="e#7#52#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1228,23 +1209,92 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1983" column="34" selection-start="313301" selection-end="313575" vertical-scroll-proportion="-19.25926" vertical-offset="49055" max-vertical-offset="49750">
+        <state line="2734" column="175" selection-start="437790" selection-end="437931" vertical-scroll-proportion="-19.185184" vertical-offset="67832" max-vertical-offset="68550">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Droit/Colloque/Repo/InscriptionInterface.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="31" selection-start="223" selection-end="223" vertical-scroll-proportion="-7.6923075" vertical-offset="0" max-vertical-offset="525">
+        <state line="8" column="38" selection-start="230" selection-end="230" vertical-scroll-proportion="-7.6923075" vertical-offset="0" max-vertical-offset="525">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Droit/Colloque/Entities/Colloque_inscriptions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="5" selection-start="850" selection-end="850" vertical-scroll-proportion="0.95628417" vertical-offset="0" max-vertical-offset="1225">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Droit/Colloque/Worker/ColloqueWorker.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="0" selection-start="91" selection-end="133" vertical-scroll-proportion="-2.8846154" vertical-offset="0" max-vertical-offset="2300">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Droit/Colloque/Repo/InscriptionEloquent.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="99" selection-start="1098" selection-end="1098" vertical-scroll-proportion="0.49365303" vertical-offset="600" max-vertical-offset="3000">
+        <state line="34" column="138" selection-start="926" selection-end="926" vertical-scroll-proportion="-17.307692" vertical-offset="400" max-vertical-offset="2825">
           <folding>
             <element signature="e#38#83#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Droit/Colloque/Worker/DocumentInterface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="40" selection-start="249" selection-end="261" vertical-scroll-proportion="-9.615385" vertical-offset="0" max-vertical-offset="450">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Droit/Colloque/Repo/OptionInterface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="53" selection-start="173" selection-end="173" vertical-scroll-proportion="0.20491803" vertical-offset="0" max-vertical-offset="732">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/InscriptionController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="84" column="5" selection-start="1940" selection-end="1940" vertical-scroll-proportion="-11.538462" vertical-offset="1800" max-vertical-offset="3000">
+          <folding>
+            <element signature="e#7#52#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Droit/Colloque/Repo/OptionEloquent.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="20" selection-start="432" selection-end="466" vertical-scroll-proportion="-9.615385" vertical-offset="250" max-vertical-offset="2150">
+          <folding>
+            <element signature="e#38#78#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/admin/colloques/form/option_show.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="48" selection-start="564" selection-end="564" vertical-scroll-proportion="0.4358251" vertical-offset="316" max-vertical-offset="1125">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/OptionController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="59" selection-start="471" selection-end="471" vertical-scroll-proportion="-13.461538" vertical-offset="200" max-vertical-offset="2650">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Droit/Colloque/Worker/DocumentWorker.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="40" selection-start="1145" selection-end="1145" vertical-scroll-proportion="0.034153007" vertical-offset="1100" max-vertical-offset="2600">
+          <folding>
+            <element signature="e#40#89#0" expanded="true" />
           </folding>
         </state>
       </provider>

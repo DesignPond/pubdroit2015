@@ -31,15 +31,8 @@ class InscriptionEloquent implements InscriptionInterface {
 	}
 		
 	public function find($id){
-		
-		return $this->inscription->where('id', '=' ,$id)->with( array('colloque_prices','users' => function($query) use ($id)
-            {
-                $query->join('adresses', function($join)
-                {
-                    $join->on('users.id', '=', 'adresses.user_id')->where('adresses.type', '=', 1);
-                });
 
-            }) )->get()->first();
+        return $this->inscription->where('colloque_inscriptions.id', '=' ,$id)->with( array('colloque_prices', 'users' ))->get()->first();
 	}
 	
 	public function getEvent($event){
