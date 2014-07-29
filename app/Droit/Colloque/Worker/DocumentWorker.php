@@ -1,11 +1,8 @@
 <?php namespace Droit\Colloque\Worker;
 
-use Droit\Colloque\Repo\PriceInterface;
-use Droit\Colloque\Repo\CompteInterface;
-use Droit\Colloque\Repo\FileInterface;
 use Droit\User\Repo\UserInfoInterface;
 
-class GenerateWorker implements GenerateInterface {
+class DocumentWorker implements DocumentInterface {
 	
 	protected $pdf;
 	

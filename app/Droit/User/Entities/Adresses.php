@@ -58,4 +58,9 @@ class Adresses extends BaseModel {
     {
         return $this->belongsTo('Droit\User\Entities\User','user_id');
     }
+
+    public function scopePrincipaleAddresse($query,$user_id)
+    {
+        return $query->where('user_id', '=', $user_id)->where('type', '=', 1);
+    }
 }

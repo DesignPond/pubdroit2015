@@ -42,10 +42,10 @@ class ColloqueEloquent implements ColloqueInterface {
 	public function find($id){
 		
 		return $this->colloque->with( array('colloque_attestations','colloque_emails','colloque_prices'=> function($query)
-													{
-													    $query->orderBy('colloque_prices.rang');
-													}, 'colloque_options','colloque_specialisations','colloque_files','colloque_config') )
-													->findOrFail($id);			
+            {
+                $query->orderBy('colloque_prices.rang');
+            }, 'colloque_options','colloque_specialisations','colloque_files','colloque_config','colloque_compte') )
+            ->findOrFail($id);
 	}
 	
 	public function create(array $data){

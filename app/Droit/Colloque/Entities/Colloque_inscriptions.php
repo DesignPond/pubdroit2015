@@ -37,7 +37,7 @@ class Colloque_inscriptions extends BaseModel {
 
     public function colloque_prices(){
 
-        return $this->belongsTo('Droit\Colloque\Entities\Colloque_prices', 'colloque_price_id');
+        return $this->belongsTo('Droit\Colloque\Entities\Colloque_prices', 'colloque_price_id' , 'id');
     }
 
 }

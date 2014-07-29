@@ -25,7 +25,13 @@
                     <!-- messages and errors -->
                     @include('layouts.partials.message')
 					
-
+                    <?php
+                    
+                        echo '<pre>';
+                        print_r($inscription);
+                        echo '</pre>';
+                    
+                    ?>
 				
 				</div>
 			</div>

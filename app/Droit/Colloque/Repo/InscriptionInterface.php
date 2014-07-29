@@ -6,7 +6,7 @@ interface InscriptionInterface {
 	public function find($id);
 	public function getLast($nbr);
 	public function getEvent($event);
-	public function getForUser($user);	
+	public function getForUser($user);
 	public function newNumber($inscrits,$user_id);
 	public function create(array $data);
 	public function update(array $data);

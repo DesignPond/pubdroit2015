@@ -68,7 +68,7 @@ class Colloques extends BaseModel{
  	
  	public function colloque_config(){
  	
-	 	return $this->hasOne('Droit\Colloque\Entities\Colloque_config', 'colloque_id');
+	 	return $this->hasMany('Droit\Colloque\Entities\Colloque_config', 'colloque_id');
  	}
  	
 	public function colloque_emails(){
@@ -80,5 +80,10 @@ class Colloques extends BaseModel{
 		
 		return $this->hasOne('Droit\Colloque\Entities\Colloque_attestations', 'colloque_id');
 	}
+
+    public function colloque_compte()
+    {
+        return $this->belongsTo('Droit\Colloque\Entities\Comptes', 'compte_id', 'id');
+    }
 	
 }

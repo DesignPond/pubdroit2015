@@ -32,7 +32,14 @@ class InscriptionEloquent implements InscriptionInterface {
 		
 	public function find($id){
 		
-		return $this->inscription->where('id', '=' ,$id)->with( array('colloque_prices','users') )->get()->first();
+		return $this->inscription->where('id', '=' ,$id)->with( array('colloque_prices','users' => function($query) use ($id)
+            {
+                $query->join('adresses', function($join)
+                {
+                    $join->on('users.id', '=', 'adresses.user_id')->where('adresses.type', '=', 1);
+                });
+
+            }) )->get()->first();
 	}
 	
 	public function getEvent($event){
@@ -48,7 +55,7 @@ class InscriptionEloquent implements InscriptionInterface {
 	
 	public function getForUser($user){
 					
-		return $this->inscription->where('user_id', '=' ,$user)->with( array('colloque_prices','users','colloques') )->get();
+		return $this->inscription->where('user_id', '=' ,$user)->with( array('colloque_prices','users' ,'colloques') )->get();
 	}
 
     public function newNumber($inscrits,$colloque_id){

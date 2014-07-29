@@ -26,9 +26,8 @@ class InscriptionController extends BaseController {
      */
     public function index()
     {
-        $file = $this->custom->fileExistFormatLink( 'test/users/' , '1' , '4' , 'pdfbon' , 'Bon');
 
-        return View::make('admin.inscriptions.ind')->with(array('file' => $file));
+        return View::make('admin.inscriptions.ind');
     }
 	/**
 	 * Show the form for creating a new resource.
@@ -72,7 +71,7 @@ class InscriptionController extends BaseController {
 	{
         $inscription = $this->inscription->find($id);
 
-        return View::make('admin.inscriptions.edit')->with( array('inscription' => $inscription));
+        return View::make('admin.inscriptions.show')->with( array('inscription' => $inscription));
 	}
 
 	/**
@@ -101,7 +100,7 @@ class InscriptionController extends BaseController {
         // Command new inscription creation and dispatch events
         $inscription = $this->execute('Droit\Colloque\Commands\UpdateInscriptionCommand');
 
-        return Redirect::to('admin/pubdroit/inscription/'.$inscription->id)->with( array('status' => 'success' , 'message' => 'Inscription mise à jour') );
+        return Redirect::to('admin/pubdroit/inscription/'.$inscription->id.'/edit')->with( array('status' => 'success' , 'message' => 'Inscription mise à jour') );
 	}
 
 	/**
