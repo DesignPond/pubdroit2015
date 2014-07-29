@@ -9,6 +9,7 @@ interface ColloqueInterface {
 	public function create(array $data);
 	public function update(array $data);
 	public function delete($id);
+    public function addInscription($id);
 
     // Emails
 	public function getEmail($type,$colloque);

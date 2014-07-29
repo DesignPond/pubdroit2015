@@ -102,6 +102,18 @@ class ColloqueEloquent implements ColloqueInterface {
 		return $colloque;
 	}
 
+    public function addInscription($id){
+
+        $colloque = $this->colloque->findOrFail($id);
+
+        $colloque->inscriptions = $colloque->inscriptions + 1;
+
+        $colloque->save();
+
+        return $colloque;
+
+    }
+
 	// Emails
 	
 	public function getEmail($type,$id){

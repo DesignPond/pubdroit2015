@@ -15,7 +15,7 @@ class CreateColloqueFacturesTable extends Migration {
 		Schema::create('colloque_factures', function(Blueprint $table) {
 		
 			$table->increments('id');
-			$table->integer('deleted');	
+			$table->integer('deleted')->default(0);
 			$table->string('numero');
 			$table->integer('user_id');	
 			$table->string('colloque_price_id');

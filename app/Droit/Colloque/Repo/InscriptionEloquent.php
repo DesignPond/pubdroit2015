@@ -76,7 +76,7 @@ class InscriptionEloquent implements InscriptionInterface {
 			return false;
 		}
 
-        // Raise event when new user is created
+        // Raise event when new inscription is created
         $inscription->raise(new InscriptionWasCreated($inscription));
 		
 		return $inscription;
@@ -98,7 +98,7 @@ class InscriptionEloquent implements InscriptionInterface {
 
 		$inscription->save();
 
-        // Raise event when new user is created
+        // Raise event when new inscription is created
         $inscription->raise(new InscriptionWasUpdated($inscription));
 		
 		return $inscription;
