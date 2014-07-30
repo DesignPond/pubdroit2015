@@ -74,4 +74,28 @@ trait ColloqueInfosTrait {
 
     }
 
+    /**
+     * Array of documents to generate for the colloque
+     *
+     * @return array mixed
+     */
+    public function whichDocumentsToGenerate($type)
+    {
+        switch ($type)
+        {
+            case 0:
+                return false;
+                break;
+            case 1:
+                return array('facture','bon','bv');
+                break;
+            case 2:
+                return array('facture','bv');
+                break;
+            case 3:
+                return array('bon');
+                break;
+        }
+    }
+
 }

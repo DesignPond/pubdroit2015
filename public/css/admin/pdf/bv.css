@@ -1,0 +1,136 @@
+div.bvWrapper {
+    height: 79.5mm;
+    margin: 0 auto;
+    width: 210mm;
+    position: absolute;
+    bottom: 0;
+    z-index: 10;
+}
+
+div.bvTop {
+    width: 210mm;
+    height: 40mm;
+}
+
+div.bvBottom {
+    width: 210mm;
+    height: 6mm;
+}
+
+div.bvSum {
+    width: 210mm;
+    height: 6mm;
+}
+
+div.bvTop, div.bvBottom {
+    font-size: 10px;
+    font-weight: bold;
+}
+
+/* bvBottom no compte*/
+
+.bvBottomTxt td.bvBottomCol1 {
+    width: 60mm;
+}
+
+.bvBottomTxt td.bvBottomCol2 {
+    width: 60mm;
+}
+
+.bvBottomTxt td.bvBottomCol3 {
+    width: 90mm;
+}
+
+.bvBottomTxt td.bvBottomCol1 span {
+    margin-left: 33mm;
+    margin-top: 1mm;
+    display: block;
+    font-size: 10px;
+}
+
+.bvBottomTxt td.bvBottomCol2 span {
+    margin-left: 31mm;
+    margin-top: 1mm;
+    display: block;
+    font-size: 10px;
+}
+
+/* TopCol adresse*/
+
+.bvTopTxt{
+    width: 210mm;
+    height: 25mm;
+}
+
+.bvTopTxt td.bvTopCol1 {
+    width: 62mm;
+    text-align: left;
+}
+
+.bvTopTxt td.bvTopCol2 {
+    width: 58mm;
+    text-align: left;
+}
+
+.bvTopTxt td.bvTopCol3 {
+    width: 90mm;
+    text-align: left;
+}
+
+table.bvTopTxt td.bvTopCol1 span {
+    margin-top: 6mm;
+    margin-left:5mm;
+    display: block;
+    font-size: 11px;
+}
+
+table.bvTopTxt td.bvTopCol2 span {
+    margin-top: 6mm;
+    display: block;
+    margin-left: 5mm;
+    font-size: 11px;
+}
+
+table.bvTopTxt td.bvTopCol3 p {
+    margin-left: 10mm;
+    display: block;
+    font-size: 11px;
+}
+
+/* Somme */
+
+table.bvSumTxt {
+    width: 210mm;
+    margin-top: 3mm;
+    height: 4mm;
+    font-weight: bold;
+    font-size: 12px;
+    font-family: courier;
+}
+
+table.bvSumTxt td.bvSumLeft {
+    width: 60mm;
+}
+
+table.bvSumTxt td.bvSumRight {
+    width: 150mm;
+}
+
+table.bvSumTxt td.bvSumLeft span {
+    margin-right: 0mm;
+    display: block;
+    font-family: courier;
+}
+
+table.bvSumTxt td.bvSumRight span {
+    margin-right: 87mm;
+    display: block;
+    font-family: courier;
+}
+
+table.bvSumTxt td.bvSumLeft span,
+table.bvSumTxt td.bvSumRight span{
+    letter-spacing: 2.35mm;
+    font-size: 17px;
+
+}

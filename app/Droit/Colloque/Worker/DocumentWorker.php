@@ -182,13 +182,41 @@ class DocumentWorker implements DocumentInterface {
         return $data;
     }
 
+    /**
+     * prepare the views name and path for generation
+     *
+     * @return array mixed
+     */
+    public function generateDocs($inscription)
+    {
+        $colloque  = $this->colloque->find($inscription->colloque_id);
+        $documents = $this->whichDocumentsToGenerate($colloque->type);
+
+        if($documents)
+        {
+           foreach($documents as $doc)
+           {
+               $data = $this->arrange($inscription,$doc);
+
+               if( !$this->generate('pdf.'.$doc , array( 'data' => $data ) , $doc.'_'.$inscription->user_id , 'generate', true ))
+               {
+                   return false;
+               }
+           }
+        }
+
+        return true;
+    }
+
 	/**
 	 * generate pdf
 	 * *
 	 * @return instance
 	 */
 	public function generate($view , $data , $name , $path , $write = NULL){
-		
+
+        $this->pdf = \App::make('dompdf');
+
 		$pdf = $this->pdf->loadView($view , $data);
 		
 		if($write)
@@ -199,7 +227,6 @@ class DocumentWorker implements DocumentInterface {
 		{
 			return $pdf->download( $name.'.pdf');
 		}
-				
 	}
 
 }

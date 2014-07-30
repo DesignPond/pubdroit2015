@@ -128,32 +128,14 @@ class AdminController extends BaseController {
 	}
 
 	public function pdf(){
-		
 
-		//$infos   = \Colloque_config::where('colloque_id','=',0)->get();
-//		$user    = $this->user->findWithInscription(1,3);
-//		$options = $this->user->colloqueOptions(1,3);
-//		$att     = $this->colloque->getAttestation(3);
-//		
-//		$attestation = ( !empty($att) ? $att : NULL );
+        $inscription = $this->inscription->find(5);
 
-       // $colloque    = $this->colloque->find($id);
-        $inscription = $this->inscription->find(6);
-		
-		//$data = $this->generate->arrange($colloque,$user,$infos,$options,$attestation);
+        if( !$this->document->generateDocs($inscription) )
+        {
+            throw new \Droit\Exceptions\DocumentGeneratorException('Document generation failed', array('Problem with pdf inscription: '.$inscription->id ));
+        }
 
-        $data = $this->document->arrange($inscription,'bv');
-
-/*      echo '<pre>';
-        print_r($data);
-        echo '</pre>';
-        exit;
-*/
-	
-		$view = 'pdf.bv';
-		$name = 'bv';
-		
-		return $this->document->generate($view , array( 'data' => $data ) , $name , 'test' , FALSE );
 	}
 	
 	public function files(){

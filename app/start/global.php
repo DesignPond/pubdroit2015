@@ -68,7 +68,7 @@ App::error(function(Laracasts\Validation\FormValidationException $exception, $co
 
 App::error(function(Droit\Exceptions\DocumentGeneratorException $exception, $code)
 {
-    return Redirect::back()->withErrors( $exception->getErrors() );
+    Log::error('Something went wrong with the document generation');
 });
 
 /*
