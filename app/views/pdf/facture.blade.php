@@ -63,20 +63,20 @@
 		<table id="content" width="100%"border="0" cellpadding="0"  cellspacing="0" style="border:none;margin:0;padding:0;">
 	    	<tr>
 	    		<td colspan="2"> 		
-	               <h2 style="font-family:sans-serif;"><strong>FACTURE No <?php echo $custom->ifExist($data['inscription']['inscriptionNumber']); ?></strong></h2>
-	               <h2 style="font-family:sans-serif;"><?php echo $custom->ifExist($data['event']['titre']); ?><br/><?php echo $custom->ifExist($data['event']['soustitre']); ?></h2>
-	               <p class="red"><strong><?php echo $data['event']['endroit']; ?></strong></p>         
+	               <h2 style="font-family:sans-serif;"><strong>FACTURE No <?php echo $custom->ifExist($data['inscription']['numero']); ?></strong></h2>
+	               <h2 style="font-family:sans-serif;"><?php echo $custom->ifExist($data['colloque']['titre']); ?><br/><?php echo $custom->ifExist($data['colloque']['soustitre']); ?></h2>
+	               <p class="red"><strong><?php echo $data['colloque']['endroit']; ?></strong></p>         
 				</td>
 	        </tr>
 	       <tr>
 				<td colspan="2" align="left">
-					<p style="text-align:left;"> Nous vous confirmons votre participation :<strong> <?php echo $custom->ifExist($data['event']['sujet']); ?>
-					</strong>  du <?php echo $custom->formatDate($data['event']['dateDebut']); ?>.</p>
+					<p style="text-align:left;"> Nous vous confirmons votre participation :<strong> <?php echo $custom->ifExist($data['colloque']['sujet']); ?>
+					</strong>  du <?php echo $custom->formatDate($data['colloque']['dateDebut']); ?>.</p>
 				</td>
 			</tr>
 			<tr>
 				<td width="40%"><p style="text-align:left; margin:0;" class="txt">Le montant de l'inscription est de:</p></td>
-				<td width="60%"><p style="text-align:left; margin:0;"><strong><?php echo $custom->ifExist($data['price']['price']); ?> CHF</strong></p></td>
+				<td width="60%"><p style="text-align:left; margin:0;"><strong><?php echo $custom->ifExist($data['price']); ?> CHF</strong></p></td>
 			</tr>
 			<tr>
 				<td>&nbsp;</td>

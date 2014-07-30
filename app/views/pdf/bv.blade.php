@@ -5,7 +5,7 @@
 <?php  
 
 	$custom = new Custom; 	
-	$price  = $custom->preparePrice($data['price']['price']); 	
+	$price  = $custom->preparePrice($data['price']);
 ?>
 
 <body style="position:relative; height:842px; margin:0;padding:0;">
@@ -21,7 +21,7 @@
 	<div class="nofacture">
 		<p>
 			<?php echo $custom->ifExist($data['compte']['motifCompte']); ?><br/>
-			<?php echo 'No '.$custom->ifExist($data['inscription']['invoiceNumber']); ?>
+			<?php echo 'No '.$custom->ifExist($data['inscription']['numero']); ?>
 		</p>
 	</div>
 

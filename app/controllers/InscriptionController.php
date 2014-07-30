@@ -70,7 +70,6 @@ class InscriptionController extends BaseController {
 	public function show($id)
 	{
         $inscription = $this->inscription->find($id);
-        $options = findForUser($colloque_id,$user_id);
 
         return View::make('admin.inscriptions.show')->with( array('inscription' => $inscription));
 	}

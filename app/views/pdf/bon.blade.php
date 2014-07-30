@@ -20,8 +20,8 @@
 					</tr>
 					<tr>
 						<td>
-							<p class="titre"><?php echo $custom->ifExist($data['event']['sujet']); ?><br/>
-							<span><?php echo $custom->ifExist($data['event']['organisateur']); ?></span></p>
+							<p class="titre"><?php echo $custom->ifExist($data['colloque']['sujet']); ?><br/>
+							<span><?php echo $custom->ifExist($data['colloque']['organisateur']); ?></span></p>
 						</td>
 					</tr>
 					</table>	
@@ -58,19 +58,19 @@
 	    	 <tr>
 	    		<td>
 	    		
-	              <h2 style="text-align:center;"><strong>BON DE PARTICIPATION   No <?php echo $custom->ifExist($data['inscription']['inscriptionNumber']); ?></strong></h2>
-	              <h2 style="font-family:sans-serif;"><?php echo $custom->ifExist($data['event']['titre']); ?><br/><?php echo $data['event']['soustitre']; ?></h2>
-	              <p  style="font-family:sans-serif;"><?php echo $custom->ifExist($data['event']['endroit']); ?></p>
-	              <p  style="font-family:sans-serif;"><strong><?php echo $custom->formatDate($data['event']['dateDebut']); ?></strong></p>
+	              <h2 style="text-align:center;"><strong>BON DE PARTICIPATION   No <?php echo $custom->ifExist($data['inscription']['numero']); ?></strong></h2>
+	              <h2 style="font-family:sans-serif;"><?php echo $custom->ifExist($data['colloque']['titre']); ?><br/><?php echo $data['colloque']['soustitre']; ?></h2>
+	              <p  style="font-family:sans-serif;"><?php echo $custom->ifExist($data['colloque']['endroit']); ?></p>
+	              <p  style="font-family:sans-serif;"><strong><?php echo $custom->formatDate($data['colloque']['dateDebut']); ?></strong></p>
 	              
 	              <?php  
 	              		if( !empty($data['options']) )
 	              		{ 
 		              		foreach($data['options'] as $option)
 		              		{ 
-			              		if($option['typeOption'] != 'text')
+			              		if($option['titre'] != 'text')
 			              		{
-							  		echo '<p style="font-family:sans-serif;margin:0;padding:0;font-size:11px;line-height:14px;"><strong>'.$option['titreOption'].'</strong></p>';
+							  		echo '<p style="font-family:sans-serif;margin:0;padding:0;font-size:11px;line-height:14px;"><strong>'.$option['titre'].'</strong></p>';
 							  	} 
 							}
 						 } 

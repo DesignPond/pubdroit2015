@@ -32,6 +32,7 @@ class ColloqueServiceProvider extends ServiceProvider {
     	$this->registerOptionService();	
     	$this->registerPriceService();	
 		$this->registerGenerateService();
+        $this->registerDocumentService();
 		$this->registerFileService();  
 		$this->registerColloqueWorkerService();
 
@@ -109,7 +110,22 @@ class ColloqueServiceProvider extends ServiceProvider {
             );
         });        
     }
-    
+
+    /**
+     * Document generator
+     */
+    public function registerDocumentService()
+    {
+        $this->app->bind('Droit\Colloque\Worker\DocumentInterface', function()
+        {
+            return new \Droit\Colloque\Worker\DocumentWorker(
+                \App::make('Droit\Colloque\Repo\ColloqueInterface') ,
+                \App::make('Droit\Colloque\Repo\OptionInterface'),
+                \App::make('Droit\Colloque\Repo\FileInterface')
+            );
+        });
+    }
+
 	/**
 	 * File service
 	 */      

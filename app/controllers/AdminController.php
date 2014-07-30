@@ -6,7 +6,7 @@ use Droit\Colloque\Repo\ColloqueInterface;
 use Droit\User\Repo\UserInfoInterface;
 use Droit\Colloque\Repo\InscriptionInterface;
 use Droit\Colloque\Worker\GenerateInterface;
-//use Droit\Service\Form\Colloque\ColloqueForm;
+use Droit\Colloque\Worker\DocumentInterface;
 
 /**
  * Admin Controller
@@ -19,14 +19,18 @@ class AdminController extends BaseController {
 	protected $user;
 	
 	protected $generate;
+
+    protected $document;
 	
-	public function __construct(ColloqueInterface $colloque , UserInfoInterface $user ,  InscriptionInterface $inscription , GenerateInterface $generate){
+	public function __construct(ColloqueInterface $colloque, UserInfoInterface $user ,  InscriptionInterface $inscription , DocumentInterface $document, GenerateInterface $generate){
 		
 		$this->colloque    = $colloque;
 		
 		$this->user        = $user;
 		
 		$this->generate    = $generate;
+
+        $this->document    = $document;
 		
 		$this->inscription = $inscription;
 	}
@@ -125,20 +129,31 @@ class AdminController extends BaseController {
 
 	public function pdf(){
 		
-		$colloque   = $this->colloque->find(4);
-		$infos   = \Colloque_config::where('colloque_id','=',0)->get();
-		$user    = $this->user->findWithInscription(1,4);
-		$options = $this->user->colloqueOptions(1,4);
-		$att     = $this->colloque->getAttestation(4);
+
+		//$infos   = \Colloque_config::where('colloque_id','=',0)->get();
+//		$user    = $this->user->findWithInscription(1,3);
+//		$options = $this->user->colloqueOptions(1,3);
+//		$att     = $this->colloque->getAttestation(3);
+//		
+//		$attestation = ( !empty($att) ? $att : NULL );
+
+       // $colloque    = $this->colloque->find($id);
+        $inscription = $this->inscription->find(6);
 		
-		$attestation = ( !empty($att) ? $att : NULL );
-		
-		$data = $this->generate->arrange($colloque,$user,$infos,$options,$attestation);
+		//$data = $this->generate->arrange($colloque,$user,$infos,$options,$attestation);
+
+        $data = $this->document->arrange($inscription,'bv');
+
+/*      echo '<pre>';
+        print_r($data);
+        echo '</pre>';
+        exit;
+*/
 	
-		$view = 'pdf.attestation';
-		$name = 'bon';
+		$view = 'pdf.bv';
+		$name = 'bv';
 		
-		return $this->generate->generate($view , array( 'data' => $data ) , $name , 'test' , FALSE );
+		return $this->document->generate($view , array( 'data' => $data ) , $name , 'test' , FALSE );
 	}
 	
 	public function files(){
@@ -146,72 +161,6 @@ class AdminController extends BaseController {
 		$files   = $this->colloque->getFiles(4);
 			
     	return View::make('pdf.test')->with( array( 'data' => $files ) );    
-	}	
-	
-	/**
-	 * Show the form for creating a new resource.
-	 *
-	 * @return Response
-	 */
-	public function create()
-	{
-        return View::make('admins.create');
 	}
-
-	/**
-	 * Store a newly created resource in storage.
-	 *
-	 * @return Response
-	 */
-	public function store()
-	{
-		//
-	}
-
-	/**
-	 * Display the specified resource.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function show($id)
-	{
-        return View::make('admins.show');
-	}
-
-	/**
-	 * Show the form for editing the specified resource.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function edit($id)
-	{
-        return View::make('admins.edit');
-	}
-
-	/**
-	 * Update the specified resource in storage.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function update($id)
-	{
-		//
-	}
-
-	/**
-	 * Remove the specified resource from storage.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function destroy($id)
-	{
-		//
-	}
-
-	
 
 }

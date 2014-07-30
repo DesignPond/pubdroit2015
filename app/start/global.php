@@ -66,6 +66,10 @@ App::error(function(Laracasts\Validation\FormValidationException $exception, $co
     return Redirect::back()->withInput()->withErrors($exception->getErrors());
 });
 
+App::error(function(Droit\Exceptions\DocumentGeneratorException $exception, $code)
+{
+    return Redirect::back()->withErrors( $exception->getErrors() );
+});
 
 /*
 |--------------------------------------------------------------------------

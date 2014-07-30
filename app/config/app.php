@@ -123,6 +123,7 @@ return array(
 		'Illuminate\Workbench\WorkbenchServiceProvider',
         'Intervention\Image\ImageServiceProvider',
         'Way\Generators\GeneratorsServiceProvider',
+        'Barryvdh\DomPDF\ServiceProvider',
 		'Droit\DroitServiceProvider',
 		'Droit\Admin\AdminServiceProvider',
 		'Droit\Colloque\ColloqueServiceProvider',
