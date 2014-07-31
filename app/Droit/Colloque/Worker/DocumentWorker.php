@@ -48,7 +48,7 @@ class DocumentWorker implements DocumentInterface {
 		// Get infos from inscription
 		$colloque_id = $inscription->colloque_id;
         $colloque    = $this->colloque->find($colloque_id);
-        $user        = $inscription->users;
+        $user        = $inscription->addresse;
 
         // No infos for user throw exeption
         if( !$user )

@@ -32,12 +32,9 @@ class InscriptionEloquent implements InscriptionInterface {
 		
 	public function find($id){
 
-        return $this->inscription->where('colloque_inscriptions.id', '=' ,$id)->with( array('colloque_prices', 'users'=> function($query)
+        return $this->inscription->where('colloque_inscriptions.id', '=' ,$id)->with( array('colloque_prices', 'users' , 'addresse' => function($query)
              {
-                 $query->join('adresses', function($join)
-                 {
-                    $join->on('users.id', '=', 'adresses.user_id')->where('adresses.type', '=', 1);
-                 });
+                 $query->where('adresses.type', '=', 1);
 
              }))->get()->first();
 	}
