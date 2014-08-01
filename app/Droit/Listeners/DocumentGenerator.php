@@ -27,4 +27,14 @@ class DocumentGenerator extends EventListener {
         });
     }
 
+    public function whenDocumentWasGenerated($event)
+    {
+        $data = ['inscription' => $event->inscription];
+
+        \Mail::send('emails.inscription.facture', $data , function($message)
+        {
+            $message->to('cindy.leschaud@gmail.com', 'Cindy Leschaud')->subject('Documents were created');
+        });
+    }
+
 }

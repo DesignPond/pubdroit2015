@@ -27,8 +27,12 @@ class InscriptionCreation extends EventListener {
 
         if( $type == 1 || $type == 2)
         {
-            // We need a facture with that inscription
-            $facture = $this->execute('Droit\Colloque\Commands\CreateFactureCommand',$event->inscription->toArray());
+            $this->execute('Droit\Colloque\Commands\CreateFactureCommand',$event->inscription->toArray());
+        }
+
+        if( !$type == 0)
+        {
+            $this->execute('Droit\Colloque\Commands\GenerateDocumentCommand',array('inscription_id' => $event->inscription->id));
         }
 
         $data = ['inscription' => $event->inscription];
