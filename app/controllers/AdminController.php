@@ -123,8 +123,9 @@ class AdminController extends BaseController {
 			$sub->save();
 		}
 */
-									
-		return View::make('admin.index'); 
+        $inscriptions = $this->inscription->getLast(3);
+
+		return View::make('admin.index')->with(array('inscriptions' => $inscriptions));
 	}
 
 	public function pdf(){

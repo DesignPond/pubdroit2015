@@ -15,7 +15,16 @@
 			<!-- row -->
 				<div class="row">
 	                <div class="col-md-12">
-	              				
+                        <h1>Inscriptions</h1>
+
+                        @if(!$inscriptions->isEmpty())
+                        <ul>
+                            @foreach($inscriptions as $inscription)
+                                <li>Inscription : {{ $inscription->id }}</li>
+                            @endforeach
+                        @else
+                        <p>Rien pour le moment</p>
+                        @endif
 	                </div>
 	            </div>
 	        <!-- end row -->
