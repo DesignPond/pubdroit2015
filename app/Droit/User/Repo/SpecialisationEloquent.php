@@ -62,7 +62,7 @@ class SpecialisationEloquent implements SpecialisationInterface {
 			return false;
 		}
 		
-		$specialisation->titreSpecialisation  = $data['titre'];
+		$specialisation->titre  = $data['titre'];
 		
 		$specialisation->save();	
 		

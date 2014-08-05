@@ -13,7 +13,7 @@ class Membres extends BaseModel {
      * @var array
      */
     protected static $rules = array(
-        'titreMembre' => 'required'
+        'titre' => 'required'
     );
 
     /**
@@ -22,6 +22,6 @@ class Membres extends BaseModel {
      * @var array
      */
     protected static $messages = array(
-        'titreMembre.required' => 'Le champs titre est requis'
+        'titre.required' => 'Le champs titre est requis'
     );
 }

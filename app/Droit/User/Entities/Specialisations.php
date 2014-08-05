@@ -13,7 +13,7 @@ class Specialisations extends BaseModel {
      * @var array
      */
     protected static $rules = array(
-        'titreSpecialisation' => 'required'
+        'titre' => 'required'
     );
 
     /**
@@ -22,6 +22,6 @@ class Specialisations extends BaseModel {
      * @var array
      */
     protected static $messages = array(
-        'titreSpecialisation.required' => 'Le champs titre est requis'
+        'titre.required' => 'Le champs titre est requis'
     );
 }

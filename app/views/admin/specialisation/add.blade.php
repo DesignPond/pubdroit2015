@@ -38,7 +38,7 @@
                                 <div class="panel-body"><!-- start panel content -->
 
                                     <div class="form-group">
-                                        <label for="titreSpecialisation" class="col-sm-3 control-label">Spécialisation à lier</label>
+                                        <label for="titre" class="col-sm-3 control-label">Spécialisation à lier</label>
                                         <div class="col-sm-6">
                                             {{  Form::select('specialisation_id', $specialisations , null , array( 'class' => 'form-control required' ) ) }}
                                         </div>

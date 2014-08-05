@@ -14,7 +14,7 @@ class CreateMembresTable extends Migration {
 	{
 		Schema::create('membres', function(Blueprint $table) {
 			$table->increments('id');
-			$table->string('titreMembre');
+			$table->string('titre');
 		});
 	}
 

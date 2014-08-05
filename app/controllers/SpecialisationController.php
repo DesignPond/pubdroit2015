@@ -42,7 +42,7 @@ class SpecialisationController extends BaseController {
 	public function store()
 	{
         $specialisation  = $this->specialisation->create(
-            Input::only('titreSpecialisation')
+            Input::only('titre')
         );
 
         return Redirect::to('admin/pubdroit/specialisation')->with( array('status' => 'success' , 'message' => 'La spécialisation a été crée' ) );
@@ -82,7 +82,7 @@ class SpecialisationController extends BaseController {
 	{
 
         $specialisation  = $this->specialisation->update(
-            Input::only('id','titreSpecialisation')
+            Input::only('id','titre')
         );
 
         return Redirect::to('admin/pubdroit/specialisation')->with( array('status' => 'success' , 'message' => 'La spécialisation a été modifiée' ) );

@@ -43,10 +43,10 @@
 					@foreach($specialisations as $specialisation)
 					
 					<div class="specialisation">
-						<h3><strong>{{ $specialisation->titreSpecialisation }}</strong></h3>
+						<h3><strong>{{ $specialisation->titre }}</strong></h3>
 						<div class="btn-group-vertical specialisation-btn">
 							<a class="btn btn-xs btn-orange" href="{{ url('admin/pubdroit/specialisation/'.$specialisation->id.'/edit') }}">&eacute;diter</a>
-							<a class="btn btn-xs btn-danger deleteAction" data-action="<?php echo $specialisation->titreSpecialisation; ?>" href="{{ url('admin/pubdroit/specialisation/'.$specialisation->id.'/delete') }}">X</a>
+							<a class="btn btn-xs btn-danger deleteAction" data-action="<?php echo $specialisation->titre; ?>" href="{{ url('admin/pubdroit/specialisation/'.$specialisation->id.'/delete') }}">X</a>
 						</div>
 					</div>
 					

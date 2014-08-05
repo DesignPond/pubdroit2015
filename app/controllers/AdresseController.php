@@ -198,18 +198,13 @@ class AdresseController extends BaseController {
 		$user_id    = Input::get('user_id');
 		
 		$redirectTo = ( $user_id ? 'admin/users/'.$user_id : 'admin/adresses/'.$adresse_id );	
-		
-		if( !empty( $adresse_id ) && ($adresse_id != 0))
-		{					
+
 			if( $this->userspecialisation->addToUser(Input::get('specialisation_id') , Input::get('adresse_id')) )
 			{				
 				return Redirect::to($redirectTo)->with( array('status' => 'success' , 'message' => 'La spécialisation a été ajouté') );
 			}
 
 			return Redirect::to($redirectTo)->with( array('status' => 'danger' , 'message' => 'L\'utilisateur à déjà la spécialisation') );
-		}
-
-		return Redirect::to($redirectTo)->with( array('status' => 'danger' , 'message' => 'Veuillez créer un adresse pour l\'utilisateur d\'abord ') );		
 	}
 
 	/**

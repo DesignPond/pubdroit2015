@@ -16,7 +16,7 @@ class CreateSpecialisationsTable extends Migration {
 		
 			$table->increments('id');
 			
-			$table->string('titreSpecialisation');
+			$table->string('titre');
 
 		});
 	}

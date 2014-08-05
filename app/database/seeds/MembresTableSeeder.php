@@ -8,16 +8,16 @@ class MembresTableSeeder extends Seeder {
 		DB::table('membres')->truncate();
 
 		$models = array(
-			array( 'titreMembre' => 'Membre OAN' ),
-			array( 'titreMembre' => 'Membre chambre des notaires NE' ),
-			array( 'titreMembre' => 'Membre de l\'UNINE' ),
-			array( 'titreMembre' => 'Membre OA BE' ),
-			array( 'titreMembre' => 'Membre OA GE' ),
-			array( 'titreMembre' => 'Membre OA Vaud' ),
-			array( 'titreMembre' => 'Membre OA ZH' ),
-			array( 'titreMembre' => 'Membre OA FR' ),
-			array( 'titreMembre' => 'Membre OA VS' ),
-			array( 'titreMembre' => 'Membre OA Tessin' )
+			array( 'titre' => 'Membre OAN' ),
+			array( 'titre' => 'Membre chambre des notaires NE' ),
+			array( 'titre' => 'Membre de l\'UNINE' ),
+			array( 'titre' => 'Membre OA BE' ),
+			array( 'titre' => 'Membre OA GE' ),
+			array( 'titre' => 'Membre OA Vaud' ),
+			array( 'titre' => 'Membre OA ZH' ),
+			array( 'titre' => 'Membre OA FR' ),
+			array( 'titre' => 'Membre OA VS' ),
+			array( 'titre' => 'Membre OA Tessin' )
 		);
 
 		// Uncomment the below to run the seeder

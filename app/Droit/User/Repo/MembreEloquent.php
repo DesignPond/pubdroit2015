@@ -36,7 +36,7 @@ class MembreEloquent implements MembreInterface {
 	public function create(array $data)
 	{
 		$membre = $this->membre->create(array(
-			'titreMembre' => $data['titreMembre']
+			'titre' => $data['titre']
 		));
 		
 		if( ! $membre )
@@ -44,7 +44,7 @@ class MembreEloquent implements MembreInterface {
 			return false;
 		}
 		
-		return true;		
+		return $membre;
 	}
 	
 	public function update(array $data)
@@ -56,11 +56,11 @@ class MembreEloquent implements MembreInterface {
 			return false;
 		}
 		
-		$membre->titreMembre  = $data['titreMembre'];
+		$membre->titre  = $data['titre'];
 		
 		$membre->save();	
 		
-		return true;		
+		return $membre;
 	}
 	
 }

@@ -44,7 +44,7 @@ class MembreController extends BaseController {
 	{
 
         $membre  = $this->membre->create(
-            Input::only('titreMembre')
+            Input::only('titre')
         );
 
         return Redirect::to('admin/pubdroit/membre')->with( array('status' => 'success' , 'message' => 'Le membre à été crée' ) );
@@ -84,7 +84,7 @@ class MembreController extends BaseController {
 	{
 
         $membre  = $this->membre->update(
-            Input::only('id','titreMembre')
+            Input::only('id','titre')
         );
 
         return Redirect::to('admin/pubdroit/membre')->with( array('status' => 'success' , 'message' => 'Le membre a été modifié' ) );

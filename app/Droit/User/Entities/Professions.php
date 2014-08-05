@@ -13,7 +13,7 @@ class Professions extends BaseModel {
      * @var array
      */
     protected static $rules = array(
-        'titreProfession' => 'required'
+        'titre' => 'required'
     );
 
     /**
@@ -22,7 +22,7 @@ class Professions extends BaseModel {
      * @var array
      */
     protected static $messages = array(
-        'titreProfession.required' => 'Le champs titre est requis'
+        'titre.required' => 'Le champs titre est requis'
     );
 
 }
