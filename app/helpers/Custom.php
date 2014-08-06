@@ -363,12 +363,12 @@ class Custom {
 	public function sharedVariables(){
 		
 	    $civilites   = Civilites::all()->lists('title','id');
-	    $professions = Professions::all()->lists('titreProfession','id');
-		$cantons     = Cantons::all()->lists('titreCanton','id');
-		$pays        = Pays::all()->lists('titrePays','id');
+	    $professions = Professions::all()->lists('titre','id');
+		$cantons     = Cantons::all()->lists('titre','id');
+		$pays        = Pays::all()->lists('nom','id');
 		
-		$allmembres          = Membres::all()->lists('titreMembre','id');
-		$allSpecialisations  = Specialisations::all()->lists('titreSpecialisation','id');
+		$allmembres          = Membres::all()->lists('titre','id');
+		$allSpecialisations  = Specialisations::all()->lists('titre','id');
 
 		$professions = $this->insertFirstInArray( 0 , 'Choix' , $professions );
 		$cantons     = $this->insertFirstInArray( 0 , 'Choix' , $cantons );
@@ -397,7 +397,7 @@ class Custom {
 	 */	
 	public function whatProfession($title){
 		
-		$professions = Professions::all()->lists('titreProfession','id');
+		$professions = Professions::all()->lists('titre','id');
 
 		return (isset($professions[$title]) ? $professions[$title] : "");			
 	}    
@@ -409,7 +409,7 @@ class Custom {
 	 */	
 	public function whatCanton($title){
 		
-		$cantons = Cantons::all()->lists('titreCanton','id');
+		$cantons = Cantons::all()->lists('titre','id');
 
 		return (isset($cantons[$title]) ? $cantons[$title] : "");	
 	} 
@@ -421,7 +421,7 @@ class Custom {
 	 */	
 	public function whatPays($title){
 		
-		$pays = Pays::all()->lists('titrePays','id');
+		$pays = Pays::all()->lists('nom','id');
 
 		return (isset($pays[$title]) ? $pays[$title] : "");	
 	} 
@@ -440,4 +440,3 @@ class Custom {
 	}
 
 }
-

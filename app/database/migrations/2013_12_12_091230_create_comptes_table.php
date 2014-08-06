@@ -16,9 +16,9 @@ class CreateComptesTable extends Migration {
 		
 			$table->increments('id');
 
-			$table->string('adressesCompte'); // changed	
-			$table->string('motifCompte'); // changed	
-			$table->string('infoCompte'); // changed	
+			$table->string('adresse'); // changed
+			$table->string('motif'); // changed
+			$table->string('info'); // changed
 			
 		});
 	}

@@ -17,7 +17,6 @@ class CreateCalculetteTauxTable extends Migration {
 			$table->increments('id');
 			$table->integer('updated_at');
 			$table->integer('created_at');
-			$table->integer('cruser_id');
 			$table->integer('deleted');	
 			$table->string('canton');		
 			$table->integer('date_debut');

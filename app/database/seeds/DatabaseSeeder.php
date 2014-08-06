@@ -16,8 +16,6 @@ class DatabaseSeeder extends Seeder {
         $this->call('UsersTableSeeder');
         $this->call('User_specialisationsTableSeeder');
 
-        $this->call('Newsletter_listsTableSeeder');
-        $this->call('Newsletter_usersTableSeeder');
         $this->call('ComptesTableSeeder');
         $this->call('SpecialisationsTableSeeder');
         $this->call('MembresTableSeeder');
@@ -25,14 +23,6 @@ class DatabaseSeeder extends Seeder {
         $this->call('CivilitesTableSeeder');
         $this->call('CantonsTableSeeder');
         $this->call('PaysTableSeeder');
-
-        /*
-        $this->call('Cm_articlesTableSeeder');
-        $this->call('Cm_articles_pricesTableSeeder');
-        $this->call('Cm_articles_typesTableSeeder');
-        $this->call('Cm_articles_attributesTableSeeder');
-        $this->call('Cm_attributesTableSeeder');
-        */
 
         $this->call('ColloquesTableSeeder');
         $this->call('Colloque_inscriptionsTableSeeder');
@@ -42,6 +32,9 @@ class DatabaseSeeder extends Seeder {
 		$this->call('Colloque_configTableSeeder');
 		$this->call('Colloque_optionsTableSeeder');
 		$this->call('Colloque_option_usersTableSeeder');
+
+        $this->call('CalculetteIpcTableSeeder');
+        $this->call('CalculetteTauxTableSeeder');
 
 	}
 

@@ -14,8 +14,7 @@ class CreateColloqueOptionsTable extends Migration {
 	{
 		Schema::create('colloque_options', function(Blueprint $table) {
 		
-			$table->increments('id');
-			
+			$table->increments('id')->unsigned();
 			$table->string('titre');
 			$table->string('type');
 			$table->integer('colloque_id');

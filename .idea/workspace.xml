@@ -5,32 +5,61 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="051f7ca7-1e9e-48fb-bc58-27f4689ba4be" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/tests/acceptance/admin.feature" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/tests/acceptance/bootstrap/FeatureContext.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/behat.yml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/database/migrations/2013_12_16_123010_create_specialisations_table.php" afterPath="$PROJECT_DIR$/app/database/migrations/2013_12_16_123010_create_specialisations_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/database/migrations/2013_12_18_102413_create_membres_table.php" afterPath="$PROJECT_DIR$/app/database/migrations/2013_12_18_102413_create_membres_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/AdresseController.php" afterPath="$PROJECT_DIR$/app/controllers/AdresseController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/MembreController.php" afterPath="$PROJECT_DIR$/app/controllers/MembreController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Droit/User/Repo/MembreEloquent.php" afterPath="$PROJECT_DIR$/app/Droit/User/Repo/MembreEloquent.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Droit/User/Entities/Membres.php" afterPath="$PROJECT_DIR$/app/Droit/User/Entities/Membres.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/database/seeds/MembresTableSeeder.php" afterPath="$PROJECT_DIR$/app/database/seeds/MembresTableSeeder.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Droit/User/Entities/Professions.php" afterPath="$PROJECT_DIR$/app/Droit/User/Entities/Professions.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/SpecialisationController.php" afterPath="$PROJECT_DIR$/app/controllers/SpecialisationController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Droit/User/Repo/SpecialisationEloquent.php" afterPath="$PROJECT_DIR$/app/Droit/User/Repo/SpecialisationEloquent.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Droit/User/Entities/Specialisations.php" afterPath="$PROJECT_DIR$/app/Droit/User/Entities/Specialisations.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/database/seeds/SpecialisationsTableSeeder.php" afterPath="$PROJECT_DIR$/app/database/seeds/SpecialisationsTableSeeder.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Droit/User/Entities/User_membres.php" afterPath="$PROJECT_DIR$/app/Droit/User/Entities/User_membres.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Droit/User/Entities/User_specialisations.php" afterPath="$PROJECT_DIR$/app/Droit/User/Entities/User_specialisations.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/admin/specialisation/add.blade.php" afterPath="$PROJECT_DIR$/app/views/admin/specialisation/add.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/admin/membre/create.blade.php" afterPath="$PROJECT_DIR$/app/views/admin/membre/create.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/admin/specialisation/create.blade.php" afterPath="$PROJECT_DIR$/app/views/admin/specialisation/create.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/admin/membre/edit.blade.php" afterPath="$PROJECT_DIR$/app/views/admin/membre/edit.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/admin/specialisation/edit.blade.php" afterPath="$PROJECT_DIR$/app/views/admin/specialisation/edit.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/admin/membre/index.blade.php" afterPath="$PROJECT_DIR$/app/views/admin/membre/index.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/admin/specialisation/index.blade.php" afterPath="$PROJECT_DIR$/app/views/admin/specialisation/index.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/pubdroit2015.iml" afterPath="$PROJECT_DIR$/.idea/pubdroit2015.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/tests/CalculetteTest.php" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/database/migrations/2013_11_25_123107_create_newsletter_lists_table.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/database/migrations/2013_11_25_123155_create_newsletter_users_table.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/database/migrations/2014_01_07_105803_create_ba_arrets_categories_table.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/database/migrations/2014_01_07_105915_create_ba_arrets_table.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/database/migrations/2014_01_07_105927_create_ba_categories_table.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/database/migrations/2014_01_07_153424_create_ba_analyses_table.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/database/migrations/2014_01_07_153516_create_ba_analyses_arrets_table.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/database/migrations/2014_01_07_153544_create_ba_analyses_categories_table.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/database/migrations/2014_01_08_143233_create_bs_categories_table.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/database/migrations/2014_01_08_143308_create_bs_seminaires_table.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/database/migrations/2014_01_08_143341_create_bs_subjects_table.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/database/migrations/2014_01_08_143406_create_bs_seminaires_subjects_table.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/database/migrations/2014_01_08_143454_create_bs_subjects_authors_table.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/database/migrations/2014_01_08_143529_create_bs_subjects_category_table.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/database/migrations/2014_01_08_143621_create_bs_authors_table.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/database/migrations/2014_02_03_153218_create_cm_articles.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/database/migrations/2014_02_03_153233_create_cm_articles_prices.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/database/migrations/2014_02_03_153247_create_cm_articles_types.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/database/migrations/2014_02_03_153301_create_cm_articles_attributes.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/database/migrations/2014_02_03_153311_create_cm_attributes.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/database/migrations/2014_07_27_085305_pivot_colloque_option_user_tables.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/database/seeds/Ba_analyses_arretsTableSeeder.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/database/seeds/Ba_analyses_categoriesTableSeeder.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/database/seeds/Ba_arretsTableSeeder.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/database/seeds/Ba_arrets_categoriesTableSeeder.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/database/seeds/Cm_articlesTableSeeder.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/database/seeds/Cm_articles_attributesTableSeeder.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/database/seeds/Cm_articles_pricesTableSeeder.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/database/seeds/Cm_articles_typesTableSeeder.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/database/seeds/Cm_attributesTableSeeder.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/database/seeds/Newsletter_listsTableSeeder.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/database/seeds/Newsletter_usersTableSeeder.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/tests/controllers/UserSpecialisationTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/tests/controllers/UserSpecialisationsControllerTest.php" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/database/migrations/2013_11_24_121742_create_users_table.php" afterPath="$PROJECT_DIR$/app/database/migrations/2013_11_24_121742_create_users_table.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/database/migrations/2013_11_24_121745_create_professions_table.php" afterPath="$PROJECT_DIR$/app/database/migrations/2013_11_24_121745_create_professions_table.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/database/migrations/2013_11_24_121746_create_cantons_table.php" afterPath="$PROJECT_DIR$/app/database/migrations/2013_11_24_121746_create_cantons_table.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/database/migrations/2013_11_24_121747_create_pays_table.php" afterPath="$PROJECT_DIR$/app/database/migrations/2013_11_24_121747_create_pays_table.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/database/migrations/2013_11_24_133859_create_addresses_table.php" afterPath="$PROJECT_DIR$/app/database/migrations/2013_11_24_133859_create_addresses_table.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/database/migrations/2013_12_12_091230_create_comptes_table.php" afterPath="$PROJECT_DIR$/app/database/migrations/2013_12_12_091230_create_comptes_table.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/database/migrations/2014_01_13_083907_create_calculette_ipc_table.php" afterPath="$PROJECT_DIR$/app/database/migrations/2014_01_13_083907_create_calculette_ipc_table.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/database/migrations/2014_01_13_085714_create_calculette_taux_table.php" afterPath="$PROJECT_DIR$/app/database/migrations/2014_01_13_085714_create_calculette_taux_table.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/database/migrations/2014_07_27_083632_create_colloque_options_table.php" afterPath="$PROJECT_DIR$/app/database/migrations/2014_07_27_083632_create_colloque_options_table.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/database/seeds/AddressesTableSeeder.php" afterPath="$PROJECT_DIR$/app/database/seeds/AddressesTableSeeder.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Droit/Calculette/Entities/Calculette_ipc.php" afterPath="$PROJECT_DIR$/app/Droit/Calculette/Entities/Calculette_ipc.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Droit/Calculette/Entities/Calculette_taux.php" afterPath="$PROJECT_DIR$/app/Droit/Calculette/Entities/Calculette_taux.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/database/seeds/CantonsTableSeeder.php" afterPath="$PROJECT_DIR$/app/database/seeds/CantonsTableSeeder.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/database/seeds/Colloque_option_userTableSeeder.php" afterPath="$PROJECT_DIR$/app/database/seeds/Colloque_option_userTableSeeder.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/database/seeds/Colloque_optionsTableSeeder.php" afterPath="$PROJECT_DIR$/app/database/seeds/Colloque_optionsTableSeeder.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/database/seeds/ComptesTableSeeder.php" afterPath="$PROJECT_DIR$/app/database/seeds/ComptesTableSeeder.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/Custom.php" afterPath="$PROJECT_DIR$/app/helpers/Custom.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/database/seeds/DatabaseSeeder.php" afterPath="$PROJECT_DIR$/app/database/seeds/DatabaseSeeder.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/database/seeds/PaysTableSeeder.php" afterPath="$PROJECT_DIR$/app/database/seeds/PaysTableSeeder.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/database/seeds/ProfessionsTableSeeder.php" afterPath="$PROJECT_DIR$/app/database/seeds/ProfessionsTableSeeder.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="pubdroit2015.iws" />
@@ -58,55 +87,39 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="UserSpecialisationEloquent.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Droit/User/Repo/UserSpecialisationEloquent.php">
+      <file leaf-file-name="CalculetteTest.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/tests/CalculetteTest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="25.76923" vertical-offset="670" max-vertical-offset="1325">
+            <state line="38" column="0" selection-start="843" selection-end="843" vertical-scroll-proportion="1.2283237" vertical-offset="525" max-vertical-offset="1275">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="User_membres.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Droit/User/Entities/User_membres.php">
+      <file leaf-file-name="CalculetteEloquent.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Droit/Calculette/Repo/CalculetteEloquent.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="84" selection-start="598" selection-end="598" vertical-scroll-proportion="-23.26923" vertical-offset="20" max-vertical-offset="925">
+            <state line="169" column="30" selection-start="4182" selection-end="4192" vertical-scroll-proportion="-8.884615" vertical-offset="3994" max-vertical-offset="4775">
+              <folding>
+                <element signature="e#40#86#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Calculette_ipc.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Droit/Calculette/Entities/Calculette_ipc.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="35" selection-start="198" selection-end="198" vertical-scroll-proportion="-6.730769" vertical-offset="0" max-vertical-offset="450">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="User_specialisations.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Droit/User/Entities/User_specialisations.php">
+      <file leaf-file-name="Calculette_taux.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Droit/Calculette/Entities/Calculette_taux.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="0" selection-start="522" selection-end="606" vertical-scroll-proportion="-20.192308" vertical-offset="100" max-vertical-offset="925">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserSpecialisationsControllerTest.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/tests/controllers/UserSpecialisationsControllerTest.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="35" selection-start="239" selection-end="258" vertical-scroll-proportion="8.653846" vertical-offset="550" max-vertical-offset="2150">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserSpecialisationTest.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/tests/controllers/UserSpecialisationTest.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="54" selection-start="247" selection-end="247" vertical-scroll-proportion="-12.5" vertical-offset="0" max-vertical-offset="2200">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AdresseController.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/controllers/AdresseController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="205" column="0" selection-start="4935" selection-end="4935" vertical-scroll-proportion="0.64953274" vertical-offset="4633" max-vertical-offset="7075">
+            <state line="7" column="35" selection-start="198" selection-end="198" vertical-scroll-proportion="-6.730769" vertical-offset="0" max-vertical-offset="450">
               <folding />
             </state>
           </provider>
@@ -125,37 +138,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/views/pdf/bon.blade.php" />
-        <option value="$PROJECT_DIR$/public/css/admin/pdf/bon.css" />
-        <option value="$PROJECT_DIR$/app/views/layouts/pdf.blade.php" />
-        <option value="$PROJECT_DIR$/app/views/pdf/bv.blade.php" />
-        <option value="$PROJECT_DIR$/public/css/admin/pdf/bv.css" />
-        <option value="$PROJECT_DIR$/app/Droit/Colloque/Worker/ColloqueWorker.php" />
-        <option value="$PROJECT_DIR$/app/Droit/Colloque/Worker/ColloqueInfosTrait.php" />
-        <option value="$PROJECT_DIR$/app/start/global.php" />
-        <option value="$PROJECT_DIR$/app/Droit/Colloque/Entities/Colloque_inscriptions.php" />
-        <option value="$PROJECT_DIR$/app/Droit/Colloque/Worker/DocumentWorker.php" />
-        <option value="$PROJECT_DIR$/app/storage/logs/laravel.log" />
-        <option value="$PROJECT_DIR$/app/Droit/Colloque/Repo/InscriptionEloquent.php" />
-        <option value="$PROJECT_DIR$/app/config/app.php" />
-        <option value="$PROJECT_DIR$/bootstrap/start.php" />
-        <option value="$PROJECT_DIR$/app/Droit/Listeners/DocumentGenerator.php" />
-        <option value="$PROJECT_DIR$/app/Droit/Colloque/Events/DocumentWasGenerated.php" />
-        <option value="$PROJECT_DIR$/app/Droit/Listeners/InscriptionCreation.php" />
-        <option value="$PROJECT_DIR$/app/Droit/Colloque/Commands/GenerateDocumentCommandHandler.php" />
-        <option value="$PROJECT_DIR$/behat.yaml" />
-        <option value="$PROJECT_DIR$/app/tests/acceptance/admin.feature" />
-        <option value="$PROJECT_DIR$/app/tests/acceptance/bootstrap/FeatureContext.php" />
-        <option value="$PROJECT_DIR$/app/controllers/AdminController.php" />
-        <option value="$PROJECT_DIR$/app/views/admin/index.blade.php" />
-        <option value="$PROJECT_DIR$/composer.json" />
-        <option value="$PROJECT_DIR$/app/views/admin/membre/index.blade.php" />
-        <option value="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Testing/AssertionsTrait.php" />
-        <option value="$PROJECT_DIR$/app/database/migrations/2013_12_16_123010_create_specialisations_table.php" />
-        <option value="$PROJECT_DIR$/app/database/migrations/2013_12_18_102413_create_membres_table.php" />
-        <option value="$PROJECT_DIR$/app/database/seeds/MembresTableSeeder.php" />
-        <option value="$PROJECT_DIR$/app/database/seeds/SpecialisationsTableSeeder.php" />
-        <option value="$PROJECT_DIR$/app/views/admin/specialisation/index.blade.php" />
         <option value="$PROJECT_DIR$/app/views/admin/specialisation/edit.blade.php" />
         <option value="$PROJECT_DIR$/app/views/admin/specialisation/create.blade.php" />
         <option value="$PROJECT_DIR$/app/views/admin/specialisation/add.blade.php" />
@@ -176,6 +158,37 @@
         <option value="$PROJECT_DIR$/app/Droit/User/Entities/User_specialisations.php" />
         <option value="$PROJECT_DIR$/app/Droit/User/Entities/User_membres.php" />
         <option value="$PROJECT_DIR$/app/controllers/AdresseController.php" />
+        <option value="$PROJECT_DIR$/app/database/seeds/Ba_analyses_arretsTableSeeder.php" />
+        <option value="$PROJECT_DIR$/app/database/migrations/2014_08_06_084626_create_arrets_table.php" />
+        <option value="$PROJECT_DIR$/app/database/migrations/2014_08_06_083936_create_analyses_arret_table.php" />
+        <option value="$PROJECT_DIR$/app/database/migrations/2014_08_06_093936_create_analyses_arret_table.php" />
+        <option value="$PROJECT_DIR$/app/database/migrations/2014_08_05_084626_create_arrets_table.php" />
+        <option value="$PROJECT_DIR$/app/database/migrations/2014_08_06_090708_create_analyses_table.php" />
+        <option value="$PROJECT_DIR$/app/database/migrations/2014_08_06_090045_create_colloque_option_user_table.php" />
+        <option value="$PROJECT_DIR$/app/database/migrations/2014_07_27_083632_create_colloque_options_table.php" />
+        <option value="$PROJECT_DIR$/app/database/seeds/Colloque_option_userTableSeeder.php" />
+        <option value="$PROJECT_DIR$/app/database/seeds/Colloque_optionsTableSeeder.php" />
+        <option value="$PROJECT_DIR$/app/database/seeds/AnalysesArretTableSeeder.php" />
+        <option value="$PROJECT_DIR$/app/database/seeds/PaysTableSeeder.php" />
+        <option value="$PROJECT_DIR$/app/database/migrations/2013_11_24_121747_create_pays_table.php" />
+        <option value="$PROJECT_DIR$/app/helpers/Custom.php" />
+        <option value="$PROJECT_DIR$/app/database/migrations/2013_11_24_121742_create_users_table.php" />
+        <option value="$PROJECT_DIR$/app/database/seeds/AddressesTableSeeder.php" />
+        <option value="$PROJECT_DIR$/app/database/migrations/2013_11_24_133859_create_addresses_table.php" />
+        <option value="$PROJECT_DIR$/app/database/seeds/ComptesTableSeeder.php" />
+        <option value="$PROJECT_DIR$/app/database/migrations/2013_12_12_091230_create_comptes_table.php" />
+        <option value="$PROJECT_DIR$/app/database/migrations/2014_01_13_085714_create_calculette_taux_table.php" />
+        <option value="$PROJECT_DIR$/app/database/migrations/2014_01_13_083907_create_calculette_ipc_table.php" />
+        <option value="$PROJECT_DIR$/app/database/seeds/CantonsTableSeeder.php" />
+        <option value="$PROJECT_DIR$/app/database/seeds/CalculetteTauxTableSeeder.php" />
+        <option value="$PROJECT_DIR$/app/database/seeds/CalculetteIpcTableSeeder.php" />
+        <option value="$PROJECT_DIR$/app/database/migrations/2013_11_24_121746_create_cantons_table.php" />
+        <option value="$PROJECT_DIR$/app/database/migrations/2013_11_24_121745_create_professions_table.php" />
+        <option value="$PROJECT_DIR$/app/database/seeds/ProfessionsTableSeeder.php" />
+        <option value="$PROJECT_DIR$/app/database/seeds/DatabaseSeeder.php" />
+        <option value="$PROJECT_DIR$/app/Droit/Calculette/Entities/Calculette_ipc.php" />
+        <option value="$PROJECT_DIR$/app/Droit/Calculette/Entities/Calculette_taux.php" />
+        <option value="$PROJECT_DIR$/app/tests/CalculetteTest.php" />
       </list>
     </option>
   </component>
@@ -262,7 +275,7 @@
   <component name="ProjectFrameBounds">
     <option name="y" value="22" />
     <option name="width" value="1680" />
-    <option name="height" value="964" />
+    <option name="height" value="965" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -383,98 +396,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pubdroit2015" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pubdroit2015" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="admin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pubdroit2015" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pubdroit2015" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="admin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="membre" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pubdroit2015" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pubdroit2015" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="admin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="inscriptions" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pubdroit2015" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pubdroit2015" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="tests" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -537,7 +458,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="User" />
+              <option name="myItemId" value="Calculette" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -559,7 +480,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="User" />
+              <option name="myItemId" value="Calculette" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -585,7 +506,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="User" />
+              <option name="myItemId" value="Calculette" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -627,11 +548,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/tests" />
       <recent name="$PROJECT_DIR$/app/Droit/Colloque/Events" />
       <recent name="$PROJECT_DIR$/public/css/admin/pdf" />
       <recent name="$PROJECT_DIR$/app/Droit/Exceptions" />
       <recent name="$PROJECT_DIR$/app/views/admin/colloques/form" />
-      <recent name="$PROJECT_DIR$/app/Droit/Colloque/Entities" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/Droit/Colloque/Repo" />
@@ -684,15 +605,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1680" height="964" extended-state="0" />
-    <editor active="true" />
+    <frame x="0" y="22" width="1680" height="965" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20782124" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.5535714" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17142858" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23809524" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.12432432" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -700,11 +621,11 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924107" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924107" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -726,281 +647,14 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Droit/Colloque/Events/InscriptionWasUpdated.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="760" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Droit/Colloque/Events/InscriptionWasCreated.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="316" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="711" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Droit/Listeners/DocumentGenerator.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="24" selection-start="807" selection-end="827" vertical-scroll-proportion="0.0" vertical-offset="725" max-vertical-offset="1125" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Droit/Colloque/Repo/InscriptionEloquent.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="20" selection-start="512" selection-end="525" vertical-scroll-proportion="0.71335506" vertical-offset="12" max-vertical-offset="2925">
-          <folding>
-            <element signature="e#38#83#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/admin/upload.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.50651467" vertical-offset="311" max-vertical-offset="925" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/admin/adresses/create.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.5472313" vertical-offset="950" max-vertical-offset="6150" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/admin/adresses/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.3029316" vertical-offset="186" max-vertical-offset="1450" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/admin/analyses/show.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-2.6206322" vertical-offset="1575" max-vertical-offset="5325" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/admin/analyses/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-2.4429967" vertical-offset="1500" max-vertical-offset="2400" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/admin/colloques/colloque.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="20" selection-start="1900" selection-end="1911" vertical-scroll-proportion="0.6742671" vertical-offset="911" max-vertical-offset="1775" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/admin/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="0" selection-start="861" selection-end="861" vertical-scroll-proportion="0.7634561" vertical-offset="211" max-vertical-offset="1025" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Droit/Colloque/Commands/GenerateDocumentCommandHandler.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="9" selection-start="958" selection-end="958" vertical-scroll-proportion="0.80878186" vertical-offset="229" max-vertical-offset="1100" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/tests/InscriptionEloquentTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="0" selection-start="775" selection-end="775" vertical-scroll-proportion="0.6051437" vertical-offset="550" max-vertical-offset="1225">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="35" selection-start="502" selection-end="502" vertical-scroll-proportion="0.5295008" vertical-offset="50" max-vertical-offset="1400">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/AdminController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="127" column="84" selection-start="2785" selection-end="2798" vertical-scroll-proportion="0.17592593" vertical-offset="3011" max-vertical-offset="3825">
-          <folding>
-            <element signature="e#34#76#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/InscriptionController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="53" selection-start="1641" selection-end="1641" vertical-scroll-proportion="0.0" vertical-offset="1775" max-vertical-offset="2975">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Droit/Listeners/InscriptionCreation.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="127" selection-start="1157" selection-end="1157" vertical-scroll-proportion="-0.02118003" vertical-offset="764" max-vertical-offset="1425">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Droit/User/Repo/MembreInterface.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="687">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/admin/inscriptions/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="0" selection-start="658" selection-end="763" vertical-scroll-proportion="0.2" vertical-offset="550" max-vertical-offset="2875">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/admin/membre/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="16" selection-start="1200" selection-end="1200" vertical-scroll-proportion="0.77160496" vertical-offset="450" max-vertical-offset="1350">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/database/seeds/MembresTableSeeder.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="37" selection-start="602" selection-end="602" vertical-scroll-proportion="0.7102178" vertical-offset="51" max-vertical-offset="825">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/database/seeds/SpecialisationsTableSeeder.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="76" column="0" selection-start="2611" selection-end="2611" vertical-scroll-proportion="2.9715242" vertical-offset="126" max-vertical-offset="2050">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/admin/specialisation/edit.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="79" selection-start="1292" selection-end="1292" vertical-scroll-proportion="0.33333334" vertical-offset="851" max-vertical-offset="2000">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/admin/specialisation/create.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="79" selection-start="1230" selection-end="1230" vertical-scroll-proportion="0.33333334" vertical-offset="851" max-vertical-offset="2000">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/admin/specialisation/add.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="57" selection-start="1502" selection-end="1502" vertical-scroll-proportion="0.33333334" vertical-offset="801" max-vertical-offset="2000">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/admin/membre/create.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="59" selection-start="1055" selection-end="1055" vertical-scroll-proportion="0.23006135" vertical-offset="850" max-vertical-offset="2000">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/admin/membre/edit.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="65" selection-start="1227" selection-end="1227" vertical-scroll-proportion="0.7285276" vertical-offset="575" max-vertical-offset="2000">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Droit/User/Repo/SpecialisationEloquent.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="64" column="30" selection-start="1245" selection-end="1245" vertical-scroll-proportion="0.41708544" vertical-offset="1351" max-vertical-offset="2475">
-          <folding>
-            <element signature="e#34#78#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/admin/specialisation/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="120" selection-start="1617" selection-end="1617" vertical-scroll-proportion="0.68701094" vertical-offset="761" max-vertical-offset="1725">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Droit/Colloque/Repo/OptionEloquent.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="67" column="44" selection-start="1397" selection-end="1402" vertical-scroll-proportion="1.2699387" vertical-offset="822" max-vertical-offset="2125">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/database/migrations/2013_12_18_102413_create_membres_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="33" selection-start="332" selection-end="332" vertical-scroll-proportion="0.3752094" vertical-offset="176" max-vertical-offset="950">
-          <folding>
-            <element signature="e#7#52#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/database/migrations/2013_12_16_123010_create_specialisations_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="33" selection-start="355" selection-end="355" vertical-scroll-proportion="0.34170854" vertical-offset="246" max-vertical-offset="1025">
-          <folding>
-            <element signature="e#7#52#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/OptionController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.1682243" vertical-offset="750" max-vertical-offset="2650">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/tests/controllers/SpecialisationsControllerTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="88" column="2" selection-start="1928" selection-end="2356" vertical-scroll-proportion="-4.1153846" vertical-offset="2093" max-vertical-offset="2725">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/tests/controllers/MembresControllerTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="87" column="2" selection-start="1784" selection-end="2186" vertical-scroll-proportion="-2.9615386" vertical-offset="2021" max-vertical-offset="2675">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/tests/controllers/OptionsControllerTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="68" column="0" selection-start="1522" selection-end="1522" vertical-scroll-proportion="1.5775578" vertical-offset="744" max-vertical-offset="1875">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/tests/controllers/ProfessionsControllerTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.90839696" vertical-offset="595" max-vertical-offset="1250">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Droit/Common/BaseModel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.221374" vertical-offset="800" max-vertical-offset="1550">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/MembreController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="30" selection-start="884" selection-end="884" vertical-scroll-proportion="0.48598132" vertical-offset="813" max-vertical-offset="2825">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Droit/User/Repo/MembreEloquent.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="22" selection-start="961" selection-end="961" vertical-scroll-proportion="1.4198474" vertical-offset="620" max-vertical-offset="1775">
-          <folding>
-            <element signature="e#34#70#0" expanded="true" />
-          </folding>
-        </state>
+        <state line="62" column="22" selection-start="961" selection-end="961" vertical-scroll-proportion="1.4198474" vertical-offset="620" max-vertical-offset="1775" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/SpecialisationController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="103" column="0" selection-start="2400" selection-end="2400" vertical-scroll-proportion="0.7694704" vertical-offset="2081" max-vertical-offset="3700">
-          <folding />
-        </state>
+        <state line="103" column="0" selection-start="2400" selection-end="2400" vertical-scroll-proportion="0.7694704" vertical-offset="2081" max-vertical-offset="3700" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Testing/AssertionsTrait.php">
@@ -1012,7 +666,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Droit/User/Repo/UserSpecialisationEloquent.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="25.76923" vertical-offset="670" max-vertical-offset="1325">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1350">
           <folding />
         </state>
       </provider>
@@ -1038,37 +692,302 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/tests/controllers/UserSpecialisationsControllerTest.php">
+    <entry file="file://$PROJECT_DIR$/app/controllers/AdresseController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="35" selection-start="239" selection-end="258" vertical-scroll-proportion="8.653846" vertical-offset="550" max-vertical-offset="2150">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/tests/controllers/UserSpecialisationTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="54" selection-start="247" selection-end="247" vertical-scroll-proportion="-12.5" vertical-offset="0" max-vertical-offset="2200">
+        <state line="205" column="0" selection-start="4935" selection-end="4935" vertical-scroll-proportion="-0.12096774" vertical-offset="5125" max-vertical-offset="7075">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Droit/User/Entities/User_specialisations.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="0" selection-start="522" selection-end="606" vertical-scroll-proportion="-20.192308" vertical-offset="100" max-vertical-offset="925">
+        <state line="25" column="0" selection-start="522" selection-end="606" vertical-scroll-proportion="0.8293839" vertical-offset="100" max-vertical-offset="925">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Droit/User/Entities/User_membres.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="84" selection-start="598" selection-end="598" vertical-scroll-proportion="-23.26923" vertical-offset="20" max-vertical-offset="925">
+        <state line="25" column="84" selection-start="598" selection-end="598" vertical-scroll-proportion="0.54268295" vertical-offset="269" max-vertical-offset="925">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/AdresseController.php">
+    <entry file="file://$PROJECT_DIR$/app/config/mail.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="205" column="0" selection-start="4935" selection-end="4935" vertical-scroll-proportion="0.64953274" vertical-offset="4633" max-vertical-offset="7075">
+        <state line="119" column="6" selection-start="4029" selection-end="4029" vertical-scroll-proportion="0.8643293" vertical-offset="2408" max-vertical-offset="3250">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/database/seeds/Colloque_option_userTableSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="8" selection-start="98" selection-end="177" vertical-scroll-proportion="-5.769231" vertical-offset="0" max-vertical-offset="725">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/database/seeds/AnalysesArretTableSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="87" selection-start="170" selection-end="170" vertical-scroll-proportion="0.4861111" vertical-offset="0" max-vertical-offset="2600">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/database/seeds/Colloque_optionsTableSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="8" selection-start="93" selection-end="172" vertical-scroll-proportion="0.3916449" vertical-offset="0" max-vertical-offset="750">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_08_06_090045_create_colloque_option_user_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="38" selection-start="532" selection-end="532" vertical-scroll-proportion="0.7832898" vertical-offset="175" max-vertical-offset="1050">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/AdminController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="127" column="84" selection-start="2785" selection-end="2798" vertical-scroll-proportion="0.527027" vertical-offset="2830" max-vertical-offset="3725">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_07_27_083632_create_colloque_options_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="36" selection-start="326" selection-end="338" vertical-scroll-proportion="0.36945814" vertical-offset="225" max-vertical-offset="1000">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/database/migrations/2013_11_24_133859_create_addresses_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="42" selection-start="634" selection-end="634" vertical-scroll-proportion="0.45787546" vertical-offset="175" max-vertical-offset="1475">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/database/migrations/2013_11_24_121742_create_users_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="48" selection-start="317" selection-end="317" vertical-scroll-proportion="0.2375297" vertical-offset="175" max-vertical-offset="1300">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/helpers/Custom.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="441" column="1" selection-start="10695" selection-end="10695" vertical-scroll-proportion="1.9348613" vertical-offset="9221" max-vertical-offset="10975">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/database/seeds/UsersTableSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.11876485" vertical-offset="100" max-vertical-offset="1125">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/database/seeds/AddressesTableSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="29" selection-start="515" selection-end="515" vertical-scroll-proportion="0.3064133" vertical-offset="167" max-vertical-offset="2425">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/database/seeds/CantonsTableSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="10" selection-start="1203" selection-end="1203" vertical-scroll-proportion="1.4925373" vertical-offset="0" max-vertical-offset="1225">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_01_13_083907_create_calculette_ipc_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="38" selection-start="246" selection-end="260" vertical-scroll-proportion="0.49392098" vertical-offset="0" max-vertical-offset="1075">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_01_13_085714_create_calculette_taux_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="42" selection-start="393" selection-end="393" vertical-scroll-proportion="0.6240822" vertical-offset="0" max-vertical-offset="1100">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/database/migrations/2013_11_24_121746_create_cantons_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="33" selection-start="332" selection-end="332" vertical-scroll-proportion="0.16413374" vertical-offset="267" max-vertical-offset="925">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/database/migrations/2013_11_24_121744_create_civilites_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="975">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/database/migrations/2013_11_24_121745_create_professions_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="33" selection-start="340" selection-end="340" vertical-scroll-proportion="0.20364742" vertical-offset="241" max-vertical-offset="925">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/database/migrations/2013_12_12_091230_create_comptes_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="35" selection-start="338" selection-end="338" vertical-scroll-proportion="0.6458967" vertical-offset="0" max-vertical-offset="1050">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/database/migrations/2013_12_18_102413_create_membres_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="33" selection-start="332" selection-end="332" vertical-scroll-proportion="0.40425533" vertical-offset="134" max-vertical-offset="950">
+          <folding>
+            <element signature="e#7#52#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/database/migrations/2013_12_16_123010_create_specialisations_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="33" selection-start="355" selection-end="355" vertical-scroll-proportion="0.3556231" vertical-offset="216" max-vertical-offset="1025">
+          <folding>
+            <element signature="e#7#52#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_02_25_084143_create_user_membres_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1000">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_02_25_081422_create_user_specialisations_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1000">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_07_27_123651_pivot_colloque_specialisation_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="975">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/database/seeds/CivilitesTableSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="51" selection-start="416" selection-end="416" vertical-scroll-proportion="0.6458967" vertical-offset="0" max-vertical-offset="675">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/database/seeds/ComptesTableSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="24" selection-start="226" selection-end="226" vertical-scroll-proportion="0.4651163" vertical-offset="0" max-vertical-offset="875">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/database/seeds/MembresTableSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="825">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/database/seeds/PaysTableSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="255" column="0" selection-start="12201" selection-end="12201" vertical-scroll-proportion="9.617022" vertical-offset="47" max-vertical-offset="6525">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/database/seeds/ProfessionsTableSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="32" selection-start="464" selection-end="464" vertical-scroll-proportion="0.6916933" vertical-offset="217" max-vertical-offset="1025">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/database/seeds/SpecialisationsTableSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2050">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/database/seeds/CalculetteIpcTableSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="30" selection-start="14" selection-end="38" vertical-scroll-proportion="0.11227545" vertical-offset="0" max-vertical-offset="11800">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/database/migrations/2013_11_24_121747_create_pays_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="31" selection-start="354" selection-end="354" vertical-scroll-proportion="0.50807637" vertical-offset="79" max-vertical-offset="975">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/database/seeds/CalculetteTauxTableSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="31" selection-start="14" selection-end="39" vertical-scroll-proportion="0.11227545" vertical-offset="0" max-vertical-offset="6525">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/database/seeds/DatabaseSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="0" selection-start="647" selection-end="647" vertical-scroll-proportion="0.45227605" vertical-offset="317" max-vertical-offset="1175">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Droit/Calculette/Entities/Calculette_ipc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="35" selection-start="198" selection-end="198" vertical-scroll-proportion="-6.730769" vertical-offset="0" max-vertical-offset="450">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Droit/Calculette/Entities/Calculette_taux.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="35" selection-start="198" selection-end="198" vertical-scroll-proportion="-6.730769" vertical-offset="0" max-vertical-offset="450">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/tests/controllers/MembresControllerTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="8" selection-start="679" selection-end="739" vertical-scroll-proportion="0.6975037" vertical-offset="550" max-vertical-offset="2675">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Droit/Calculette/Repo/CalculetteEloquent.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="169" column="30" selection-start="4182" selection-end="4192" vertical-scroll-proportion="-8.884615" vertical-offset="3994" max-vertical-offset="4775">
+          <folding>
+            <element signature="e#40#86#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/tests/CalculetteTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="0" selection-start="843" selection-end="843" vertical-scroll-proportion="1.2283237" vertical-offset="525" max-vertical-offset="1275">
           <folding />
         </state>
       </provider>

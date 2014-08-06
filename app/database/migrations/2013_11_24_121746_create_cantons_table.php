@@ -14,7 +14,7 @@ class CreateCantonsTable extends Migration {
 	{
 		Schema::create('cantons', function(Blueprint $table) {
 			$table->increments('id');
-			$table->string('titreCanton');
+			$table->string('titre');
 		});
 	}
 

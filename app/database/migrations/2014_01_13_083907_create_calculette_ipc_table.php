@@ -17,7 +17,6 @@ class CreateCalculetteIpcTable extends Migration {
 			$table->increments('id');
 			$table->integer('updated_at');
 			$table->integer('created_at');
-			$table->integer('cruser_id');
 			$table->integer('deleted');			
 			$table->integer('date_debut');
 			$table->double('indice', 11, 2);								

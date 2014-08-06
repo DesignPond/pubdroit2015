@@ -10,14 +10,14 @@ class ComptesTableSeeder extends Seeder {
 		$comptes = array(
 			
 			array(
-				'adressesCompte' => '<p>Universit&eacute; de Neuch&acirc;tel <br /> Service des fonds de tiers <br /> 2000 Neuch&acirc;tel</p>',
-				'motifCompte'    => 'U. 00908 FoCo avocats 2013',
-				'infoCompte'     => '20-4130-2'
+				'adresse' => '<p>Universit&eacute; de Neuch&acirc;tel <br /> Service des fonds de tiers <br /> 2000 Neuch&acirc;tel</p>',
+				'motif'    => 'U. 00908 FoCo avocats 2013',
+				'info'     => '20-4130-2'
 			),
 			array(
-				'adressesCompte' => '<p>Université de Neuchâtel<br />Service des fonds de tiers<br />2000 Neuchâtel</p>',
-				'motifCompte'    => 'U.01952 CDM 3e journée des doctorants',
-				'infoCompte'     => '20-4130-2'
+				'adresse' => '<p>Université de Neuchâtel<br />Service des fonds de tiers<br />2000 Neuchâtel</p>',
+				'motif'    => 'U.01952 CDM 3e journée des doctorants',
+				'info'     => '20-4130-2'
 			)
 			
 		);

@@ -16,7 +16,7 @@ class CreatePaysTable extends Migration {
 		
 			$table->increments('id');
 			$table->string('code');
-			$table->string('titrePays');
+			$table->string('nom');
 		});
 	}
 

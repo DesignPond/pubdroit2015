@@ -14,13 +14,11 @@ class CreateUsersTable extends Migration {
 	{
 		Schema::create('users', function(Blueprint $table) {
 		
-			$table->increments('id');
-			
+			$table->increments('id')->unsigned();
 			$table->string('prenom');
 			$table->string('nom');
-            $table->string('name');
 			$table->string('username');
-			$table->string('email')->nullable();
+			$table->string('email');
 			$table->string('password', 64);
 			
 			$table->text('permissions')->nullable();
@@ -28,14 +26,10 @@ class CreateUsersTable extends Migration {
 			$table->timestamp('activated_at')->nullable();
 			$table->timestamp('last_login')->nullable();
 
-			// We'll need to ensure that MySQL uses the InnoDB engine to
-			// support the indexes, other engines aren't affected.
-			$table->engine = 'InnoDB';
 			$table->unique('email');
 			$table->unique('username');
 			
 			$table->softDeletes();
-			
 			$table->timestamps();
 		});
 	}

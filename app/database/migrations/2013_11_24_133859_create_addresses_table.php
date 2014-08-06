@@ -14,14 +14,14 @@ class CreateAddressesTable extends Migration {
 	{
 		Schema::create('adresses', function(Blueprint $table) {
 			$table->increments('id');
-			$table->integer('civilite');
+			$table->integer('civilite_id');
 			$table->string('prenom')->nullable();
 			$table->string('nom')->nullable();
             $table->string('name')->nullable();
 			$table->string('email')->nullable();
 			$table->string('entreprise')->nullable();
 			$table->string('fonction')->nullable();
-			$table->integer('profession')->nullable();
+			$table->integer('profession_id')->nullable();
 			$table->string('telephone')->nullable();
 			$table->string('mobile')->nullable();
 			$table->string('fax')->nullable();
@@ -30,8 +30,8 @@ class CreateAddressesTable extends Migration {
 			$table->string('complement')->nullable();
 			$table->string('npa')->nullable();
 			$table->string('ville')->nullable();
-			$table->integer('canton')->nullable();
-			$table->integer('pays')->nullable();
+			$table->integer('canton_id')->nullable();
+			$table->integer('pays_id')->nullable();
 			$table->string('type')->default(1);
 			$table->integer('user_id')->nullable();
 			$table->boolean('livraison');

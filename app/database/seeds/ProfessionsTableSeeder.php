@@ -9,22 +9,22 @@ class ProfessionsTableSeeder extends Seeder {
 
 		$professions = array(
 			array( 
-				'titreProfession' => 'Avocat'
+				'titre' => 'Avocat'
 			),
 			array( 
-				'titreProfession' => 'Juriste'
+				'titre' => 'Juriste'
 			),
 			array( 
-				'titreProfession' => 'Greffier'
+				'titre' => 'Greffier'
 			),
 			array( 
-				'titreProfession' => 'Assistant'
+				'titre' => 'Assistant'
 			),
 			array( 
-				'titreProfession' => 'Avocat-stagiaire'
+				'titre' => 'Avocat-stagiaire'
 			),
 			array( 
-				'titreProfession' => 'Chargé d’enseignement'
+				'titre' => 'Chargé d’enseignement'
 			)
 		);
 
