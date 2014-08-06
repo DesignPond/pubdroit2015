@@ -35,7 +35,7 @@ class InscriptionServiceWorker implements InscriptionServiceInterface {
 		
 		// get essentials
 		$essentials   = $this->inscriptionEssentials($inscriptions);		
-		$options      = $this->option->findForUser($user);
+		$options      = $this->option->findAllOptionsForUser($user);
 		
 		$data['inscriptions'] = $inscriptions;
 		$data['options']      = $options;

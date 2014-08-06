@@ -30,9 +30,10 @@ class CalculetteEloquent implements CalculetteInterface {
 		$newloyer   = number_format($new,2,'.',"'");
 		$difference = number_format($newloyer-$loyer,2,'.',"'");
 		
-		setlocale(LC_ALL, 'fr_FR');  
+		setlocale(LC_ALL, 'fr_FR');
+
 		$taux_date = Carbon::createFromTimeStamp($taux_date)->formatLocalized('%B %Y'); 
-		$ipc_date = Carbon::createFromTimeStamp($ipc_date)->formatLocalized('%B %Y'); 
+		$ipc_date  = Carbon::createFromTimeStamp($ipc_date)->formatLocalized('%B %Y');
 		
 		$calcul = array(
 			'taux_depart' => $taux_depart,
@@ -60,8 +61,8 @@ class CalculetteEloquent implements CalculetteInterface {
 		$ipc_actuel = $this->ipc_actuel();
 		
 		// calcul		
-		$taux_variation_ipc = (($ipc_actuel-$ipc_depart)*100)/$ipc_depart;
-		$augmentation_ipc   = $loyer_actuel * ($taux_variation_ipc/100) * 0.4;
+		$taux_variation_ipc = (($ipc_actuel-$ipc_depart) * 100)/$ipc_depart;
+		$augmentation_ipc   = $loyer_actuel * ($taux_variation_ipc / 100) * 0.4;
 		$loyer_augmente_ipc = $loyer_actuel + $augmentation_ipc;
 		
 		$nouveau_loyer = $loyer_augmente_ipc;
@@ -75,36 +76,38 @@ class CalculetteEloquent implements CalculetteInterface {
 		
 		if($tDepart != $tActuel) 
 		{
-			$tMax = max($tDepart,$tActuel)*4;
-			$tMin = min($tDepart,$tActuel)*4;
+			$tMax = max($tDepart,$tActuel) * 4;
+			$tMin = min($tDepart,$tActuel) * 4;
 
-			$tMax1 = $tMax-20;
-			$tMin1 = $tMin-20;
+			$tMax1 = $tMax - 20;
+			$tMin1 = $tMin - 20;
 			$tDif1 = $tMax1-$tMin1;
 			
-			if($tMin1<0 && $tMax1<0) {
+			if($tMin1 < 0 && $tMax1 < 0)
+            {
 				$tFinal30 = $tDif1;
 			} 
 			else 
 			{
-				if($tMin1<0) 
+				if($tMin1 < 0)
 				{
-					$tFinal30 = $tMin1*-1;
+					$tFinal30 = $tMin1 * -1;
 					$tMin1 = 0;
 				}
 				
-				$tMax2 = $tMax1-4;
-				$tMin2 = $tMin1-4;
-				$tDif2 = $tMax2-$tMin2;
+				$tMax2 = $tMax1 - 4;
+				$tMin2 = $tMin1 - 4;
+				$tDif2 = $tMax2 - $tMin2;
 				
-				if($tMin2<0 && $tMax2<0) {
+				if($tMin2 < 0 && $tMax2 < 0)
+                {
 					$tFinal25 = $tDif2;
 				} 
 				else 
 				{
 					if($tMin2<0) 
 					{
-						$tFinal25 = $tMin2*-1;
+						$tFinal25 = $tMin2 * -1;
 						$tFinal20 = $tMax2;
 					} 
 					else 
@@ -114,17 +117,17 @@ class CalculetteEloquent implements CalculetteInterface {
 				}
 			}
 			
-			$tauxFinal = $tFinal20*2+$tFinal25*2.5+$tFinal30*3;
+			$tauxFinal = ($tFinal20 * 2) + ($tFinal25 * 2.5) + ($tFinal30 * 3);
 			
 			$isBaisse = ($tDepart > $tActuel) ? true : false;
 			
 			if($isBaisse) 
 			{
-				$tauxFinal = ($tauxFinal*100)/($tauxFinal+100);
-				$tauxFinal = $tauxFinal*-1;
+				$tauxFinal = ($tauxFinal * 100) / ($tauxFinal + 100);
+				$tauxFinal = $tauxFinal * -1;
 			}
 			
-			$nouveau_loyer += $nouveau_loyer*($tauxFinal/100);
+			$nouveau_loyer += $nouveau_loyer * ($tauxFinal / 100);
 		}
 		
 		return $nouveau_loyer;	

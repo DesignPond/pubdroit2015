@@ -58,7 +58,7 @@
 										<div class="form-group row">
 										 	 <label for="civilite" class="col-sm-3 control-label">Civilite</label>
 										 	 <div class="col-sm-6">	
-												{{ Form::select('civilite', $civilites , $adresse->civilite , array( 'class' => 'form-control required' ) ) }}		
+												{{ Form::select('civilite', $civilites , $adresse->civilite_id , array( 'class' => 'form-control required' ) ) }}
 											 </div>
 											 <div class="col-sm-3"><p class="help-block"></p></div>
 										</div>								 
@@ -98,7 +98,7 @@
 										<div class="form-group row">
 										 	 <label for="profession" class="col-sm-3 control-label">Profession</label>
 										 	 <div class="col-sm-6">
-												{{ Form::select('profession', $professions , $adresse->profession , array( 'class' => 'form-control required' ) ) }}	
+												{{ Form::select('profession', $professions , $adresse->profession_id , array( 'class' => 'form-control required' ) ) }}
 											 </div>
 											 <div class="col-sm-3"><p class="help-block"></p></div>
 										</div>	
@@ -178,7 +178,7 @@
 										<div class="form-group row">
 										 	 <label for="canton" class="col-sm-3 control-label">Canton</label>
 										 	 <div class="col-sm-6">
-												{{ Form::select('canton', $cantons , $adresse->canton , array( 'class' => 'form-control required' ) ) }}
+												{{ Form::select('canton', $cantons , $adresse->canton_id , array( 'class' => 'form-control required' ) ) }}
 											 </div>
 											 <div class="col-sm-3"><p class="help-block"></p></div>
 										</div>	
@@ -186,7 +186,7 @@
 										<div class="form-group row">
 										 	 <label for="pays" class="col-sm-3 control-label">Pays</label>
 										 	 <div class="col-sm-6">
-												{{ Form::select('pays', $pays , $adresse->pays , array( 'class' => 'form-control required' ) ) }}
+												{{ Form::select('pays', $pays , $adresse->pays_id , array( 'class' => 'form-control required' ) ) }}
 											 </div>
 											 <div class="col-sm-3"><p class="help-block">Requis</p></div>
 										</div>																			
@@ -278,7 +278,7 @@
 								 		{ 											 
 									 		echo '<div class="list-group-item">';
 									 			echo Form::open(array('url' => 'admin/adresses/removeSpecialisation'));
-									 			echo $spec->titreSpecialisation;
+									 			echo $spec->titre;
 									 			echo Form::hidden('id', $spec->idspec );
 									 			echo Form::hidden('user_id', $adresse->user_id );
 									 			echo Form::hidden('adresse_id', $adresse->id );
@@ -321,7 +321,7 @@
 								 		{ 											 
 									 		echo '<div class="list-group-item">';
 									 			echo Form::open(array('url' => 'admin/adresses/removeMembre'));
-									 			echo $membre->titreMembre;
+									 			echo $membre->titre;
 									 			echo Form::hidden('id', $membre->idmem );
 									 			echo Form::hidden('user_id', $adresse->user_id );
 									 			echo Form::hidden('adresse_id', $adresse->id );

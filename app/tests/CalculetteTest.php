@@ -31,8 +31,11 @@ class CalculetteTest extends TestCase
                           new \Droit\Calculette\Entities\Calculette_ipc
                       );
 
-        $actual = $calculette->ipc_actuel();
+        $actual = $calculette->calculer('be', '1225494000' , '620');
 
+        echo '<pre>';
+        print_r($actual);
+        echo '</pre>';exit;
         $expect = '159.50';
 
         $this->assertEquals($expect, $actual);
