@@ -36,7 +36,7 @@ class ProfessionEloquent implements ProfessionInterface {
 	public function create(array $data)
 	{
 		$profession = $this->profession->create(array(
-			'titreProfession' => $data['titreProfession']
+			'titre' => $data['titre']
 		));
 		
 		if( ! $profession )
@@ -56,7 +56,7 @@ class ProfessionEloquent implements ProfessionInterface {
 			return false;
 		}
 		
-		$profession->titreProfession  = $data['titreProfession'];
+		$profession->titre  = $data['titre'];
 		
 		$profession->save();	
 		

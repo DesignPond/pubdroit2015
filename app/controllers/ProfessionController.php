@@ -42,7 +42,7 @@ class ProfessionController extends BaseController {
 	public function store()
 	{
         $profession  = $this->profession->create(
-            Input::only('titreProfession')
+            Input::only('titre')
         );
 
         return Redirect::to('admin/pubdroit/profession')->with( array('status' => 'success' , 'message' => 'La profession a été crée' ) );
@@ -82,7 +82,7 @@ class ProfessionController extends BaseController {
 	{
 
         $profession  = $this->profession->update(
-            Input::only('id','titreProfession')
+            Input::only('id','titre')
         );
 
         return Redirect::to('admin/pubdroit/profession')->with( array('status' => 'success' , 'message' => 'La profession a été modifiée' ) );

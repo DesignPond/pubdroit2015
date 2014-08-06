@@ -38,9 +38,9 @@
 							   <div class="panel-body"><!-- start panel content -->
 							
 									<div class="form-group">
-										  <label for="titreProfession" class="col-sm-3 control-label">Titre de la Profession</label>
+										  <label for="titre" class="col-sm-3 control-label">Titre de la Profession</label>
 										  <div class="col-sm-6">
-										  	 {{ Form::text('titreProfession', null , array('class' => 'form-control' )) }}
+										  	 {{ Form::text('titre', null , array('class' => 'form-control' )) }}
 										  </div>
 										  <div class="col-sm-3">Requis</div>
 									</div>
