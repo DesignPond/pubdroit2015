@@ -31,31 +31,29 @@ class AdresseEloquent implements AdresseInterface{
 		return $this->adresse->orderBy('id', 'DESC')->take($nbr)->skip(0)->get();	
 	}
 	
-	public function get_ajax( $sEcho , $iDisplayStart , $iDisplayLength , $sSearch = NULL){
+	public function get_ajax( $sEcho , $iDisplayStart , $iDisplayLength , $sSearch = NULL , $iSortCol_0, $sSortDir_0){
 
-		$iTotal = $this->adresse->where('user_id','=',0)->get()->count();
+		$columns = array( 'prenom', 'nom', 'email' , 'adresse',  'ville');
 
-
-        echo '<pre>';
-        print_r($iTotal);
-        echo '</pre>';exit;
+        $iTotal = $this->adresse->where('user_id','=',0)->get(array('id'))->count();
 		
 		if($sSearch)
 		{
 			$data = $this->adresse->where('user_id','=',0)
-								  ->whereRaw('( prenom LIKE "%'.$sSearch.'%" OR nom LIKE "%'.$sSearch.'%" OR entreprise LIKE "%'.$sSearch.'%" OR adresse LIKE "%'.$sSearch.'%" )')
+								  ->whereRaw('( prenom LIKE "%'.$sSearch.'%" OR nom LIKE "%'.$sSearch.'%" OR email LIKE "%'.$sSearch.'%" OR entreprise LIKE "%'.$sSearch.'%" OR adresse LIKE "%'.$sSearch.'%" )')
+                                  ->orderBy($columns[$iSortCol_0], $sSortDir_0)
 								  ->take($iDisplayLength)
 								  ->skip($iDisplayStart)
 								  ->get();
 								    
 			$iTotalDisplayRecords = $this->adresse->where('user_id','=',0)
-								  ->whereRaw('( prenom LIKE "%'.$sSearch.'%" OR nom LIKE "%'.$sSearch.'%" OR entreprise LIKE "%'.$sSearch.'%" OR adresse LIKE "%'.$sSearch.'%" )')
+								  ->whereRaw('( prenom LIKE "%'.$sSearch.'%" OR nom LIKE "%'.$sSearch.'%" OR email LIKE "%'.$sSearch.'%" OR entreprise LIKE "%'.$sSearch.'%" OR adresse LIKE "%'.$sSearch.'%" )')
 								  ->get()
 								  ->count();	
 		}
 		else
 		{
-			$data = $this->adresse->where('user_id','=',0)->take($iDisplayLength)->skip($iDisplayStart)->get();
+			$data = $this->adresse->where('user_id','=',0)->orderBy($columns[$iSortCol_0], $sSortDir_0)->take($iDisplayLength)->skip($iDisplayStart)->get();
 			
 			$iTotalDisplayRecords = $iTotal;	
 		}
@@ -234,13 +232,13 @@ class AdresseEloquent implements AdresseInterface{
 	public function create(array $data){
 
 		$adresse = $this->adresse->create(array(
-			'civilite'   => $data['civilite'],
+			'civilite_id'=> $data['civilite_id'],
 			'prenom'     => $this->custom->format_name($data['prenom']),
 			'nom'        => $this->custom->format_name($data['nom']),
 			'email'      => $data['email'],
 			'entreprise' => $data['entreprise'],
 			'fonction'   => $data['fonction'],
-			'profession' => $data['profession'],
+			'profession_id' => $data['profession_id'],
 			'telephone'  => $data['telephone'],
 			'mobile'     => $data['mobile'],
 			'fax'        => $data['fax'],
@@ -249,8 +247,8 @@ class AdresseEloquent implements AdresseInterface{
 			'complement' => $data['complement'],
 			'npa'        => $data['npa'],
 			'ville'      => $data['ville'],
-			'canton'     => $data['canton'],
-			'pays'       => $data['pays'],
+			'canton_id'  => $data['canton_id'],
+			'pays_id'    => $data['pays_id'],
 			'type'       => $data['type'],
 			'user_id'    => $data['user_id'],
 			'livraison'  => $data['livraison'],
@@ -277,13 +275,13 @@ class AdresseEloquent implements AdresseInterface{
 		}
 		
 		// Général
-		$adresse->civilite    = $data['civilite'];
+		$adresse->civilite_id = $data['civilite_id'];
 		$adresse->prenom      = $this->custom->format_name($data['prenom']);
 		$adresse->nom         = $this->custom->format_name($data['nom']);
 		$adresse->email       = $data['email'];
 		$adresse->entreprise  = $data['entreprise'];
 		$adresse->fonction    = $data['fonction'];
-		$adresse->profession  = $data['profession'];
+		$adresse->profession_id  = $data['profession_id'];
 		$adresse->telephone   = $data['telephone'];
 		$adresse->mobile      = $data['mobile'];
 		$adresse->fax         = $data['fax'];
@@ -292,8 +290,8 @@ class AdresseEloquent implements AdresseInterface{
 		$adresse->complement  = $data['complement'];
 		$adresse->npa         = $data['npa'];
 		$adresse->ville       = $data['ville'];
-		$adresse->canton      = $data['canton'];
-		$adresse->pays        = $data['pays'];
+		$adresse->canton_id   = $data['canton_id'];
+		$adresse->pays_id     = $data['pays_id'];
 		$adresse->type        = $data['type'];
 		$adresse->user_id     = $data['user_id'];
 		$adresse->updated_at  = date('Y-m-d G:i:s');	

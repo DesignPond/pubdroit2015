@@ -26,23 +26,9 @@
 					<?php } ?>	
 				</div>
 			</div>
-							
-		    @if($errors->has())				
-				<div class="alert alert-dismissable alert-danger">
-				    @foreach($errors->all() as $message)						
-				    {{ $message }}<br/>						
-				    @endforeach
-				</div>						
-			@endif
-			
-			@if(Session::has('status'))
-			<div class="alert alert-dismissable alert-{{  Session::get('status') }}">
-				@if(Session::has('message'))
-					{{  Session::get('message') }}
-				@endif
-				<button class="close" aria-hidden="true" data-dismiss="alert" type="button">×</button>
-			</div>
-			@endif
+
+            <!-- messages and errors -->
+            @include('layouts.partials.message')
 			
 			<div class="row"><!-- row -->
 				<div class="col-md-6"><!-- col -->

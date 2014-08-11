@@ -24,6 +24,6 @@ interface AdresseInterface {
 	public function delete($id);
 	
 	// Ajax call
-	public function get_ajax( $sEcho , $iDisplayStart , $iDisplayLength , $sSearch = NULL );
+	public function get_ajax( $sEcho , $iDisplayStart , $iDisplayLength , $sSearch = NULL , $iSortCol_0, $sSortDir_0);
 
 }

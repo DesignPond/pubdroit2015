@@ -11,29 +11,29 @@ class Adresses extends BaseModel {
 	protected $guarded   = array('id');
 	
     protected static $rules = array(
-        'civilite'   => 'required',
-		'prenom'     => 'required',
-		'nom'        => 'required',
-		'email'      => 'required',
-		'profession' => 'required',
-		'adresse'    => 'required',
-		'npa'        => 'required',
-		'ville'      => 'required',
-		'pays'       => 'required',
-		'type'       => 'required'
+        'civilite_id'   => 'required',
+		'prenom'        => 'required',
+		'nom'           => 'required',
+		'email'         => 'required',
+		'profession_id' => 'required',
+		'adresse'       => 'required',
+		'npa'           => 'required',
+		'ville'         => 'required',
+		'pays_id'       => 'required',
+		'type'          => 'required'
     );
 
     protected static $messages = array(
-        'civilite.required'   => 'Le champ civilité est requis',
-		'prenom.required'     => 'Le champ prénom est requis',
-		'nom.required'        => 'Le champ nom est requis',
-		'email.required'      => 'Le champ email est requis',
-		'profession.required' => 'Le champ profession est requis',
-		'adresse.required'    => 'Le champ adresse est requis',
-		'npa.required'        => 'Le champ npa est requis',
-		'ville.required'      => 'Le champ ville est requis',
-		'pays.required'       => 'Le champ pays est requis',
-		'type.required'       => 'Le champ type d\'adresse est requis'
+        'civilite_id.required'   => 'Le champ civilité est requis',
+		'prenom.required'        => 'Le champ prénom est requis',
+		'nom.required'           => 'Le champ nom est requis',
+		'email.required'         => 'Le champ email est requis',
+		'profession_id.required' => 'Le champ profession est requis',
+		'adresse.required'       => 'Le champ adresse est requis',
+		'npa.required'           => 'Le champ npa est requis',
+		'ville.required'         => 'Le champ ville est requis',
+		'pays_id.required'       => 'Le champ pays est requis',
+		'type.required'          => 'Le champ type d\'adresse est requis'
     );
 	
 	/**

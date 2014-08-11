@@ -17,6 +17,13 @@
  */
 Route::get('/', function()
 {
+    $adre = new \Droit\User\Repo\AdresseEloquent(new \Droit\User\Entities\Adresses);
+    $ajax = $adre->get_ajax( 1 , 0 , 10 , null );
+
+    echo '<pre>';
+    print_r($ajax);
+    echo '</pre>';
+
 	return View::make('hello');
 });
 

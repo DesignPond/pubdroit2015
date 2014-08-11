@@ -52,14 +52,17 @@ class UserInfoEloquent implements UserInfoInterface{
 	 * Ajax call for datatable
 	 *
 	*/
-	public function get_ajax( $columns , $sEcho , $iDisplayStart , $iDisplayLength , $sSearch = NULL ){
-		
-		$iTotal   = $this->user->get()->count();
+	public function get_ajax( $columns , $sEcho , $iDisplayStart , $iDisplayLength , $sSearch = NULL, $iSortCol_0, $sSortDir_0 ){
+
+        $columns = array( 'prenom', 'nom', 'email' , 'adresse',  'ville');
+
+		$iTotal   = $this->user->get(array('id'))->count();
 		
 		if($sSearch)
 		{
 			$data = $this->user->with( array('adresses') )
 							   ->whereRaw('( prenom LIKE "%'.$sSearch.'%" OR nom LIKE "%'.$sSearch.'%" )')
+                               ->orderBy($columns[$iSortCol_0], $sSortDir_0)
 							   ->take($iDisplayLength)
 							   ->skip($iDisplayStart)
 							   ->get();
@@ -68,7 +71,7 @@ class UserInfoEloquent implements UserInfoInterface{
 		}
 		else
 		{
-			$data = $this->user->with( array('adresses') )->take($iDisplayLength)->skip($iDisplayStart)->get();
+			$data = $this->user->with( array('adresses') )->orderBy($columns[$iSortCol_0], $sSortDir_0)->take($iDisplayLength)->skip($iDisplayStart)->get();
 			
 			$iTotalDisplayRecords = $iTotal;	
 		}

@@ -2176,11 +2176,11 @@ input[type="button"].btn-block {
   z-index: 1001;
   display: none;
   float: left;
-  min-width: 160px;
+  min-width: 170px;
   padding: 5px 0;
   margin: 2px 0 0;
   list-style: none;
-  font-size: 14px;
+  font-size: 13px;
   background-color: rgba(255, 255, 255, 0.98);
   border: 1px solid #cccccc;
   border: 1px solid #d2d3d6;

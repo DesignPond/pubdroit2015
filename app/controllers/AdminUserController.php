@@ -44,8 +44,10 @@ class AdminUserController extends BaseController {
         $sEcho          = Input::get('sEcho');      
         $iDisplayStart  = Input::get('iDisplayStart');
         $iDisplayLength = Input::get('iDisplayLength');
+        $iSortCol_0     = Input::get('iSortCol_0');
+        $sSortDir_0     = Input::get('sSortDir_0');
         
-        return $this->user->get_ajax( $columns , $sEcho , $iDisplayStart , $iDisplayLength , $sSearch );
+        return $this->user->get_ajax( $columns , $sEcho , $iDisplayStart , $iDisplayLength , $sSearch , $iSortCol_0, $sSortDir_0);
         
 	}
 	

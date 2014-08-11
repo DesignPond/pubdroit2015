@@ -33,7 +33,7 @@
 									<th>Prénom</th>
 									<th>Nom</th>
 									<th>Email</th>
-									<th>Adresses</th>
+									<th>Adresse</th>
 									<th>Ville</th>	
 									<th>Options</th>									
 								</thead>

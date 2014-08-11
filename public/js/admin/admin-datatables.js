@@ -50,6 +50,7 @@ $(document).ready(
         "sProcessing":"Recherche...",
         "bProcessing": true,
         "bServerSide": true,
+        'aoColumnDefs': [{'bSortable': false, 'aTargets': [4] },{'bSortable': false, 'aTargets': [5] }],
         "iDisplayLength": "10",
         "sAjaxSource": base_url + "admin/getAllUser",
         "oLanguage": {
@@ -75,6 +76,7 @@ $(document).ready(
         "bProcessing": true,
         "bStateSave": true,
         "bServerSide": true,
+        'aoColumnDefs': [{'bSortable': false, 'aTargets': [5] }],
         "iDisplayLength": "10",
         "sAjaxSource": base_url + "admin/getAllAdresse",
         "oLanguage": {

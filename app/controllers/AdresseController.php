@@ -65,8 +65,10 @@ class AdresseController extends BaseController {
         $sEcho          = Input::get('sEcho');      
         $iDisplayStart  = Input::get('iDisplayStart');
         $iDisplayLength = Input::get('iDisplayLength');
-        
-        return $this->adresse->get_ajax( $sEcho , $iDisplayStart , $iDisplayLength , $sSearch );
+        $iSortCol_0     = Input::get('iSortCol_0');
+        $sSortDir_0     = Input::get('sSortDir_0');
+
+        return $this->adresse->get_ajax( $sEcho , $iDisplayStart , $iDisplayLength , $sSearch, $iSortCol_0, $sSortDir_0 );
         
 	}
 	
