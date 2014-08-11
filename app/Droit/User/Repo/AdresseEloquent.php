@@ -32,9 +32,13 @@ class AdresseEloquent implements AdresseInterface{
 	}
 	
 	public function get_ajax( $sEcho , $iDisplayStart , $iDisplayLength , $sSearch = NULL){
-			
-		
+
 		$iTotal = $this->adresse->where('user_id','=',0)->get()->count();
+
+
+        echo '<pre>';
+        print_r($iTotal);
+        echo '</pre>';exit;
 		
 		if($sSearch)
 		{
@@ -76,7 +80,7 @@ class AdresseEloquent implements AdresseInterface{
 			$row['ville']   = $this->custom->format_name($adresse['ville']);
 			
 			$row['options'] = '<a class="btn btn-info edit_btn" type="button" href="'.url('admin/adresses/'.$adresse['id']).'">&Eacute;diter</a> ';
-			// Reste keys
+			// Reset keys
 			$row = array_values($row);
 
 			$output['aaData'][] = $row;

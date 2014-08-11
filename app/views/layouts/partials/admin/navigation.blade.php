@@ -38,15 +38,18 @@
             <li><a class="" href="#"><span>Ventes</span></a></li>
         </ul>
     </li>
+
+    <!-- Colloques -->
+    <li><a href="javascript:;" class="{{ Request::is( 'admin/colloque') ? 'active' : '' }}"><i class="fa fa-exclamation"></i> <span>Colloques</span></a>
+        <ul class="acc-menu">
+            <li><a class="{{ Request::is( 'admin/colloque') ? 'active' : '' }}" href="{{ url('admin/colloque') }}"><span>Colloques</span></a></li>
+            <li><a class="{{ Request::is( 'admin/colloque/archives') ? 'active' : '' }}" href="{{ url('admin/colloque/archives') }}"><span>Colloques archivés</span></a></li>
+        </ul>
+    </li>
     <!-- Site: publications-droit.ch -->
     <li><a href="javascript:;" class="{{ Request::is( 'admin/pubdroit') ? 'active' : '' }}"><i class="fa fa-book"></i> <span>Publications-droit</span></a>
         <ul class="acc-menu">
-            <li><a class="{{ Request::is( 'admin/pubdroit/lists') ? 'active' : '' }}" href="{{ url('admin/pubdroit/lists') }}">
-                    <span>Colloques</span></a>
-            </li>
-            <li><a class="{{ Request::is( 'admin/pubdroit/archives') ? 'active' : '' }}" href="{{ url('admin/pubdroit/archives') }}">
-                    <span>Colloques archivés</span></a>
-            </li>
+            <li><a class="" href="#"><span>Liens</span></a></li>
         </ul>
     </li>
 

@@ -13,7 +13,7 @@
             <h1>Spécialisation</h1>
 			<div class="options">
 	            <div class="btn-toolbar">
-	                <a href="{{ url('admin/pubdroit/specialisation/create') }}" class="btn btn-default"><i class="fa fa-plus"></i> &nbsp;Créer</a>
+	                <a href="{{ url('admin/specialisation/create') }}" class="btn btn-default"><i class="fa fa-plus"></i> &nbsp;Créer</a>
 	            </div>
 			</div>
 		</div>
@@ -45,8 +45,8 @@
 					<div class="specialisation">
 						<h3><strong>{{ $specialisation->titre }}</strong></h3>
 						<div class="btn-group-vertical specialisation-btn">
-							<a class="btn btn-xs btn-orange" href="{{ url('admin/pubdroit/specialisation/'.$specialisation->id.'/edit') }}">&eacute;diter</a>
-							<a class="btn btn-xs btn-danger deleteAction" data-action="<?php echo $specialisation->titre; ?>" href="{{ url('admin/pubdroit/specialisation/'.$specialisation->id.'/delete') }}">X</a>
+							<a class="btn btn-xs btn-orange" href="{{ url('admin/specialisation/'.$specialisation->id.'/edit') }}">&eacute;diter</a>
+							<a class="btn btn-xs btn-danger deleteAction" data-action="<?php echo $specialisation->titre; ?>" href="{{ url('admin/specialisation/'.$specialisation->id.'/delete') }}">X</a>
 						</div>
 					</div>
 					

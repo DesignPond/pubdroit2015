@@ -28,7 +28,7 @@
                             'id' => 'validate-form',
                             'data-validate' => 'parsley',
                             'class' => 'form-horizontal',
-                            'url' => 'admin/pubdroit/specialisation/linkColloque'))
+                            'url' => 'admin/specialisation/linkColloque'))
                             }}
 
                             <!-- panel start -->

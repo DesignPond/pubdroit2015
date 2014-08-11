@@ -35,25 +35,15 @@ class ColloqueController extends BaseController {
 	}
 
 	/**
-	 * Display a listing of the resource.
+	 * Display a listing of the colloques actifs
 	 *
 	 * @return Response
 	 */
 	public function index()
 	{
-        return View::make('admin.index');
-	}
-	
-	/**
-	 * Display a listing of the colloques actifs
-	 *
-	 * @return Response
-	 */
-	public function lists()
-	{
 		$colloques = $this->colloque->getActifs();
 
-        return View::make('admin.colloques.colloque')->with( array('colloques' => $colloques , 'title' => 'En cours'));
+        return View::make('admin.colloques.colloque')->with( array('colloques' => $colloques , 'title' => 'En cours','archive' => false));
 	}
 	
 	
@@ -66,7 +56,7 @@ class ColloqueController extends BaseController {
 	{
 		$colloques = $this->colloque->getArchives();
 
-        return View::make('admin.colloques.colloque')->with( array('colloques' => $colloques , 'title' => 'Archives'));
+        return View::make('admin.colloques.colloque')->with( array('colloques' => $colloques , 'title' => 'Archivés','archive' => true ));
 	}
 
 	/**

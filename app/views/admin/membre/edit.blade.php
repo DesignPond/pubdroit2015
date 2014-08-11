@@ -28,7 +28,7 @@
 								'id' => 'validate-form',
 								'data-validate' => 'parsley',
 								'class' => 'form-horizontal',
-								'route' => array('admin.pubdroit.membre.update',$membre->id))) 
+								'route' => array('admin.membre.update',$membre->id)))
 							}} 
 
 							<!-- panel start -->

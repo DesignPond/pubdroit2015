@@ -22,7 +22,7 @@
 					<!-- panel start -->
 					<div class="panel panel-primary">
 					  <!-- form start --> 
-					  {{ Form::open(array( 'url' => 'admin/pubdroit/colloque', 'class' => 'form-horizontal')) }}
+					  {{ Form::open(array( 'url' => 'admin/colloque', 'class' => 'form-horizontal')) }}
 				       <div class="panel-heading"><h4><i class="fa fa-calendar-o"></i> &nbsp;Général</h4></div>
 					    <div class="panel-body"><!-- start panel content -->
 							

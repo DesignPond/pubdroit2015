@@ -28,7 +28,7 @@
 								'id' => 'validate-form',
 								'data-validate' => 'parsley',
 								'class' => 'form-horizontal',
-								'route' => array('admin.pubdroit.specialisation.update',$specialisation->id))) 
+								'route' => array('admin.specialisation.update',$specialisation->id)))
 							}} 
 
 							<!-- panel start -->

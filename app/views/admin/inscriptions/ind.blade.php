@@ -15,7 +15,7 @@
             <h1>Inscription</h1>
 			<div class="options">
 	            <div class="btn-toolbar">
-	                <a href="{{ url('admin/pubdroit/inscription/create') }}" class="btn btn-default"><i class="fa fa-plus"></i> &nbsp;Créer</a>
+	                <a href="{{ url('admin/inscription/create') }}" class="btn btn-default"><i class="fa fa-plus"></i> &nbsp;Créer</a>
 	            </div>
 			</div>
 		</div>
@@ -25,11 +25,7 @@
 				<div class="col-sm-12">	
 
                     <?php
-                    echo $file;
 
-                    if( File::exists('/Applications/MAMP/htdocs/pubdroit2015/public/test/users/1/pdfbon_4-1.pdf') ){
-                        //echo 'exist';
-                    }
 
                     ?>
 				

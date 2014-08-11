@@ -13,7 +13,7 @@
             <h1>Profession</h1>
 			<div class="options">
 	            <div class="btn-toolbar">
-	                <a href="{{ url('admin/pubdroit/profession/create') }}" class="btn btn-default"><i class="fa fa-plus"></i> &nbsp;Créer</a>
+	                <a href="{{ url('admin/profession/create') }}" class="btn btn-default"><i class="fa fa-plus"></i> &nbsp;Créer</a>
 	            </div>
 			</div>
 		</div>
@@ -45,8 +45,8 @@
 					<div class="profession">
 						<h3><strong>{{ $profession->titre }}</strong></h3>
 						<div class="btn-group-vertical profession-btn">
-							<a class="btn btn-xs btn-orange" href="{{ url('admin/pubdroit/profession/'.$profession->id.'/edit') }}">&eacute;diter</a>
-							<a class="btn btn-xs btn-danger deleteAction" data-action="<?php echo $profession->titre; ?>" href="{{ url('admin/pubdroit/profession/'.$profession->id.'/delete') }}">X</a>
+							<a class="btn btn-xs btn-orange" href="{{ url('admin/profession/'.$profession->id.'/edit') }}">&eacute;diter</a>
+							<a class="btn btn-xs btn-danger deleteAction" data-action="<?php echo $profession->titre; ?>" href="{{ url('admin/profession/'.$profession->id.'/delete') }}">X</a>
 						</div>
 					</div>
 					

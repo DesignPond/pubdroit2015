@@ -29,7 +29,7 @@
 								'id' => 'validate-form',
 								'data-validate' => 'parsley',
 								'class' => 'form-horizontal',
-								'route' => 'admin.pubdroit.profession.store')) 
+								'route' => 'admin.profession.store'))
 							}} 
 
 							<!-- panel start -->

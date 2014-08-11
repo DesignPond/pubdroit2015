@@ -29,7 +29,7 @@
 								'id' => 'validate-form',
 								'data-validate' => 'parsley',
 								'class' => 'form-horizontal',
-								'route' => array('admin.pubdroit.inscription.update',$inscription->id)))
+								'route' => array('admin.inscription.update',$inscription->id)))
 							}} 
 
 							<!-- panel start -->

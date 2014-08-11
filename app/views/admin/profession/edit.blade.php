@@ -28,7 +28,7 @@
 								'id' => 'validate-form',
 								'data-validate' => 'parsley',
 								'class' => 'form-horizontal',
-								'route' => array('admin.pubdroit.profession.update',$profession->id))) 
+								'route' => array('admin.profession.update',$profession->id)))
 							}} 
 
 							<!-- panel start -->

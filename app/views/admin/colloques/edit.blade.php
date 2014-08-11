@@ -16,12 +16,6 @@
 		<div class="container">
 		    <div class="row">
 				<div class="col-sm-12">
-                <?php
-                    echo '<pre>';
-                    print_r($colloque);
-                    echo '</pre>';
-                ?>
-
                     <!-- messages and errors -->
                     @include('layouts.partials.message')
 
@@ -42,7 +36,7 @@
 								'id'            => 'colloque_email',
 								'data-validate' => 'parsley',
 								'class'         => 'validate-form-email form-horizontal',
-								'url'           => array('admin/pubdroit/colloque/email'))) 
+								'url'           => array('admin/colloque/email')))
 							}}				
 							  
 							<div class="form-group">
@@ -98,7 +92,7 @@
 								'id'            => 'colloque_attestation',
 								'data-validate' => 'parsley',
 								'class'         => 'validate-form-attestation form-horizontal',
-								'url'           => 'admin/pubdroit/colloque/attestation' ))
+								'url'           => 'admin/colloque/attestation' ))
 							}}
 							
 							<div class="form-group">
@@ -198,7 +192,7 @@
 						'id'            => 'colloque_info',
 						'data-validate' => '',
 						'class'         => 'form-horizontal',
-						'route'         => array('admin.pubdroit.colloque.update',$colloque->id))) 
+						'route'         => array('admin.colloque.update',$colloque->id)))
 					}} 
 
 					<!-- panel start -->
@@ -315,7 +309,7 @@
 					   <div id="infos_option" class="panel-body"><!-- start panel content -->
 					   					     
 							  <h3>Prix</h3>
-							  <p><a href="{{ url('admin/pubdroit/price/create/'.$colloque->id) }}" class="btn btn-sm btn-primary">Ajouter</a></p>
+							  <p><a href="{{ url('admin/price/create/'.$colloque->id) }}" class="btn btn-sm btn-primary">Ajouter</a></p>
 							  
 							  <div class="row">
 							  	  <div class="col-sm-6 col-md-offset-3">
@@ -338,8 +332,8 @@
 														  			{{ $price->remarque }}
 														  		</div>
 													  			<div class="col-sm-2 btn-group btn-group-pivot">
-														  			<a class="btn btn-xs btn-orange" href="{{ route('admin.pubdroit.price.edit',  $price->id ) }}">éditer</a>		
-														  			<a class="btn btn-xs btn-danger deleteAction" data-action="<?php echo $price->remarque; ?>" href="{{ url('admin/pubdroit/price/'.$price->id.'/delete') }}">X</a>
+														  			<a class="btn btn-xs btn-orange" href="{{ route('admin.price.edit',  $price->id ) }}">éditer</a>
+														  			<a class="btn btn-xs btn-danger deleteAction" data-action="<?php echo $price->remarque; ?>" href="{{ url('admin/price/'.$price->id.'/delete') }}">X</a>
 																</div>
 															</div>
 											  			</li>
@@ -365,8 +359,8 @@
 														  			{{ $price->remarque }}
 														  		</div>
 													  			<div class="col-sm-2 btn-group btn-group-pivot">
-														  			<a class="btn btn-xs btn-orange" href="{{ route('admin.pubdroit.price.edit',  $price->id ) }}">éditer</a>		
-														  			<a class="btn btn-xs btn-danger deleteAction" data-action="<?php echo $price->remarque; ?>" href="{{ url('admin/pubdroit/price/'.$price->id.'/delete') }}">X</a>
+														  			<a class="btn btn-xs btn-orange" href="{{ route('admin.price.edit',  $price->id ) }}">éditer</a>
+														  			<a class="btn btn-xs btn-danger deleteAction" data-action="<?php echo $price->remarque; ?>" href="{{ url('admin/price/'.$price->id.'/delete') }}">X</a>
 																</div>
 															</div>
 											  			</li>
@@ -382,7 +376,7 @@
 							  </div>
 
 							  <h3><a name="option">Options</a></h3>
-							  <p><a href="{{ url('admin/pubdroit/option/create/'.$colloque->id) }}" class="btn btn-sm btn-primary">Ajouter</a></p>
+							  <p><a href="{{ url('admin/option/create/'.$colloque->id) }}" class="btn btn-sm btn-primary">Ajouter</a></p>
 
 							  <div class="row">
 					  	 		 <div class="col-sm-6 col-md-offset-3">
@@ -403,8 +397,8 @@
 											  			<?php echo $option->titre; ?>
 											  		</div>
 										  			<div class="col-sm-2 btn-group btn-group-pivot">
-										  				<a class="btn btn-xs btn-orange" href="{{ route('admin.pubdroit.option.edit',  $option->id ) }}">éditer</a>						
-														<a class="btn btn-xs btn-danger deleteAction" data-action="<?php echo $option->titre; ?>" href="{{ url('admin/pubdroit/option/'.$option->id.'/delete') }}">X</a>
+										  				<a class="btn btn-xs btn-orange" href="{{ route('admin.option.edit',  $option->id ) }}">éditer</a>
+														<a class="btn btn-xs btn-danger deleteAction" data-action="<?php echo $option->titre; ?>" href="{{ url('admin/option/'.$option->id.'/delete') }}">X</a>
 													</div>
 												</div>
 									  		</li>
@@ -415,7 +409,7 @@
 							  </div>						  		
 							  									  
 							  <h3>Spécialisations</h3>
-							  <p><a href="{{ url('admin/pubdroit/specialisation/addToColloque/'.$colloque->id) }}" class="btn btn-sm btn-primary">Ajouter</a></p>
+							  <p><a href="{{ url('admin/specialisation/addToColloque/'.$colloque->id) }}" class="btn btn-sm btn-primary">Ajouter</a></p>
 
 						  	  <div class="row">
 					  	  		 <div class="col-sm-6 col-md-offset-3">
@@ -429,7 +423,7 @@
 												  			<?php echo $specialisation->titreSpecialisation; ?>
 												  		</div>
 											  			<div class="col-sm-2 btn-group btn-group-pivot">
-												  			<a class="btn btn-xs btn-danger deleteAction" data-action="<?php echo $specialisation->titreSpecialisation; ?>" href="{{ url('admin/pubdroit/specialisation/'.$specialisation->pivot->id.'/unlinkColloque') }}">X</a>	
+												  			<a class="btn btn-xs btn-danger deleteAction" data-action="<?php echo $specialisation->titreSpecialisation; ?>" href="{{ url('admin/specialisation/'.$specialisation->pivot->id.'/unlinkColloque') }}">X</a>	
 														</div>
 													</div>
 										  		</li>
