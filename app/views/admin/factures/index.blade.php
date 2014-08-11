@@ -8,11 +8,11 @@
 	<div id="wrap">
 			
 		<div id="page-heading">
-			<ol class="breadcrumb">
-				<li><a href="{{ url('admin') }}">Dashboard</a></li>
-				<li class="active">Factures</li>
-			</ol>
-			<h1>Factures</h1>
+
+            <!-- Breadcrumbs  -->
+            @include('layouts.partials.admin.breadcrumb')
+
+            <h1>Factures</h1>
 			<div class="options">
 				<div class="btn-toolbar">
                      <a href="{{ url('admin/pubdroit/inscription/colloque/'.$colloque->id) }}" class="btn btn-sky"><i class="fa fa-file-text-o"></i> &nbsp;Inscriptions</a>

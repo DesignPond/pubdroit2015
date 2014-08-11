@@ -55,6 +55,8 @@ $(document).ready(
         "oLanguage": {
             "sLengthMenu": "_MENU_ resultat par page",
             "sInfo"    : "Total de _TOTAL_ utilisateurs, affichés _START_ à _END_",
+            "sInfoEmpty": 'Aucune entrée',
+            "sEmptyTable": "Aucune correspondance n'a été trouvé",
             "sSearch"  : "",
             "oPaginate": {
 		        "sNext"     : "Suivant",
@@ -78,6 +80,8 @@ $(document).ready(
         "oLanguage": {
             "sLengthMenu": "_MENU_ resultat par page",
             "sInfo"    : "Total de _TOTAL_ adresses, affichés _START_ à _END_",
+            "sInfoEmpty": 'Aucune entrée',
+            "sEmptyTable": "Aucune correspondance n'a été trouvé",
             "sSearch"  : "",
             "oPaginate": {
 		        "sNext"     : "Suivant",
@@ -97,6 +101,8 @@ $(document).ready(
         "oLanguage": {
             "sLengthMenu": "_MENU_ resultat par page",
             "sInfo"    : "Total de _TOTAL_ resultats, affichés _START_ à _END_",
+            "sInfoEmpty": 'Aucune entrée',
+            "sEmptyTable": "Aucune correspondance n'a été trouvé",
             "sSearch"  : "",
             "oPaginate": {
 		        "sNext"     : "Suivant",

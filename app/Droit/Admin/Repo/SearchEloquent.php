@@ -351,13 +351,14 @@ class SearchEloquent implements SearchInterface {
 
             // Query construction
             $fields = array(
-                $join.'.id' ,$join.'.user_id',$join.'.deleted',$join.'.civilite',$join.'.nom',$join.'.prenom',
-                $join.'.profession',$join.'.entreprise',$join.'.telephone',$join.'.adresse', $join.'.npa',$join.'.ville',
-                $join.'.pays',$join.'.canton',$join.'.email', $from.'.nom as user_nom',
+                $join.'.id' ,$join.'.user_id',$join.'.deleted',$join.'.civilite_id',$join.'.nom',$join.'.prenom',
+                $join.'.profession_id',$join.'.entreprise',$join.'.telephone',$join.'.adresse', $join.'.npa',$join.'.ville',
+                $join.'.pays_id',$join.'.canton_id',$join.'.email', $from.'.nom as user_nom',
                 $from.'.prenom as user_prenom', $from.'.email as user_email', $from.'.activated as activated', $from.'.id as uid'
             );
 
-            $sql  = ' '.$from.'.name LIKE "%'.$terms.'%" ';
+            $sql  = ' '.$from.'.prenom LIKE "%'.$terms.'%" ';
+            $sql .= ' OR '.$from.'.nom LIKE "%'.$terms.'%" ';
             $sql .= ' OR '.$from.'.email LIKE "%'.$terms.'%" ';
 
             $users = \DB::table($from)->whereRaw($sql)
@@ -393,12 +394,13 @@ class SearchEloquent implements SearchInterface {
 
             // Query construction
             $fields = array(
-                $from.'.id' ,$from.'.user_id',$from.'.deleted',$from.'.civilite',$from.'.nom',$from.'.prenom',
-                $from.'.profession',$from.'.entreprise',$from.'.telephone',$from.'.adresse', $from.'.npa',$from.'.ville',
-                $from.'.pays',$from.'.canton',$from.'.email', $from.'.nom as user_nom'
+                $from.'.id' ,$from.'.user_id',$from.'.deleted',$from.'.civilite_id',$from.'.nom',$from.'.prenom',
+                $from.'.profession_id',$from.'.entreprise',$from.'.telephone',$from.'.adresse', $from.'.npa',$from.'.ville',
+                $from.'.pays_id',$from.'.canton_id',$from.'.email', $from.'.nom as user_nom'
             );
 
-            $sql  = ' '.$from.'.name LIKE "%'.$terms.'%" ';
+            $sql  = ' '.$from.'.nom LIKE "%'.$terms.'%" ';
+            $sql .= ' OR '.$from.'.prenom LIKE "%'.$terms.'%" ';
             $sql .= ' OR '.$from.'.email LIKE "%'.$terms.'%" ';
             $sql .= ' OR '.$from.'.entreprise LIKE "%'.$terms.'%" ';
 

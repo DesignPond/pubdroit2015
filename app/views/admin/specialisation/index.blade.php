@@ -6,11 +6,11 @@
 	<div id="wrap">
 			
 		<div id="page-heading">
-			<ol class="breadcrumb">
-				<li><a href="index.htm">Dashboard</a></li>
-				<li class="active">Spécialisation</li>
-			</ol>
-			<h1>Spécialisation</h1>
+
+            <!-- Breadcrumbs  -->
+            @include('layouts.partials.admin.breadcrumb')
+
+            <h1>Spécialisation</h1>
 			<div class="options">
 	            <div class="btn-toolbar">
 	                <a href="{{ url('admin/pubdroit/specialisation/create') }}" class="btn btn-default"><i class="fa fa-plus"></i> &nbsp;Créer</a>

@@ -6,12 +6,11 @@
 	<div id="wrap">
 			
 		<div id="page-heading">
-			<ol class="breadcrumb">
-				<li><a href="index.htm">Dashboard</a></li>
-				<li>Profession</li>
-				<li class="active">Créer</li>
-			</ol>
-			<h1>Profession</h1>
+
+            <!-- Breadcrumbs  -->
+            @include('layouts.partials.admin.breadcrumb')
+
+            <h1>Factures</h1>
 		</div>
 		
 		<div class="container">

@@ -8,9 +8,10 @@
 	<div id="wrap">
 	
 		<div id="page-heading">
-			<ol class="breadcrumb">
-				<li class="active"><a href="{{ url('admin') }}">Dashboard</a></li>
-			</ol>
+
+            <!-- Breadcrumbs  -->
+            @include('layouts.partials.admin.breadcrumb')
+
 			<h1>Analyses</h1>
 			<div class="options">
 	            <div class="btn-toolbar">

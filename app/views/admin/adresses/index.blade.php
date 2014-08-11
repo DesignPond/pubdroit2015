@@ -6,10 +6,11 @@
 	<div id="wrap">
 	
 		<div id="page-heading">
-			<ol class="breadcrumb">
-				<li class="active"><a href="{{ url('admin') }}">Dashboard</a></li>
-			</ol>
-			<h1>Adresses</h1>
+
+            <!-- Breadcrumbs  -->
+            @include('layouts.partials.admin.breadcrumb')
+
+            <h1>Adresses</h1>
 			<div class="options">
 	            <div class="btn-toolbar">
 	                <a href="{{ url('admin/adresses/create') }}" class="btn btn-default"><i class="fa fa-plus"></i> &nbsp;Ajouter une adresse</a>

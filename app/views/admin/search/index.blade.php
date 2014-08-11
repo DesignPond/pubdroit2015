@@ -5,10 +5,11 @@
 	<div id="page-content">
 		<div id="wrap">
 			<div id="page-heading">
-				<ol class="breadcrumb">
-					<li class="active"><a href="{{ url('admin') }}">Dashboard</a></li>
-				</ol>
-				<h1>Recherche</h1>
+
+                <!-- Breadcrumbs  -->
+                @include('layouts.partials.admin.breadcrumb')
+
+                <h1>Recherche</h1>
 			</div>
 			<div class="container">
 			

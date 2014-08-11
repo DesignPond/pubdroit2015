@@ -6,11 +6,11 @@
 		<div id="wrap">
 		
 			<div id="page-heading">
-				<ol class="breadcrumb">
-					<li><a href="index.htm">Dashboard</a></li>
-					<li class="active"><a href="index.htm">Arrêts</a></li>
-				</ol>
-				<h1>Arret 
+
+                <!-- Breadcrumbs  -->
+                @include('layouts.partials.admin.breadcrumb')
+
+                <h1>Arret
 					@if ( !empty($arret) )	
 						{{ $arret->reference }}
 					@endif 
