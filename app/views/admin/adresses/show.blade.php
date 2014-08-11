@@ -115,7 +115,7 @@
 									 		echo '<div class="list-group-item">';
 									 			echo Form::open(array('url' => 'admin/adresses/removeSpecialisation'));
 									 			echo $spec->titre;
-									 			echo Form::hidden('id', $spec->idspec );
+									 			echo Form::hidden('specialisation_id', $spec->specialisation_id );
 									 			echo Form::hidden('user_id', $adresse->user_id );
 									 			echo Form::hidden('adresse_id', $adresse->id );
 									 			echo '<button type="submit" class="btn btn-xs btn-danger">X</button>';
@@ -158,7 +158,7 @@
 									 		echo '<div class="list-group-item">';
 									 			echo Form::open(array('url' => 'admin/adresses/removeMembre'));
 									 			echo $membre->titre;
-									 			echo Form::hidden('id', $membre->idmem );
+									 			echo Form::hidden('id', $membre->membre_id );
 									 			echo Form::hidden('user_id', $adresse->user_id );
 									 			echo Form::hidden('adresse_id', $adresse->id );
 									 			echo '<button type="submit" class="btn btn-xs btn-danger">X</button>';

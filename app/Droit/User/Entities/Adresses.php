@@ -46,12 +46,12 @@ class Adresses extends BaseModel {
 		
 	public function membres(){
     	
-    	return $this->belongsToMany('Droit\User\Entities\Membres', 'user_membres', 'membre_id', 'adresse_id')->withPivot('id');
+    	return $this->belongsToMany('Droit\User\Entities\Membres', 'user_membres', 'adresse_id','membre_id')->withPivot('id');
  	}
  	
 	public function specialisations(){
 
-    	return $this->belongsToMany('Droit\User\Entities\Specialisations', 'user_specialisations', 'specialisation_id', 'adresse_id')->withPivot('id');
+    	return $this->belongsToMany('Droit\User\Entities\Specialisations', 'user_specialisations','adresse_id', 'specialisation_id')->withPivot('id');
  	}
  	
 	public function user()

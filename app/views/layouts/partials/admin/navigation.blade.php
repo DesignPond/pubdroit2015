@@ -11,13 +11,13 @@
     <!-- Outils: membres, specialisations, professions -->
     <li><a href="javascript:;"><i class="fa fa-cogs"></i> <span>Outils</span></a>
         <ul class="acc-menu">
-            <li><a class="{{ Request::is( 'admin/pubdroit/specialisation') ? 'active' : '' }}" href="{{ url('admin/pubdroit/specialisation') }}">
+            <li><a class="{{ Request::is( 'admin/specialisation') ? 'active' : '' }}" href="{{ url('admin/specialisation') }}">
                     <span>Spécialisations</span></a>
             </li>
-            <li><a class="{{ Request::is( 'admin/pubdroit/membre') ? 'active' : '' }}" href="{{ url('admin/pubdroit/membre') }}">
+            <li><a class="{{ Request::is( 'admin/membre') ? 'active' : '' }}" href="{{ url('admin/membre') }}">
                     <span>Membres</span></a>
             </li>
-            <li><a class="{{ Request::is( 'admin/pubdroit/profession') ? 'active' : '' }}" href="{{ url('admin/pubdroit/profession') }}">
+            <li><a class="{{ Request::is( 'admin/profession') ? 'active' : '' }}" href="{{ url('admin/profession') }}">
                     <span>Profession</span></a>
             </li>
         </ul>
@@ -32,7 +32,7 @@
     </li>
 
     <!-- Shop -->
-    <li><a href="javascript:;" class="{{ Request::is( 'admin/pubdroit') ? 'active' : '' }}"><i class="fa fa-shopping-cart"></i> <span>Shop</span></a>
+    <li><a href="javascript:;" class="{{ Request::is( 'admin/shop') ? 'active' : '' }}"><i class="fa fa-shopping-cart"></i> <span>Shop</span></a>
         <ul class="acc-menu">
             <li><a class="" href="#"><span>Produits</span></a></li>
             <li><a class="" href="#"><span>Ventes</span></a></li>

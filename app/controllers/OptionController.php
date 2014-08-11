@@ -47,7 +47,7 @@ class OptionController extends BaseController {
             Input::all()
         );
 
-        return Redirect::to('admin/pubdroit/colloque/'.$colloque_id.'/edit')->with( array('status' => 'success' , 'message' => 'L\'option a été crée' ) );
+        return Redirect::to('admin/colloque/'.$colloque_id.'/edit')->with( array('status' => 'success' , 'message' => 'L\'option a été crée' ) );
 
 	}
 
@@ -79,7 +79,7 @@ class OptionController extends BaseController {
             Input::all()
         );
 
-        return Redirect::to('admin/pubdroit/colloque/'.$colloque_id.'/edit')->with( array('status' => 'success' , 'message' => 'L\'option a été mise à jour') );
+        return Redirect::to('admin/colloque/'.$colloque_id.'/edit')->with( array('status' => 'success' , 'message' => 'L\'option a été mise à jour') );
 
 	}
 

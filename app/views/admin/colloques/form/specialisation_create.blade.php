@@ -30,7 +30,7 @@
 								'id'     => 'validate-form',
 								'data-validate' => 'parsley',
 								'class' => 'form-horizontal',
-								'url' => 'admin/pubdroit/specialisation/linkEvent')) 
+								'url' => 'admin/specialisation/linkEvent'))
 							}} 
 
 							<!-- panel start -->

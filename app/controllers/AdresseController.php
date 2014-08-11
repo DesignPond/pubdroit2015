@@ -95,7 +95,7 @@ class AdresseController extends BaseController {
 	 */
 	public function create($id = null)
 	{
-		// creation is used for new simple adress and new user adress
+		// creation is used for new simple adresse and new user adresse
 		
 		$infos = $this->adresse->infosIfUser($id);	
 		
@@ -195,13 +195,12 @@ class AdresseController extends BaseController {
 	 * @return Response
 	 */	
 	public function specialisation(){
-	
-		$adresse_id = Input::get('adresse_id');
+
 		$user_id    = Input::get('user_id');
 		
-		$redirectTo = ( $user_id ? 'admin/users/'.$user_id : 'admin/adresses/'.$adresse_id );	
+		$redirectTo = ( $user_id ? 'admin/users/'.$user_id : 'admin/adresses/'.Input::get('adresse_id') );
 
-			if( $this->userspecialisation->addToUser(Input::get('specialisation_id') , Input::get('adresse_id')) )
+			if( $this->adresse->addSpecialisation(Input::get('specialisation_id') , Input::get('adresse_id')) )
 			{				
 				return Redirect::to($redirectTo)->with( array('status' => 'success' , 'message' => 'La spécialisation a été ajouté') );
 			}
@@ -216,23 +215,18 @@ class AdresseController extends BaseController {
 	 * @return Response
 	 */	
 	public function membre(){
-		
-		$adresse_id = Input::get('adresse_id');
-		$user_id    = Input::get('user_id');	
 
-		$redirectTo = ( $user_id ? 'admin/users/'.$user_id : 'admin/adresses/'.$adresse_id );		
-		
-		if( !empty( $adresse_id ) && ($adresse_id != 0))
-		{					
-			if( $this->usermembre->addToUser(Input::get('membre_id') , Input::get('adresse_id')) )
-			{	
-				return Redirect::to($redirectTo)->with( array('status' => 'success' , 'message' => 'L\'appartenance comme membre a été ajouté') ); 
-			}
-		
-			return Redirect::to($redirectTo)->with( array('status' => 'danger' , 'message' => 'L\'utilisateur à déjà l\'appartenance comme membre') ); 
-		}	
+		$user_id  = Input::get('user_id');
 
-		return Redirect::to($redirectTo)->with( array('status' => 'danger' , 'message' => 'Veuillez créer un adresse pour l\'utilisateur d\'abord ') );				
+		$redirectTo = ( $user_id ? 'admin/users/'.$user_id : 'admin/adresses/'.Input::get('adresse_id') );
+
+        if( $this->adresse->addMembre(Input::get('membre_id') , Input::get('adresse_id')) )
+        {
+            return Redirect::to($redirectTo)->with( array('status' => 'success' , 'message' => 'L\'appartenance comme membre a été ajouté') );
+        }
+
+        return Redirect::to($redirectTo)->with( array('status' => 'danger' , 'message' => 'L\'utilisateur à déjà l\'appartenance comme membre') );
+
 	}
 	
 	/**
@@ -242,19 +236,15 @@ class AdresseController extends BaseController {
 	 * @return Response
 	 */	
 	public function removeSpecialisation(){
-	
-		$adresse_id = Input::get('adresse_id');
-		$user_id    = Input::get('user_id');
-		$id         = Input::get('id');	
-		
-		$redirectTo = ( $user_id != 0 ? 'admin/users/'.$user_id : 'admin/adresses/'.$adresse_id );	
-		
-		if ( $this->userspecialisation->delete($id) )
-		{
-            return Redirect::to($redirectTo)->with( array('status' => 'success' , 'message' => 'La spécialisation a été supprimé')); 
-        }
 
-        return Redirect::to($redirectTo)->with( array('status' => 'danger' , 'message' => 'Problème avec la suppression') );				
+		$user_id = Input::get('user_id');
+		
+		$redirectTo = ( $user_id != 0 ? 'admin/users/'.$user_id : 'admin/adresses/'.Input::get('adresse_id') );
+
+		$this->adresse->removeSpecialisation(Input::get('specialisation_id'),Input::get('adresse_id'));
+
+        return Redirect::to($redirectTo)->with( array('status' => 'success' , 'message' => 'La spécialisation a été supprimé'));
+
 	}
 
 	/**
@@ -264,14 +254,12 @@ class AdresseController extends BaseController {
 	 * @return Response
 	 */	
 	public function removeMembre(){
-	
-		$adresse_id = Input::get('adresse_id');
-		$user_id    = Input::get('user_id');
-		$id         = Input::get('id');	
-		
-		$redirectTo = ( $user_id != 0 ? 'admin/users/'.$user_id : 'admin/adresses/'.$adresse_id );	
 
-		if ( $this->usermembre->delete($id) )
+		$user_id    = Input::get('user_id');
+
+		$redirectTo = ( $user_id != 0 ? 'admin/users/'.Input::get('user_id') : 'admin/adresses/'.Input::get('adresse_id') );
+
+		if ( $this->adresse->removeMembre(Input::get('membre_id'),Input::get('adresse_id')) )
 		{
             return Redirect::to($redirectTo)->with( array('status' => 'success' , 'message' => 'Le membre a été supprimé')); 
         }

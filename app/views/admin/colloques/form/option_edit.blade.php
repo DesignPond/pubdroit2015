@@ -42,7 +42,7 @@
 								'id' => 'validate-form',
 								'data-validate' => 'parsley',
 								'class' => 'form-horizontal',
-								'route' => array('admin.pubdroit.option.update',$option->id))) 
+								'route' => array('admin.option.update',$option->id)))
 							}} 
 
 							<!-- panel start -->

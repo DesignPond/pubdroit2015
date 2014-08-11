@@ -30,7 +30,7 @@
 								'id' => 'validate-form',
 								'data-validate' => 'parsley',
 								'class' => 'form-horizontal',
-								'route' => 'admin.pubdroit.price.store')) 
+								'route' => 'admin.price.store'))
 							}} 
 
 							<!-- panel start -->

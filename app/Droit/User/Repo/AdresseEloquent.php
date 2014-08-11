@@ -95,7 +95,7 @@ class AdresseEloquent implements AdresseInterface{
 	 */
 	public function find($id){
 				
-		return $this->adresse->where('id','=',$id)->with(array('user'))->get()->first();													
+		return $this->adresse->where('id','=',$id)->with(array('user','specialisations'))->get()->first();
 	}
 	
 	/**
@@ -228,6 +228,52 @@ class AdresseEloquent implements AdresseInterface{
             $join->on('user_specialisations.specialisation_id', '=', 'specialisations.id');
         })->select('user_specialisations.*','specialisations.*','user_specialisations.id as idspec')->get();														
 	}
+
+
+    /**
+     * Attach specialisation to adresse
+     *
+     * @return boolean
+     */
+    public function addSpecialisation($specialisation,$adresse_id)
+    {
+        $this->adresse->find($adresse_id)->specialisations()->attach($specialisation);
+
+        return true;
+    }
+
+    /**
+     * Detach specialisation from adresse
+     *
+     * @return boolean
+     */
+    public function removeSpecialisation($specialisation,$adresse_id)
+    {
+        return $this->adresse->find($adresse_id)->specialisations()->detach($specialisation);
+    }
+
+    /**
+     * Attach membre to adresse
+     *
+     * @return boolean
+     */
+    public function addMembre($membre,$adresse_id){
+
+        $this->adresse->find($adresse_id)->membres()->attach($membre);
+
+        return true;
+    }
+
+    /**
+     * Detach specialisation from adresse
+     *
+     * @return boolean
+     */
+    public function removeMembre($membre,$adresse_id){
+
+        return $this->adresse->find($adresse_id)->membres()->detach($membre);
+    }
+
 	
 	public function create(array $data){
 

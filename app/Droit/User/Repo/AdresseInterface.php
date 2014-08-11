@@ -22,6 +22,11 @@ interface AdresseInterface {
 	public function create(array $data);
 	public function update(array $data);
 	public function delete($id);
+
+    public function addSpecialisation($specialisation,$adresse_id);
+    public function removeSpecialisation($specialisation,$adresse_id);
+    public function addMembre($membre,$adresse_id);
+    public function removeMembre($membre,$adresse_id);
 	
 	// Ajax call
 	public function get_ajax( $sEcho , $iDisplayStart , $iDisplayLength , $sSearch = NULL , $iSortCol_0, $sSortDir_0);

@@ -47,7 +47,7 @@ class MembreController extends BaseController {
             Input::only('titre')
         );
 
-        return Redirect::to('admin/pubdroit/membre')->with( array('status' => 'success' , 'message' => 'Le membre à été crée' ) );
+        return Redirect::to('admin/membre')->with( array('status' => 'success' , 'message' => 'Le membre à été crée' ) );
 	}
 
 	/**
@@ -87,7 +87,7 @@ class MembreController extends BaseController {
             Input::only('id','titre')
         );
 
-        return Redirect::to('admin/pubdroit/membre')->with( array('status' => 'success' , 'message' => 'Le membre a été modifié' ) );
+        return Redirect::to('admin/membre')->with( array('status' => 'success' , 'message' => 'Le membre a été modifié' ) );
 
 	}
 

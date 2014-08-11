@@ -45,7 +45,7 @@ class SpecialisationController extends BaseController {
             Input::only('titre')
         );
 
-        return Redirect::to('admin/pubdroit/specialisation')->with( array('status' => 'success' , 'message' => 'La spécialisation a été crée' ) );
+        return Redirect::to('admin/specialisation')->with( array('status' => 'success' , 'message' => 'La spécialisation a été crée' ) );
 	}
 
 	/**
@@ -85,7 +85,7 @@ class SpecialisationController extends BaseController {
             Input::only('id','titre')
         );
 
-        return Redirect::to('admin/pubdroit/specialisation')->with( array('status' => 'success' , 'message' => 'La spécialisation a été modifiée' ) );
+        return Redirect::to('admin/specialisation')->with( array('status' => 'success' , 'message' => 'La spécialisation a été modifiée' ) );
 
 	}
 
@@ -126,7 +126,7 @@ class SpecialisationController extends BaseController {
 		
 		$specialisation = $this->specialisation->linkColloque( Input::all() );
 
-		return Redirect::to('admin/pubdroit/colloque/'.$colloque_id.'/edit')->with( array('status' => 'success' , 'message' => 'La spécialisation a été lié' ) );
+		return Redirect::to('admin/colloque/'.$colloque_id.'/edit')->with( array('status' => 'success' , 'message' => 'La spécialisation a été lié' ) );
 
 	}
 	

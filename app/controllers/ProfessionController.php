@@ -45,7 +45,7 @@ class ProfessionController extends BaseController {
             Input::only('titre')
         );
 
-        return Redirect::to('admin/pubdroit/profession')->with( array('status' => 'success' , 'message' => 'La profession a été crée' ) );
+        return Redirect::to('admin/profession')->with( array('status' => 'success' , 'message' => 'La profession a été crée' ) );
 	}
 
 	/**
@@ -85,7 +85,7 @@ class ProfessionController extends BaseController {
             Input::only('id','titre')
         );
 
-        return Redirect::to('admin/pubdroit/profession')->with( array('status' => 'success' , 'message' => 'La profession a été modifiée' ) );
+        return Redirect::to('admin/profession')->with( array('status' => 'success' , 'message' => 'La profession a été modifiée' ) );
 
 	}
 

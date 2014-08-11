@@ -44,7 +44,7 @@ class PriceController extends BaseController {
                Input::all()
         );
 
-        return Redirect::to('admin/pubdroit/colloque/'.$colloque_id.'/edit')->with( array('status' => 'success' , 'message' => 'Le prix a été crée' ) );
+        return Redirect::to('admin/colloque/'.$colloque_id.'/edit')->with( array('status' => 'success' , 'message' => 'Le prix a été crée' ) );
 
 	}
 
@@ -87,7 +87,7 @@ class PriceController extends BaseController {
             Input::all()
         );
 
-        return Redirect::to('admin/pubdroit/colloque/'.$colloque_id.'/edit')->with( array('status' => 'success' , 'message' => 'Le prix a été mis a jour') );
+        return Redirect::to('admin/colloque/'.$colloque_id.'/edit')->with( array('status' => 'success' , 'message' => 'Le prix a été mis a jour') );
 
 	}
 

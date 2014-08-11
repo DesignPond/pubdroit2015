@@ -30,7 +30,7 @@
 								'id' => 'validate-form',
 								'data-validate' => 'parsley',
 								'class' => 'form-horizontal',
-								'route' => array('admin.pubdroit.price.update',$price->id))) 
+								'route' => array('admin.price.update',$price->id)))
 							}} 
 
 							<!-- panel start -->
