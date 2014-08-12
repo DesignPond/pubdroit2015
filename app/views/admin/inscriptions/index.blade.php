@@ -71,7 +71,7 @@
 										{		                            	
 		                                   	echo '<tr class="odd gradeX">';										   	
 										   		echo '<td><a class="btn btn-sm btn-primary" href="'.url('admin/users/'.$inscrit->user_id).'">&Eacute;diter</a></td>';
-												echo '<td>'.$inscrit->inscriptionNumber.'</td>';
+												echo '<td>'.$inscrit->numero.'</td>';
 												echo '<td>'.$inscrit->created_at->format('d-m-Y').'</td>';
 												echo '<td>'.$custom->whatCivilite($inscrit->civilite).'</td>';
 												echo '<td>'.$inscrit->prenom.'</td>';

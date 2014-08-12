@@ -30,13 +30,13 @@ class ColloqueEloquent implements ColloqueInterface {
 		
 	public function getActifs(){
 		
-		return $this->colloque->where('dateDebut','>=',$this->today)->get();		
+		return $this->colloque->with(array('colloque_inscriptions'))->where('dateDebut','>=',$this->today)->get();
 	}
 	
 		
 	public function getArchives(){
 		
-		return $this->colloque->where('dateDebut','<',$this->today)->get();		
+		return $this->colloque->with(array('colloque_inscriptions'))->where('dateDebut','<',$this->today)->get();
 	}
 		
 	public function find($id){

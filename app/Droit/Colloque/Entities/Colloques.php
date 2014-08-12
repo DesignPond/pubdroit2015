@@ -85,5 +85,10 @@ class Colloques extends BaseModel{
     {
         return $this->hasMany('Droit\Colloque\Entities\Colloque_options', 'colloque_id', 'id');
     }
+
+    public function colloque_inscriptions()
+    {
+        return $this->hasMany('Droit\Colloque\Entities\Colloque_inscriptions', 'colloque_id', 'id');
+    }
 	
 }

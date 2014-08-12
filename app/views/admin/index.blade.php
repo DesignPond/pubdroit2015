@@ -18,15 +18,6 @@
 				<div class="row">
 	                <div class="col-md-12">
 
-<!--                        @if(!$inscriptions->isEmpty())
-                        <ul>
-                            @foreach($inscriptions as $inscription)
-                                <li>Inscription : {{ $inscription->id }}</li>
-                            @endforeach
-                        @else
-                        <p>Rien pour le moment</p>
-                        @endif-->
-
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="panel panel-indigo">
