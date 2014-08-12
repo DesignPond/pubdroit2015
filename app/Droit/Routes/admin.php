@@ -52,6 +52,9 @@ Route::group(array('prefix' => 'admin'), function()
     Route::get('colloque/{id}/destroy_file', array('uses' => 'ColloqueController@destroy_file'));
     Route::post('colloque/email', array('uses' => 'ColloqueController@email'));
     Route::post('colloque/attestation', array('uses' => 'ColloqueController@attestation'));
+    Route::get('specialisation/addToColloque/{colloque}', array('uses' => 'SpecialisationController@addToColloque'));
+    Route::post('colloque/specialisation', array('uses' => 'ColloqueController@specialisation'));
+    Route::get('colloque/removeSpecialisation/{specialisation_id}/{colloque_id}', array('uses' => 'ColloqueController@removeSpecialisation'));
     Route::resource('colloque', 'ColloqueController');
 
     // Options colloques
@@ -75,9 +78,6 @@ Route::group(array('prefix' => 'admin'), function()
     // Spécialisations users and colloques
     Route::get('specialisation/{specialisation}/delete', array('uses' => 'SpecialisationController@destroy'));
     Route::get('specialisation/create/{colloque}', array('uses' => 'SpecialisationController@create'));
-    Route::get('specialisation/addToColloque/{colloque}', array('uses' => 'SpecialisationController@addToColloque'));
-    Route::post('specialisation/linkColloque', array('uses' => 'SpecialisationController@linkColloque'));
-    Route::get('specialisation/{id}/unlinkColloque', array('uses' => 'SpecialisationController@unlinkColloque'));
     Route::resource('specialisation', 'SpecialisationController');
 
     // Membres users

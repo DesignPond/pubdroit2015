@@ -6,12 +6,11 @@
 	<div id="wrap">
 			
 		<div id="page-heading">
-			<ol class="breadcrumb">
-				<li><a href="index.htm">Dashboard</a></li>
-				<li>Option</li>
-				<li class="active">&Eacute;diter</li>
-			</ol>
-			<h1>Option</h1>
+
+            <!-- Breadcrumbs  -->
+            @include('layouts.partials.admin.breadcrumb')
+
+            <h1>Option</h1>
 		</div>
 		
 		<div class="container">
@@ -20,30 +19,18 @@
 
 					<div class="row">
 						<div class="col-sm-8 col-md-offset-2">
-						
-						   @if($errors->has())
-								We encountered the following errors:						
-								<ul>
-								    @foreach($errors->all() as $message)						
-								    <li>{{ $message }}</li>						
-								    @endforeach
-								</ul>						
-							@endif
-							
-							@if(Session::has('status'))
-							<div class="alert alert-dismissable alert-{{  Session::get('status') }}">
-								ok <button class="close" aria-hidden="true" data-dismiss="alert" type="button">×</button>
-							</div>
-							@endif
 
-							<!-- form start --> 
+                            <!-- messages and errors -->
+                            @include('layouts.partials.message')
+
+							<!-- form start -->
 							{{ Form::model($option,array(
 								'method' => 'PATCH',
 								'id' => 'validate-form',
 								'data-validate' => 'parsley',
 								'class' => 'form-horizontal',
 								'route' => array('admin.option.update',$option->id)))
-							}} 
+							}}
 
 							<!-- panel start -->
 							<div class="panel panel-green">	

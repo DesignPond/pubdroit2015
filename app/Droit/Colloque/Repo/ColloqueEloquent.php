@@ -55,7 +55,6 @@ class ColloqueEloquent implements ColloqueInterface {
 			'titre'        => $data['titre'],
 			'soustitre'    => $data['soustitre'],
 			'sujet'        => $data['sujet'],
-			'description'  => $data['description'],
 			'endroit'      => $data['endroit'],
 			'dateDebut'    => $data['dateDebut'],
 			'dateFin'      => $data['dateFin'],
@@ -86,7 +85,6 @@ class ColloqueEloquent implements ColloqueInterface {
 		$colloque->titre        = $data['titre'];
 		$colloque->soustitre    = $data['soustitre'];
 		$colloque->sujet        = $data['sujet'];
-		$colloque->description  = $data['description'];
 		$colloque->endroit      = $data['endroit'];
 		$colloque->dateDebut    = $data['dateDebut'];
 		$colloque->dateFin      = $data['dateFin'];
@@ -112,6 +110,28 @@ class ColloqueEloquent implements ColloqueInterface {
 
         return $colloque;
 
+    }
+
+    /**
+     * Attach specialisation to colloque
+     *
+     * @return boolean
+     */
+    public function addSpecialisation($specialisation,$colloque_id)
+    {
+        $this->colloque->find($colloque_id)->colloque_specialisations()->attach($specialisation);
+
+        return true;
+    }
+
+    /**
+     * Detach specialisation from colloque
+     *
+     * @return boolean
+     */
+    public function removeSpecialisation($specialisation,$colloque_id)
+    {
+        return $this->colloque->find($colloque_id)->colloque_specialisations()->detach($specialisation);
     }
 
 	// Emails

@@ -1,5 +1,4 @@
 @extends('layouts.admin')
-
 @section('content')
 
 <div id="page-content">
@@ -75,7 +74,7 @@
 					          <div class="form-group">
 					               <label class="col-sm-3 control-label">Date de début</label>
 					               <div class="col-sm-6">
-					                   <input type="text" name="dateDebut" class="form-control datepicker" id="dateDebut">
+					                   <input type="text" name="dateDebut" class="form-control datepicker required" id="dateDebut">
 					               </div>
 					          </div>		
 					          
@@ -84,9 +83,9 @@
 					               <div class="col-sm-6">
 					                   <input type="text" name="dateFin" class="form-control datepicker" id="dateFin">
 					               </div>
-					          </div>							          					  							  
-							  
-					          <div class="form-group">
+					          </div>
+
+                              <div class="form-group">
 					               <label class="col-sm-3 control-label">Délai d'inscription</label>
 					               <div class="col-sm-6">
 					                   <input type="text" name="dateDelai" class="form-control datepicker" id="dateDelai">

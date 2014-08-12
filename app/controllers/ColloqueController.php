@@ -126,7 +126,7 @@ class ColloqueController extends BaseController {
             Input::all()
         );
 
-        return Redirect::to('admin/pubdroit/colloque/'.$colloque->id.'/edit')->with( array('status' => 'success', 'message' => 'Mise a jour ok') );
+        return Redirect::to('admin/colloque/'.$colloque->id.'/edit')->with( array('status' => 'success', 'message' => 'Mise a jour ok') );
 
 	}
 
@@ -141,7 +141,7 @@ class ColloqueController extends BaseController {
             Input::all()
         );
 
-        return Redirect::to('admin/pubdroit/colloque/'.$colloque_id.'/edit')->with( array('status' => 'success' , 'message' => 'Mise à jour ok') );
+        return Redirect::to('admin/colloque/'.$colloque_id.'/edit')->with( array('status' => 'success' , 'message' => 'Mise à jour ok') );
 
     }
 
@@ -156,7 +156,7 @@ class ColloqueController extends BaseController {
             Input::all()
         );
 
-        return Redirect::to('admin/pubdroit/colloque/'.$colloque_id.'/edit')->with( array('status' => 'success' , 'message' => 'Mise à jour ok') );
+        return Redirect::to('admin/colloque/'.$colloque_id.'/edit')->with( array('status' => 'success' , 'message' => 'Mise à jour ok') );
 
 	}
 
@@ -212,5 +212,37 @@ class ColloqueController extends BaseController {
         return Redirect::back()->with( $message );
 
 	}
+
+    /**
+     * Add specialisation for colloque
+     *
+     * @param  int  $colloque_id , specialisation_id
+     * @return Response
+     */
+    public function specialisation(){
+
+        if( $this->colloque->addSpecialisation(Input::get('specialisation_id') , Input::get('colloque_id')) )
+        {
+            return Redirect::to('admin/colloque/'.Input::get('colloque_id').'/edit')->with( array('status' => 'success' , 'message' => 'La spécialisation a été lié' ) );
+        }
+
+        return Redirect::back()->with( array('status' => 'danger' , 'message' => 'Le colloque a déjà la spécialisation') );
+    }
+
+    /**
+     * Remove specialisation from colloque
+     *
+     * @param  int  $colloque_id , specialisation_id
+     * @return Response
+     */
+    public function removeSpecialisation($specialisation_id,$colloque_id){
+
+        if( $this->colloque->removeSpecialisation($specialisation_id , $colloque_id) )
+        {
+            return Redirect::back()->with( array('status' => 'success' , 'message' => 'La spécialisation a été supprimé' ) );
+        }
+
+        return Redirect::back()->with( array('status' => 'danger' , 'message' => 'Le colloque a déjà la spécialisation') );
+    }
 
 }

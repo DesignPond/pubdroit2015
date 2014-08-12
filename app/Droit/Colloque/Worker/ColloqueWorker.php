@@ -47,7 +47,7 @@ class ColloqueWorker implements ColloqueWorkerInterface{
     {
         $colloque       = $this->colloque->find($id);
         $default        = $this->colloque->getEmail('inscription', 0);
-        $comptes        = $this->compte->getAll()->lists('motifCompte', 'id');
+        $comptes        = $this->compte->getAll()->lists('motif', 'id');
         $comptes        = ['' => 'Choix'] + $comptes;
         $centers        = $this->file->getAllCenters();
         $allfiles       = $this->setFiles($colloque,$this->documents);

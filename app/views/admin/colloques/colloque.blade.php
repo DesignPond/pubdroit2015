@@ -39,7 +39,7 @@
 						    <div class="panel-body colloque-info">
 							    <p>{{ $colloque->organisateur }}</p>
  
-							    <p><strong>Date:</strong> {{ Custom::formatDate( $colloque->dateDebut ) }}</p>
+							    <p><strong>Date:</strong> {{ Custom::formatDate( $colloque->dateDebut->toDateString() ) }}</p>
 						    </div>
 						    <div class="panel-footer mini-footer ">
 						    	<div class="btn-group">

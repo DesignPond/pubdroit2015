@@ -6,7 +6,7 @@
     <li class="divider"></li>
 
     <!-- Accueil admin -->
-    <li><a class="{{ Request::is( 'admin') ? 'active' : '' }}" href="{{ url('admin') }}"><i class="fa fa-circle"></i> <span>Dashboard</span></a></li>
+    <li><a class="{{ Request::is( 'admin') ? 'active' : '' }}" href="{{ url('admin') }}"><i class="fa fa-circle"></i> <span>Accueil</span></a></li>
 
     <!-- Outils: membres, specialisations, professions -->
     <li><a href="javascript:;"><i class="fa fa-cogs"></i> <span>Outils</span></a>
@@ -46,6 +46,17 @@
             <li><a class="{{ Request::is( 'admin/colloque/archives') ? 'active' : '' }}" href="{{ url('admin/colloque/archives') }}"><span>Colloques archivés</span></a></li>
         </ul>
     </li>
+
+    <!-- Newsletter -->
+    <li><a href="javascript:;" class="{{ Request::is( 'admin/pubdroit') ? 'active' : '' }}"><i class="fa fa-envelope-o"></i> <span>Newsletter</span></a>
+        <ul class="acc-menu">
+            <li><a class="" href="#"><span>Créer une newsletter</span></a></li>
+            <li><a class="" href="#"><span>Archives</span></a></li>
+            <li><a class="" href="#"><span>Abonnées</span></a></li>
+            <li><a class="" href="#"><span>Statistiques</span></a></li>
+        </ul>
+    </li>
+    <li class="divider"></li>
     <!-- Site: publications-droit.ch -->
     <li><a href="javascript:;" class="{{ Request::is( 'admin/pubdroit') ? 'active' : '' }}"><i class="fa fa-book"></i> <span>Publications-droit</span></a>
         <ul class="acc-menu">
@@ -70,17 +81,7 @@
             <li>{{ link_to('admin/matrimonial/analyses', 'Analyses' , array('class' => Request::is( 'admin/matrimonial/analyses') ? 'active' : '') ) }}</li>
         </ul>
     </li>
-
-    <!-- Newsletter -->
-    <li><a href="javascript:;" class="{{ Request::is( 'admin/pubdroit') ? 'active' : '' }}"><i class="fa fa-envelope-o"></i> <span>Newsletter</span></a>
-        <ul class="acc-menu">
-            <li><a class="" href="#"><span>Créer une newsletter</span></a></li>
-            <li><a class="" href="#"><span>Archives</span></a></li>
-            <li><a class="" href="#"><span>Abonnées</span></a></li>
-            <li><a class="" href="#"><span>Statistiques</span></a></li>
-        </ul>
-    </li>
-
+    <li class="divider"></li>
     <!-- Configurations -->
     <li><a href="javascript:;" class="{{ Request::is( 'admin/pubdroit') ? 'active' : '' }}"><i class="fa fa-cog"></i> <span>Configurations</span></a>
         <ul class="acc-menu">

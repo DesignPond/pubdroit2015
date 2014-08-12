@@ -10,7 +10,7 @@
             <!-- Breadcrumbs  -->
             @include('layouts.partials.admin.breadcrumb')
 
-            <h1>Profession</h1>
+            <h1>Inscriptions</h1>
 			<div class="options">
 	            <div class="btn-toolbar">
 	                <a href="{{ url('admin/profession/create') }}" class="btn btn-default"><i class="fa fa-plus"></i> &nbsp;Créer</a>

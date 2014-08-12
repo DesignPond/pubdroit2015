@@ -9,7 +9,7 @@ class Colloques extends BaseModel{
      *
      * @var array
      */
-	protected $guarded   = array('id');
+	protected $guarded = array('id');
 
     /**
      * Validation rules for colloque creation

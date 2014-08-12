@@ -1,5 +1,4 @@
 @extends('layouts.admin')
-
 @section('content')
 
 <div id="page-content">
@@ -258,14 +257,7 @@
 								  </div>
 								  <div class="col-sm-3"><p class="help-block">Requis</p></div>
 							  </div>							  							  							
-							  
-							  <div class="form-group">
-							  	  <label for="description" class="col-sm-3 control-label">Description</label>
-							  	  <div class="col-sm-6">
-							  	  	 {{ Form::textarea('description', null , array('class' => 'form-control redactor', 'cols' => '50' , 'rows' => '4' )) }}
-							  	  </div>
-							  </div>
-							  
+
 							  <div class="form-group">
 							  	  <label for="endroit" class="col-sm-3 control-label">Endroit</label>
 							  	  <div class="col-sm-6">
@@ -293,7 +285,7 @@
 					                   {{ Form::text('dateDelai', null , array('class' => 'form-control datepicker required', 'id' => 'dateDelai' )) }}
 					               </div>
 					          </div>				          
-							  
+
 							  <div class="form-group">
 							  	  <label for="remarques" class="col-sm-3 control-label">Remarques</label>
 							  	  <div class="col-sm-6">
@@ -420,10 +412,10 @@
 										  			<div class="row">
 										  				<div class="col-sm-10">
 												  			<i class="fa fa-question-circle"></i>&nbsp;&nbsp;
-												  			<?php echo $specialisation->titreSpecialisation; ?>
+												  			<?php echo $specialisation->titre; ?>
 												  		</div>
 											  			<div class="col-sm-2 btn-group btn-group-pivot">
-												  			<a class="btn btn-xs btn-danger deleteAction" data-action="<?php echo $specialisation->titreSpecialisation; ?>" href="{{ url('admin/specialisation/'.$specialisation->pivot->id.'/unlinkColloque') }}">X</a>	
+												  			<a class="btn btn-xs btn-danger deleteAction" data-action="<?php echo $specialisation->titre; ?>" href="{{ url('admin/colloque/removeSpecialisation/'.$specialisation->id.'/'.$colloque->id) }}">X</a>
 														</div>
 													</div>
 										  		</li>

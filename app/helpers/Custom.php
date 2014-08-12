@@ -21,7 +21,7 @@ class Custom {
     
         $instance   = Carbon::createFromFormat('Y-m-d', $date); 
 		setlocale(LC_TIME, 'fr_FR'); 							                   
-		$formatDate = $instance->formatLocalized('%A %d %B %Y'); 
+		$formatDate = $instance->formatLocalized('%d %B %Y');
 	
         return $formatDate;
     }

@@ -24,11 +24,11 @@
 
                             <!-- form start -->
                             {{ Form::open(array(
-                            'method' => 'POST',
-                            'id' => 'validate-form',
-                            'data-validate' => 'parsley',
-                            'class' => 'form-horizontal',
-                            'url' => 'admin/specialisation/linkColloque'))
+                                'method' => 'POST',
+                                'id' => 'validate-form',
+                                'data-validate' => 'parsley',
+                                'class' => 'form-horizontal',
+                                'url' => 'admin/colloque/specialisation'))
                             }}
 
                             <!-- panel start -->

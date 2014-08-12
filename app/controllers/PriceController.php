@@ -27,7 +27,7 @@ class PriceController extends BaseController {
 	 */
 	public function create($colloque)
 	{
-        return View::make('admin.colloque.form.price_create')->with( array( 'colloque' => $colloque ) );
+        return View::make('admin.colloques.form.price_create')->with( array( 'colloque' => $colloque ) );
 	}
 
 	/**
@@ -69,7 +69,7 @@ class PriceController extends BaseController {
 	{
 		 $price = $this->price->find($id);
 		 
-		 return View::make('admin.colloque.form.price_edit')->with( array('price' => $price) );
+		 return View::make('admin.colloques.form.price_edit')->with( array('price' => $price) );
 	}
 
 	/**

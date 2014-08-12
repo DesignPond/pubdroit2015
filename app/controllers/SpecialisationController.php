@@ -103,8 +103,6 @@ class SpecialisationController extends BaseController {
         return Redirect::back()->with( $message );
 
 	}
-	
-	/* Link to colloques */
 
     /**
      * Add a specialisation to an colloque
@@ -116,27 +114,7 @@ class SpecialisationController extends BaseController {
         $specialisations = $this->specialisation->droplist();
         $specialisations = ['' => 'Choix'] + $specialisations;
 
-        return View::make('admin.specialisation.add')->with(array('colloque_id' => $id , 'specialisations' => $specialisations ));
+        return View::make('admin.colloques.form.specialisation_add')->with(array('colloque_id' => $id , 'specialisations' => $specialisations ));
     }
-	
-	public function linkColloque()
-    {
-
-		$colloque_id       = Input::get('colloque_id');
-		
-		$specialisation = $this->specialisation->linkColloque( Input::all() );
-
-		return Redirect::to('admin/colloque/'.$colloque_id.'/edit')->with( array('status' => 'success' , 'message' => 'La spécialisation a été lié' ) );
-
-	}
-	
-	public function unlinkColloque($id)
-    {
-
-        $message = ( $this->specialisation->unlinkColloque($id) ? array('status' => 'success','message' => 'La spécialisation a été delié') : array('status' => 'error','message' => 'Problème avec la suppression') );
-
-        return Redirect::back()->with( $message );
-
-	}
 
 }

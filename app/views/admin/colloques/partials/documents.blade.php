@@ -49,7 +49,7 @@
 
                                             @else
 
-                                            {{ Form::open(array( 'url' => 'admin/pubdroit/colloque/upload' ,'files' => true )) }}
+                                            {{ Form::open(array( 'url' => 'admin/colloque/upload' ,'files' => true )) }}
                                                 <input class="uploadFile" disabled="disabled" placeholder="">
                                                 <input type="hidden" name="destination" value="files/{{ $doc }}/" />
                                                 <input type="hidden" name="type" value="{{ $doc }}" />
@@ -78,7 +78,7 @@
                                         <div class="panel-body admin-icon-panel">
                                             <p><strong>{{ ucfirst($doc) }}</strong></p>
 
-                                            {{ Form::open(array( 'url' => 'admin/pubdroit/colloque/upload' ,'files' => true )) }}
+                                            {{ Form::open(array( 'url' => 'admin/colloque/upload' ,'files' => true )) }}
                                             <input class="uploadFile" disabled="disabled" placeholder="">
                                             <input type="hidden" name="destination" value="files/{{ $doc }}/" />
                                             <input type="hidden" name="type" value="{{ $doc }}" />

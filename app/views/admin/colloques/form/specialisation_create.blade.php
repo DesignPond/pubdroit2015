@@ -6,12 +6,11 @@
 	<div id="wrap">
 			
 		<div id="page-heading">
-			<ol class="breadcrumb">
-				<li><a href="index.htm">Dashboard</a></li>
-				<li>Spécialisation</li>
-				<li class="active">Créer</li>
-			</ol>
-			<h1>Spécialisation</h1>
+
+            <!-- Breadcrumbs  -->
+            @include('layouts.partials.admin.breadcrumb')
+
+            <h1>Spécialisation</h1>
 		</div>
 		
 		<div class="container">
@@ -30,7 +29,7 @@
 								'id'     => 'validate-form',
 								'data-validate' => 'parsley',
 								'class' => 'form-horizontal',
-								'url' => 'admin/specialisation/linkEvent'))
+								'url' => 'admin/colloque/specialisation'))
 							}} 
 
 							<!-- panel start -->
@@ -51,7 +50,6 @@
 							      	<div class="row">
 							      		<div class="col-sm-6 col-sm-offset-3">
 							      			<div class="btn-toolbar">
-							      				{{ Form::hidden('id', null )}}
 							      				{{ Form::hidden('colloque_id', $event )}}
 								      			<button type="submit" class="btn-primary btn">Envoyer</button>
 							      			</div>
