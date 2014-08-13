@@ -4,7 +4,7 @@
 @if($documents)
     @foreach($documents as $type => $document)
         <div class="col-sm-6">
-            <div class="panel panel-primary">
+            <div class="panel panel-green">
                 <div rel="#{{ $type }}" class="panel-heading">
                     <h4><i class="fa fa-picture-o"></i> &nbsp;{{ ucfirst($type) }}</h4>
                     <div class="options">
@@ -59,7 +59,7 @@
                                                         <span>&nbsp;Choisir&nbsp;</span>
                                                         <input class="uploadBtn upload" type="file" name="file" />
                                                     </div>
-                                                    <button type="submit" class="btn btn-sm btn-success btn-envoyer" type="button">&nbsp;Envoyer&nbsp;</button>
+                                                    <button type="submit" class="btn btn-sm btn-success btn-envoyer">&nbsp;Envoyer&nbsp;</button>
                                                 </div>
                                             {{ Form::close() }}
 
@@ -88,7 +88,7 @@
                                                     <span>&nbsp;Choisir&nbsp;</span>
                                                     <input class="uploadBtn upload" type="file" name="file" />
                                                 </div>
-                                                <button type="submit" class="btn btn-sm btn-success" type="button">&nbsp;Envoyer&nbsp;</button>
+                                                <button type="submit" class="btn btn-sm btn-success">&nbsp;Envoyer&nbsp;</button>
                                             </div>
                                             {{ Form::close() }}
 

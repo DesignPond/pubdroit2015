@@ -1,29 +1,23 @@
 @extends('layouts.admin')
 @section('content')
 
-<div id="page-content">
-	<div id="wrap">
-			
 		<div id="page-heading">
-
-            <!-- Breadcrumbs  -->
-            @include('layouts.partials.admin.breadcrumb')
-
             <h1>&Eacute;diter un colloque</h1>
 		</div>
 		
 		<div class="container">
 		    <div class="row">
 				<div class="col-sm-12">
-                    <!-- messages and errors -->
-                    @include('layouts.partials.message')
+
+                    <!-- Custom options for colloque attestation and emails -->
+                    @include('admin.colloques.partials.custom')
 
                     <!-- Images et documents -->
                     @include('admin.colloques.partials.documents')
 
 					<!-- Textes email -->
 					<!-- panel start -->
-					<div class="panel panel-sky">
+					<div class="panel panel-green">
 				       <div rel="#email_colloque" class="panel-heading colloque_section"><h4><i class="fa fa-envelope-o"></i> &nbsp;Textes pour email inscription</h4></div>
 					    <div id="email_colloque" class="toggle_in panel-body"><!-- start panel content -->
 					    
@@ -189,7 +183,7 @@
 					{{ Form::model($colloque,array(
 						'method'        => 'PATCH',
 						'id'            => 'colloque_info',
-						'data-validate' => '',
+						'data-validate' => 'parsley',
 						'class'         => 'form-horizontal',
 						'route'         => array('admin.colloque.update',$colloque->id)))
 					}} 
@@ -261,8 +255,9 @@
 							  <div class="form-group">
 							  	  <label for="endroit" class="col-sm-3 control-label">Endroit</label>
 							  	  <div class="col-sm-6">
-							  	  	 {{ Form::text('endroit', null , array('class' => 'form-control required' )) }}
+							  	  	 {{ Form::text('endroit', null , array('class' => 'form-control required')) }}
 							  	  </div>
+                                  <div class="col-sm-3"><p class="help-block">Requis</p></div>
 							  </div>
 							  
 					          <div class="form-group">
@@ -439,7 +434,7 @@
 							  <div class="form-group">
 							  	  <label for="selector1" class="col-sm-3 control-label">Compte pour BV</label>
 							  	  <div class="col-sm-6">
-							  	  	 {{ Form::select('compte_id', $comptes , null , array( 'class' => 'form-control required' ) ) }}
+							  	  	 {{ Form::select('compte_id', $comptes , null , array( 'class' => 'form-control') ) }}
 							  	  </div>
 							  	  <div class="col-sm-3"><p class="help-block">Requis si génération du BV</p></div>
 							  </div>	
@@ -504,8 +499,5 @@
 				</div>
 			</div>
 	    </div>
-    
-	</div>
-</div>
 
 @stop

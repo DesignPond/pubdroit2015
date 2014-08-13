@@ -17,7 +17,8 @@ class CreateColloqueFacturesTable extends Migration {
 			$table->increments('id');
 			$table->integer('deleted')->default(0);
 			$table->string('numero');
-			$table->integer('user_id');	
+			$table->integer('user_id');
+            $table->dateTime('payed_at')->nullable();
 			$table->string('colloque_price_id');
 			$table->integer('colloque_id');
 			$table->enum('status', array('attente','paye','gratuit'))->default('attente');

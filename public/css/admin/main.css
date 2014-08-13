@@ -1,3 +1,11 @@
+.container-message{
+    padding-bottom: 0;
+}
+
+.container-message .alert{
+    margin-bottom: 0;
+}
+
 .panel-heading .options .btn {
     line-height: 1em !important;
     opacity: 1;
@@ -272,4 +280,14 @@ table td .edit_btn , .list-group .btn{
 
 #addspecs ,#addmembers{
 	padding: 20px 0;
+}
+
+.parsley-error-list{
+    list-style: none;
+    margin: 0;
+    padding: 5px 0 0;
+}
+
+.parsley-error-list .required{
+    color: #8d0a00;
 }

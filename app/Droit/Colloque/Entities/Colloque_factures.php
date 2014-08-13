@@ -6,6 +6,8 @@ class Colloque_factures extends BaseModel {
 
 	protected $guarded   = array('id');
 
+    protected $dates = array('created_at','payed_at');
+
     /**
      * Validation rules for facture creation
      *

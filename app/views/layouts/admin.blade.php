@@ -53,12 +53,24 @@
                 @include('layouts.partials.admin.navigation')
 
 			</nav>
-	
-			<!-- Main content -->
-	            @yield('content')	            
-	        <!-- Fin contenu -->
-	        	
-		</div>
+            <div id="page-content">
+                <div id="wrap">
+
+                    <!-- Breadcrumbs  -->
+                    @include('layouts.partials.admin.breadcrumb')
+
+                    <!-- messages and errors -->
+                    @include('layouts.partials.message')
+
+                    <!-- Main content -->
+	                @yield('content')
+
+	                <!-- Fin contenu -->
+
+                </div>
+            </div>
+
+        </div>
 		<!-- Footer infos -->
 		<footer role="contentinfo"><!--Footer--></footer>
 			

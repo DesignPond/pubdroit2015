@@ -42,3 +42,5 @@ window.ParsleyConfig = window.ParsleyConfig || {};
     }
   });
 }(window.jQuery || window.Zepto));
+
+

@@ -1,74 +1,61 @@
 @extends('layouts.admin')
-
 @section('content')
 
-<div id="page-content">
-    <div id="wrap">
+    <div id="page-heading">
+        <h1>Spécialisation</h1>
+    </div>
 
-        <div id="page-heading">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
 
-            <!-- Breadcrumbs  -->
-            @include('layouts.partials.admin.breadcrumb')
+                <div class="row">
+                    <div class="col-sm-8 col-md-offset-2">
 
-            <h1>Spécialisation</h1>
-        </div>
+                        <!-- form start -->
+                        {{ Form::open(array(
+                            'method' => 'POST',
+                            'id' => 'validate-form',
+                            'data-validate' => 'parsley',
+                            'class' => 'form-horizontal',
+                            'url' => 'admin/colloque/specialisation'))
+                        }}
 
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12">
+                        <!-- panel start -->
+                        <div class="panel panel-green">
+                            <div class="panel-heading"><h4><i class="fa fa-calendar-o"></i> Lier</h4></div>
+                            <div class="panel-body"><!-- start panel content -->
 
-                    <div class="row">
-                        <div class="col-sm-8 col-md-offset-2">
-
-                            @include('layouts.partials.message')
-
-                            <!-- form start -->
-                            {{ Form::open(array(
-                                'method' => 'POST',
-                                'id' => 'validate-form',
-                                'data-validate' => 'parsley',
-                                'class' => 'form-horizontal',
-                                'url' => 'admin/colloque/specialisation'))
-                            }}
-
-                            <!-- panel start -->
-                            <div class="panel panel-green">
-                                <div class="panel-heading"><h4><i class="fa fa-calendar-o"></i> Lier</h4></div>
-                                <div class="panel-body"><!-- start panel content -->
-
-                                    <div class="form-group">
-                                        <label for="titre" class="col-sm-3 control-label">Spécialisation à lier</label>
-                                        <div class="col-sm-6">
-                                            {{  Form::select('specialisation_id', $specialisations , null , array( 'class' => 'form-control required' ) ) }}
-                                        </div>
-                                        <div class="col-sm-3">Requis</div>
+                                <div class="form-group">
+                                    <label for="titre" class="col-sm-3 control-label">Spécialisation à lier</label>
+                                    <div class="col-sm-6">
+                                        {{  Form::select('specialisation_id', $specialisations , null , array( 'class' => 'form-control required' ) ) }}
                                     </div>
+                                    <div class="col-sm-3">Requis</div>
+                                </div>
 
-                                </div><!-- end panel content -->
-                                <div class="panel-footer">
-                                    <div class="row">
-                                        <div class="col-sm-6 col-sm-offset-3">
-                                            <div class="btn-toolbar">
-                                                {{ Form::hidden('colloque_id', $colloque_id )}}
-                                                <button type="submit" class="btn-primary btn">Envoyer</button>
-                                            </div>
+                            </div><!-- end panel content -->
+                            <div class="panel-footer">
+                                <div class="row">
+                                    <div class="col-sm-6 col-sm-offset-3">
+                                        <div class="btn-toolbar">
+                                            {{ Form::hidden('colloque_id', $colloque_id )}}
+                                            <button type="submit" class="btn-primary btn">Envoyer</button>
                                         </div>
                                     </div>
                                 </div>
+                            </div>
 
-                            </div><!-- end panel -->
+                        </div><!-- end panel -->
 
-                            {{ Form::close() }}
+                        {{ Form::close() }}
 
 
-                        </div>
                     </div>
-
                 </div>
+
             </div>
         </div>
-
     </div>
-</div>
 
 @stop
