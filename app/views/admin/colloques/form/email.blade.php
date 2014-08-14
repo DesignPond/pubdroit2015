@@ -36,7 +36,7 @@
                                 @if(!empty($email))
                                 {{ Form::textarea('message', $email->message , array('class' => 'form-control  redactor', 'cols' => '50' , 'rows' => '4' )) }}
                                 @else
-                                {{ Form::textarea('message', null , array('class' => 'form-control redactor', 'cols' => '50' , 'rows' => '4' )) }}
+                                {{ Form::textarea('message', null , array('class' => 'form-control redactor required', 'cols' => '50' , 'rows' => '4' )) }}
                                 @endif
 
                             </div>

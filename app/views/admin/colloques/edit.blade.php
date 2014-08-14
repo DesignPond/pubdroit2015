@@ -5,10 +5,10 @@
             <h1>&Eacute;diter <small>{{ $colloque->titre }}</small></h1>
             <div class="options">
                 <div class="btn-toolbar">
-                    <a href="{{ url('admin/colloque/attestation/'.$colloque->id) }}" class="btn btn-indigo"><i class="fa fa-certificate"></i> &nbsp;Configuration attestation</a>
-                    <a href="{{ url('admin/colloque/email/'.$colloque->id) }}" class="btn btn-orange"><i class="fa fa-envelope-o"></i> &nbsp;Configuration email</a>
                     <a href="{{ url('admin/inscription/colloque/'.$colloque->id) }}" class="btn btn-midnightblue"><i class="fa fa-calendar"></i> &nbsp;Inscriptions</a>
                     <a href="{{ url('admin/inscription/colloque/'.$colloque->id) }}" class="btn btn-green"><i class="fa fa-credit-card"></i> &nbsp;Factures</a>
+                    <a href="{{ url('admin/colloque/attestation/'.$colloque->id) }}" class="btn btn-indigo"><i class="fa fa-certificate"></i> &nbsp;Configuration attestation</a>
+                    <a href="{{ url('admin/colloque/email/'.$colloque->id) }}" class="btn btn-orange"><i class="fa fa-envelope-o"></i> &nbsp;Configuration email</a>
                 </div>
             </div>
 		</div>
@@ -21,8 +21,6 @@
                     @include('admin.colloques.partials.documents')
 					
 					<!-- Info générales-->
-					
-					<!-- form start --> 
 					{{ Form::model($colloque,array(
 						'method'        => 'PATCH',
 						'id'            => 'colloque_info',
@@ -39,27 +37,27 @@
 
 							<h3>Centres</h3>
 
-							  <div class="form-group">
-								  <label for="titre" class="col-sm-3 control-label">Centre organisateurs</label>
-								  <div class="col-sm-6">
+							<div class="form-group">
+								<label for="titre" class="col-sm-3 control-label">Centre organisateurs</label>
+								<div class="col-sm-6">
 								  
-								  		<?php
-								  			
-								  			$ColloqueLogos  = ( isset($colloque->centres) ? $colloque->centres : '' );
-								  			$centerLogos = explode(',', $ColloqueLogos);
-									  		
-											if(!empty($centers)){
-												foreach($centers as $center){
-													echo '<div class="checkbox block"><label><input name="centres[]" value="'.$center.'" type="checkbox" ';
-													if( in_array($center, $centerLogos)){ echo 'checked'; }
-													echo ' >'.$center.'</label></div>';
-												}
-											}	
-										?>
+                                    <?php
 
-								  </div>
-								  <div class="col-sm-3"><p class="help-block">Requis</p></div>
-							  </div>
+                                        $ColloqueLogos  = ( isset($colloque->centres) ? $colloque->centres : '' );
+                                        $centerLogos = explode(',', $ColloqueLogos);
+
+                                        if(!empty($centers)){
+                                            foreach($centers as $center){
+                                                echo '<div class="checkbox block"><label><input name="centres[]" value="'.$center.'" type="checkbox" ';
+                                                if( in_array($center, $centerLogos)){ echo 'checked'; }
+                                                echo ' >'.$center.'</label></div>';
+                                            }
+                                        }
+                                    ?>
+
+								</div>
+								<div class="col-sm-3"><p class="help-block">Requis</p></div>
+							</div>
 					    
 							<h3>Général</h3>
 							  <div class="form-group">
@@ -136,17 +134,18 @@
 					<div class="panel panel-info">	
 				       <div rel="#infos_option" class="panel-heading colloque_section"><h4><i class="fa fa-flag-o"></i> Prix et Options</h4></div>
 					   <div id="infos_option" class="panel-body"><!-- start panel content -->
-					   					     
-							  <h3>Prix</h3>
-							  <p><a href="{{ url('admin/price/create/'.$colloque->id) }}" class="btn btn-sm btn-primary">Ajouter</a></p>
-							  
+
 							  <div class="row">
-							  	  <div class="col-sm-6 col-md-offset-3">
+                                  <div class="col-sm-3">
+                                      <h3>Prix</h3>
+                                      <p><a href="{{ url('admin/price/create/'.$colloque->id) }}" class="btn btn-sm btn-primary">Ajouter</a></p>
+                                  </div>
+							  	  <div class="col-sm-6">
 							  	  
 							  	  	  @if ( ! $colloque->colloque_prices->isEmpty() )
-							  	  	  
+
 							  	  	  <h4>PRIX COLLOQUES</h4>
-							  	  	  
+
 								  	  <div class="panel panel-midnightblue">
 										  <div class="panel-body">
 											  <ul class="list-group">
@@ -204,14 +203,15 @@
 							  	  </div>				
 							  </div>
 
-							  <h3><a name="option">Options</a></h3>
-							  <p><a href="{{ url('admin/option/create/'.$colloque->id) }}" class="btn btn-sm btn-primary">Ajouter</a></p>
-
 							  <div class="row">
-					  	 		 <div class="col-sm-6 col-md-offset-3">
-									  <ul class="list-group">
-									  @if ( ! $colloque->colloque_options->isEmpty() )
+                                  <div class="col-sm-3">
+                                      <h3><a name="option">Options</a></h3>
+                                      <p><a href="{{ url('admin/option/create/'.$colloque->id) }}" class="btn btn-sm btn-primary">Ajouter</a></p>
+                                  </div>
+					  	 		 <div class="col-sm-6">
+									  <ul class="list-group margeUp">
 
+									  @if ( ! $colloque->colloque_options->isEmpty() )
 
 									  	@foreach($colloque->colloque_options as $option)
 									  		<li class="list-group-item">
@@ -236,13 +236,14 @@
 									  </ul>
 								  </div>
 							  </div>						  		
-							  									  
-							  <h3>Spécialisations</h3>
-							  <p><a href="{{ url('admin/specialisation/addToColloque/'.$colloque->id) }}" class="btn btn-sm btn-primary">Ajouter</a></p>
 
 						  	  <div class="row">
-					  	  		 <div class="col-sm-6 col-md-offset-3">
-									  <ul class="list-group">
+                                  <div class="col-sm-3">
+                                      <h3>Spécialisations</h3>
+                                      <p><a href="{{ url('admin/specialisation/addToColloque/'.$colloque->id) }}" class="btn btn-sm btn-primary">Ajouter</a></p>
+                                  </div>
+					  	  		 <div class="col-sm-6">
+									  <ul class="list-group margeUp">
 								  		@if ( ! $colloque->colloque_specialisations->isEmpty() )
 										  	@foreach($colloque->colloque_specialisations as $specialisation)
 										  		<li class="list-group-item">
@@ -263,7 +264,6 @@
 							  </div>
 							  	
 					    </div><!-- end panel content -->
-
 					</div><!-- end panel -->
 
 					<!-- panel start -->
@@ -286,19 +286,12 @@
 							  	  <div class="col-sm-6">
 
                                       <div class="radio">
-                                          <label>
-                                              {{ Form::radio('type', 1 , ($colloque->type == 1 ? true : false)) }}Avec tous les documents
-                                          </label>
+                                          <label>{{ Form::radio('type', 1 , ($colloque->type == 1 ? true : false)) }}Avec tous les documents</label>
                                       </div>
-
-                                      <div class="radio">
-                                          <label>{{ Form::radio('type', 3,($colloque->type == 3 ? true : false) ) }}Que Bon</label>
-                                      </div>
-
+                                      <div class="radio"> <label>{{ Form::radio('type', 3,($colloque->type == 3 ? true : false) ) }}Que Bon</label></div>
                                       <div class="radio">
                                           <label>{{ Form::radio('type', 2,($colloque->type == 2 ? true : false) ) }}Que facture et BV</label>
                                       </div>
-
                                       <div class="radio">
                                           <label>{{ Form::radio('type', 0,($colloque->type == 0 ? true : false) ) }}Sans Documents</label>
                                       </div>
@@ -322,8 +315,8 @@
 							  </div>	
 							
 							<!-- form end --> 
-					    </div><!-- end panel content -->
-					    <div class="panel-footer">
+					   </div><!-- end panel content -->
+					   <div class="panel-footer">
 					      	<div class="row">
 					      		<div class="col-sm-6 col-sm-offset-3">
 					      			<div class="btn-toolbar">
@@ -332,7 +325,7 @@
 					      			</div>
 					      		</div>
 					      	</div>
-					    </div>
+					   </div>
 
 					</div><!-- end panel -->
 										

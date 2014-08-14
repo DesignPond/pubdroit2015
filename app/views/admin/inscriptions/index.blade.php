@@ -7,7 +7,8 @@
         <h1>Inscriptions</h1>
         <div class="options">
             <div class="btn-toolbar">
-                 <a href="{{ url('admin/invoice/colloque/'.$colloque->id) }}" class="btn btn-green"><i class="fa fa-file-text-o"></i> &nbsp;Factures</a>
+                <a href="{{ url('admin/colloque/'.$colloque->id.'/edit') }}" class="btn btn-info"><i class="fa fa-certificate"></i> &nbsp;Retour au colloque</a>
+                <a href="{{ url('admin/invoice/colloque/'.$colloque->id) }}" class="btn btn-green"><i class="fa fa-file-text-o"></i> &nbsp;Factures</a>
             </div>
         </div>
     </div>

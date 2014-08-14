@@ -18,15 +18,27 @@
         @if ( !empty($colloques) )
             @foreach($colloques as $colloque)
 
-            <?php $color = ($archive ? 'orange': 'info'); ?>
+            <?php
+
+                $color    = ($archive ? 'orange': 'info');
+                $filename = ( !$colloque->colloque_files->isEmpty() ? $colloque->colloque_files->first()->filename : null );
+                $vignette = ( $filename ? $filename : 'default.png');
+            ?>
 
             <div class="col-md-6">
                 <div class="panel panel-{{ $color }}">
                     <div class="panel-heading"><h4><i class="fa fa-calendar icon-highlight icon-highlight-default"></i> {{ $colloque->titre }}</h4></div>
                     <div class="panel-body colloque-info">
 
-                        <p>{{ $colloque->organisateur }}</p>
-                        <p><strong>Date:</strong> {{ Custom::formatDate( $colloque->dateDebut ) }}</p>
+                        <div class="media">
+                            <a class="pull-left" href="#">
+                                <img class="media-object" width="50" src="{{ asset('files/vignette/'.$vignette); }}" alt="vignette">
+                            </a>
+                            <div class="media-body">
+                                <p>{{ $colloque->organisateur }}</p>
+                                <p><strong>Date:</strong> {{ Custom::formatDate( $colloque->dateDebut ) }}</p>
+                            </div>
+                        </div>
 
                         <div class="btn-group pull-right">
                             <a class="btn btn-sm btn-info" href="{{ url('admin/colloque/'.$colloque->id.'/edit') }}">&Eacute;diter</a>

@@ -45,7 +45,7 @@
 
                                                  <input class="uploadFile" disabled="disabled" placeholder="{{ $allfiles[$type][$doc]->filename }}">
                                                  <a class="btn btn-xs btn-danger alone_btn deleteAction" data-action="<?php echo $allfiles[$type][$doc]->filename; ?>"
-                                                    href="{{ url('admin/pubdroit/colloque/'.$allfiles[$type][$doc]->id.'/destroy_file') }}">X</a>
+                                                    href="{{ url('admin/colloque/'.$allfiles[$type][$doc]->id.'/destroy_file') }}">X</a>
 
                                             @else
 
