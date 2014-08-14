@@ -17,7 +17,7 @@
         <div class="row">
             <div class="col-sm-12">
 
-                <div class="panel panel-sky"> <!-- start panel -->
+                <div class="panel panel-midnightblue"> <!-- start panel -->
                     <div class="panel-heading">
                         <h4><?php echo $colloque->titre; ?></h4>
                     </div>

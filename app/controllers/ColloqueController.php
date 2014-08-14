@@ -130,35 +130,46 @@ class ColloqueController extends BaseController {
 
 	}
 
-	public function email(){
+	public function email($colloque_id){
 
-		$colloque_id = Input::get('colloque_id');
+        $email   = $this->colloque->find($colloque_id)->colloque_emails;
+        $default = $this->colloque->getEmail('inscription', 0);
+
+        return View::make('admin.colloques.form.email')->with( array('email' => $email , 'default' => $default , 'colloque_id' => $colloque_id ));
+
+    }
+
+	public function attestation($colloque_id){
+
+        $attestation = $this->colloque->find($colloque_id)->colloque_attestations;
+
+        return View::make('admin.colloques.form.attestation')->with( array('attestation' => $attestation , 'colloque_id' => $colloque_id ));
+
+	}
+
+    public function edit_email(){
+
+        $colloque_id = Input::get('colloque_id');
         $email_id    = Input::get('id');
+        $store       = ($email_id ? 'updateEmail' : 'createEmail' );
 
-        $store    = ($email_id ? 'updateEmail' : 'createEmail' );
-
-        $email  = $this->colloque->$store(
-            Input::all()
-        );
+        $email  = $this->colloque->$store( Input::all() );
 
         return Redirect::to('admin/colloque/'.$colloque_id.'/edit')->with( array('status' => 'success' , 'message' => 'Mise à jour ok') );
 
     }
 
-	public function attestation(){
+    public function edit_attestation(){
 
-		$colloque_id = Input::get('colloque_id');
+        $colloque_id = Input::get('colloque_id');
         $att_id      = Input::get('id');
+        $store       = ($att_id ? 'updateAttestation' : 'createAttestation' );
 
-        $store    = ($att_id ? 'updateAttestation' : 'createAttestation' );
-
-        $attestation  = $this->colloque->$store(
-            Input::all()
-        );
+        $attestation  = $this->colloque->$store( Input::all() );
 
         return Redirect::to('admin/colloque/'.$colloque_id.'/edit')->with( array('status' => 'success' , 'message' => 'Mise à jour ok') );
 
-	}
+    }
 
 	/**
 	 * Remove the specified resource from storage.

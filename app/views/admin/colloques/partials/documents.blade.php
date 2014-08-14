@@ -4,7 +4,7 @@
 @if($documents)
     @foreach($documents as $type => $document)
         <div class="col-sm-6">
-            <div class="panel panel-green">
+            <div class="panel panel-info">
                 <div rel="#{{ $type }}" class="panel-heading">
                     <h4><i class="fa fa-picture-o"></i> &nbsp;{{ ucfirst($type) }}</h4>
                     <div class="options">

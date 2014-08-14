@@ -1,7 +1,7 @@
 <div class="row">
 
     <div class="col-md-2">
-        <a href="#" class="shortcut-tiles tiles-primary">
+        <a href="#" class="shortcut-tiles tiles-indigo">
             <div class="tiles-body">
                 <div class="pull-left"><i class="fa fa-certificate"></i></div>
                 <div class="pull-right"></div>
@@ -10,7 +10,7 @@
         </a>
     </div>
     <div class="col-md-2">
-        <a href="#" class="shortcut-tiles tiles-indigo">
+        <a href="#" class="shortcut-tiles tiles-orange">
             <div class="tiles-body">
                 <div class="pull-left"><i class="fa fa-envelope-o"></i></div>
                 <div class="pull-right"></div>
@@ -27,7 +27,7 @@
         </a>
     </div>
     <div class="col-md-2">
-        <a href="#" class="shortcut-tiles tiles-magenta">
+        <a href="#" class="shortcut-tiles tiles-green">
             <div class="tiles-body">
                 <div class="pull-left"><i class="fa fa-credit-card"></i></div>
             </div>

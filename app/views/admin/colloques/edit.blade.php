@@ -2,180 +2,23 @@
 @section('content')
 
 		<div id="page-heading">
-            <h1>&Eacute;diter un colloque</h1>
+            <h1>&Eacute;diter <small>{{ $colloque->titre }}</small></h1>
+            <div class="options">
+                <div class="btn-toolbar">
+                    <a href="{{ url('admin/colloque/attestation/'.$colloque->id) }}" class="btn btn-indigo"><i class="fa fa-certificate"></i> &nbsp;Configuration attestation</a>
+                    <a href="{{ url('admin/colloque/email/'.$colloque->id) }}" class="btn btn-orange"><i class="fa fa-envelope-o"></i> &nbsp;Configuration email</a>
+                    <a href="{{ url('admin/inscription/colloque/'.$colloque->id) }}" class="btn btn-midnightblue"><i class="fa fa-calendar"></i> &nbsp;Inscriptions</a>
+                    <a href="{{ url('admin/inscription/colloque/'.$colloque->id) }}" class="btn btn-green"><i class="fa fa-credit-card"></i> &nbsp;Factures</a>
+                </div>
+            </div>
 		</div>
 		
 		<div class="container">
 		    <div class="row">
 				<div class="col-sm-12">
 
-                    <!-- Custom options for colloque attestation and emails -->
-                    @include('admin.colloques.partials.custom')
-
                     <!-- Images et documents -->
                     @include('admin.colloques.partials.documents')
-
-					<!-- Textes email -->
-					<!-- panel start -->
-					<div class="panel panel-green">
-				       <div rel="#email_colloque" class="panel-heading colloque_section"><h4><i class="fa fa-envelope-o"></i> &nbsp;Textes pour email inscription</h4></div>
-					    <div id="email_colloque" class="toggle_in panel-body"><!-- start panel content -->
-					    
-					    	<?php  $email = ( isset($colloque->colloque_email) ? $colloque->colloque_email : array() ); ?>
-
-							<!-- form start --> 
-							{{ Form::model($email,array(
-								'method'        => 'POST',
-								'id'            => 'colloque_email',
-								'data-validate' => 'parsley',
-								'class'         => 'validate-form-email form-horizontal',
-								'url'           => array('admin/colloque/email')))
-							}}				
-							  
-							<div class="form-group">
-							  	<label for="message" class="col-sm-3 control-label">Message</label>
-							  	<div class="col-sm-6">
-							  	
-							  		@if(!empty($email))
-					      				{{ Form::textarea('message', $email->message , array('class' => 'form-control  redactor', 'cols' => '50' , 'rows' => '4' )) }}
-					      			@else
-					      				{{ Form::textarea('message', null , array('class' => 'form-control redactor', 'cols' => '50' , 'rows' => '4' )) }}
-					      			@endif
-							  	  	
-							  	</div>
-							</div>							
-
-							<div class="col-sm-6 col-sm-offset-3 margeBottom">
-					      		
-                                @if(!empty($email))
-                                    {{ Form::hidden('id', $email->id )}}
-                                @endif
-
-                                {{ Form::hidden('type', 'inscription' )}}
-                                {{ Form::hidden('colloque_id', $colloque->id )}}
-
-                                <button type="submit" class="btn-primary btn">Envoyer</button>
-
-					      	</div>
-					      											    					    
-					    	@if( !empty($default) )
-						    	<div id="defaultEmail" class="col-sm-6 col-sm-offset-3">
-						    		<a class="noUnderline" data-toggle="collapse" data-parent="#defaultEmail" href="#emailText">
-                                        <i class="fa fa-eye"></i> &nbsp;Texte email par défaut
-                                    </a>
-						    		<div id="emailText" class="well collapse">{{ $default->message }}</div>
-						    	</div>
-					    	@endif
-						    						  
-							{{ Form::close() }}
-					    	
-					    </div><!-- end panel content -->
-					</div><!-- end panel -->
-					
-					<!-- Textes Attestation -->
-					<!-- panel start -->
-					<div class="panel panel-midnightblue">
-				       <div rel="#attestation_colloque" class="panel-heading colloque_section"><h4><i class="fa fa-envelope-o"></i> &nbsp;Infos pour attestation</h4></div>
-					    <div id="attestation_colloque" class="toggle_in panel-body"><!-- start panel content -->
-							
-						    <?php  $attestation = ( isset($colloque->colloque_attestations) ? $colloque->colloque_attestations : array() ); ?>
-							<!-- form start --> 
-							{{ Form::open(array(
-								'method'        => 'POST',
-								'id'            => 'colloque_attestation',
-								'data-validate' => 'parsley',
-								'class'         => 'validate-form-attestation form-horizontal',
-								'url'           => 'admin/colloque/attestation' ))
-							}}
-							
-							<div class="form-group">
-								  <label for="lieu" class="col-sm-3 control-label">Lieu</label>
-								  <div class="col-sm-6">
-								  	
-									  @if(!empty($attestation))
-									      {{ Form::text('lieu', $attestation->lieu , array('class' => 'form-control required' )) }}
-									  @else
-						      			  {{ Form::text('lieu', null , array('class' => 'form-control required' )) }}
-						      		  @endif
-						      		  
-								  </div>
-								  <div class="col-sm-3"><p class="help-block">Requis</p></div>
-							</div>
-							
-							
-							<div class="form-group">
-								  <label for="organisateur" class="col-sm-3 control-label">Organisateur</label>
-								  <div class="col-sm-6">
-								  
-								      @if(!empty($attestation))
-									      {{ Form::text('organisateur', $attestation->organisateur , array('class' => 'form-control required' )) }}
-									  @else
-						      			  {{ Form::text('organisateur', null , array('class' => 'form-control required' )) }}
-						      		  @endif
-						      		  
-								  </div>
-								  <div class="col-sm-3"><p class="help-block">Requis</p></div>
-							</div>
-							
-							
-							<div class="form-group">
-								  <label for="signature" class="col-sm-3 control-label">Signature</label>
-								  <div class="col-sm-6">
-								  
-								      @if(!empty($attestation))
-									      {{ Form::text('signature', $attestation->signature , array('class' => 'form-control required' )) }}
-									  @else
-						      			  {{ Form::text('signature', null , array('class' => 'form-control required' )) }}
-						      		  @endif
-						      		  
-								  </div>
-								  <div class="col-sm-3"><p class="help-block">Requis</p></div>
-							</div>
-							
-							
-							<div class="form-group">
-								  <label for="responsabilite" class="col-sm-3 control-label">Responsabilite</label>
-								  <div class="col-sm-6">
-								  
-								      @if(!empty($attestation))
-									      {{ Form::text('responsabilite', $attestation->responsabilite , array('class' => 'form-control' )) }}
-									  @else
-						      			  {{ Form::text('responsabilite', null , array('class' => 'form-control' )) }}
-						      		  @endif
-						      		  
-								  </div>
-								  <div class="col-sm-3"><p class="help-block"></p></div>
-							</div>
-							  
-							<div class="form-group">
-							  	<label for="remarque" class="col-sm-3 control-label">Remarque</label>
-							  	<div class="col-sm-6">
-							  	
-							  		@if(!empty($attestation))
-					      				{{ Form::textarea('remarque', $attestation->remarque , array('class' => 'form-control redactor', 'cols' => '50' , 'rows' => '4' )) }}
-					      			@else
-					      				{{ Form::textarea('remarque', null , array('class' => 'form-control redactor', 'cols' => '50' , 'rows' => '4' )) }}
-					      			@endif
-							  	  	
-							  	</div>
-							</div>
-							  
-							<div class="col-sm-6 col-sm-offset-3">
-					      		<div class="btn-toolbar">
-					      		
-					      			@if(!empty($attestation))
-					      				{{ Form::hidden('id', $attestation->id )}}
-					      			@endif
-					      			
-					      			{{ Form::hidden('colloque_id', $colloque->id )}}
-						      		<button type="submit" class="btn-primary btn">Envoyer</button>
-					      		</div>
-					      	</div>
-	
-							{{ Form::close() }}
-					    	
-					    </div><!-- end panel content -->
-					</div><!-- end panel -->
 					
 					<!-- Info générales-->
 					
@@ -189,11 +32,10 @@
 					}} 
 
 					<!-- panel start -->
-					<div class="panel panel-green">
+					<div class="panel panel-info">
 	
 				       <div rel="#infos_gen" class="panel-heading colloque_section"><h4><i class="fa fa-calendar-o"></i> Informations</h4></div>
 					   <div id="infos_gen" class="panel-body"><!-- start panel content -->
-
 
 							<h3>Centres</h3>
 
@@ -291,7 +133,7 @@
 					</div><!-- end panel -->
 
 					<!-- panel start -->
-					<div class="panel panel-green">	
+					<div class="panel panel-info">	
 				       <div rel="#infos_option" class="panel-heading colloque_section"><h4><i class="fa fa-flag-o"></i> Prix et Options</h4></div>
 					   <div id="infos_option" class="panel-body"><!-- start panel content -->
 					   					     
@@ -425,7 +267,7 @@
 					</div><!-- end panel -->
 
 					<!-- panel start -->
-					<div class="panel panel-green">	
+					<div class="panel panel-info">	
 				       <div class="panel-heading"><h4><i class="fa fa-gears"></i> Configuration</h4></div>
 					   <div class="panel-body"><!-- start panel content -->
 					   					     

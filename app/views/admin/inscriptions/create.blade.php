@@ -22,7 +22,7 @@
                         }}
 
                         <!-- panel start -->
-                        <div class="panel panel-green">
+                        <div class="panel panel-midnightblue">
                            <div class="panel-heading"><h4><i class="fa fa-calendar-o"></i> Nouvelle inscription</h4></div>
                            <div class="panel-body"><!-- start panel content -->
 

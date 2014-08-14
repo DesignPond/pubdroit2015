@@ -7,7 +7,7 @@
         <h1>Factures</h1>
         <div class="options">
             <div class="btn-toolbar">
-                 <a href="{{ url('admin/inscription/colloque/'.$colloque->id) }}" class="btn btn-sky"><i class="fa fa-file-text-o"></i> &nbsp;Inscriptions</a>
+                 <a href="{{ url('admin/inscription/colloque/'.$colloque->id) }}" class="btn btn-midnightblue"><i class="fa fa-file-text-o"></i> &nbsp;Inscriptions</a>
             </div>
         </div>
     </div>

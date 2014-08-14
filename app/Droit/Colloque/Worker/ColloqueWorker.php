@@ -46,7 +46,6 @@ class ColloqueWorker implements ColloqueWorkerInterface{
     public function getInfoForColloque($id)
     {
         $colloque       = $this->colloque->find($id);
-        $default        = $this->colloque->getEmail('inscription', 0);
         $comptes        = $this->compte->getAll()->lists('motif', 'id');
         $comptes        = ['' => 'Choix'] + $comptes;
         $centers        = $this->file->getAllCenters();
@@ -56,7 +55,6 @@ class ColloqueWorker implements ColloqueWorkerInterface{
             'colloque'       => $colloque,
             'centers'        => $centers,
             'comptes'        => $comptes,
-            'default'        => $default,
             'documents'      => $this->documents,
             'allfiles'       => $allfiles
         );
