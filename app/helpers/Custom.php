@@ -391,7 +391,7 @@ class Custom {
 	 */	
 	public function whatCivilite($title){
 		
-		$civilites = Civilites::all()->lists('title','id');
+		$civilites = Civilites::all()->lists('titre','id');
 		
 		return (isset($civilites[$title]) ? $civilites[$title] : "");		
 	}

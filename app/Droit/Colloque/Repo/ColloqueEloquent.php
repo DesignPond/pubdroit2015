@@ -40,7 +40,11 @@ class ColloqueEloquent implements ColloqueInterface {
 		
 	public function getArchives(){
 		
-		return $this->colloque->with(array('colloque_inscriptions'))->where('dateDebut','<',$this->today)->get();
+		return $this->colloque->with(array('colloque_inscriptions','colloque_files' => function($query)
+        {
+            $query->where('colloque_files.type','=','vignette');
+
+        }))->where('dateDebut','<',$this->today)->get();
 	}
 		
 	public function find($id){

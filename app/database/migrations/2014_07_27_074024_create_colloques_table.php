@@ -24,7 +24,8 @@ class CreateColloquesTable extends Migration {
 			$table->string('endroit');
 			$table->date('dateDebut');
 			$table->date('dateFin')->nullable();
-			$table->date('dateDelai'); // changed
+			$table->date('dateDelai');
+            $table->date('dateActif')->nullable();
 			$table->text('remarques')->nullable();
 			$table->enum('type', array('0','1','2','3'))->default(1);
 			$table->integer('compte_id')->nullable();	// changed

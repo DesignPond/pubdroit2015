@@ -87,6 +87,32 @@ class AddressesTableSeeder extends Seeder {
 
 		// Uncomment the below to run the seeder
 		DB::table('adresses')->insert($addresses);
+
+        $faker = \Faker\Factory::create();
+
+        foreach(range(3,13) as $index)
+        {
+            \Droit\User\Entities\Adresses::create([
+                'civilite_id'   => $faker->numberBetween(1 , 4),
+                'prenom'        => $faker->firstName,
+                'nom'           => $faker->lastName,
+                'email'         => $faker->email,
+                'entreprise'    => $faker->company,
+                'profession_id' => $faker->numberBetween(1,6),
+                'telephone'     => $faker->randomNumber(10),
+                'mobile'        => $faker->randomNumber(10),
+                'adresse'       => $faker->streetAddress,
+                'npa'           => $faker->postcode,
+                'ville'         => $faker->city,
+                'canton_id'     => $faker->numberBetween(1,26),
+                'pays_id'       => '208',
+                'type'          => '1',
+                'user_id'       => $index,
+                'created_at'    => date('Y-m-d G:i:s'),
+			    'updated_at'    => date('Y-m-d G:i:s')
+            ]);
+        }
+
 	}
 
 }

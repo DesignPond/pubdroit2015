@@ -8,7 +8,42 @@ $(document).ready(
   function() {
   	
   	TableTools.DEFAULTS.aButtons = [ "xls" ];
-  	
+
+
+  /**
+   * Sort function for dates Y/m/d
+   */
+
+  jQuery.extend( jQuery.fn.dataTableExt.oSort, {
+      "date-uk-pre": function ( a ) {
+          var ukDatea = a.split('/');
+          return (ukDatea[2] + ukDatea[1] + ukDatea[0]) * 1;
+      },
+      "date-uk-asc": function ( a, b ) {
+          return ((a < b) ? -1 : ((a > b) ? 1 : 0));
+      },
+      "date-uk-desc": function ( a, b ) {
+          return ((a < b) ? 1 : ((a > b) ? -1 : 0));
+      }
+  });
+
+  /**
+   * Sort function for inscription number - get only number after / and sort naturally
+   */
+
+  jQuery.extend( jQuery.fn.dataTableExt.oSort, {
+      "sort-number-pre": function ( a ) {
+          var res = a.split('/');
+          return parseInt(res[1]);
+      },
+      "sort-number-asc": function ( a, b ) {
+          return ((a < b) ? -1 : ((a > b) ? 1 : 0));
+      },
+      "sort-number-desc": function ( a, b ) {
+          return ((a < b) ? 1 : ((a > b) ? -1 : 0));
+      }
+  });
+
     $('.datatables').dataTable({
         "sDom": "<'row'<'col-xs-6'l><'col-xs-6'f>r>t<'row'<'col-xs-6'i><'col-xs-6'p>>",
         "sPaginationType": "bootstrap",
@@ -23,10 +58,10 @@ $(document).ready(
 		        "sLast"     : "Dernière page"
 		     }
         },
-        // "oTableTools": { "sSwfPath": base_url + "swf/copy_csv_xls_pdf.swf"},
+        'aoColumnDefs': [{'bSortable': false, 'aTargets': [0] }],
 		"aoColumns": [
 			    /* uid */        null,
-			    /* no */         null,
+			    /* no */         { "sType": "sort-number" },
 			    /* date */       null,
 			    /* civilité */   null,
 			    /* prenom */     null,
@@ -39,7 +74,7 @@ $(document).ready(
 			    /* ville */      null,
 			    /* canton */     { "bVisible": false },
 			    /* pays */       { "bVisible": false }
-			]
+		]
     });
     
     $('.users_table').dataTable({
@@ -64,7 +99,7 @@ $(document).ready(
 		        "sPrevious" : "Précédent",
 		        "sFirst"    : "Première page",
 		        "sLast"     : "Dernière page"
-		     }
+		    }
         }
     });
     
@@ -114,21 +149,6 @@ $(document).ready(
 		     }
         }
     });
-    
-	jQuery.extend( jQuery.fn.dataTableExt.oSort, {
-	    "date-uk-pre": function ( a ) {
-	        var ukDatea = a.split('/');
-	        return (ukDatea[2] + ukDatea[1] + ukDatea[0]) * 1;
-	    },
-	 
-	    "date-uk-asc": function ( a, b ) {
-	        return ((a < b) ? -1 : ((a > b) ? 1 : 0));
-	    },
-	 
-	    "date-uk-desc": function ( a, b ) {
-	        return ((a < b) ? 1 : ((a > b) ? -1 : 0));
-	    }
-	} );
             
     $('.arrets_table').dataTable({
         "sDom": "<'row'<'col-xs-6'l><'col-xs-6'f>r>t<'row'<'col-xs-6'i><'col-xs-6'p>>",

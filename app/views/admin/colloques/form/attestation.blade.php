@@ -13,7 +13,7 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
-
+                <p class="lead"><i class="fa fa-pencil-square"></i>&nbsp; {{ $titre }}</p>
                 <!-- panel start -->
                 <div class="panel panel-indigo">
                     <div class="panel-heading"><h4><i class="fa fa-envelope-o"></i> &nbsp;Infos pour attestation</h4></div>

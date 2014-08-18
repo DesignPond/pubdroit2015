@@ -35,7 +35,7 @@
                         <table cellpadding="0" cellspacing="0" border="0" class="table table-striped table-bordered datatables" id="inscriptionsTable">
                             <thead>
                                 <tr>
-                                    <th>ID</th>
+                                    <th></th>
                                     <th>N°</th>
                                     <th>Date</th>
                                     <th>Titre </th>
@@ -52,7 +52,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                             <?php
+                            <?php
 
                                 foreach($factures as $facture)
                                 {
@@ -60,26 +60,26 @@
                                     {
                                         echo '<tr class="odd gradeX">';
 
-                                            echo '<td>'.$facture->user_id.'</td>';
+                                            echo '<td><a href="'.url('admin/users/'.$facture->user_id).'" class="btn btn-green">'.$facture->user_id.'</a></td>';
                                             echo '<td>'.$facture->numero.'</td>';
                                             echo '<td>'.$facture->created_at->format('d/m/Y').'</td>';
-                                            echo '<td>'.$custom->whatCivilite($facture->civilite).'</td>';
+                                            echo '<td>'.$custom->whatCivilite($facture->civilite_id).'</td>';
                                             echo '<td>'.$facture->prenom.'</td>';
                                             echo '<td>'.$facture->nom.'</td>';
                                             echo '<td>'.$facture->email.'</td>';
                                             echo '<td>'.$facture->entreprise.'</td>';
-                                            echo '<td>'.$custom->whatProfession($facture->profession).'</td>';
+                                            echo '<td>'.$custom->whatProfession($facture->profession_id).'</td>';
                                             echo '<td>'.$facture->adresse.'</td>';
                                             echo '<td>'.$facture->npa.'</td>';
                                             echo '<td>'.$facture->ville.'</td>';
-                                            echo '<td>'.$custom->whatCanton($facture->canton).'</td>';
-                                            echo '<td>'.$custom->whatPays($facture->pays).'</td>';
+                                            echo '<td>'.$custom->whatCanton($facture->canton_id).'</td>';
+                                            echo '<td>'.$custom->whatPays($facture->pays_id).'</td>';
 
                                         echo '</tr>';
                                     }
                                  }
 
-                              ?>
+                            ?>
                             </tbody>
                        </table>
                        @else

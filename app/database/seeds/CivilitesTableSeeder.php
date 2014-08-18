@@ -8,10 +8,10 @@ class CivilitesTableSeeder extends Seeder {
 		DB::table('civilites')->truncate();
 
 		$civilites = array(
-			array('title' => 'Monsieur'),
-			array('title' => 'Madame'),
-			array('title' => 'Me'),
-			array('title' => ' ')
+			array('titre' => 'Monsieur'),
+			array('titre' => 'Madame'),
+			array('titre' => 'Me'),
+			array('titre' => ' ')
 		);
 
 		// Uncomment the below to run the seeder

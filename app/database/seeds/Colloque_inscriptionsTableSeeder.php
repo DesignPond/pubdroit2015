@@ -52,6 +52,23 @@ class Colloque_inscriptionsTableSeeder extends Seeder {
 
 		// Uncomment the below to run the seeder
 		DB::table('colloque_inscriptions')->insert($colloque_inscriptions);
+
+        $faker = \Faker\Factory::create();
+
+        foreach(range(3,13) as $index)
+        {
+             $colloque_id = $faker->numberBetween(1,4);
+
+            \Droit\Colloque\Entities\Colloque_inscriptions::create([
+                'colloque_id'        => $colloque_id,
+                'user_id'            => $index,
+                'colloque_price_id'  => 1,
+                'numero'             => $colloque_id.'-2014/'.$index,
+                'created_at'         => date('Y-m-d G:i:s'),
+                'updated_at'         => date('Y-m-d G:i:s')
+            ]);
+        }
+
 	}
 
 }

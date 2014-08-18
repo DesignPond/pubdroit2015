@@ -134,16 +134,18 @@ class ColloqueController extends BaseController {
 
         $email   = $this->colloque->find($colloque_id)->colloque_emails;
         $default = $this->colloque->getEmail('inscription', 0);
+        $titre = $this->colloque->find($colloque_id)->first()->titre;
 
-        return View::make('admin.colloques.form.email')->with( array('email' => $email , 'default' => $default , 'colloque_id' => $colloque_id ));
+        return View::make('admin.colloques.form.email')->with( array('email' => $email , 'default' => $default , 'colloque_id' => $colloque_id , 'titre' => $titre));
 
     }
 
 	public function attestation($colloque_id){
 
         $attestation = $this->colloque->find($colloque_id)->colloque_attestations;
+        $titre = $this->colloque->find($colloque_id)->first()->titre;
 
-        return View::make('admin.colloques.form.attestation')->with( array('attestation' => $attestation , 'colloque_id' => $colloque_id ));
+        return View::make('admin.colloques.form.attestation')->with( array('attestation' => $attestation , 'colloque_id' => $colloque_id, 'titre' => $titre ));
 
 	}
 

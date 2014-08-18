@@ -8603,6 +8603,7 @@ footer #back-to-top {
   margin: 0;
   padding: 20px 20px 20px 20px;
   float: left;
+  max-width: 50%;
   line-height: 30px;
   font-weight: 300;
   font-size: 42px;

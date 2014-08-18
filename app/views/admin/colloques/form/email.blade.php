@@ -2,7 +2,7 @@
 @section('content')
 
     <div id="page-heading">
-        <h1>Email<br/><small>Texte envoyé avec l'inscription</small></h1>
+        <h1>Email<br/><small>Texte envoyé avec l'inscription pour: {{ $titre }}</h1>
         <div class="options">
             <div class="btn-toolbar">
                 <a href="{{ url('admin/colloque/'.$colloque_id.'/edit') }}" class="btn btn-info"><i class="fa fa-certificate"></i> &nbsp;Retour au colloque</a>
@@ -13,7 +13,6 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-7">
-
                 <!-- panel start -->
                 <div class="panel panel-orange">
                     <div class="panel-heading"><h4><i class="fa fa-envelope-o"></i> &nbsp;Texte </h4></div>
@@ -30,8 +29,7 @@
                         }}
 
                         <div class="form-group">
-                            <label for="message" class="col-sm-2 control-label">Nouveau texte</label>
-                            <div class="col-sm-10">
+                            <div class="col-sm-12">
 
                                 @if(!empty($email))
                                 {{ Form::textarea('message', $email->message , array('class' => 'form-control  redactor', 'cols' => '50' , 'rows' => '4' )) }}

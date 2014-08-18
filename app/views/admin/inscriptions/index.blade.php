@@ -63,17 +63,17 @@
                                             echo '<td><a class="btn btn-sm btn-primary" href="'.url('admin/users/'.$inscrit->user_id).'">&Eacute;diter</a></td>';
                                             echo '<td>'.$inscrit->numero.'</td>';
                                             echo '<td>'.$inscrit->created_at->format('d/m/Y').'</td>';
-                                            echo '<td>'.$custom->whatCivilite($inscrit->civilite).'</td>';
+                                            echo '<td>'.$custom->whatCivilite($inscrit->civilite_id).'</td>';
                                             echo '<td>'.$inscrit->prenom.'</td>';
                                             echo '<td>'.$inscrit->nom.'</td>';
                                             echo '<td>'.$inscrit->email.'</td>';
                                             echo '<td>'.$inscrit->entreprise.'</td>';
-                                            echo '<td>'.$custom->whatProfession($inscrit->profession).'</td>';
+                                            echo '<td>'.$custom->whatProfession($inscrit->profession_id).'</td>';
                                             echo '<td>'.$inscrit->adresse.'</td>';
                                             echo '<td>'.$inscrit->npa.'</td>';
                                             echo '<td>'.$inscrit->ville.'</td>';
-                                            echo '<td>'.$custom->whatCanton($inscrit->canton).'</td>';
-                                            echo '<td>'.$custom->whatPays($inscrit->pays).'</td>';
+                                            echo '<td>'.$custom->whatCanton($inscrit->canton_id).'</td>';
+                                            echo '<td>'.$custom->whatPays($inscrit->pays_id).'</td>';
                                         echo '</tr>';
                                     }
                                 }

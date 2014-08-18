@@ -2,7 +2,7 @@
 @section('content')
 
 		<div id="page-heading">
-            <h1>&Eacute;diter <small>{{ $colloque->titre }}</small></h1>
+            <h1><i class="fa fa-pencil-square"></i> &nbsp;{{ $colloque->titre }}</h1>
             <div class="options">
                 <div class="btn-toolbar">
                     <a href="{{ url('admin/inscription/colloque/'.$colloque->id) }}" class="btn btn-midnightblue"><i class="fa fa-calendar"></i> &nbsp;Inscriptions</a>
@@ -105,6 +105,7 @@
 					               <div class="col-sm-6">
 					                   {{ Form::text('dateDebut', null ,array('class' => 'form-control datepicker required', 'id' => 'dateDebut' )) }}
 					               </div>
+                                   <div class="col-sm-3"><p class="help-block">Requis</p></div>
 					          </div>	
 					          
 					          <div class="form-group">
@@ -119,10 +120,18 @@
 					               <div class="col-sm-6">
 					                   {{ Form::text('dateDelai', null , array('class' => 'form-control datepicker required', 'id' => 'dateDelai' )) }}
 					               </div>
-					          </div>				          
+                                   <div class="col-sm-3"><p class="help-block">Requis</p></div>
+					          </div>
+
+                               <div class="form-group">
+                                   <label class="col-sm-3 control-label">Actif jusqu'au</label>
+                                   <div class="col-sm-6">
+                                       {{ Form::text('dateActif', null , array('class' => 'form-control datepicker' )) }}
+                                   </div>
+                               </div>
 
 							  <div class="form-group">
-							  	  <label for="remarques" class="col-sm-3 control-label">Remarques</label>
+							  	  <label for="remarques" class="col-sm-3 control-label">Remarques<br/><small>Visible sur publications-droit.ch</small></label>
 							  	  <div class="col-sm-6">
 							  	  	 {{ Form::textarea('remarques', null , array('class' => 'form-control redactor', 'cols' => '50' , 'rows' => '4' )) }}
 							  	  </div>
