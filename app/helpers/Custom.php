@@ -368,7 +368,7 @@ class Custom {
 	
 	public function sharedVariables(){
 		
-	    $civilites   = Civilites::all()->lists('title','id');
+	    $civilites   = Civilites::all()->lists('titre','id');
 	    $professions = Professions::all()->lists('titre','id');
 		$cantons     = Cantons::all()->lists('titre','id');
 		$pays        = Pays::all()->lists('nom','id');

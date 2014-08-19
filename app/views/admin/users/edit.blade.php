@@ -11,10 +11,7 @@
           <div class="col-md-12">
               <div class="panel panel-sky">
 
-                    <div class="panel-heading">
-                        <h4>éditer</h4>
-                    </div>
-
+                    <div class="panel-heading"><h4>éditer</h4></div>
                     <div class="panel-body collapse in">
 
                         <div class="well">
@@ -23,7 +20,7 @@
                                 'method' => 'put',
                                 'class' => 'form-horizontal',
                                 'role' => 'form'
-                                )) }}
+                            )) }}
 
                                 <div class="form-group {{ ($errors->has('firstName')) ? 'has-error' : '' }}" for="firstName">
                                     {{ Form::label('edit_firstName', 'First Name', array('class' => 'col-sm-2 control-label')) }}
@@ -32,7 +29,6 @@
                                     </div>
                                     {{ ($errors->has('firstName') ? $errors->first('firstName') : '') }}
                                 </div>
-
 
                                 <div class="form-group {{ ($errors->has('lastName')) ? 'has-error' : '' }}" for="lastName">
                                     {{ Form::label('edit_lastName', 'Last Name', array('class' => 'col-sm-2 control-label')) }}
@@ -62,15 +58,18 @@
                                         {{ Form::submit('Submit Changes', array('class' => 'btn btn-primary'))}}
                                     </div>
                               </div>
+
                             {{ Form::close()}}
+
                         </div>
 
                         <h4>Change Password</h4>
+
                         <div class="well">
                             {{ Form::open(array(
-                            'action' => array('UserController@change', $user->id),
-                            'class' => 'form-inline',
-                            'role' => 'form'
+                                'action' => array('UserController@change', $user->id),
+                                'class' => 'form-inline',
+                                'role' => 'form'
                             )) }}
 
                             <div class="form-group {{ $errors->has('oldPassword') ? 'has-error' : '' }}">

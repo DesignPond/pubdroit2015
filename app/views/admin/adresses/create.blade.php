@@ -30,10 +30,10 @@
                 </div>
             @endif
 
+                {{ Form::open(array( 'url' => 'admin/adresses' , 'data-validate' => 'parsley' ,'class' => 'validate-form form-horizontal')) }}
+
                 <div class="panel panel-midnightblue"><!-- panel -->
                     <div class="panel-body"><!-- panel body -->
-
-                        {{ Form::open(array( 'url' => 'admin/adresses' , 'data-validate' => 'parsley' ,'class' => 'validate-form form-horizontal')) }}
 
                         <h3><strong>Type d'adresse</strong></h3>
 
@@ -50,7 +50,7 @@
                         <div class="form-group row">
                              <label for="civilite" class="col-sm-3 control-label">Civilite</label>
                              <div class="col-sm-6">
-                                {{ Form::select('civilite', $civilites , null , array( 'class' => 'form-control' ) ) }}
+                                {{ Form::select('civilite_id', $civilites , null , array( 'class' => 'form-control' ) ) }}
                              </div>
                              <div class="col-sm-3"><p class="help-block"></p></div>
                         </div>
@@ -90,7 +90,7 @@
                         <div class="form-group row">
                              <label for="profession" class="col-sm-3 control-label">Profession</label>
                              <div class="col-sm-6">
-                                {{ Form::select('profession', $professions , 0 , array( 'class' => 'form-control' ) ) }}
+                                {{ Form::select('profession_id', $professions , 0 , array( 'class' => 'form-control' ) ) }}
                              </div>
                              <div class="col-sm-3"><p class="help-block"></p></div>
                         </div>
@@ -170,7 +170,7 @@
                         <div class="form-group row">
                              <label for="canton" class="col-sm-3 control-label">Canton</label>
                              <div class="col-sm-6">
-                                {{ Form::select('canton', $cantons , 0 , array( 'class' => 'form-control' ) ) }}
+                                {{ Form::select('canton_id', $cantons , 0 , array( 'class' => 'form-control' ) ) }}
                              </div>
                              <div class="col-sm-3"><p class="help-block"></p></div>
                         </div>
@@ -178,7 +178,7 @@
                         <div class="form-group row">
                              <label for="pays" class="col-sm-3 control-label">Pays</label>
                              <div class="col-sm-6">
-                                {{ Form::select('pays', $pays , 208 , array( 'class' => 'form-control required' ) ) }}
+                                {{ Form::select('pays_id', $pays , 208 , array( 'class' => 'form-control required' ) ) }}
                              </div>
                              <div class="col-sm-3"><p class="help-block">Requis</p></div>
                         </div>
@@ -202,9 +202,9 @@
                         </div>
                     </div>
 
-                    {{ Form::close() }}
-
                 </div><!-- end panel -->
+
+                {{ Form::close() }}
 
                 </div><!-- end col -->
 

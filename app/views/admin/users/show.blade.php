@@ -85,7 +85,7 @@
                                     <table class="table table-condensed">
                                         <tbody>
                                             <tr>
-                                                <td>Nom d'utilisateur</td><td><a href="#">{{ $user->username }}</a></td>
+                                                <td>Nom d'utilisateur</td><td><a id="username" href="#">{{ $user->username }}</a></td>
                                             </tr>
                                             <tr>
                                                 <td>Email</td><td><a href="mailto:{{ $user->email }}">{{ $user->email }}</a></td>
@@ -378,7 +378,7 @@
                                                 {{ Form::close() }}
                                             </li>
                                             <li class="divider"></li>
-                                            <li><a href="<?php echo url('admin/adresses/delete/'.$adresse->id.'/'.$adresse->user_id); ?>">
+                                            <li><a class="deleteAction deleteConfirm" data-action="adresse" href="<?php echo url('admin/adresses/delete/'.$adresse->id.'/'.$adresse->user_id); ?>">
                                                 <small class="text-danger">Supprimer</small></a>
                                             </li>
                                         </ul>
@@ -386,6 +386,7 @@
                                 </div>
                             </div>
 
+                            <!-- Partial adresse form -->
                             @include('admin.adresses.partials.form-edit')
 
                         </div><!-- end panel body -->

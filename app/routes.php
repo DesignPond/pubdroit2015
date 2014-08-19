@@ -18,7 +18,7 @@
 Route::get('/', function()
 {
     $adre = new \Droit\User\Repo\AdresseEloquent(new \Droit\User\Entities\Adresses);
-    $ajax = $adre->get_ajax( 1 , 0 , 10 , null );
+    $ajax = $adre->changeLivraison(1 , 1);
 
     echo '<pre>';
     print_r($ajax);

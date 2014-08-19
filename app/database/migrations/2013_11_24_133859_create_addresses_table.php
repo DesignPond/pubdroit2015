@@ -34,8 +34,8 @@ class CreateAddressesTable extends Migration {
 			$table->integer('pays_id')->nullable();
 			$table->string('type')->default(1);
 			$table->integer('user_id')->nullable();
-			$table->boolean('livraison');
-			$table->boolean('deleted');
+			$table->boolean('livraison')->nullable();
+			$table->boolean('deleted')->nullable();
 			$table->softDeletes();
 			$table->timestamps();
 		});

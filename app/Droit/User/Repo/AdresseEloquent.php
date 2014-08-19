@@ -347,6 +347,46 @@ class AdresseEloquent implements AdresseInterface{
 		return $adresse;
 	}
 
+    /**
+     *  Update a column
+     */
+    public function updateColumn($id , $column , $value){
+
+        $adresse = $this->adresse->find($id);
+
+        if( ! $adresse )
+        {
+            return false;
+        }
+
+        $adresse->$column = $value;
+        $adresse->save();
+
+        return $adresse;
+    }
+
+    /**
+     * Change delivery adresse for user
+     */
+    public function changeLivraison($adresse_id , $user_id){
+
+        $adresses = $this->adresseUser($user_id)->lists('id');
+
+        foreach($adresses as $id)
+        {
+            // Find adresse
+            $adresse = $this->adresse->find($id);
+            // If it's the provided adresse we want to change set livraison to 1 else set to 0
+            $livraison = ( $adresse_id == $id ? 1 : 0);
+            $adresse->livraison = $livraison;
+            $adresse->save();
+
+        }
+
+        return true;
+
+    }
+
 	public function delete($id){
 	
 		$adresse = $this->adresse->find($id);

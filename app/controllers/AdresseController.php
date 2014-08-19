@@ -75,15 +75,21 @@ class AdresseController extends BaseController {
 	
 	/**
 	 * change livraison adresse
-	*/		
+     *
+     * @param  int  $id, int $user_id, int $livraison
+     * @return Response
+     */
 	public function changeLivraison(){
-		
-		if ($this->adresse->changeLivraison($id,$type))
-		{			
-			return Redirect::to($redirectTo)->with( array('status' => 'success' , 'message' => 'Adresse supprimé') ); 		
-		}	
-		
-		return Redirect::to($redirectTo)->with( array('status' => 'danger' , 'message' => 'Problème avec la suppression') ); 
+
+        $user_id    = Input::get('user_id');
+        $adresse    = Input::get('id');
+
+        if ( $this->adresse->changeLivraison($adresse , $user_id) )
+        {
+            return Redirect::to('admin/users/'.$user_id)->with( array('status' => 'success' , 'message' => 'L\'adresse a été changé en adresse de livraison'));
+        }
+
+        return Redirect::to('admin/users/'.$user_id)->with( array('status' => 'danger' , 'message' => 'Problème avec le changement') );
 		
 	}
 
@@ -265,6 +271,7 @@ class AdresseController extends BaseController {
         }
 
         return Redirect::to($redirectTo)->with( array('status' => 'danger' , 'message' => 'Problème avec la suppression') );			
-	}	
+	}
+
 	
 }

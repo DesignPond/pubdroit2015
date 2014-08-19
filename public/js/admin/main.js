@@ -87,16 +87,26 @@ $(function() {
 	$( ".sortable" ).sortable();
 	$( ".sortable" ).disableSelection();
 	 
-	$('body').on('click','.deleteAction',function(){
+	$('body').on('click','.deleteAction',function(event){
 		
 		var $this   = $(this);
 		var action  = $this.data('action');
+        var message = '';
+
+        if($this.hasClass('deleteConfirm'))
+        {
+            var livraison = $this.closest('ul').find('input[name="livraison"]').val();
+            message += ( livraison ? 'Attention!! Cette adresse est l\'adresse de livraison!' : '');
+        }
 		
-		var answer = confirm('Voulez-vous vraiment supprimer : '+ action +' ?');
+		var answer = confirm('Voulez-vous vraiment supprimer : '+ action +' ? ' + message);
+
 	    if (answer){
 			return true;
 	    }
-	    return false;	
+
+	    return false;
+
 	});
 	
     $('.edit_text').editable( base_url + 'admin/pubdroit/event/pivot', { 
@@ -137,33 +147,40 @@ $(function() {
 	$('body').on('click','#changeColumnBtn', function(event){		
 		// Prevent form submit
 		event.preventDefault();
-		$('#alert-error').hide(); 		
+		$('#alert-error').hide();
+
 		// Serialize form data
 		var newname = $("#newValue").val();
 		var column  = $("#whatColumn").val();
-		var user_id = $("#userid").val();	
-		
-		console.log(newname);
-		console.log(user_id);		   
-		// Post the infos
+		var user_id = $("#userid").val();
 
 		$.ajax({
 			 type     : 'post',
 			 dataType : "json",
 			 data     : { user_id : user_id , newname : newname , column : column },
 			 success  : function(result) 
-			 {	
-		 	
+			 {
 				// The inscription is deleted, we refresh the inscription div with new infos
-				if(result.result == true){ 				
-					// When username is changed dismiss modal
-					window.location.href = base_url + 'admin/users/' + user_id;		 	 	               
+				if(result.result == true)
+                {
+                    // Update the username
+                    if(column == 'username'){
+                        $('#username').text(newname);
+                    }
+
+                    // When username is changed dismiss modal and show alert box
+                    $('#changeColumn').modal('hide');
+
+                    $('.container-message').find('#message').text('La mise à jour a été effectué');
+                    $('.container-message').show(500).delay(1500).hide(500);
+					//window.location.href = base_url + 'admin/users/' + user_id; // redirect if we want
+
 	            }
 	            else
 	            {  
 	                // alert('problem');  // Something went wrong alert the debbuging infos
-	                $('#alert-error').show(); 
-	            }				
+	                $('#alert-error').show();
+                }
 			 },
 			 url: base_url + 'admin/users/changeColumn'
 		});	
