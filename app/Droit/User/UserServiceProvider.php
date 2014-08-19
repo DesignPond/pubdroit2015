@@ -123,7 +123,7 @@ class UserServiceProvider extends ServiceProvider {
 
         $this->app->bind('Droit\User\Worker\UserWorkerInterface', function()
         {
-            return new \Droit\User\Worker\UserWorker( new User , new AD );
+            return new \Droit\User\Worker\UserWorker( new \Droit\User\Repo\UserInfoEloquent( new User ) , new \Droit\User\Repo\AdresseEloquent( new AD ) );
         });
     }
 

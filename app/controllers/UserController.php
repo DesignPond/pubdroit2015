@@ -4,6 +4,7 @@ use Droit\User\Repo\UserInfoInterface;
 use Droit\User\Repo\AdresseInterface;
 use Droit\Colloque\Worker\InscriptionServiceInterface;
 use Droit\User\Forms\UserCreation;
+use Droit\User\Worker\UserWorkerInterface;
 
 use Droit\User\Commands\CreateUserCommand;
 
@@ -17,9 +18,11 @@ class UserController extends BaseController {
 	protected $adresse;
 
     protected $validator;
+
+    protected $worker;
 	
 	/* Inject dependencies */
-	public function __construct( UserInfoInterface $user,AdresseInterface $adresse,InscriptionServiceInterface $inscription, UserCreation $validator )
+	public function __construct( UserInfoInterface $user,AdresseInterface $adresse,InscriptionServiceInterface $inscription, UserCreation $validator , UserWorkerInterface $worker)
 	{
 			
 		$this->user         = $user;
@@ -29,6 +32,8 @@ class UserController extends BaseController {
 		$this->inscription  = $inscription;
 
         $this->validator    = $validator;
+
+        $this->worker       = $worker;
 
 		// Custom helper
 
@@ -177,7 +182,29 @@ class UserController extends BaseController {
 		
 		return Redirect::to('admin/users/'.$id)->with( array('status' => 'error' , 'message' => 'Problème avec la modification') ); 
         		
-	}	
+	}
+
+    /**
+     * Convert adresse to user
+     *
+     * @return $user_id
+     */
+    public function convert()
+    {
+        $adresse_id  = $_POST['adresse_id'];
+        $password    = $_POST['password'];
+
+        $user = $this->worker->convert($adresse_id , $password);
+
+        if( $user )
+        {
+            echo json_encode( array( 'result' => true , 'user_id' => $user->id ) );
+        }
+        else
+        {
+            echo json_encode( array( 'result' => false ) );
+        }
+    }
 
 	/**
 	 * Remove the specified resource from storage.

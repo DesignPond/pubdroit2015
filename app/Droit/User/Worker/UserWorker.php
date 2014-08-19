@@ -40,19 +40,20 @@ class UserWorker implements UserWorkerInterface{
                         'email'    => $email,
                         'password' => $password
                     )
-                );
+        );
+
         if(!$user)
         {
-            // Assign user_id to adresse
-            $adresse->user_id   = $user->id;
-            $adresse->livraison = 1;
-            $adresse->type      = 1;
-            $adresse->save();
-
-            return $user;
+            return false;
         }
 
-        return false;
+        // Assign user_id to adresse
+        $adresse->user_id   = $user->id;
+        $adresse->livraison = 1;
+        $adresse->type      = 1;
+        $adresse->save();
+
+        return $user;
 
     }
 }

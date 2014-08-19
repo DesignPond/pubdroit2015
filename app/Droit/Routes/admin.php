@@ -28,6 +28,7 @@ Route::group(array('prefix' => 'admin'), function()
 	Route::get('users/{user}/edit', 'UserController@edit');
 	Route::get('users/{user}/destroy', 'UserController@destroy');
 	Route::get('users/{user}/active', 'UserController@active');
+    Route::post('users/convert', 'UserController@convert');
 	Route::post('users', 'UserController@store');	
 
 	/* member and specialisation */

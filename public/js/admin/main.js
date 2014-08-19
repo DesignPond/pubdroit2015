@@ -148,7 +148,6 @@ $(function() {
 		// Prevent form submit
 		event.preventDefault();
 		$('#alert-error').hide();
-
 		// Serialize form data
 		var newname = $("#newValue").val();
 		var column  = $("#whatColumn").val();
@@ -167,25 +166,49 @@ $(function() {
                     if(column == 'username'){
                         $('#username').text(newname);
                     }
-
                     // When username is changed dismiss modal and show alert box
                     $('#changeColumn').modal('hide');
-
                     $('.container-message').find('#message').text('La mise à jour a été effectué');
                     $('.container-message').show(500).delay(1500).hide(500);
 					//window.location.href = base_url + 'admin/users/' + user_id; // redirect if we want
-
 	            }
 	            else
-	            {  
-	                // alert('problem');  // Something went wrong alert the debbuging infos
-	                $('#alert-error').show();
+	            {
+	                $('#alert-error').show(); // show info in modal if error (ex:username already taken)
                 }
 			 },
 			 url: base_url + 'admin/users/changeColumn'
-		});	
-			
+		});
 	});
+
+    // change column like username or password for user
+    $('body').on('click','#convertAdresseBtn', function(event){
+        // Prevent form submit
+        event.preventDefault();
+        $('#alert-error').hide();
+        // Serialize form data
+        var password    = $("#password").val();
+        var adresse_id  = $("#adresse_id").val();
+
+        $.ajax({
+            type     : 'post',
+            dataType : "json",
+            data     : { adresse_id : adresse_id , password : password },
+            success  : function(result)
+            {
+                // The inscription is deleted, we refresh the inscription div with new infos
+                if(result.result == true)
+                {
+                    window.location.href = base_url + 'admin/users/' + result.user_id; // redirect if we want
+                }
+                else
+                {
+                    $('#alert-error').show(); // show info in modal if error (ex:username already taken)
+                }
+            },
+            url: base_url + 'admin/users/convert'
+        });
+    });
 	
 	if($('#UsernameEmail')) {
 		
