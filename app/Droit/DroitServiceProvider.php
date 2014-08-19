@@ -30,5 +30,5 @@ class DroitServiceProvider extends ServiceProvider {
             return new \Droit\Service\Worker\UploadWorker();
         });        
     }
-    
+
 }

@@ -27,7 +27,7 @@
                                 <th>Email</th>
                                 <th>Adresse</th>
                                 <th>Ville</th>
-                                <th>Options</th>
+                                <th class="text-right">Action</th>
                             </thead>
                             <tbody></tbody>
                         </table>

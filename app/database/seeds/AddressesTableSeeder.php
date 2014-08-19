@@ -76,10 +76,10 @@ class AddressesTableSeeder extends Seeder {
 	           'ville'         => 'Neuchâtel',
 	           'canton_id'     => '13',
 	           'pays_id'       => '208',
-	           'type'          => '1',
-	           'user_id'       => '2',
-	           'livraison'     => '1',
-	           'deleted'       => '0',
+	           'type'          => 1,
+	           'user_id'       => 2,
+	           'livraison'     => 1,
+	           'deleted'       => 0,
 	           'created_at'    => date('Y-m-d G:i:s'),
 			   'updated_at'    => date('Y-m-d G:i:s')
 	        )
@@ -110,6 +110,28 @@ class AddressesTableSeeder extends Seeder {
                 'user_id'       => $index,
                 'created_at'    => date('Y-m-d G:i:s'),
 			    'updated_at'    => date('Y-m-d G:i:s')
+            ]);
+        }
+
+        foreach(range(14,34) as $index)
+        {
+            \Droit\User\Entities\Adresses::create([
+                'civilite_id'   => $faker->numberBetween(1 , 4),
+                'prenom'        => $faker->firstName,
+                'nom'           => $faker->lastName,
+                'email'         => $faker->email,
+                'entreprise'    => $faker->company,
+                'profession_id' => $faker->numberBetween(1,6),
+                'telephone'     => $faker->randomNumber(10),
+                'mobile'        => $faker->randomNumber(10),
+                'adresse'       => $faker->streetAddress,
+                'npa'           => $faker->postcode,
+                'ville'         => $faker->city,
+                'canton_id'     => $faker->numberBetween(1,26),
+                'pays_id'       => '208',
+                'type'          => 1,
+                'created_at'    => date('Y-m-d G:i:s'),
+                'updated_at'    => date('Y-m-d G:i:s')
             ]);
         }
 

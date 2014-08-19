@@ -5,18 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="051f7ca7-1e9e-48fb-bc58-27f4689ba4be" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Droit/User/Worker/UserWorker.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Droit/User/Worker/UserWorkerInterface.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/database/migrations/2013_11_24_133859_create_addresses_table.php" afterPath="$PROJECT_DIR$/app/database/migrations/2013_11_24_133859_create_addresses_table.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/database/seeds/AddressesTableSeeder.php" afterPath="$PROJECT_DIR$/app/database/seeds/AddressesTableSeeder.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/AdresseController.php" afterPath="$PROJECT_DIR$/app/controllers/AdresseController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Droit/User/Repo/AdresseEloquent.php" afterPath="$PROJECT_DIR$/app/Droit/User/Repo/AdresseEloquent.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Droit/User/Repo/AdresseInterface.php" afterPath="$PROJECT_DIR$/app/Droit/User/Repo/AdresseInterface.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/Custom.php" afterPath="$PROJECT_DIR$/app/helpers/Custom.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/admin/adresses/create.blade.php" afterPath="$PROJECT_DIR$/app/views/admin/adresses/create.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/admin/users/edit.blade.php" afterPath="$PROJECT_DIR$/app/views/admin/users/edit.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/users/edit.blade.php" afterPath="$PROJECT_DIR$/app/views/users/edit.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/admin/main.js" afterPath="$PROJECT_DIR$/public/js/admin/main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Droit/DroitServiceProvider.php" afterPath="$PROJECT_DIR$/app/Droit/DroitServiceProvider.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Droit/User/UserServiceProvider.php" afterPath="$PROJECT_DIR$/app/Droit/User/UserServiceProvider.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/admin/adresses/index.blade.php" afterPath="$PROJECT_DIR$/app/views/admin/adresses/index.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/admin/users/index.blade.php" afterPath="$PROJECT_DIR$/app/views/admin/users/index.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/partials/message.blade.php" afterPath="$PROJECT_DIR$/app/views/layouts/partials/message.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/routes.php" afterPath="$PROJECT_DIR$/app/routes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/admin/users/show.blade.php" afterPath="$PROJECT_DIR$/app/views/admin/users/show.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/admin/adresses/show.blade.php" afterPath="$PROJECT_DIR$/app/views/admin/adresses/show.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="pubdroit2015.iws" />
@@ -45,36 +45,10 @@
   <component name="FileEditorManager">
     <leaf>
       <file leaf-file-name="show.blade.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/admin/users/show.blade.php">
+        <entry file="file://$PROJECT_DIR$/app/views/admin/adresses/show.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="402" column="48" selection-start="23197" selection-end="23209" vertical-scroll-proportion="-5.269231" vertical-offset="9913" max-vertical-offset="11075">
-              <folding>
-                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#3;n#div#1;n#!!top" expanded="true" />
-                <marker date="1408433425000" expanded="true" signature="1526:1797" placeholder="..." />
-                <marker date="1408433425000" expanded="true" signature="2068:2341" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/public/js/admin/main.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="174" column="62" selection-start="5340" selection-end="5340" vertical-scroll-proportion="0.4757143" vertical-offset="4017" max-vertical-offset="7175">
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="message.blade.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/layouts/partials/message.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="30" selection-start="802" selection-end="809" vertical-scroll-proportion="-16.346153" vertical-offset="225" max-vertical-offset="950">
-              <folding>
-                <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
-              </folding>
+            <state line="22" column="0" selection-start="775" selection-end="775" vertical-scroll-proportion="77.88461" vertical-offset="2575" max-vertical-offset="4425">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -82,25 +56,7 @@
       <file leaf-file-name="AdresseController.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/AdresseController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="86" column="29" selection-start="1954" selection-end="1990" vertical-scroll-proportion="103.38461" vertical-offset="4763" max-vertical-offset="7000">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Adresses.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Droit/User/Entities/Adresses.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="0" selection-start="408" selection-end="440" vertical-scroll-proportion="-7.6923075" vertical-offset="175" max-vertical-offset="1750">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserController.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/UserController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="153" column="12" selection-start="3315" selection-end="3315" vertical-scroll-proportion="-8.634615" vertical-offset="3251" max-vertical-offset="5075">
+            <state line="24" column="0" selection-start="597" selection-end="629" vertical-scroll-proportion="-9.615385" vertical-offset="275" max-vertical-offset="7000">
               <folding />
             </state>
           </provider>
@@ -109,7 +65,7 @@
       <file leaf-file-name="AdresseEloquent.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Droit/User/Repo/AdresseEloquent.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="372" column="62" selection-start="9825" selection-end="9825" vertical-scroll-proportion="-9.769231" vertical-offset="9046" max-vertical-offset="10125">
+            <state line="2" column="0" selection-start="34" selection-end="110" vertical-scroll-proportion="-0.96153843" vertical-offset="0" max-vertical-offset="10425">
               <folding>
                 <element signature="e#34#71#0" expanded="true" />
               </folding>
@@ -117,31 +73,51 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="routes.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/routes.php">
+      <file leaf-file-name="UserWorker.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Droit/User/Worker/UserWorker.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="36" selection-start="569" selection-end="569" vertical-scroll-proportion="-10.576923" vertical-offset="0" max-vertical-offset="1475">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AdresseInterface.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Droit/User/Repo/AdresseInterface.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="3" selection-start="618" selection-end="674" vertical-scroll-proportion="-12.538462" vertical-offset="274" max-vertical-offset="1050">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserInfoEloquent.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Droit/User/Repo/UserInfoEloquent.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="166" column="9" selection-start="4192" selection-end="4192" vertical-scroll-proportion="-159.61539" vertical-offset="0" max-vertical-offset="7675">
+            <state line="20" column="4" selection-start="386" selection-end="386" vertical-scroll-proportion="0.71428573" vertical-offset="0" max-vertical-offset="700">
               <folding>
-                <element signature="e#34#72#0" expanded="true" />
+                <element signature="e#36#73#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserWorkerInterface.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Droit/User/Worker/UserWorkerInterface.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="0" selection-start="68" selection-end="68" vertical-scroll-proportion="-3.8461537" vertical-offset="0" max-vertical-offset="275">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserServiceProvider.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Droit/User/UserServiceProvider.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="125" column="63" selection-start="3124" selection-end="3124" vertical-scroll-proportion="-19.23077" vertical-offset="2575" max-vertical-offset="3325">
+              <folding>
+                <element signature="e#84#123#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="InscriptionServiceWorker.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Droit/Colloque/Worker/InscriptionServiceWorker.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="41" selection-start="253" selection-end="263" vertical-scroll-proportion="-3.8461537" vertical-offset="0" max-vertical-offset="1775">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Adresses.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Droit/User/Entities/Adresses.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="46" column="27" selection-start="1384" selection-end="1391" vertical-scroll-proportion="-4.8076925" vertical-offset="975" max-vertical-offset="1750">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -159,16 +135,9 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/views/admin/membre/index.blade.php" />
-        <option value="$PROJECT_DIR$/app/views/admin/profession/create.blade.php" />
-        <option value="$PROJECT_DIR$/app/views/admin/profession/edit.blade.php" />
-        <option value="$PROJECT_DIR$/app/views/admin/profession/index.blade.php" />
-        <option value="$PROJECT_DIR$/app/views/admin/search/index.blade.php" />
-        <option value="$PROJECT_DIR$/app/views/admin/specialisation/create.blade.php" />
         <option value="$PROJECT_DIR$/app/views/admin/specialisation/edit.blade.php" />
         <option value="$PROJECT_DIR$/app/views/admin/specialisation/index.blade.php" />
         <option value="$PROJECT_DIR$/app/views/admin/users/create.blade.php" />
-        <option value="$PROJECT_DIR$/app/views/admin/users/index.blade.php" />
         <option value="$PROJECT_DIR$/app/views/admin/upload.blade.php" />
         <option value="$PROJECT_DIR$/app/views/admin/index.blade.php" />
         <option value="$PROJECT_DIR$/app/views/admin/colloques/partials/custom.blade.php" />
@@ -192,24 +161,31 @@
         <option value="$PROJECT_DIR$/app/views/admin/factures/index.blade.php" />
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/app/database/seeds/UsersTableSeeder.php" />
-        <option value="$PROJECT_DIR$/app/database/seeds/AddressesTableSeeder.php" />
         <option value="$PROJECT_DIR$/app/database/seeds/Colloque_inscriptionsTableSeeder.php" />
         <option value="$PROJECT_DIR$/app/Droit/Colloque/Repo/ColloqueEloquent.php" />
         <option value="$PROJECT_DIR$/public/js/admin/admin-datatables.js" />
         <option value="$PROJECT_DIR$/app/views/admin/inscriptions/index.blade.php" />
         <option value="$PROJECT_DIR$/app/helpers/Custom.php" />
         <option value="$PROJECT_DIR$/app/views/admin/adresses/create.blade.php" />
-        <option value="$PROJECT_DIR$/app/database/migrations/2013_11_24_133859_create_addresses_table.php" />
         <option value="$PROJECT_DIR$/app/views/users/edit.blade.php" />
         <option value="$PROJECT_DIR$/app/views/admin/users/edit.blade.php" />
-        <option value="$PROJECT_DIR$/app/controllers/AdresseController.php" />
         <option value="$PROJECT_DIR$/app/Droit/User/Repo/AdresseInterface.php" />
         <option value="$PROJECT_DIR$/app/routes.php" />
-        <option value="$PROJECT_DIR$/app/Droit/User/Repo/AdresseEloquent.php" />
         <option value="$PROJECT_DIR$/app/Droit/User/Entities/Adresses.php" />
         <option value="$PROJECT_DIR$/app/views/admin/users/show.blade.php" />
-        <option value="$PROJECT_DIR$/app/views/layouts/partials/message.blade.php" />
         <option value="$PROJECT_DIR$/public/js/admin/main.js" />
+        <option value="$PROJECT_DIR$/app/controllers/AdresseController.php" />
+        <option value="$PROJECT_DIR$/app/database/migrations/2013_11_24_133859_create_addresses_table.php" />
+        <option value="$PROJECT_DIR$/app/database/seeds/AddressesTableSeeder.php" />
+        <option value="$PROJECT_DIR$/app/views/admin/users/index.blade.php" />
+        <option value="$PROJECT_DIR$/app/views/admin/adresses/index.blade.php" />
+        <option value="$PROJECT_DIR$/app/views/admin/adresses/show.blade.php" />
+        <option value="$PROJECT_DIR$/app/views/layouts/partials/message.blade.php" />
+        <option value="$PROJECT_DIR$/app/Droit/User/Repo/AdresseEloquent.php" />
+        <option value="$PROJECT_DIR$/app/Droit/User/Worker/UserWorkerInterface.php" />
+        <option value="$PROJECT_DIR$/app/Droit/DroitServiceProvider.php" />
+        <option value="$PROJECT_DIR$/app/Droit/User/UserServiceProvider.php" />
+        <option value="$PROJECT_DIR$/app/Droit/User/Worker/UserWorker.php" />
       </list>
     </option>
   </component>
@@ -297,7 +273,7 @@
   <component name="ProjectFrameBounds">
     <option name="y" value="22" />
     <option name="width" value="1680" />
-    <option name="height" value="944" />
+    <option name="height" value="951" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -1133,33 +1109,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Repo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pubdroit2015" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pubdroit2015" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Droit" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="User" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Entities" />
+              <option name="myItemId" value="Worker" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1439,15 +1389,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1680" height="944" extended-state="0" />
+    <frame x="0" y="22" width="1680" height="951" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.112" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.11904762" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20595238" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19880952" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.12432432" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -1481,53 +1431,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/admin/inscriptions/edit.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="72" column="0" selection-start="3309" selection-end="3360" vertical-scroll-proportion="0.66019416" vertical-offset="1324" max-vertical-offset="2050" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/admin/inscriptions/show.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="129" selection-start="302" selection-end="302" vertical-scroll-proportion="0.16846362" vertical-offset="50" max-vertical-offset="900" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/admin/inscriptions/create.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="60" selection-start="807" selection-end="807" vertical-scroll-proportion="0.53908354" vertical-offset="200" max-vertical-offset="2025" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Droit/Colloque/Entities/Colloques.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="68" column="35" selection-start="2098" selection-end="2113" vertical-scroll-proportion="0.0" vertical-offset="1050" max-vertical-offset="2500" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/UploadController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="768" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/admin/colloques/partials/documents.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="71" selection-start="3060" selection-end="3060" vertical-scroll-proportion="0.0" vertical-offset="558" max-vertical-offset="3250" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/admin/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="35" selection-start="256" selection-end="263" vertical-scroll-proportion="98.07692" vertical-offset="2925" max-vertical-offset="7575">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/admin/colloques/form/attestation.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="16" selection-start="484" selection-end="558" vertical-scroll-proportion="-14.423077" vertical-offset="0" max-vertical-offset="3225" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/admin/colloques/colloque.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="122" selection-start="772" selection-end="772" vertical-scroll-proportion="-13.076923" vertical-offset="235" max-vertical-offset="1650" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/admin/colloques/form/email.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="31" column="49" selection-start="1500" selection-end="1500" vertical-scroll-proportion="0.49435028" vertical-offset="425" max-vertical-offset="2175" />
@@ -1607,13 +1510,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/database/seeds/AddressesTableSeeder.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="100" column="35" selection-start="3690" selection-end="3717" vertical-scroll-proportion="0.0" vertical-offset="1942" max-vertical-offset="3075">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/database/seeds/Colloque_inscriptionsTableSeeder.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="64" column="41" selection-start="2099" selection-end="2099" vertical-scroll-proportion="0.0" vertical-offset="1217" max-vertical-offset="1975">
@@ -1656,13 +1552,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/database/migrations/2013_11_24_133859_create_addresses_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="50" selection-start="1229" selection-end="1229" vertical-scroll-proportion="0.8214286" vertical-offset="325" max-vertical-offset="1475">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/admin/adresses/create.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="206" column="35" selection-start="10818" selection-end="10818" vertical-scroll-proportion="0.8214286" vertical-offset="4575" max-vertical-offset="5550">
@@ -1691,60 +1580,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/admin/adresses/partials/form-edit.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4000">
-          <folding>
-            <marker date="1407762925000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1407762925000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1407762925000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1407762925000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1407762925000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1407762925000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1407762925000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1407762925000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1407762925000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1407762925000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1407762925000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1407762925000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1407762925000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1407762925000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1407762925000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1407762925000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1407762925000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1407762925000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1407762925000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1407762925000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1407762925000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1407762925000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1407762925000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1407762925000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1407762925000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1407762925000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1407762925000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1407762925000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1407762925000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1407762925000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1407762925000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1407762925000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1407762925000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1407762925000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1407762925000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1407762925000" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/admin/users/edit.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="72" column="28" selection-start="3907" selection-end="3907" vertical-scroll-proportion="4.3461537" vertical-offset="1913" max-vertical-offset="2850">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/admin/adresses/show.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4550">
           <folding />
         </state>
       </provider>
@@ -1770,52 +1608,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Droit/User/Repo/AdresseEloquent.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="372" column="62" selection-start="9825" selection-end="9825" vertical-scroll-proportion="-9.769231" vertical-offset="9046" max-vertical-offset="10125">
-          <folding>
-            <element signature="e#34#71#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Droit/User/Repo/AdresseInterface.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="24" column="3" selection-start="618" selection-end="674" vertical-scroll-proportion="-12.538462" vertical-offset="274" max-vertical-offset="1050">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Droit/User/Entities/Adresses.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="0" selection-start="408" selection-end="440" vertical-scroll-proportion="-7.6923075" vertical-offset="175" max-vertical-offset="1750">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/admin/users/show.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="402" column="48" selection-start="23197" selection-end="23209" vertical-scroll-proportion="-5.269231" vertical-offset="9913" max-vertical-offset="11075">
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#3;n#div#1;n#!!top" expanded="true" />
-            <marker date="1408433425000" expanded="true" signature="1526:1797" placeholder="..." />
-            <marker date="1408433425000" expanded="true" signature="2068:2341" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/partials/message.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="30" selection-start="802" selection-end="809" vertical-scroll-proportion="-16.346153" vertical-offset="225" max-vertical-offset="950">
-          <folding>
-            <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/AdresseController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="86" column="29" selection-start="1954" selection-end="1990" vertical-scroll-proportion="103.38461" vertical-offset="4763" max-vertical-offset="7000">
           <folding />
         </state>
       </provider>
@@ -1836,11 +1631,147 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/database/seeds/AddressesTableSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="102" column="60" selection-start="3831" selection-end="3831" vertical-scroll-proportion="-3.5769231" vertical-offset="2457" max-vertical-offset="3625">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/database/migrations/2013_11_24_133859_create_addresses_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="46" selection-start="1098" selection-end="1110" vertical-scroll-proportion="0.35714287" vertical-offset="575" max-vertical-offset="1475">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/public/js/admin/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="174" column="62" selection-start="5340" selection-end="5340" vertical-scroll-proportion="0.4757143" vertical-offset="4017" max-vertical-offset="7175">
+        <state line="174" column="62" selection-start="5340" selection-end="5340" vertical-scroll-proportion="0.0" vertical-offset="3991" max-vertical-offset="7175">
           <folding>
             <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/admin/users/show.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="402" column="48" selection-start="23197" selection-end="23209" vertical-scroll-proportion="-5.269231" vertical-offset="9913" max-vertical-offset="11075">
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#3;n#div#1;n#!!top" expanded="true" />
+            <marker date="1408433425000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1408433425000" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/admin/users/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="32" selection-start="1137" selection-end="1171" vertical-scroll-proportion="-17.307692" vertical-offset="275" max-vertical-offset="1225">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/admin/adresses/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="66" selection-start="1166" selection-end="1166" vertical-scroll-proportion="-27.884615" vertical-offset="0" max-vertical-offset="1225">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/admin/adresses/partials/form-edit.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="126.92308" vertical-offset="3300" max-vertical-offset="4000">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Droit/Colloque/Worker/InscriptionServiceInterface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="726">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/admin/adresses/show.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="0" selection-start="775" selection-end="775" vertical-scroll-proportion="77.88461" vertical-offset="2575" max-vertical-offset="4425">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/partials/message.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="82" selection-start="207" selection-end="207" vertical-scroll-proportion="0.14285715" vertical-offset="0" max-vertical-offset="950">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Droit/DroitServiceProvider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="0" selection-start="606" selection-end="606" vertical-scroll-proportion="0.75" vertical-offset="225" max-vertical-offset="925">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Droit/User/UserServiceProvider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="125" column="63" selection-start="3124" selection-end="3124" vertical-scroll-proportion="-19.23077" vertical-offset="2575" max-vertical-offset="3325">
+          <folding>
+            <element signature="e#84#123#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/AdresseController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="0" selection-start="597" selection-end="629" vertical-scroll-proportion="-9.615385" vertical-offset="275" max-vertical-offset="7000">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Droit/Colloque/Worker/GenerateWorker.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="87" selection-start="444" selection-end="444" vertical-scroll-proportion="0.5" vertical-offset="50" max-vertical-offset="4600">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Droit/User/Entities/Adresses.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="27" selection-start="1384" selection-end="1391" vertical-scroll-proportion="-4.8076925" vertical-offset="975" max-vertical-offset="1750">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Droit/Colloque/Worker/InscriptionServiceWorker.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="41" selection-start="253" selection-end="263" vertical-scroll-proportion="-3.8461537" vertical-offset="0" max-vertical-offset="1775">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Droit/User/Repo/AdresseEloquent.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="0" selection-start="34" selection-end="110" vertical-scroll-proportion="-0.96153843" vertical-offset="0" max-vertical-offset="10425">
+          <folding>
+            <element signature="e#34#71#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Droit/User/Worker/UserWorkerInterface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="0" selection-start="68" selection-end="68" vertical-scroll-proportion="-3.8461537" vertical-offset="0" max-vertical-offset="275">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Droit/User/Worker/UserWorker.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="4" selection-start="386" selection-end="386" vertical-scroll-proportion="0.71428573" vertical-offset="0" max-vertical-offset="700">
+          <folding>
+            <element signature="e#36#73#0" expanded="true" />
           </folding>
         </state>
       </provider>

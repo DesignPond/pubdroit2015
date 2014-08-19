@@ -32,10 +32,10 @@ class CreateAddressesTable extends Migration {
 			$table->string('ville')->nullable();
 			$table->integer('canton_id')->nullable();
 			$table->integer('pays_id')->nullable();
-			$table->string('type')->default(1);
-			$table->integer('user_id')->nullable();
-			$table->boolean('livraison')->nullable();
-			$table->boolean('deleted')->nullable();
+			$table->string('type')->default(1)->nullable();
+			$table->integer('user_id')->default(0);
+			$table->boolean('livraison')->default(0);
+			$table->boolean('deleted')->default(0);
 			$table->softDeletes();
 			$table->timestamps();
 		});

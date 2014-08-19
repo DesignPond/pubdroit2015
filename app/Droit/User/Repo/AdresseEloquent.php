@@ -95,7 +95,7 @@ class AdresseEloquent implements AdresseInterface{
 	 */
 	public function find($id){
 				
-		return $this->adresse->where('id','=',$id)->with(array('user','specialisations'))->get()->first();
+		return $this->adresse->where('id','=',$id)->with(array('user','specialisations','membres'))->get()->first();
 	}
 	
 	/**
@@ -237,9 +237,15 @@ class AdresseEloquent implements AdresseInterface{
      */
     public function addSpecialisation($specialisation,$adresse_id)
     {
-        $this->adresse->find($adresse_id)->specialisations()->attach($specialisation);
+        $adresse = $this->find($adresse_id);
 
-        return true;
+        if (!$adresse->specialisations->contains($specialisation))
+        {
+            $adresse->specialisations()->attach($specialisation);
+            return true;
+        }
+
+        return false;
     }
 
     /**
@@ -259,9 +265,15 @@ class AdresseEloquent implements AdresseInterface{
      */
     public function addMembre($membre,$adresse_id){
 
-        $this->adresse->find($adresse_id)->membres()->attach($membre);
+        $adresse = $this->find($adresse_id);
 
-        return true;
+        if (!$adresse->membres->contains($membre))
+        {
+            $adresse->membres()->attach($membre);
+            return true;
+        }
+
+        return false;
     }
 
     /**

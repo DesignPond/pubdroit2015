@@ -19,12 +19,9 @@
             </div>
         </div>
 
-    <!-- messages and errors -->
-    @include('layouts.partials.message')
-
         <div class="row"><!-- row -->
-            <div class="col-md-6"><!-- col -->
 
+            <div class="col-md-6"><!-- col -->
                 <div class="panel panel-midnightblue"><!-- panel -->
                     <div class="panel-body"><!-- panel body -->
 
@@ -35,9 +32,7 @@
                         @endif
 
                     </div><!-- end panel body -->
-
                 </div><!-- end panel -->
-
                 </div><!-- end col -->
 
                 <div class="col-md-6"><!-- col -->

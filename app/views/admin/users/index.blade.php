@@ -27,7 +27,7 @@
                                 <th>Nom</th>
                                 <th>Status</th>
                                 <th>Adresses</th>
-                                <th class="text-right">Options</th>
+                                <th class="text-right">Action</th>
                             </thead>
                             <tbody></tbody>
                         </table>

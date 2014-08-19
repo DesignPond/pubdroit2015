@@ -31,7 +31,8 @@ class UserServiceProvider extends ServiceProvider {
     	$this->registerUserSpecialisationService();
     	$this->registerUserMembreService();
     	$this->registerSpecialisationService();	
-    	$this->registerMembreService();			
+    	$this->registerMembreService();
+        $this->registerUserWorker();
     }
     
 	/**
@@ -113,5 +114,17 @@ class UserServiceProvider extends ServiceProvider {
             return new \Droit\User\Repo\MembreEloquent( new M );
         });
         
-	}   
+	}
+
+    /**
+     * User worker
+     */
+    protected function registerUserWorker(){
+
+        $this->app->bind('Droit\User\Worker\UserWorkerInterface', function()
+        {
+            return new \Droit\User\Worker\UserWorker( new User , new AD );
+        });
+    }
+
 }

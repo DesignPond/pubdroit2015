@@ -206,12 +206,12 @@ class AdresseController extends BaseController {
 		
 		$redirectTo = ( $user_id ? 'admin/users/'.$user_id : 'admin/adresses/'.Input::get('adresse_id') );
 
-			if( $this->adresse->addSpecialisation(Input::get('specialisation_id') , Input::get('adresse_id')) )
-			{				
-				return Redirect::to($redirectTo)->with( array('status' => 'success' , 'message' => 'La spécialisation a été ajouté') );
-			}
+        if( $this->adresse->addSpecialisation(Input::get('specialisation_id') , Input::get('adresse_id')) )
+        {
+            return Redirect::to($redirectTo)->with( array('status' => 'success' , 'message' => 'La spécialisation a été ajouté') );
+        }
 
-			return Redirect::to($redirectTo)->with( array('status' => 'danger' , 'message' => 'L\'utilisateur à déjà la spécialisation') );
+        return Redirect::to($redirectTo)->with( array('status' => 'danger' , 'message' => 'L\'utilisateur à déjà la spécialisation') );
 	}
 
 	/**

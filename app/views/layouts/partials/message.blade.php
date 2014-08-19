@@ -2,7 +2,7 @@
 <div class="container">
     <div class="row">
         <div class="col-sm-12">
-            <div class="alert alert-dismissable alert-danger">
+            <div class="alert alert-dismissable alert-{{ Session::get('status') }}">
 
                 @foreach($errors->all() as $message)
                     <p>{{ $message }}</p>
