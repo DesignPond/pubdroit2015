@@ -2,5 +2,6 @@
 
 interface UserWorkerInterface{
 
+    public function convert($adresse_id,$password);
 
 }

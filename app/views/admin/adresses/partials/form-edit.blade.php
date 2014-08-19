@@ -1,7 +1,8 @@
 {{ Form::open(array( 'url' => 'admin/adresses/'.$adresse->id , 'method' => 'PUT' )) }}
 
-    <h3><strong><?php echo $custom->whatType($adresse->type); ?></strong></h3>
-
+    <div class="row"><!-- row -->
+        <h3><strong><?php echo $custom->whatType($adresse->type); ?></strong></h3>
+    </div>
     <div class="form-group row">
         <label for="civilite" class="col-sm-3 control-label">Civilite</label>
         <div class="col-sm-6">
